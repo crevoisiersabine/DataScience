@@ -1,0 +1,501 @@
+Course, Chapter, Topic
+
+CS106A, Chapter 2, Algorithm vs Program,
+CS106A, Chapter 2, Creating Methods, 
+CS106A, Chapter 2, for Loop and While Loop,
+CS106A, Chapter 2, If Statement and Putting it All Together,
+
+CS106A, Chapter 3, Common Errors, 
+CS106A, Chapter 3, Comments, 
+CS106A, Chapter 3, Pre-conditions and Post-conditions
+CS106A, Chapter 3, Decomposition, 
+CS106A, Chapter 3, Importance of Good Software Engineering, 
+CS106A, Chapter 3, The Right Decomposition,
+
+-----------------------------------------------------------------------------------------
+http://see.stanford.edu/see/lecturelist.aspx?coll=11f4f422-5670-4b4c-889c-008262e09e4e
+
+CS106B, Chapter 2, Similarity between C++ & Java,
+CS106B, Chapter 2, #include Statements
+CS106B, Chapter 2, Global Declarations (constant)
+CS106B, Chapter 2, Declaring a Function Prototype
+CS106B, Chapter 2, The main() Function
+CS106B, Chapter 2, C++ User Defined Data Types
+CS106B, Chapter 2, C++ Parameters Passing
+
+CS106B, Chapter 3, C++ Libraries
+CS106B, Chapter 3, C++ String Type & Operations on String
+CS106B, Chapter 3, C++ Console I/O
+
+CS106B, Chapter 4, C++ File I/O
+CS106B, Chapter 4, Stream Operations
+CS106B, Chapter 4, Error Function
+CS106B, Chapter 4, Class Libraries OO Features & Why OO is So Successful
+CS106B, Chapter 4, Container Classes & Template Containers
+
+CS106B, Chapter 5, Vector Class & Interface
+CS106B, Chapter 5, Type-safety in Templates
+CS106B, Chapter 5, Grid Class & Interface
+CS106B, Chapter 5, Stack Class & Interface
+CS106B, Chapter 5, Queue Class & Interface
+CS106B, Chapter 5, Nested Templates
+CS106B, Chapter 5, Learning a New API
+CS106B, Chapter 5, CS106B Library Documentation
+
+CS106B, Chapter 6, More Containers
+CS106B, Chapter 6, Map Class & Interface
+CS106B, Chapter 6, Iterator Operation Through the Map
+CS106B, Chapter 6, Set Class & Interface
+CS106B, Chapter 6, Set Higher-level Operations & Why Set is Different
+
+CS106B, Chapter 7, Seeing Functions as Data: Plot Functions
+CS106B, Chapter 7, Back to the Set
+CS106B, Chapter 7, Client Callback Function
+CS106B, Chapter 7, Review of the Classes
+CS106B, Chapter 7, Using Nested Abstract Data Types
+CS106B, Chapter 7, Recursion
+
+CS106B, Chapter 8, Common Mistakes: 'I'terator
+CS106B, Chapter 8, Common Mistakes: Concatenating Strings
+CS106B, Chapter 8, Solving Problems Recursively
+CS106B, Chapter 8, Functional Recursion
+CS106B, Chapter 8, Recursion & Efficiency
+CS106B, Chapter 8, Binary Search
+
+CS106B, Chapter 9, Thinking Recursively
+CS106B, Chapter 9, Procedural vs Functional Recursion
+CS106B, Chapter 9, Fractal Code
+CS106B, Chapter 9, Hanois Towers : Classic Recursion Example
+CS106B, Chapter 9, Permutations
+
+CS106B, Chapter 10, Subsets
+CS106B, Chapter 10, Exhaustive Recursion
+CS106B, Chapter 10, Recursive Backtracking
+
+CS106B, Chapter 11, Backtracking Pseudocode & Examples
+CS106B, Chapter 11, Introduction to Pointers
+
+CS106B, Chapter 12, Pointer Basics
+CS106B, Chapter 12, Recursive Data
+CS106B, Chapter 12, Linked Lists
+
+CS106B, Chapter 13, More on Linked Lists using recursion
+CS106B, Chapter 13, Passing Pointers by Reference
+CS106B, Chapter 13, Array vs Linked List
+
+CS106B, Chapter 14, Algorithm Analysis
+CS106B, Chapter 14, Big-O
+CS106B, Chapter 14, Analysis of Recursive Algorithms
+CS106B, Chapter 14, Selection Sort
+
+CS106B, Chapter 15, Selection Sort
+CS106B, Chapter 15, Insertion Sort
+CS106B, Chapter 15, Merge Sort
+CS106B, Chapter 15, Quick Sort
+
+CS106B, Chapter 16, Quick Sort
+CS106B, Chapter 16, Quicksort vs Merge Sort
+CS106B, Chapter 16, Template Instantiation
+
+CS106B, Chapter 17, Sort Template with Callback
+CS106B, Chapter 17, Why Object Oriented Programming
+CS106B, Chapter 17, Class Division
+CS106B, Chapter 17, Class Interface in ".h" File
+CS106B, Chapter 17, Storage for Objects
+CS106B, Chapter 17, Accessing Members of a Class
+CS106B, Chapter 17, Class & Member Function Implementation
+CS106B, Chapter 17, Maintaining Object Consistency
+CS106B, Chapter 17, Constructors & Destructors of a Class
+CS106B, Chapter 17, Idea of Encapsulation
+
+CS106B, Chapter 18, Abstract Data Types
+CS106B, Chapter 18, Why Abstract Data Types?
+CS106B, Chapter 18, Growing Dynamically: Making Space at Runtime
+CS106B, Chapter 18, Templatizing the Class Created
+
+CS106B, Chapter 19, Rules of Template Implementation
+CS106B, Chapter 19, InsertAt Function
+CS106B, Chapter 19, Consequences of Contiguous Memory Being a Disadvantage
+
+CS106B, Chapter 20, Linked List Implementation for Stack
+CS106B, Chapter 20, Analyzing Push/pop Functions
+CS106B, Chapter 20, Queue Implementation
+CS106B, Chapter 20, Buffered Class Interface
+
+CS106B, Chapter 21, Buffer: Vector vs Stack
+CS106B, Chapter 21, Buffer as Linked List
+CS106B, Chapter 21, Cursor Design
+CS106B, Chapter 21, Use of Dummy Cell
+CS106B, Chapter 21, Linked List Insert/delete
+CS106B, Chapter 21, Linked List Cursor Movement
+CS106B, Chapter 21, Doubly Linked List
+CS106B, Chapter 21, Implementing Map
+CS106B, Chapter 21, Map as Vector
+
+CS106B, Chapter 22, Binary Search Trees
+CS106B, Chapter 22, Trees in General
+CS106B, Chapter 22, Implementing Map as Tree
+CS106B, Chapter 22, Important Syntactical Advice
+
+CS106B, Chapter 23, Pathfinder Demo
+CS106B, Chapter 23, Graphs in C++
+CS106B, Chapter 23, Nodes and Arcs in C++
+CS106B, Chapter 23, Depth First Search
+CS106B, Chapter 23, Breadth First Search
+CS106B, Chapter 23, Graph Search Algorithms
+
+CS106B, Chapter 24, Compare Map Implementations
+CS106B, Chapter 24, Hashtable Idea
+CS106B, Chapter 24, Hashing Generic Types
+CS106B, Chapter 24, Implementing Set
+
+CS106B, Chapter 25, Lexicon Case Study: Sorted Vector, BST, Hash Table, Letter Trie
+CS106B, Chapter 25, DAWG: Directed Acyclic Word Graph
+CS106B, Chapter 25, Lexicon as DAWG
+
+CS106B, Chapter 26, Thinking About Design
+
+CS106B, Chapter 27, Guest Lecturer: Keith Schwarz, About the C++ Language
+
+CS171 Visualisation
+
+CS109 Data Science
+
+-----------------------------------------------------------------------------------------
+https://class.coursera.org/ml-004/lecture
+
+Machine Learning Coursera, Introduction
+
+Machine Learning Coursera, Octave Tutorial
+
+Machine Learning Coursera, Linear Algebra Review, Matrices and Vectors
+Machine Learning Coursera, Linear Algebra Review, Addition and Scalar Multiplication
+Machine Learning Coursera, Linear Algebra Review, Vector Multiplication
+Machine Learning Coursera, Linear Algebra Review, Matrix Multiplication
+Machine Learning Coursera, Linear Algebra Review, Inverse and Transpose
+
+Machine Learning Coursera, Linear Regression, Cost Function
+Machine Learning Coursera, Linear Regression, Gradient Descent with One Variable
+Machine Learning Coursera, Linear Regression, Gradient Descent with Multiple Variables
+Machine Learning Coursera, Linear Regression, Features and Polynomial Regression
+Machine Learning Coursera, Linear Regression, Normal Equation
+Machine Learning Coursera, Linear Regression, Regularization
+
+Machine Learning Coursera, Logistic Regression, Classification
+Machine Learning Coursera, Logistic Regression, Hypothesis Representation
+Machine Learning Coursera, Logistic Regression, Decision Boundary
+Machine Learning Coursera, Logistic Regression, Cost Function
+Machine Learning Coursera, Logistic Regression, Multiclass Classification
+Machine Learning Coursera, Logistic Regression, Regularization
+
+Machine Learning Coursera, Neural Networks, Non linear Hypotheses
+Machine Learning Coursera, Neural Networks, Model Representation
+Machine Learning Coursera, Neural Networks, Multiclass Classification
+Machine Learning Coursera, Neural Networks, Cost Function
+Machine Learning Coursera, Neural Networks, Backpropagation
+Machine Learning Coursera, Neural Networks, Implementation
+Machine Learning Coursera, Neural Networks, Gradient Checking
+Machine Learning Coursera, Neural Networks, Random Initialisation
+
+Machine Learning Coursera, Support Vector Machines, Optimisation Objective
+Machine Learning Coursera, Support Vector Machines, Large Margin Intuition
+Machine Learning Coursera, Support Vector Machines, Kernels
+Machine Learning Coursera, Support Vector Machines, Using an SVM
+
+Machine Learning Coursera, Clustering, Unsupervised Learning
+Machine Learning Coursera, Clustering, K-means Algorithm
+Machine Learning Coursera, Clustering, Optimisation Objective
+Machine Learning Coursera, Clustering, Random Initialization
+Machine Learning Coursera, Clustering, Choosing the number of clusters
+
+Machine Learning Coursera, Dimensionality Reduction, Data Compression
+Machine Learning Coursera, Dimensionality Reduction, Visualisation
+Machine Learning Coursera, Dimensionality Reduction, Principal Component Analysis
+Machine Learning Coursera, Dimensionality Reduction, Choosing the number of PCs
+Machine Learning Coursera, Dimensionality Reduction, Reconstruction from Compressed Representation
+Machine Learning Coursera, Dimensionality Reduction, Advice for Applying PCA
+
+Machine Learning Coursera, Anomaly Detection, Motivation
+Machine Learning Coursera, Anomaly Detection, Gaussian Distribution
+Machine Learning Coursera, Anomaly Detection, Algorithms
+Machine Learning Coursera, Anomaly Detection, Developing and Evaluating an Anomaly Detection System
+Machine Learning Coursera, Anomaly Detection, Anomaly Detection vs. Supervised Learning
+Machine Learning Coursera, Anomaly Detection, What Features to Use
+Machine Learning Coursera, Anomaly Detection, Multivariate Gaussian Distribution
+
+Machine Learning Coursera, Recommender Systems, Content Based Recommendations
+Machine Learning Coursera, Recommender Systems, Collaborative Filtering Algorithm
+Machine Learning Coursera, Recommender Systems, Vectorization
+Machine Learning Coursera, Recommender Systems, Implementation
+
+Machine Learning Coursera, Advice for Applying ML, Deciding what to try
+Machine Learning Coursera, Advice for Applying ML, Evaluating a Hypothesis
+Machine Learning Coursera, Advice for Applying ML, Model Selection and Train / Validation
+Machine Learning Coursera, Advice for Applying ML, Bias vs. Variance
+Machine Learning Coursera, Advice for Applying ML, Regularisation and Bias vs. Variance
+Machine Learning Coursera, Advice for Applying ML, Learning Curves
+Machine Learning Coursera, Advice for Applying ML, What to do next ?
+
+Machine Learning Coursera, ML System Design, Prioritization
+Machine Learning Coursera, ML System Design, Error Analysis
+Machine Learning Coursera, ML System Design, Trade-off Precision and Recall
+Machine Learning Coursera, ML System Design, Data for ML
+
+Machine Learning Coursera, Large Scale Machine Learning, Learning with Large Datasets
+Machine Learning Coursera, Large Scale Machine Learning, Stochastic Gradient Descent
+Machine Learning Coursera, Large Scale Machine Learning, Mini-bathc gradient descent
+Machine Learning Coursera, Large Scale Machine Learning, Stochastic gradient descent convergence
+Machine Learning Coursera, Large Scale Machine Learning, Online Learning
+Machine Learning Coursera, Large Scale Machine Learning, Map Reduce and Parallelism 
+
+Machine Learning Coursera, Application Examples
+
+Machine Learning Coursera, Conclusions
+
+-----------------------------------------------------------------------------------------
+http://projects.iq.harvard.edu/stat110/youtube
+
+Stats 110, Lecture 1, sample spaces
+Stats 110, Lecture 1, naive definition of probability
+Stats 110, Lecture 1, counting
+Stats 110, Lecture 1, sampling
+
+Stats 110, Lecture 2, Bose-Einstein
+Stats 110, Lecture 2, story proofs
+Stats 110, Lecture 2, Vandermonde identity
+Stats 110, Lecture 2, axioms of probability 
+
+Stats 110, Lecture 3, birthday problem
+Stats 110, Lecture 3, properties of probability
+Stats 110, Lecture 3, inclusion-exclusion
+Stats 110, Lecture 3, matching problem
+
+Stats 110, Lecture 4, independence
+Stats 110, Lecture 4, Newton-Pepys
+Stats 110, Lecture 4, conditional probability
+Stats 110, Lecture 4, Bayes’ rule
+
+Stats 110, Lecture 5, law of total probability
+Stats 110, Lecture 5, conditional probability examples
+Stats 110, Lecture 5, conditional independence
+
+Stats 110, Lecture 6, Monty Hall problem
+Stats 110, Lecture 6, Simpson’s paradox
+
+Stats 110, Lecture 7, gambler’s ruin
+Stats 110, Lecture 7, first step analysis
+Stats 110, Lecture 7, random variables
+Stats 110, Lecture 7, Bernoulli
+Stats 110, Lecture 7, Binomial
+
+Stats 110, Lecture 8, random variables
+Stats 110, Lecture 8, CDFs
+Stats 110, Lecture 8, PMFs
+Stats 110, Lecture 8, Hypergeometric
+
+Stats 110, Lecture 9, independence
+Stats 110, Lecture 9, Geometric
+Stats 110, Lecture 9, expected values
+Stats 110, Lecture 9, indicator r.v.s
+Stats 110, Lecture 9, linearity
+Stats 110, Lecture 9, symmetry
+Stats 110, Lecture 9, fundamental bridge
+
+Stats 110, Lecture 10, linearity
+Stats 110, Lecture 10, Putnam problem
+Stats 110, Lecture 10, Negative Binomial
+Stats 110, Lecture 10, St. Petersburg paradox
+
+Stats 110, Lecture 11, sympathetic magic
+Stats 110, Lecture 11, Poisson distribution
+Stats 110, Lecture 11, Poisson approximation
+
+Stats 110, Lecture 12, discrete vs. continuous
+Stats 110, Lecture 12, PDFs
+Stats 110, Lecture 12, variance
+Stats 110, Lecture 12, standard deviation
+Stats 110, Lecture 12, Uniform
+Stats 110, Lecture 12, universality
+
+Stats 110, Lecture 13, standard Normal
+Stats 110, Lecture 13, Normal normalizing constant
+
+Stats 110, Lecture 14, Normal distribution
+Stats 110, Lecture 14, standardization
+Stats 110, Lecture 14, LOTUS
+
+Stats 110, Lecture 15, midterm review
+Stats 110, Lecture 15, extra examples
+
+Stats 110, Lecture 16, Exponential distribution
+Stats 110, Lecture 16, memoryless property
+
+Stats 110, Lecture 17, moment generating functions
+Stats 110, Lecture 17, hybrid Bayes’ rule
+Stats 110, Lecture 17, Laplace’s rule of succession
+
+Stats 110, Lecture 18, MGFs to get moments of Expo and Normal
+Stats 110, Lecture 18, sums of Poissons
+Stats 110, Lecture 18, joint distributions
+
+Stats 110, Lecture 19, joint
+Stats 110, Lecture 19, conditional and marginal distributions
+Stats 110, Lecture 19, 2-D LOTUS
+Stats 110, Lecture 19, chicken-egg
+
+Stats 110, Lecture 20, expected distance between Normals
+Stats 110, Lecture 20, Multinomial
+Stats 110, Lecture 20, Cauchy
+
+Stats 110, Lecture 21, covariance
+Stats 110, Lecture 21, correlation
+Stats 110, Lecture 21, variance of a sum
+Stats 110, Lecture 21, variance of Hypergeometric
+
+Stats 110, Lecture 22, transformations
+Stats 110, Lecture 22, LogNormal
+Stats 110, Lecture 22, convolutions
+Stats 110, Lecture 22, the probabilistic method
+
+Stats 110, Lecture 23, Beta distribution
+Stats 110, Lecture 23, Bayes’ billiards
+Stats 110, Lecture 23, finance preview and examples
+
+Stats 110, Lecture 24, Gamma distribution
+Stats 110, Lecture 24, Poisson processes
+
+Stats 110, Lecture 25, Beta-Gamma (bank-post office)
+Stats 110, Lecture 25, order statistics
+Stats 110, Lecture 25, conditional expectation
+Stats 110, Lecture 25, two envelope paradox
+
+Stats 110, Lecture 26, two envelope paradox (cont.)
+Stats 110, Lecture 26, conditional expectation (cont.)
+Stats 110, Lecture 26, waiting for HT vs. waiting for HH
+
+Stats 110, Lecture 27, conditional expectation (cont.)
+Stats 110, Lecture 27, taking out what’s known
+Stats 110, Lecture 27, Adam’s law
+Stats 110, Lecture 27, Eve’s law
+
+Stats 110, Lecture 28, sum of a random number of random variables
+Stats 110, Lecture 28, inequalities (Cauchy-Schwarz, Jensen, Markov, Chebyshev)
+
+Stats 110, Lecture 29, law of large numbers
+Stats 110, Lecture 29, central limit theorem
+
+Stats 110, Lecture 30, Chi-Square
+Stats 110, Lecture 30, Student-t
+Stats 110, Lecture 30, Multivariate Normal
+
+Stats 110, Lecture 31, Markov chains
+Stats 110, Lecture 31, transition matrix
+Stats 110, Lecture 31, stationary distribution
+
+Stats 110, Lecture 32, Markov chains (cont.)
+Stats 110, Lecture 32, irreducibility
+Stats 110, Lecture 32, reversibility
+Stats 110, Lecture 32, random walk on an undirected network
+
+Stats 110, Lecture 33, Markov chains (cont.)
+Stats 110, Lecture 33, Google PageRank as a Markov chain
+
+Stats 110, Lecture 34, a look ahead
+
+-----------------------------------------------------------------------------------------
+https://www.udacity.com/course/viewer#!/c-st095
+
+Statistics Udacity, Lecture 1, Introduction
+Statistics Udacity, Lecture 2, Visualizing Data
+Statistics Udacity, Lecture 3, Central Tendency
+Statistics Udacity, Lecture 4, Variability
+Statistics Udacity, Lecture 5, Standardizing
+Statistics Udacity, Lecture 6, Normal Distribution
+Statistics Udacity, Lecture 7, Sampling Distribution
+Statistics Udacity, Lecture 8, Estimation
+Statistics Udacity, Lecture 9, Hypothesis Testing
+Statistics Udacity, Lecture 10, t-Tests
+Statistics Udacity, Lecture 11, t-Tests
+Statistics Udacity, Lecture 12, One-way ANOVA
+Statistics Udacity, Lecture 13, ANOVA (cont.)
+Statistics Udacity, Lecture 14, Correlation
+Statistics Udacity, Lecture 15, Regression
+Statistics Udacity, Lecture 16, Chi-Squared tests
+
+-----------------------------------------------------------------------------------------
+https://class.coursera.org/db/lecture
+
+Stanford Databases, Introduction, Introduction
+
+Stanford Databases, Relational Databases, Model
+Stanford Databases, Relational Databases, Querying
+Stanford Databases, Relational Databases, UML Language
+
+Stanford Databases, Relational Algebra, Select
+Stanford Databases, Relational Algebra, Project
+Stanford Databases, Relational Algebra, Join
+Stanford Databases, Relational Algebra, Set Operators
+Stanford Databases, Relational Algebra, Rename
+Stanford Databases, Relational Algebra, Notation
+
+Stanford Databases, XML Data, Introduction
+Stanford Databases, XML Data, DTDs
+Stanford Databases, XML Data, IDs
+Stanford Databases, XML Data, IDREFs
+Stanford Databases, XML Data, XML Schema
+Stanford Databases, XML Data, Querying
+
+Stanford Databases, JSON Data, Introduction
+
+Stanford Databases, SQL, Introduction
+Stanford Databases, SQL, Select
+Stanford Databases, SQL, Set Operators
+Stanford Databases, SQL, Where
+Stanford Databases, SQL, From
+Stanford Databases, SQL, Joins
+Stanford Databases, SQL, Aggregation
+Stanford Databases, SQL, NULL
+Stanford Databases, SQL, Data modification statements
+Stanford Databases, SQL, Indexes
+Stanford Databases, SQL, Constraints
+Stanford Databases, SQL, Triggers
+Stanford Databases, SQL, Transactions
+Stanford Databases, SQL, Isolations
+Stanford Databases, SQL, Views
+Stanford Databases, SQL, Authorisation
+Stanford Databases, SQL, Recursion
+Stanford Databases, SQL, OLAP
+
+Stanford Databases, NoSQL, Motivation
+
+-----------------------------------------------------------------------------------------
+https://class.coursera.org/nlangp-001/lecture
+
+NLP, Introduction
+
+NLP, The Language Modeling Problem, Markov Processes
+NLP, The Language Modeling Problem, Trigram Language Model
+NLP, The Language Modeling Problem, Perplexity
+
+NLP, Parameter Estimation in Language Models, Linear Interpolation
+NLP, Parameter Estimation in Language Models, Dicounting Methods
+
+NLP, Tagging Problems and Hidden Markov Models, Tagging Problem
+NLP, Tagging Problems and Hidden Markov Models, Generative Models for Supervised Learning
+NLP, Tagging Problems and Hidden Markov Models, Hidden Markov Model (HMM)
+NLP, Tagging Problems and Hidden Markov Models, Parameter Estimation in HMM
+NLP, Tagging Problems and Hidden Markov Models, Viterbi Algorithm
+
+NLP, Parsing and Context-Free Grammars, Parsing Problem
+NLP, Parsing and Context-Free Grammars, Context-Free Grammar
+NLP, Parsing and Context-Free Grammars, A Simple Grammar for English
+
+NLP, Probabilistic Context-Free Grammars (PCFGs), Basics of PCFGs
+NLP, Probabilistic Context-Free Grammars (PCFGs), CKY Parsing Algorithm
+NLP, Probabilistic Context-Free Grammars (PCFGs), Weaknesses of PCFGs
+
+NLP, Lexicalized PCFGs, Lexicalization of a Treebank
+NLP, Lexicalized PCFGs, Parameter Estimation in Lexicalised PCFGs
+NLP, Lexicalized PCFGs, Evaluation of Lexicalised PCFGs
+
+

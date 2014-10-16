@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+html{
+	-webkit-font-smoothing: antialiased;
+}
+
+rect {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;	
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+.node {
+  font: 10px sans-serif;
+}
+.new_link, .stat_link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+  opacity: 0.75;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  opacity: 0.25;
+  stroke-width: 1.5px;
+}
+
+.stat_link {
+  stroke: green;
+}
+
+text{
+	fill: WhiteSmoke;
+	stroke: WhiteSmoke;
+	shape-rendering: crispEdges;
+}
+
+.inner_text {
+  opacity: 0.5;
+  stroke: lightblue;
+}
+
+</style>
+
+<head>
+    <title></title>
+</head>
+<!-- <body bgcolor="rgb(112,128,144)"> -->
+<body bgcolor="Black">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="../libs/jquery-1.10.1.js"></script>
+<script src="../libs/FileSaver2.js"></script>
+<!-- <script type="text/javascript" src="../static_hierarch.js"></script> -->
+<script type="text/javascript" src="../dynamic_hierarch.js"></script>
+
+<div id="vis"></div>
+
+
+</body>
+</html>
