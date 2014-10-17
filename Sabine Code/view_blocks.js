@@ -34,6 +34,7 @@ var svg_plot = d3.select("#area1")
         height: height + margin.top + margin.bottom
       })
     .append("g")
+      .attr("class", "mainG")
       .attr({
         transform: "translate(" + margin.left + "," + margin.top + ")"
       });
@@ -90,7 +91,7 @@ function fillCourses() {
           .attr('width', 350)
           .attr('height', 500)
           .append("xhtml:body")
-          .html('<div style="width: 400px; font-size: 30; color: white; display:none"></div>');
+          .html('<div style="width: 400px; font-size: 30; color: white; display:none, visibility:hidden"></div>');
 
   //Create the x and y axes
   x.domain([dataLoader.minDate(), dataLoader.maxDate()]);
@@ -270,12 +271,22 @@ function fillCourses() {
   rectsBucket.push(d3.select("#bucket9").selectAll("rect")[0].length);
   rectsBucket.push(d3.select("#bucket10").selectAll("rect")[0].length);
 
-  var time_funcs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+  var time_funcs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
       timer = 0;
-  var delays = [3000, 2000, 4000, 4000, 4000, 2000, 2000, 3000, 3000]
+  var delays = [3000, 2000, 4000, 4000, 4000, 2000, 2000, 3000, 3000, 1000] //Change the opacity of the last circle
 
   function callFuncs() {
-    transitions(time_funcs[timer++], captions, rectsBucket);
+    if(time_funcs[timer] == "11"){
+      if(!d3.select(".circle10").empty()) {
+        d3.select(".circle10").transition().duration(400).delay(1000).style("opacity", 0.3); //Change the opacity of the last circle
+        enableHover(captions);
+        timer++;
+      }
+    }
+    else{
+      var t = time_funcs[timer++];
+      transitions(t, captions, rectsBucket);
+    }
     if (timer < time_funcs.length) setTimeout(callFuncs, delays[timer-1]);
   }
   //Launch the function after 0.5s
@@ -301,32 +312,39 @@ function fillCourses() {
     .style("text-anchor", "end")
     .text(function(d) { return d; });
 
-    //Hovering
-    d3.selectAll("rect")
-      .on("mouseover", function(){
-        //This checks the class of the caption to disallow hovering over the rects before the storytelling piece is over
-        if(d3.select("#caption").classed("10")){
-          var buck = this.parentNode.parentNode.id;
-          //Note buck_num = 0 actually corresponds to 10th bucket
-          var buck_num = buck[buck.length-1];
-          if(buck_num == 0){
-            $("#caption").html(captions[9]);
-          }
-          else{
-            $("#caption").html(captions[buck_num-1]);
-          }
-        }
-      })
 };
 
+function enableHover(captions){
+  //Hovering
+  console.log(d3.selectAll("circle"))
+  d3.select(".mainG").selectAll("circle")
+    .on("mouseover", function(d){
+      //Increase the opacity of the circle when hovered over
+      d3.select(this).style("opacity", 0.8);
+      //Bring the correct caption to show
+      var buck = d3.select(this).attr("class");
+      var buck_num = buck[buck.length-1];
+      if(buck_num == 0){ //Note buck_num = 0 actually corresponds to 10th bucket
+        $("#caption").html(captions[9]);
+      }
+      else{
+        $("#caption").html(captions[buck_num-1]);
+      }
+    })
+    .on("mouseout", function(d){
+      d3.select(this).style("opacity", 0.3);
+    })
+}
+
 function transitions(bucket_number, captions, rectsBucket){
-  
+  var circleNum = bucket_number - 1;
+
   // First transition the bars
   d3.selectAll("g").selectAll("#bucket" + bucket_number + " rect")
     .transition()
-    .duration(50)
+    .duration(100)
     .delay(function(d, i){
-      return x(d.date) * 10 + i * 10;
+      return x(d.date) * 30 + i * 30;
     })
       .style('opacity', 1)
       .attr("class", "shown")
@@ -334,11 +352,36 @@ function transitions(bucket_number, captions, rectsBucket){
         var totalHours = parseInt(d3.select(".header .col-md-1 h1 small").text()) + 1;
         d3.select(".header .col-md-1 h1 small").text(totalHours);
         if(i == 0){
+          //If any circles exist already, reduce their opacity to bring in focus the new circle
+          d3.select(".circle" + circleNum).transition().duration(400).style("opacity", 0.3);
+          //Bring up the story
           $("#caption").html(captions[bucket_number - 1]).attr("class", bucket_number).hide();
         }
         if(i == rectsBucket[bucket_number - 1] - 2){
+          //Get attributes of the last rect over which the circle will be positioned
+          var xPos = parseInt(d3.select(this).attr("x"));
+          var yPos = parseInt(d3.select(this).attr("y"));
+          var h = parseInt(d3.select(this).attr("height"));
+          var w = parseInt(d3.select(this).attr("width"));
+          var circle = d3.select(".mainG")
+                        .append("circle")
+                        .attr("class", "circle" + bucket_number)
+                        .attr("cx", xPos + w/2)
+                        .attr("cy", yPos - h)
+                        .attr("r", 25)
+                        .style("fill", "purple")
+                        .style("opacity", 0);
+          circle.transition()
+            .ease("linear")
+            .duration(1000)
+            .style("opacity", 0.8);
+
           // Then transition the relevant text
-          $("#caption").fadeIn();
+          d3.select("#caption").transition()
+              .ease("linear")
+              .duration(1000)
+              .style("display", "inline")
+              .style("visibility", "visible");
         }
       })
 }
