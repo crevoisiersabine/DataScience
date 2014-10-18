@@ -277,8 +277,10 @@ function firstView() {
 
   var time_funcs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
       timer = 0;
-  var delays = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] //for ease of testing so happens quickly
-  // var delays = [3000, 2000, 4000, 4000, 4000, 2000, 2000, 3000, 3000, 1000] //Change the opacity of the last circle
+  // var delays = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] //for ease of testing so happens quickly
+  var delays = [3000, 2000, 4000, 4000, 4000, 2000, 2000, 3000, 3000, 1000] //Change the opacity of the last circle
+  //Check if FF button has been clicked, if so, stop all transitions
+  var FFclicked;
 
   function callFuncs() {
     if(time_funcs[timer] == "11"){
@@ -293,7 +295,9 @@ function firstView() {
       var t = time_funcs[timer++];
       transitions(t, captions, rectsBucket);
     }
-    if (timer < time_funcs.length) setTimeout(callFuncs, delays[timer-1]);
+    if (timer < time_funcs.length){
+      FFclicked = setTimeout(callFuncs, delays[timer-1]);
+    }
   }
   //Launch the function after 0.5s
   setTimeout(callFuncs, 0);
@@ -327,6 +331,28 @@ function firstView() {
   arrowImg.append("path").attr("d", "M50.021,15.959c-18.779,0.002-34.001,15.224-34.001,34c0,18.779,15.221,34.002,34.001,34.001   c18.776,0,33.998-15.222,33.999-34.002C84.021,31.181,68.798,15.961,50.021,15.959z M47.684,72.107   c-0.044-0.033-0.089-0.064-0.132-0.102c-0.078-0.064-0.155-0.135-0.231-0.212c-0.003-0.002-0.006-0.006-0.008-0.008L30.324,54.798   c-1.495-1.495-1.495-3.915,0-5.411c1.493-1.493,3.915-1.493,5.408,0L46.195,59.85l-0.001-29.015   c0.001-2.113,1.714-3.826,3.826-3.826c2.111,0,3.824,1.713,3.824,3.826v29.016l10.463-10.462c1.492-1.495,3.916-1.495,5.411,0   c1.491,1.494,1.491,3.914,0,5.407L52.726,71.788c-0.081,0.083-0.16,0.154-0.243,0.221c-0.033,0.03-0.07,0.058-0.104,0.086   c-0.027,0.021-0.058,0.045-0.088,0.062c-0.634,0.472-1.416,0.752-2.269,0.754c-0.856-0.002-1.639-0.282-2.276-0.754   C47.724,72.142,47.705,72.123,47.684,72.107z");
   arrowImg.attr("transform", function(d, i) { return "translate("+ (1000 - margin.left - margin.right)/2 + ", 0)"; });
   arrowImg.attr("opacity", 0);
+
+  var arrowFastForward = svg_legend.append("g").attr("class", "FF");
+  arrowFastForward.append("path").attr("d", "M53.646,62.319l6.518-6.518H25.801C22.593,55.801,20,53.208,20,50  c0-3.208,2.593-5.815,5.801-5.815h34.363l-6.518-6.503c-2.271-2.271-2.271-5.947,0-8.217c2.271-2.271,5.946-2.271,8.217,0  l16.435,16.435c2.27,2.255,2.27,5.947,0,8.203L61.863,70.536c-2.271,2.27-5.947,2.27-8.217,0  C51.375,68.266,51.375,64.589,53.646,62.319z");
+  arrowFastForward.attr("transform", function(d, i) { return "translate(20, 200)"; });
+
+  //When click on the fast forward arrow
+  svg_legend.select(".FF").on("click", function(){
+    //End transitions
+    var allElem = d3.selectAll("*")
+      .transition() 
+      .duration(0)
+      .each('end', function(d, i) {
+        if(i == 1129) {
+          //Update the total hours to the correct number - at this point to avoid discrepancies due to transitions not yet finished
+          d3.select(".header .col-md-1 h1 small").text("673");
+        }
+    });
+    clearTimeout(FFclicked);
+    //Finish the plot
+    runTillEnd(captions, rectsBucket);
+  })
+
 };
 
 function showNext(arrowImg){
@@ -353,7 +379,7 @@ function enableHover(captions){
     .on("mouseout", function(d){
       d3.select(this).style("opacity", 0.3);
     })
-  var arrowClick = d3.select(".arrowDOWN").select("path");
+  var arrowClick = d3.select(".arrowDOWN").attr("opacity", 1);
   arrowClick.on("click", function(d){
     //Load the data again for another view
     secondView();
@@ -366,11 +392,11 @@ function transitions(bucket_number, captions, rectsBucket){
   // First transition the bars
   d3.selectAll("g").selectAll("#bucket" + bucket_number + " rect")
     .transition()
-    // .duration(100)
-    .duration(0) //for ease of testing so happens quickly
-    // .delay(function(d, i){
-      // return x(d.date) * 30 + i * 30;
-    // })
+    .duration(100)
+    // .duration(0) //for ease of testing so happens quickly
+    .delay(function(d, i){
+      return x(d.date) * 30 + i * 30;
+    })
       .style('opacity', 1)
       .attr("class", "shown")
       .each('end', function(d, i) {
@@ -398,22 +424,57 @@ function transitions(bucket_number, captions, rectsBucket){
                         .style("opacity", 0);
           circle.transition()
             .ease("linear")
-            .duration(0) //for ease of testing so happens quickly
-            // .duration(1000) 
+            .duration(1000) 
             .style("opacity", 0.8);
 
           // Then transition the relevant text
           d3.select("#caption").transition()
               .ease("linear")
-              .duration(0) //for ease of testing so happens quickly
-              // .duration(1000)
+              .duration(1000)
               .style("display", "inline")
               .style("visibility", "visible");
         }
       })
 }
 
+function runTillEnd(captions, rectsBucket){
+  //Remove all circles
+  d3.selectAll("circle").remove();
+
+  for(bucket_number = 1; bucket_number < 11; bucket_number++){
+    // First show the the bars
+    var rectList = d3.selectAll("g").selectAll("#bucket" + bucket_number + "").selectAll("rect");
+    rectList.style('opacity', 1)
+           .attr("class", "shown");
+    //Show the circles
+    // console.log(rectsBucket)
+    var xCoord = rectList[0][rectList[0].length - 2].x.animVal.value; //animVal allows access to coordinates somehow...there must be a better way, I don't know at this stage
+    var yCoord = rectList[0][rectList[0].length - 2].y.animVal.value;
+    var h = rectList[0][rectList[0].length - 2].height.animVal.value;
+    var w = rectList[0][rectList[0].length - 2].width.animVal.value;
+    d3.select(".mainG")
+      .append("circle")
+      .attr("class", "circle" + bucket_number)
+      .attr("cx", xCoord + w/2)
+      .attr("cy", yCoord - h)
+      .attr("r", 25)
+      .style("fill", "purple")
+      .style("opacity", 0.3);
+  }
+  // Then make the caption visible
+  d3.select("#caption")
+    .style("display", "inline")
+    .style("visibility", "visible").text("");
+
+  //Enable hovering once everything is loaded
+  enableHover(captions);
+}
+
 function secondView(){
+  // Make the caption invisible
+  d3.select("#caption")
+    .style("visibility", "hidden");
+  //Make the axis text invisible
   d3.selectAll(".axis").selectAll("text").style("opacity", 0);
   d3.selectAll("svg").transition().duration(1000).ease("cubic")
     .attr("height", 100)
@@ -450,4 +511,3 @@ function secondView(){
     firstView();
   })
 }
-
