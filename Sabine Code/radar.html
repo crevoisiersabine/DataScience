@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="RadarChart.js"></script>
+    <style>
+
+      html {
+        -webkit-font-smoothing: antialiased; /*To remove blurry text*/
+      }
+
+      #chart {
+        position: absolute;
+        top: 50px;
+        left: 100px;
+      }
+
+      .axis text,
+      .legend text{
+          font-family: sans-serif;
+          font-size: 15px;
+          fill: WhiteSmoke;
+          stroke: WhiteSmoke;
+          shape-rendering: crispEdges;
+      }
+
+    </style>
+
+</head>
+<body bgcolor="Black">
+  <div id="body">
+  <div id="chart"></div>
+  </div>
+
+  <script src = "radar.js"></script>
+
+</body>
+</html>
