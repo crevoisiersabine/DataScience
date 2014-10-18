@@ -1,11 +1,11 @@
-var diameter = 960;
+var diameter = 900;
 
 var margin = {top: 20, right: 120, bottom: 20, left: 120},
-    width = diameter,
+    width = diameter*(3/4),
     height = diameter;
     
 var i = 0,
-    duration = 500,
+    duration = 200,
     root;
 
 var tree = d3.layout.tree()
@@ -15,22 +15,31 @@ var tree = d3.layout.tree()
 var diagonal = d3.svg.diagonal.radial()
     .projection(function(d) { return d.depth != 2 ?[d.y, d.x / 180 * Math.PI] : [d.y, d.x / 180 * Math.PI]; });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#area1").append("svg")
     .attr("width", width )
-    .attr("height", height )
+    .attr("height", height)
   .append("g")
-    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+    .attr("transform", "translate(" + diameter*(5/16) + "," + diameter*(3/8) + ")");
+    // .on("mouseover", mouseover)
+    // .on("mousemove", mousemove)
+    // .on("mouseout", mouseout);
 
-    svg.append("rect")
-    .attr("x", diameter/2 - 120)
-    .attr("y", -diameter/4)
-    .attr("width", 60)
-    .attr("height", 20);
+var div = d3.select("panel-body");
+
+//     .attr("class", "tooltip")
+//     .append("h4").text("Detailed Tooltip");
+    // .attr("transform", "translate(" + diameter*(1/4) + "," + diameter*(1/4) + ")");            
+    // .style("opacity", 0);
+
+    // svg.append("rect")
+    // .attr("x", diameter/2 - 120)
+    // .attr("y", -diameter/4)
+    // .attr("width", 60)
+    // .attr("height", 20);
 
 //-----------------------------------------------------------------------------------------------------------
 
 d3.csv("course_hierarch.csv", function(d) {
-    stat_array = [2, 76, 153];
     data ={ "name": "", "children": [] }
     Course_arr = data.children
     Course = "Course"
@@ -87,22 +96,27 @@ d3.csv("course_hierarch.csv", function(d) {
   d3.select(self.frameElement).style("height", "800px");
   // timeFunction();
 
-  var time_funcs = [collapse1, collapse2, expand1],
+  var time_funcs = [collapse1, collapse2, expand1, collapse1, collapse2, expand2],
       timer = 0;
-  var delays = [500, 2000, 1000]
+  var delays = [250, 1000, 5000, 250, 1000]
 
   function callFuncs() {
-    if(timer==0) {
+    if(timer==0 || timer==3) {
       d = svg.selectAll("g.node").data()[0];
+      console.log(timer);
+      console.log(d);
       collapse1(d);
       timer++;
     } else {
+      console.log(timer);
       time_funcs[timer++]();
+      console.log(timer);
     }
-      if (timer < time_funcs.length) setTimeout(callFuncs, delays[timer-1]);
+
+    if (timer < time_funcs.length) setTimeout(callFuncs, delays[timer-1]); //Pause timer before calling next func
   }
 
-  setTimeout(callFuncs, 5000); //delay start 1 sec.
+  setTimeout(callFuncs, 4000); //delay start 1 sec.
 
 });
 
@@ -131,7 +145,7 @@ d3.csv("course_hierarch.csv", function(d) {
   }
 //-----------------------------------------------------------------------------------------------------------
 
-function update(source, class_used) {
+function update(source, class_used, class_array) {
 
   // Default argument color
   // typeof b !== 'undefined'
@@ -143,7 +157,7 @@ function update(source, class_used) {
   // console.log(nodes)
 
   // This defines the y value, the different radii of the plot disks
-  nodes.forEach(function(d) { d.y = d.depth * 120; });
+  nodes.forEach(function(d) { d.y = d.depth * 100; });
 
       //----------------------------------------
   // UPDATE THE NODES NB: Uses Generate/Update Pattern
@@ -199,6 +213,11 @@ function update(source, class_used) {
       .attr("text-anchor", function(d) { return d.x < 180? "end" : "start"; })
       .attr("transform", function(d) { return d.x < 180 ? "translate(-20)" : "rotate(180)"; })    
 
+  d3.selectAll("circle")
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseout", mouseout);
+
       //----------------------------------------
   // EXIT NODES - TODO: appropriate transform
   var nodeExit = node.exit().transition()
@@ -231,8 +250,16 @@ function update(source, class_used) {
   // Transition links to their new position & change class to tell the stories
   link.transition()
       .duration(duration)
-      .attr("class", function(d) { return stat_array.indexOf(d.target.id)!=-1 ? class_used: this.className.baseVal})
       .attr("d", diagonal);
+
+  if (typeof class_used !== 'undefined') { //If the class argument has been passed
+      // variable is undefined
+    svg.selectAll("path").filter(function(d) { return class_array.indexOf(d.target.id)!=-1})
+    .attr("class", class_used);
+  }
+
+  // svg.selectAll("path")
+  //     .attr("class", function(d) { return stat_array.indexOf(d.target.id)!=-1 ? class_used: this.className.baseVal});
 
   // Transition exiting nodes to the parent's new position.
   link.exit().transition()
@@ -270,18 +297,23 @@ function click(d) {
 
 //--------------------------------Collapse Functions----------------------------------------------------------
 function collapse1(d) {
+  // console.log(d)
   if(d.depth == 0){
-    d.children.forEach(collapse1)
+    for(i=0; i<d.children.length; i++)
+      collapse1(d.children[i]);
+//     d.children.forEach(collapse1)
   } else {
-    d._children = d.children;
-    d.children = null;
+    if(!d._children){ //Only change storage id d._children set to null;
+      d._children = d.children;
+      d.children = null;
+    }
     update(d)
   }
 }
 
 function collapse2(){
   var d = svg.selectAll("g.node").data()[0];
-  console.log(d)
+  // console.log(d)
   d._children = d.children;
   d.children = null;
   update(d)
@@ -289,22 +321,78 @@ function collapse2(){
 
 //--------------------------------Expand Function----------------------------------------------------------
 
-
 function expand1(){
-  expan_arr = [2, 76, 153];
-  var d = svg.selectAll("g.node").data()[0];
-  // console.log(d);
-  // console.log(d._children);
-  d._children.forEach(function(data){
-  d.children = d._children;
-    if(expan_arr.indexOf(data.id) != -1){
-      console.log(data.id);
-      data.children = data._children
+  stat_array = [118, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 76];
+  expan_arr = [118, 153, 76]; //The array of nodes to expand
+  var d = svg.selectAll("g.node").data()[0]; //This select the data associated with the base node
+  // console.log(d)
+
+  d.children = d._children; //Expand the first level of the node graph
+  d._children = null;
+
+  d.children.forEach(function(dat){ //For all of the children of lowest level
+    // console.log(dat.children)
+    // console.log(dat._children)
+    if(expan_arr.indexOf(dat.id) != -1){ //Dictates the nodes within the first level to expand
+      // console.log(dat.id);
+      if(!dat.children){ //If children are null
+        dat.children = dat._children; //if data.children null then make equal to data._children
+        dat._children = null;
+      }
     }
   })
-  update(d, "stat_link");
+  update(d, "stat_link", stat_array);
 }
 
+function expand2(){
+  algo_array = [2, 28, 76, 103, 178, 24, 25, 26];
+  expan_arr = [2, 28, 76, 103, 178];
+  var d = svg.selectAll("g.node").data()[0];
+
+  d.children = d._children; //Expand the first level of the node graph
+  d._children = null;
+
+  d.children.forEach(function(dat){
+    // console.log(dat.children)
+    // console.log(dat._children)
+    if(expan_arr.indexOf(dat.id) != -1){
+      // console.log(dat.id);
+      if(!dat.children){
+        dat.children = dat._children;
+        dat._children = null;
+      }
+    }
+  })
+  update(d, "algorithm_link", algo_array);
+}
+
+
+function mouseover() {
+  // div.transition()
+      // .duration(500)
+    data = d3.select(this).data()[0]
+    console.log(data)
+    div.style("opacity", 1)
+        .html(data.name + "<br/>"  + data.id);
+}
+
+function mousemove() {
+  // div
+  //     .text(d3.event.pageX + ", " + d3.event.pageY)
+      // div.text(d3.select(this).data());
+
+
+      // enter().append("text")
+      //       .text(function(d) {return d})
+      // .style("left", (d3.event.pageX - 34) + "px")
+      // .style("top", (d3.event.pageY - 12) + "px");
+}
+
+function mouseout() {
+  // div.transition()
+      // .duration(500)
+    div.style("opacity", 1);
+}
 
 
 
