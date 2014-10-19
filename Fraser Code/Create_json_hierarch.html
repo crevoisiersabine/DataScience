@@ -20,11 +20,11 @@ rect {
 .node {
   font: 10px sans-serif;
 }
-.new_link, .stat_link {
+.new_link, .stat_link, .algorithm_link, .ml_link { /* All links have these properties */   
   fill: none;
   stroke: #ccc;
   stroke-width: 1.5px;
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 .link {
@@ -38,6 +38,14 @@ rect {
   stroke: green;
 }
 
+.algorithm_link {
+  stroke: red;
+}
+
+.ml_link {
+  stroke: blue;
+}
+
 text{
 	fill: WhiteSmoke;
 	stroke: WhiteSmoke;
@@ -49,23 +57,143 @@ text{
   stroke: lightblue;
 }
 
+div.tooltip {   
+  position: fixed;           
+/*  text-align: center;  */         
+  width: 200px;                  
+  height: 300px;                 
+/*  padding: 2px; */            
+/*  font: 12px sans-serif; */    
+  border: 0px;      
+/*  background-color: white;*/
+  top: 200px;
+  opacity: 0.9;
+/*  box-shadow: 0 0 20px #888888;
+  border-radius: 5px;  */        
+}
+
+.vertical-align { /*Align the buttons vertically*/    
+    display: flex;
+    align-items: center;
+}
+
+.panel { /*Remove padding from the panels*/  
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.panel-body {
+   padding: 1 !important;
+   margin: 1 !important;
+}
+
+.row-sm-padding { /*remove negative margin on the rows and the columns*/  
+  margin-left: 0;
+  margin-right: 0;
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+#Statistics {
+  /*border-color: green;*/
+  background: green;
+}
+#Algorithms {
+  /*border-color: red;*/
+  background: red;
+}
+#Machine {
+  /*border-color: blue;*/
+  background: blue;
+}
+
+.active {
+  opacity: 1;   /*this should take precedence over other CSS rules as declared last*/
+}
+
 </style>
 
 <head>
-    <title></title>
+    <title>Data Science CV</title>
+    <link rel="stylesheet" href = "//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/slate/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <!-- <body bgcolor="rgb(112,128,144)"> -->
-<body bgcolor="Black">
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
-<script type="text/javascript" src="../libs/jquery-1.10.1.js"></script>
-<script src="../libs/FileSaver2.js"></script>
-<!-- <script type="text/javascript" src="../static_hierarch.js"></script> -->
-<script type="text/javascript" src="../dynamic_hierarch.js"></script>
+<!-- <body bgcolor="Black"> -->
 
-<div id="vis"></div>
+
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="../" class="navbar-brand">Home</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Learning</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Acknowledgements</a></li>
+      </ul>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="vertical-container container-fluid">
+    <div class="row row-sm-padding"> <!-- Using new flex containers -->
+      <div class="col-md-7" id="area1"></div>
+      <div class="panel panel-default col-md-4">
+        <div class="panel-body horizontal-align">
+          <div class="col-md-12" id="area2">
+            <div class="buttons text-center">
+              <p><a href="#" class="btn btn-primary" id="Overview" style="width:85px">Overview</a>
+                 <a href="#" class="btn btn-default" id="Statistics" style="width:85px">Statistics</a>
+                 <a href="#" class="btn btn-default" id="Algorithms" style="width:85px">Algorithms</a>
+                 <a href="#" class="btn btn-default" id="Machine" style="width:85px">ML</a></p>
+            </div>
+            <div class="panel">
+              <div class="panel-body">
+                <table class="table table-hover">
+                  <thead>
+                    <h4 class="text-left">Summary</h4>
+                    <h5 class="text-left position_id">Statistics</h5>
+                  </thead>
+                  <tbody>
+                    <tr><td id="story_1">Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</td></tr>
+                    <tr><td id="story_2">Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</td></tr>
+                    <tr><td id="story_3">Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</td></tr>
+                </tbody>
+              </table>
+              </div>
+            </div><!-- /.close small panel -->
+          </div><!-- /.close column 12 -->
+        </div>
+      </div><!-- /.close panel 4-->
+
+    </div> <!-- /.row -->
+</div><!-- /.container-fluid -->
 
 
 </body>
+
+<script src="../libs/FileSaver2.js"></script>
+<script type="text/javascript" src="../dynamic_hierarch.js"></script>
+
 </html>
+
+
+
+
+
+
