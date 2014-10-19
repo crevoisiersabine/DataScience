@@ -19,12 +19,28 @@ var svg = d3.select("#area1").append("svg")
     .attr("width", width )
     .attr("height", height)
   .append("g")
-    .attr("transform", "translate(" + diameter*(5/16) + "," + diameter*(3/8) + ")");
+    .attr("transform", "translate(" + diameter*(3/8) + "," + diameter*(3/8) + ")");
     // .on("mouseover", mouseover)
     // .on("mousemove", mousemove)
     // .on("mouseout", mouseout);
 
-var div = d3.select("panel-body");
+var div = d3.select(".position_id");
+
+d3.selectAll("tr td")
+  .on("mouseover", function() {
+    var pref = prefix(d3.select(".position_id").html())
+    var id_sel = "#" + pref + event.target.id
+    d3.selectAll(id_sel).classed("active", true) })
+  .on("mouseout", function() {
+    var pref = prefix(d3.select(".position_id").html())
+    var id_sel = "#" + pref + event.target.id
+    d3.selectAll(id_sel).classed("active", false) });
+
+  function prefix(selected){
+    if(selected == "Algorithms") return "alg_link_"
+    else if(selected == "Machine Learning") return "ml_link_"
+    else return "stat_link_"
+  }
 
 //     .attr("class", "tooltip")
 //     .append("h4").text("Detailed Tooltip");
@@ -37,8 +53,7 @@ var div = d3.select("panel-body");
     // .attr("width", 60)
     // .attr("height", 20);
 
-//-----------------------------------------------------------------------------------------------------------
-
+//--------------------------------------------LOADING DATA FUNC----------------------------------------------------
 d3.csv("course_hierarch.csv", function(d) {
     data ={ "name": "", "children": [] }
     Course_arr = data.children
@@ -84,44 +99,16 @@ d3.csv("course_hierarch.csv", function(d) {
       // }
   })
 
-  // console.log(hours_course)
-  // console.log(hours_course.length)
-  // console.log(hours_chap)
-  // console.log(hours_chap.length)
+
   root = data;
   root.x0 = height / 2;
   root.y0 = 0;
 
   update(root); //Initial setup;
   d3.select(self.frameElement).style("height", "800px");
-  // timeFunction();
-
-  var time_funcs = [collapse1, collapse2, expand1, collapse1, collapse2, expand2],
-      timer = 0;
-  var delays = [250, 1000, 5000, 250, 1000]
-
-  function callFuncs() {
-    if(timer==0 || timer==3) {
-      d = svg.selectAll("g.node").data()[0];
-      console.log(timer);
-      console.log(d);
-      collapse1(d);
-      timer++;
-    } else {
-      console.log(timer);
-      time_funcs[timer++]();
-      console.log(timer);
-    }
-
-    if (timer < time_funcs.length) setTimeout(callFuncs, delays[timer-1]); //Pause timer before calling next func
-  }
-
-  setTimeout(callFuncs, 4000); //delay start 1 sec.
-
 });
 
-//-----------------------------------------------------------------------------------------------------------
-  //Check if child exists function
+//--------------------------------If Child Exists-----------------------------------------------------
   function child_exist(arr_check, data){
     if(arr_check.length == 0){
       return true //i.e. array is empty so push
@@ -134,7 +121,7 @@ d3.csv("course_hierarch.csv", function(d) {
     return true; //i.e. doesn't exist
   }
 
-//-----------------------------------------------------------------------------------------------------------
+//--------------------------------Find array element---------------------------------------------------------
   //Find correct array element
   function findByVal(arr_check, Value) {
       for (var i = 0; i < arr_check.length; i++) {
@@ -143,18 +130,13 @@ d3.csv("course_hierarch.csv", function(d) {
         }
       }
   }
-//-----------------------------------------------------------------------------------------------------------
+//--------------------------------Update tree func---------------------------------------------------------
 
 function update(source, class_used, class_array) {
-
-  // Default argument color
-  // typeof b !== 'undefined'
 
   // Compute the new tree layout.
   var nodes = tree.nodes(root),
       links = tree.links(nodes);
-
-  // console.log(nodes)
 
   // This defines the y value, the different radii of the plot disks
   nodes.forEach(function(d) { d.y = d.depth * 100; });
@@ -175,7 +157,6 @@ function update(source, class_used, class_array) {
   // ENTER NEW NODES - at the parent's previous position.
   var nodeEnter = node.enter().append("g")
       .attr("class", "node")
-      // .attr("transform", function(d) { console.log(d.id); return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
       .on("click", click);
 
   nodeEnter.append("circle")
@@ -186,8 +167,6 @@ function update(source, class_used, class_array) {
       .attr("x", 10)
       .attr("dy", ".35em")
       .attr("class", function(d) { return d.depth == 1 ? "inner_text" : "outer_text"; })
-      // .attr("text-anchor", function(d) { return d.x < 180? "start" : "end"; })
-      // .attr("transform", function(d) { return d.x < 180 ? "translate(0)" : "rotate(180)translate(-" + 20 + ")"; })
       .attr("transform", function(d) { return d.x < 180 ? "translate(0)" : "rotate(180)translate(-" + (d.name.length * 8.5)  + ")"; })
       .text(function(d) { return d.name; })
       .style("fill-opacity", 1e-6);
@@ -207,7 +186,6 @@ function update(source, class_used, class_array) {
       .style("fill-opacity", 1)
       .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
       .attr("transform", function(d) { return d.x < 180 ? "translate(0)" : "rotate(180)translate(-" + 20 + ")"; })
-      // .attr("transform", function(d) { return d.x < 180 ? "translate(0)" : "rotate(180)translate(-" + 20 + ")"; });
 
   nodeUpdate.select(".inner_text")
       .attr("text-anchor", function(d) { return d.x < 180? "end" : "start"; })
@@ -222,7 +200,6 @@ function update(source, class_used, class_array) {
   // EXIT NODES - TODO: appropriate transform
   var nodeExit = node.exit().transition()
       .duration(duration)
-      //.attr("transform", function(d) { return "diagonal(" + source.y + "," + source.x + ")"; })
       .remove();
 
   nodeExit.select("circle")
@@ -251,15 +228,11 @@ function update(source, class_used, class_array) {
   link.transition()
       .duration(duration)
       .attr("d", diagonal);
-
-  if (typeof class_used !== 'undefined') { //If the class argument has been passed
-      // variable is undefined
+  //Change the class of links
+  if (typeof class_used !== 'undefined') { //If the class argument has been passed variable is not undefined
     svg.selectAll("path").filter(function(d) { return class_array.indexOf(d.target.id)!=-1})
     .attr("class", class_used);
   }
-
-  // svg.selectAll("path")
-  //     .attr("class", function(d) { return stat_array.indexOf(d.target.id)!=-1 ? class_used: this.className.baseVal});
 
   // Transition exiting nodes to the parent's new position.
   link.exit().transition()
@@ -276,13 +249,10 @@ function update(source, class_used, class_array) {
     d.x0 = d.x;
     d.y0 = d.y;
   });
-
-
-  // console.log(svg.selectAll("g.node")[0]);
 }
 
-//-----------------------------------------------------------------------------------------------------------
-// Toggle children on click.
+//--------------------------CLICK FUNCTIONS--------------------------------------------------------------
+// Node toggle on click
 function click(d) {
   if (d.children) { //If children is not null, stores this in a temp variable and sets children to null
     d._children = d.children;
@@ -295,9 +265,36 @@ function click(d) {
   update(d);
 }
 
+
+function story_click() {
+  console.log("here");
+  check = d3.select(this)
+  console.log(check);
+  console.log(event.target.id); //This is the jquery way to get the id that triggered event
+  d = svg.selectAll("g.node").data()[0];
+  collapse1(d);
+  setTimeout(collapse2, 1000); //Delay between collapsing first and second row
+
+  if(event.target.id === 'Statistics') setTimeout(stat_expand, 2000); //Note due to javascript concurrency func called 1000ms after above
+  else if(event.target.id === 'Algorithms') setTimeout(algo_expand, 2000);
+  else if(event.target.id === 'Machine') setTimeout(ml_expand, 2000);
+  else setTimeout(expand_all, 2000);
+  //     data = d3.select(this).data()[0];
+  //   // div.style("opacity", 1)
+  //   //     .html(data.name + "<br/>"  + data.id);
+  //   div.html(data.name + "<br/>"  + data.id)
+
+  // var div = d3.select(".btn");
+
+  //   var nodeEnter = node.enter().append("g")
+  //     .attr("class", "node")
+  //     .on("click", click);
+}
+
+d3.selectAll(".btn").on("click", story_click);
+
 //--------------------------------Collapse Functions----------------------------------------------------------
 function collapse1(d) {
-  // console.log(d)
   if(d.depth == 0){
     for(i=0; i<d.children.length; i++)
       collapse1(d.children[i]);
@@ -313,28 +310,26 @@ function collapse1(d) {
 
 function collapse2(){
   var d = svg.selectAll("g.node").data()[0];
-  // console.log(d)
   d._children = d.children;
   d.children = null;
   update(d)
 }
 
-//--------------------------------Expand Function----------------------------------------------------------
+//--------------------------------Expand Functions----------------------------------------------------------
 
-function expand1(){
-  stat_array = [118, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 76];
+function stat_expand(){
+  story_1 = [118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140];
+  story_2 = [53, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169];
+  story_3 = [76];
+  stat_array = story_1.concat(story_2, story_3);
   expan_arr = [118, 153, 76]; //The array of nodes to expand
   var d = svg.selectAll("g.node").data()[0]; //This select the data associated with the base node
-  // console.log(d)
 
   d.children = d._children; //Expand the first level of the node graph
   d._children = null;
 
   d.children.forEach(function(dat){ //For all of the children of lowest level
-    // console.log(dat.children)
-    // console.log(dat._children)
     if(expan_arr.indexOf(dat.id) != -1){ //Dictates the nodes within the first level to expand
-      // console.log(dat.id);
       if(!dat.children){ //If children are null
         dat.children = dat._children; //if data.children null then make equal to data._children
         dat._children = null;
@@ -342,21 +337,28 @@ function expand1(){
     }
   })
   update(d, "stat_link", stat_array);
+      //Call timer function (specific arg passed)
+      // timer_collapse(0);
+      //Timer function calls a function to change the links
+
+  setTimeout(link_wrapper("stat_link", story_1, story_2, story_3, stat_sum), 500)
+  //Update the text in the summary to correspond to the links
 }
 
-function expand2(){
-  algo_array = [2, 28, 76, 103, 178, 24, 25, 26];
+function algo_expand(){
+  story_1 = [2, 28];
+  story_2 = [24, 25, 26];
+  story_3 = [76, 103, 178];
   expan_arr = [2, 28, 76, 103, 178];
+  algo_array = story_1.concat(story_2, story_3);
   var d = svg.selectAll("g.node").data()[0];
 
   d.children = d._children; //Expand the first level of the node graph
   d._children = null;
 
   d.children.forEach(function(dat){
-    // console.log(dat.children)
-    // console.log(dat._children)
+
     if(expan_arr.indexOf(dat.id) != -1){
-      // console.log(dat.id);
       if(!dat.children){
         dat.children = dat._children;
         dat._children = null;
@@ -364,16 +366,113 @@ function expand2(){
     }
   })
   update(d, "algorithm_link", algo_array);
+      //Call timer function (specific arg passed)
+      //Timer function calls a function to change the links
+  setTimeout(link_wrapper("algorithm_link", story_1, story_2, story_3, alg_sum), 500);
+      //Update the text in the summary to correspond to the links
 }
 
+function ml_expand(){
+  story_1 = [2, 28];
+  story_2 = [24, 25, 26];
+  story_3 = [76, 103, 178];
+  ml_array = story_1.concat(story_2, story_3);
+  expan_arr = [2, 28, 76, 103, 178];
+  var d = svg.selectAll("g.node").data()[0];
+
+  d.children = d._children; //Expand the first level of the node graph
+  d._children = null;
+
+  d.children.forEach(function(dat){
+
+    if(expan_arr.indexOf(dat.id) != -1){
+      if(!dat.children){
+        dat.children = dat._children;
+        dat._children = null;
+      }
+    }
+  })
+  update(d, "ml_link", ml_array);
+  setTimeout(link_wrapper("ml_link", story_1, story_2, story_3, ml_sum), 500)
+}
+
+function expand_all(){
+  var d = svg.selectAll("g.node").data()[0];
+
+  d.children = d._children; //Expand the first level of the node graph
+  d._children = null;
+
+  d.children.forEach(function(dat){
+    dat.children = dat._children;
+    dat._children = null;
+  })
+  update(d);
+}
+
+
+//--------------------------------Timer functions----------------------------------------------------------
+
+  //This is the wrapper function that creates the varies stories on a timer
+  function link_wrapper(name, story_1, story_2, story_3, summary_func){
+
+      console.log(name)
+      console.log(story_1)
+      console.log(story_2)
+      console.log(story_3)
+
+      var story_arrs = [story_1, story_2, story_3];
+      var story_strs = ["_story_1", "_story_2", "_story_3"];
+      var counter = 0;
+
+      function link_change(){
+          svg.selectAll("path").filter(function(d) { return story_arrs[counter].indexOf(d.target.id)!=-1})
+              .attr("id", name + story_strs[counter]) //Change id associated with links
+              .classed("active", true); //Make links active
+          counter++; //Update the counter
+
+          summary_func(counter); //This is the function which updates the summary text
+
+          if(counter!=0) {
+            svg.selectAll("#" + name + story_strs[counter - 2]).classed("active", false); //Make old links inactive
+          }
+          if(counter < story_arrs.length) setTimeout(link_change, 1000);
+      }
+      link_change(story_arrs, story_strs); // Call the function defined above
+  }
+
+//--------------------------------SUMMARY FUNCS----------------------------------------------------------
+
+function stat_sum(counter){
+  if(counter==1){
+    d3.select(".position_id").html("Statistics");
+  }
+  d3.select("#story_"+counter).html("trial" + "<br/>"  + "trial");
+}
+
+function alg_sum(counter){
+  if(counter==1){
+    d3.select(".position_id").html("Algorithms");
+  }
+  d3.select("#story_"+counter).html("what" + "<br/>"  + "what");
+}
+
+function ml_sum(counter){
+  if(counter==1){
+    d3.select(".position_id").html("Machine Learning");
+  }
+  d3.select("#story_"+counter).html("trial" + "<br/>"  + "trial");
+}
+
+
+//--------------------------------Expand Functions----------------------------------------------------------
 
 function mouseover() {
   // div.transition()
       // .duration(500)
-    data = d3.select(this).data()[0]
-    console.log(data)
-    div.style("opacity", 1)
-        .html(data.name + "<br/>"  + data.id);
+    data = d3.select(this).data()[0];
+    // div.style("opacity", 1)
+    //     .html(data.name + "<br/>"  + data.id);
+    div.html(data.name + "<br/>"  + data.id)
 }
 
 function mousemove() {

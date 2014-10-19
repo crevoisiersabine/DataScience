@@ -20,11 +20,11 @@ rect {
 .node {
   font: 10px sans-serif;
 }
-.new_link, .stat_link {
+.new_link, .stat_link, .algorithm_link, .ml_link { /* All links have these properties */   
   fill: none;
   stroke: #ccc;
   stroke-width: 1.5px;
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 .link {
@@ -40,6 +40,10 @@ rect {
 
 .algorithm_link {
   stroke: red;
+}
+
+.ml_link {
+  stroke: blue;
 }
 
 text{
@@ -68,11 +72,45 @@ div.tooltip {
   border-radius: 5px;  */        
 }
 
-.vertical-align {
+.vertical-align { /*Align the buttons vertically*/    
     display: flex;
     align-items: center;
 }
 
+.panel { /*Remove padding from the panels*/  
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.panel-body {
+   padding: 1 !important;
+   margin: 1 !important;
+}
+
+.row-sm-padding { /*remove negative margin on the rows and the columns*/  
+  margin-left: 0;
+  margin-right: 0;
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+#Statistics {
+  /*border-color: green;*/
+  background: green;
+}
+#Algorithms {
+  /*border-color: red;*/
+  background: red;
+}
+#Machine {
+  /*border-color: blue;*/
+  background: blue;
+}
+
+.active {
+  opacity: 1;   /*this should take precedence over other CSS rules as declared last*/
+}
 
 </style>
 
@@ -113,28 +151,33 @@ div.tooltip {
 </nav>
 
 <div class="vertical-container container-fluid">
-    <div class="row"> <!-- Using new flex containers -->
+    <div class="row row-sm-padding"> <!-- Using new flex containers -->
       <div class="col-md-7" id="area1"></div>
       <div class="panel panel-default col-md-4">
-        <div class="panel-body vertical-align">
-          <div class="col-md-3" id="area2">
-            <div class="btn-group-vertical">
-              <a href="#" class="btn btn-default" id="Statistics">Statistics</a>
-              <a href="#" class="btn btn-default" id="Algorithms">Algorithms</a>
-              <a href="#" class="btn btn-default" id="Machine Learning">Machine Learning</a>
+        <div class="panel-body horizontal-align">
+          <div class="col-md-12" id="area2">
+            <div class="buttons text-center">
+              <p><a href="#" class="btn btn-primary" id="Overview" style="width:85px">Overview</a>
+                 <a href="#" class="btn btn-default" id="Statistics" style="width:85px">Statistics</a>
+                 <a href="#" class="btn btn-default" id="Algorithms" style="width:85px">Algorithms</a>
+                 <a href="#" class="btn btn-default" id="Machine" style="width:85px">ML</a></p>
             </div>
-          </div><!-- /.close column 3 -->
-          <div class="col-md-9" id="area3">
-            <!-- <div class = "tooltip"> -->
-    <!--         <g height = "675"> -->
-            <h4 class="text-center">Summary</h4>
             <div class="panel">
               <div class="panel-body">
-                <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-                </p>
+                <table class="table table-hover">
+                  <thead>
+                    <h4 class="text-left">Summary</h4>
+                    <h5 class="text-left position_id">Statistics</h5>
+                  </thead>
+                  <tbody>
+                    <tr><td id="story_1">Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</td></tr>
+                    <tr><td id="story_2">Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</td></tr>
+                    <tr><td id="story_3">Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</td></tr>
+                </tbody>
+              </table>
               </div>
             </div><!-- /.close small panel -->
-          </div><!-- /.close column 9 -->
+          </div><!-- /.close column 12 -->
         </div>
       </div><!-- /.close panel 4-->
 
