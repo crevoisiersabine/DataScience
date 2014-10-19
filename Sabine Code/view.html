@@ -41,12 +41,70 @@
           stroke: white;
       }
 
+      .content {
+       position: relative;
+       bottom: 600px;
+       opacity: 1;
+      }
+      
+      .imageBackground {
+        /*this sets the background color to be the same as the rest of the page*/
+        /*background-color: #272b30 !important; */
+        background-color: transparent !important;
+      }
+
+      .brush .extent {
+        stroke: #fff;
+        fill-opacity: .35;
+        shape-rendering: crispEdges;
+      }
+
+      .area {
+        clip-path: url(#clip);
+      }
+
+      img {
+          z-index: -1;
+      }
+
     </style>
 </head>
 
 <body>
+
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="../" class="navbar-brand">Home</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Learning</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Acknowledgements</a></li>
+      </ul>
+    </div><!-- /.container-fluid -->
+  </nav>
+
 <div id="page">
-  <div class="header">
+  <div class="imageBackground">
+    <div class="row">
+      <div class="col-lg-6">
+      </div>
+      <div class="col-lg-6">
+          <img src="./Map/thailand_reduced_opacity.png" class="img-rounded">
+      </div>
+    </div>
+  </div>
+
+  <div class="header content">
     <div class="row">
       <div class="col-md-8">
         <h1 class="text-center">Data Science Online Masters</h1>
@@ -60,15 +118,15 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row content">
     <div class="col-md-12" id="UP"></div>
   </div>
 
-  <div class="row">
+  <div class="row content">
     <div class="col-md-12" id="area1"></div>
   </div>
 
-  <div class="row">
+  <div class="row content">
     <div class="col-md-12" id="DOWN"></div>
   </div>
 

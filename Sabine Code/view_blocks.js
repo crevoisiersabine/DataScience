@@ -447,7 +447,6 @@ function runTillEnd(captions, rectsBucket){
     rectList.style('opacity', 1)
            .attr("class", "shown");
     //Show the circles
-    // console.log(rectsBucket)
     var xCoord = rectList[0][rectList[0].length - 2].x.animVal.value; //animVal allows access to coordinates somehow...there must be a better way, I don't know at this stage
     var yCoord = rectList[0][rectList[0].length - 2].y.animVal.value;
     var h = rectList[0][rectList[0].length - 2].height.animVal.value;
@@ -470,16 +469,23 @@ function runTillEnd(captions, rectsBucket){
   enableHover(captions);
 }
 
+function LoadMyJs(scriptName) {
+  var imported = document.createElement('script');
+  imported.src = scriptName;
+  document.head.appendChild(imported);
+}
+
 function secondView(){
   // Make the caption invisible
   d3.select("#caption")
     .style("visibility", "hidden");
   //Make the axis text invisible
   d3.selectAll(".axis").selectAll("text").style("opacity", 0);
+  //Make the svg smaller to use as context for the next plot
   d3.selectAll("svg").transition().duration(1000).ease("cubic")
     .attr("height", 100)
-    .attr("width", 1100 - margin.left - margin.right);
-  d3.select("#caption").attr("visibility", "hidden");
+    .attr("width", 850 - margin.left - margin.right);
+  //Remove the svg with the legend
   d3.selectAll("svg").forEach(function(d){
     d.forEach(function(k, index){
       if(index == 1){
@@ -487,9 +493,18 @@ function secondView(){
       }
     })
   })
+  //Add a class to the g
+  d3.select("svg").select("g").attr("class", "context");
+
+  //Load bottom graph
+  LoadMyJs("area.js");
+
+  //Include focus and brush functionality
+  focusAndBrush();
+
   //Add an up arrow to go back to previous view
   var arrowImg2 = d3.select("#UP").append("svg")
-                    .attr("width", 1100 - margin.left - margin.right)
+                    .attr("width", 850 - margin.left - margin.right)
                     .attr("height", 100)
                     .append("g")
                     .attr({
@@ -507,7 +522,46 @@ function secondView(){
     d3.selectAll("svg").remove();
     //Reset the hour counter
     d3.select(".header .col-md-1 h1 small").text("0");
-    //Load the data again for another view
-    firstView();
+    //Load the data again for previous view
+    LoadMyJs("view_blocks.js");
   })
+}
+
+function focusAndBrush() {
+  var svg = d3.select("#area1").select("svg");
+
+  var brush = d3.svg.brush()
+    .x(x)
+    .on("brush", brushed);
+
+  var area = d3.svg.area()
+    .interpolate("basis")   
+    .x(function(d) { 
+    return x(d.date) + 1; }) //1 pixel shift to avoid ovverwriting the y-axis
+    .y0(height)
+    .y1(function(d) { return y(d.hour); });
+
+  d3.select(".context").append("g")
+      .attr("class", "x brush")
+      .call(brush)
+    .selectAll("rect")
+      .attr("y", -6)
+      .attr("height", 300 + 7);
+
+  //Keep a counter of how many times brushed
+  var count = 0;
+  function brushed() {
+    if(count == 0){ //only apprend defs once
+       d3.select("#area1").selectAll("svg")
+        .append("defs").append("clipPath")
+          .attr("id", "clip")
+        .append("rect")
+          .attr("width", width)
+          .attr("height", height);
+    }
+    count++;
+    x.domain(brush.empty() ? x.domain() : brush.extent());
+    d3.select(".focus").selectAll(".course").selectAll("path").attr("d", function(d) { return area(d.values); });
+    d3.select(".focus").select(".x.axis").call(xAxis);
+  }
 }
