@@ -29,8 +29,8 @@ var color = d3.scale.ordinal()
     // .range(["#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#17becf"]);
     // .range(["#ff7f0e", "#1f77b4", "#2ca02c", "#9467bd", "#aec7e8", "#d62728", "#e377c2", "#17becf"]);
     // .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5"]);
-    // .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
-    .range(["#e41a1c","#377eb8","#4daf4a","#984ea3","#ff7f00","#ffff33","#a65628","#f781bf"]);
+    .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
+    // .range(["#e41a1c","#377eb8","#4daf4a","#984ea3","#ff7f00","#ffff33","#a65628","#f781bf"]);
 
 var svg = d3.select("#area1").append("svg").attr({
     width: width + margin.left + margin.right,
@@ -40,6 +40,8 @@ var svg = d3.select("#area1").append("svg").attr({
 .attr({
     transform: "translate(" + margin.left + "," + margin.top + ")"
 });
+
+var grad = d3.select("#grad");
 
 // -------------------------------------------------------------------------------------------------------
 //DATA
@@ -66,7 +68,14 @@ d3.tsv("study_data.tsv", function(data) {
   svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
-    .call(xAxis);
+    .call(xAxis)
+      .selectAll("text")  
+          .style("text-anchor", "end")
+          .attr("dx", "-.8em")
+          .attr("dy", ".15em")
+          .attr("transform", function(d) {
+            return "rotate(-65)" 
+          });;
 
   svg.append("g")
     .attr("class", "y axis")
@@ -161,34 +170,211 @@ d3.tsv("study_data.tsv", function(data) {
     //Functions
     function Highlight(d) {
       //Gray out all courses except the one hovered over
-        svg.selectAll(".area")
-          .style("fill", "#c7c7c7");
-        //Recede other course legends in gray 
-        svg.selectAll(".block")
-           .style("fill", "#c7c7c7");
+      svg.selectAll(".area")
+        .style("fill", "#c7c7c7");
+      //Recede other course legends in gray 
+      svg.selectAll(".block")
+         .style("fill", "#c7c7c7");
 
-        //Sort the course nodes so that the hovered one appears at the front
-        svg.selectAll(".course").sort(function(a, b) {
-          if (a.name === d.name) {
-              return 1;
-          } else {
-              if (b.name === d.name) {
-                return -1;
-              } else {
-                return 0;
-              }
-          }
+      //Sort the course nodes so that the hovered one appears at the front
+      svg.selectAll(".course").sort(function(a, b) {
+        if (a.name === d.name) {
+            return 1;
+        } else {
+            if (b.name === d.name) {
+              return -1;
+            } else {
+              return 0;
+            }
+        }
       });
 
-        //Highlight in blue the area hovered over
-        svg.select(".area." + d.name + "")
-           .style("fill", "#17becf")
-           .style("opacity", 1);
+      if(d.name == "DB"){
+        d3.select("#gradSingle").selectAll("stop")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select(".SQL")
+          .style('fill', "url(#gradSingle)");
+        d3.select(".Databases")
+          .style('fill', "url(#gradSingle)");
+      }
+      if(d.name == "CS106B"){
+        d3.select("#gradSingle").selectAll("stop")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        //programming contribution
+        d3.select(".c")
+          .style('fill', "url(#gradSingle)");
+        //algorithms contribution
+        d3.select(".Algorithms")
+          .style('fill', "url(#gradSingle)");
+      }
+      if(d.name == "CS171"){
+        //javscript programming contribution
+        d3.select("#gradSingle").selectAll("stop")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select(".javascript")
+          .style('fill', "url(#gradSingle)");
 
-        //Highlight in blue the legend for the course hovered over
-        svg.select(".block." + d.name + "")
-           .style("fill", "#17becf")
-           .style("opacity", 1);
+        //design contribution
+        d3.select(".Design")
+          .style('fill', "url(#gradSingle)");
+      }
+      if(d.name == "NLP"){
+        //NLP contribution
+        d3.select("#gradSingle").selectAll("stop")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select(".Natural.Language.Processing")
+          .style('fill', "url(#gradSingle)");
+        
+        //Programming contribution
+        d3.select("#gradPython").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "87%";
+          })
+        d3.select("#gradPython").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "87%";
+          })
+        d3.select("#gradPython").selectAll(".inProgressEnd")
+          .attr("offset", function(d, i) {
+              return "100%";
+          })
+        d3.select("#gradPython").selectAll(".complete")
+          .attr("offset", function(d, i) {
+              return "100%";
+          })
+        d3.select(".python")
+          .style('fill', "url(#gradPython)");
+      }
+      if(d.name == "StatsUD"){
+        d3.select("#gradStats").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "86%";
+          })
+        d3.select("#gradStats").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "86%";
+          })
+        d3.select("#gradStats").selectAll(".inProgressEnd")
+          .attr("offset", function(d, i) {
+              return "100%";
+          })
+        d3.select("#gradStats").selectAll(".complete")
+          .attr("offset", function(d, i) {
+              return "100%";
+          })
+        d3.select(".Statistics")
+          .style('fill', "url(#gradStats)");
+      }
+      if(d.name == "CS109"){
+        //python programming contribution
+        d3.select("#gradPython").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select("#gradPython").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select("#gradPython").selectAll(".inProgressEnd")
+          .attr("offset", function(d, i) {
+              return "87%";
+          })
+        d3.select("#gradPython").selectAll(".complete")
+          .attr("offset", function(d, i) {
+              return "87%";
+          })
+        d3.select(".python")
+          .style('fill', "url(#gradPython)");
+
+        //stats contribution
+        d3.select("#gradStats").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "73%";
+          })
+        d3.select("#gradStats").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "73%";
+          })
+        d3.select("#gradStats").selectAll(".inProgressEnd")
+          .attr("offset", function(d, i) {
+              return "86%";
+          })
+        d3.select("#gradStats").selectAll(".complete")
+          .attr("offset", function(d, i) {
+              return "86%";
+          })
+        d3.select(".Statistics")
+          .style('fill', "url(#gradStats)");
+
+        //machine learning contribution
+        d3.select("#gradML").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select("#gradML").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+      }
+      if(d.name == "Stats110"){
+        d3.select("#gradStats").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "8%";
+          })
+        d3.select("#gradStats").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "8%";
+          })
+        d3.select("#gradStats").selectAll(".inProgressEnd")
+          .attr("offset", function(d, i) {
+              return "73%";
+          })
+        d3.select("#gradStats").selectAll(".complete")
+          .attr("offset", function(d, i) {
+              return "73%";
+          })
+        d3.select(".Statistics")
+          .style('fill', "url(#gradStats)");
+      }
+      if(d.name == "StatsMIT"){
+        d3.select("#gradStats").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select("#gradStats").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select("#gradStats").selectAll(".inProgressEnd")
+          .attr("offset", function(d, i) {
+              return "8%";
+          })
+        d3.select("#gradStats").selectAll(".complete")
+          .attr("offset", function(d, i) {
+              return "8%";
+          })
+        d3.select(".Statistics")
+          .style('fill', "url(#gradStats)");
+      }
+
+
+      //Highlight in blue the area hovered over
+      svg.select(".area." + d.name + "")
+         .style("fill", "#17becf")
+         .style("opacity", 1);
+
+      //Highlight in blue the legend for the course hovered over
+      svg.select(".block." + d.name + "")
+         .style("fill", "#17becf")
+         .style("opacity", 1);
     }
 
     function UnHighlight(d) {
@@ -204,6 +390,67 @@ d3.tsv("study_data.tsv", function(data) {
               }
           }
       });
+
+      if(d.name == "DB"){
+        d3.select(".SQL")
+          .style('fill', "#c7c7c7");
+        d3.select(".Databases")
+          .style('fill', "#c7c7c7");
+      }
+      if(d.name == "CS106B"){
+        //programming contribution
+        d3.select(".c")
+          .style('fill', "#c7c7c7");
+        //algorithms contribution
+        d3.select(".Algorithms")
+          .style('fill', "#c7c7c7");
+      }
+      if(d.name == "CS171"){
+        //javscript contributino
+        d3.select(".javascript")
+          .style('fill', "#c7c7c7");
+        //design contribution
+        d3.select(".Design")
+          .style('fill', "#c7c7c7");
+      }
+      if(d.name == "NLP"){
+        //Programming contribution
+        d3.select(".python")
+          .style('fill', "#c7c7c7");
+        //NLP contribution
+        d3.select(".Natural.Language.Processing")
+          .style('fill', "#c7c7c7");
+      }
+      if(d.name == "StatsUD"){
+        d3.select(".Statistics")
+          .style('fill', "#c7c7c7");
+      }
+      if(d.name == "CS109"){
+        //python programming contribution
+        d3.select(".python")
+          .style('fill', "#c7c7c7");
+        //stats contribution
+        d3.select(".Statistics")
+          .style('fill', "#c7c7c7");
+
+        //machine learning contribution
+        d3.select("#gradML").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "25%";
+          })
+        d3.select("#gradML").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "25%";
+          })
+      }
+      if(d.name == "Stats110"){
+        d3.select(".Statistics")
+          .style('fill', "#c7c7c7");
+      }
+      if(d.name == "StatsMIT"){
+        d3.select(".Statistics")
+          .style('fill', "#c7c7c7");
+      }
 
         //On mouseover, return to previous colours
         svg.selectAll(".area")

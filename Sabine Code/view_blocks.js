@@ -25,7 +25,8 @@ var yAxis = d3.svg.axis()
 var color = d3.scale.ordinal()
     // .range(["#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#17becf"]);
     // .range(["#ff7f0e", "#1f77b4", "#2ca02c", "#9467bd", "#aec7e8", "#d62728", "#e377c2", "#17becf"]);
-    .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5"]);
+    // .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5"]);
+    .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
 
 //Load the data
 dataLoader.load(firstView);
@@ -160,7 +161,9 @@ function firstView() {
               .attr("y", function(d) { return (y(number + j) - height/11 + 1); }) //(height/11) to get the rects to drop from the top of the hour
               .style("fill", color(d.name))
               .style('opacity', 0)
-              .attr("class", "hidden");
+              .attr("class", function(){
+                return "hidden " + String(d.name)
+              });
           }
           number += hour_range;
         }
@@ -377,6 +380,7 @@ function enableHover(captions){
       }
     })
     .on("mouseout", function(d){
+      $("#caption").html("");
       d3.select(this).style("opacity", 0.3);
     })
   var arrowClick = d3.select(".arrowDOWN").attr("opacity", 1);
@@ -398,7 +402,9 @@ function transitions(bucket_number, captions, rectsBucket){
       return x(d.date) * 30 + i * 30;
     })
       .style('opacity', 1)
-      .attr("class", "shown")
+      .attr("class", function(){
+        return "shown " + String(this.className.animVal.substr(this.className.animVal.indexOf(' ')+1));
+      })
       .each('end', function(d, i) {
         var totalHours = parseInt(d3.select(".header .col-md-1 h1 small").text()) + 1;
         d3.select(".header .col-md-1 h1 small").text(totalHours);
@@ -445,7 +451,9 @@ function runTillEnd(captions, rectsBucket){
     // First show the the bars
     var rectList = d3.selectAll("g").selectAll("#bucket" + bucket_number + "").selectAll("rect");
     rectList.style('opacity', 1)
-           .attr("class", "shown");
+           .attr("class", function(){
+              return "shown " + String(this.className.animVal.substr(this.className.animVal.indexOf(' ')+1));
+            });
     //Show the circles
     var xCoord = rectList[0][rectList[0].length - 2].x.animVal.value; //animVal allows access to coordinates somehow...there must be a better way, I don't know at this stage
     var yCoord = rectList[0][rectList[0].length - 2].y.animVal.value;
@@ -469,11 +477,47 @@ function runTillEnd(captions, rectsBucket){
   enableHover(captions);
 }
 
+// ----------------------------------------LOADING FILE FUNCTIONS-----------------------------------------------
+
 function LoadMyJs(scriptName) {
   var imported = document.createElement('script');
   imported.src = scriptName;
   document.head.appendChild(imported);
 }
+
+function LoadScriptsSync(_scripts, scripts) {
+
+  var x = 0;
+  var loopArray = function(_scripts, scripts) {
+    // call itself
+    loadScript(_scripts[x], scripts[x], function(){
+      // set x to next item
+      x++;
+      // any more items in array?
+      if(x < _scripts.length) {
+        loopArray(_scripts, scripts);   
+      }
+    }); 
+  }
+  loopArray(_scripts, scripts);      
+}
+
+function loadScript(src, script, callback){
+
+    script = document.createElement('script');
+    script.onerror = function() { 
+        // handling error when loading script
+        console.log('Error to handle');
+    }
+    script.onload = function(){
+        console.log(src + ' loaded ')
+        callback();
+    }
+    script.src = src;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+// ----------------------------------------END OF LOADING FILE FUNCTIONS---------------------------------------
 
 function secondView(){
   // Make the caption invisible
@@ -484,7 +528,7 @@ function secondView(){
   //Make the svg smaller to use as context for the next plot
   d3.selectAll("svg").transition().duration(1000).ease("cubic")
     .attr("height", 100)
-    .attr("width", 850 - margin.left - margin.right);
+    .attr("width", 800 - margin.left - margin.right);
   //Remove the svg with the legend
   d3.selectAll("svg").forEach(function(d){
     d.forEach(function(k, index){
@@ -496,8 +540,8 @@ function secondView(){
   //Add a class to the g
   d3.select("svg").select("g").attr("class", "context");
 
-  //Load bottom graph
-  LoadMyJs("area.js");
+  //Load bottom graphs
+  LoadScriptsSync(["area.js", "barChart.js"], [])
 
   //Include focus and brush functionality
   focusAndBrush();
@@ -529,6 +573,8 @@ function secondView(){
 
 function focusAndBrush() {
   var svg = d3.select("#area1").select("svg");
+  var x2 = x;
+  var width = 800 - margin.left - margin.right;
 
   var brush = d3.svg.brush()
     .x(x)
@@ -551,6 +597,66 @@ function focusAndBrush() {
   //Keep a counter of how many times brushed
   var count = 0;
   function brushed() {
+
+  //   var selection = d3.select(".context").selectAll("rect");
+  //   var counts = [0, 0, 0, 0, 0, 0, 0, 0];
+  //   var total = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  //   for(var i = 0; i < selection[0].length; i++){
+  //     var course = selection[0][i].className.animVal.substr(selection[0][i].className.animVal.indexOf(' ')+1);
+  //     var date = selection[0][i].parentNode.className.animVal;
+  //     var brushT1 = format(brush.extent()[0]);
+  //     var brushT2 = format(brush.extent()[1]);
+  //     brushT1 = d3.time.format("%d-%m-%Y").parse(brushT1);
+  //     brushT2 = d3.time.format("%m-%d-%Y").parse(brushT2);
+
+  //     date = d3.time.format("%a\ %b\ %d\ %Y\ %X").parse(date.substr(0, date.length - 15));
+  //     if(course != "extent" && course != "" && course != "background" && date < brushT1 || course != "extent" && course != "" && course != "background" && date > brushT2){
+  //       if(course == "CS106B"){
+  //        counts[0]++;
+  //       }
+  //       if(course == "DB"){
+  //         counts[1]++;
+  //       }
+  //       if(course == "NLP"){
+  //         counts[2]++;
+  //       }
+  //       if(course == "CS171"){
+  //         counts[3]++;
+  //       }
+  //       if(course == "Stats110"){
+  //         counts[4]++;
+  //       }
+  //       if(course == "StatsUD"){
+  //         counts[5]++;
+  //       }
+  //       if(course == "StatsMIT"){
+  //         counts[6]++;
+  //       }
+  //       if(course == "CS109"){
+  //         counts[7]++;
+  //       }
+  //     }
+
+  //     //Total count for python
+  //     total[0] = (0.86*counts[7] + 0.13*counts[2]) / 0.92;
+  //     console.log(String(total[0]))
+  //     var grad = d3.select("#grad");
+  //     grad.append("stop").attr("offset", String(total[0]) + "%").style("stop-color", "#17becf");
+  //     grad.append("stop").attr("offset", String(100 - total[0]) + "%").style("stop-color", "#c7c7c7");
+  //     d3.select(".python")
+  //       .style("fill", "none")
+  //       .style('fill', "url(#grad)");
+  //     //Total count JS
+
+  //     //Total R
+
+  //     //Total c++
+
+  //     //Total SQL
+
+
+  //   }
+
     if(count == 0){ //only apprend defs once
        d3.select("#area1").selectAll("svg")
         .append("defs").append("clipPath")
@@ -560,8 +666,16 @@ function focusAndBrush() {
           .attr("height", height);
     }
     count++;
-    x.domain(brush.empty() ? x.domain() : brush.extent());
+    x.domain(brush.empty() ? x2.domain() : brush.extent());
     d3.select(".focus").selectAll(".course").selectAll("path").attr("d", function(d) { return area(d.values); });
-    d3.select(".focus").select(".x.axis").call(xAxis);
+    d3.select(".focus").select(".x.axis").call(xAxis)
+      .selectAll("text")  
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", function(d) {
+          return "rotate(-65)" 
+        });;;
+
   }
 }

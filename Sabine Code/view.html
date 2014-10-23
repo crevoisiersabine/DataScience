@@ -19,6 +19,12 @@
         -webkit-font-smoothing: antialiased; /*To remove blurry text*/
       }
 
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+       
+      body{
+          font-family: 'Open Sans', sans-serif;
+      }
+
       h1, p {
         font-variant: small-caps !important;  
         text-rendering: auto;
@@ -33,7 +39,9 @@
       }
 
       .axis text,
-      .legend text {
+      .legend text,
+      .xaxis text, 
+      .yaxis text {
           font-family: sans-serif;
           font-variant: small-caps;
           font-size: 12px;
@@ -67,31 +75,88 @@
           z-index: -1;
       }
 
+      .xaxis line {
+        stroke: #fff;
+      }
+      .xaxis path {
+        display: none;
+      }
+
+      .yaxis path {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .xaxis .minor {
+        stroke-opacity: 0.5;
+      }
+
+      #navLeft, #navRight {
+        width: 50%;
+        float: left;
+        margin: 0 0 1em 0;
+        padding: 0;
+        background-color: #222;
+      }
+
+      #navLeft ul, #navRight ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; 
+      }
+
+      #navLeft li, #navRight li {
+        float: right;
+        display: inline;
+      }
+
+      #navLeft li {
+        float: left;
+        display: inline;
+      }
+
+      #navLeft li a, #navRight li a {
+        display: block;
+        padding: 8px 15px;
+        text-decoration: none;
+      }
+
+      a {
+        color: #eee;
+        font-variant: small-caps;
+      }
+
+      a:hover, a:active, a:focus {
+        color: #222;
+        background-color: #eee; 
+      }
+
+      .navContainer {
+        height: 100px;
+      }
+
     </style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="../" class="navbar-brand">Home</a>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Learning</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Acknowledgements</a></li>
-      </ul>
-    </div><!-- /.container-fluid -->
-  </nav>
+<div class="navContainer">
+  <div id="navLeft">
+    <ul>
+      <li><a href="#home">Data Science Online Master</a></li>
+      <li><a href="#news">Detailed Exploration</a></li>
+    </ul>
+  </div>
+  <div id="navRight">
+    <ul>
+      <!-- <li class="right"><a href="#about">About</a></li> -->
+      <li class="right"><a href="#contact">Contact Us</a></li>
+      <li><a href="#contact">Special Thanks</a></li>
+      <!-- <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="datajourney"></a></li> -->
+    </ul>
+  </div>
+</div>
 
 <div id="page">
   <div class="imageBackground">
@@ -133,4 +198,5 @@
 </body>
   <script src = "dataLoader.js"></script>
   <script src = "view_blocks.js"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </html>
