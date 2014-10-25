@@ -1,5 +1,5 @@
 var margin = { top: 100, right: 10, bottom: 50, left: 50 };
-var width = 1000 - margin.left - margin.right;
+var width = 900 - margin.left - margin.right;
 var height = 450 - margin.bottom - margin.top;
 var width_legend = 100;
 
@@ -28,10 +28,47 @@ var color = d3.scale.ordinal()
     // .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5"]);
     .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
 
-//Load the data
-dataLoader.load(firstView);
+var courses = [];
+var colorD =[];
 
-function firstView() {
+d3.tsv("study_data.tsv", function(err, data) {
+    colorD = d3.keys(data[0]).filter(function(key) { return key !== "Date"; });
+    color.domain(colorD);
+
+    var count = 0.0;
+    var course_dictionary = {}
+
+    //Populate the data that I will use from the file
+    data.forEach(function(d, i){
+        
+      //Parsing the date in the dataset
+      d.date = format.parse(d.Date);
+
+      count += 1;
+      var y0 = 0;
+      d.courses = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+      d.total = d.courses[d.courses.length - 1].y1;
+
+
+      if(course_dictionary[d.date] == undefined) {
+        course_dictionary[d.date] = [color.domain().map(function(name) { return {total: d.total, date: d.date, name: name, y0: y0, y1: y0 += +d[name]}; })];
+      }
+      else {
+        course_dictionary[d.date].push(color.domain().map(function(name) { return {total: d.total, date: d.date, name: name, y0: y0, y1: y0 += +d[name]}; }));
+      }
+    })
+
+    //Create the data structure
+    for(var key in course_dictionary){
+      for(var course in course_dictionary[key]){
+        courses.push(course_dictionary[key][course]);
+      }
+    }
+
+    minDate = d3.extent(data, function(d) { return d.date; })[0];
+    maxDate = d3.extent(data, function(d) { return d.date; })[1];
+    maxHour = d3.max(data, function(d) { return d.total; });
+
   var svg_plot = d3.select("#area1")
     .append("svg")
       .attr({
@@ -59,7 +96,55 @@ function firstView() {
       .attr({
         transform: "translate(0," + margin.top + ")"
       });
-  //Text to tell a story
+
+//----------------------------------------------------------Arrows----------------------------------------------------------------
+function createArrows(h){
+    var arrows = d3.selectAll("#area1")
+      .append("svg")
+      .attr({
+          width: 150,
+          height: h
+        })
+      .append("g").attr("id", "#arrows")
+        .attr({
+          transform: "translate(50, 0)"
+        });
+
+    var arrowreplay = arrows.append("g").attr("class", "RP")
+        .attr({
+          transform: "translate(0, 0)"
+        });
+    arrowreplay.append("path")
+      .attr("d", "M50,68.2c-8.6,0-15.6-7-15.6-15.6c0-3.6,1.3-7.2,3.6-10c0.6-0.7,1.6-0.8,2.3-0.2c0.7,0.6,0.8,1.6,0.2,2.3  c-1.8,2.2-2.9,5-2.9,7.9c0,6.8,5.6,12.4,12.4,12.4c6.8,0,12.4-5.6,12.4-12.4S56.8,40.2,50,40.2c-0.9,0-1.6-0.7-1.6-1.6  s0.7-1.6,1.6-1.6c8.6,0,15.6,7,15.6,15.6S58.6,68.2,50,68.2z")
+    arrowreplay.append("path").attr("d", "M54.1,46.1c-0.4,0-0.8-0.1-1.1-0.4l-6-5.5c-0.3-0.3-0.5-0.7-0.5-1.2c0-0.4,0.2-0.9,0.5-1.2l6-5.5c0.7-0.6,1.7-0.6,2.3,0.1  c0.6,0.7,0.6,1.7-0.1,2.3L50.5,39l4.7,4.3c0.7,0.6,0.7,1.6,0.1,2.3C54.9,45.9,54.5,46.1,54.1,46.1z")
+
+    var arrowFastForward = arrows.append("g").attr("class", "FF")
+        .attr({
+          transform: "translate(37, 0)"
+        });
+    arrowFastForward.append("path").attr("d", "M52.422,51.737c-0.354,0-0.709-0.125-0.995-0.377l-9.805-8.693c-0.62-0.55-0.677-1.498-0.127-2.118      c0.551-0.62,1.499-0.676,2.118-0.127l9.805,8.693c0.62,0.55,0.677,1.498,0.127,2.118C53.249,51.566,52.836,51.737,52.422,51.737      z")
+    arrowFastForward.append("path").attr("d", "M42.618,60.43c-0.414,0-0.827-0.17-1.123-0.505c-0.549-0.62-0.492-1.568,0.127-2.118l9.805-8.693      c0.621-0.549,1.568-0.492,2.118,0.127c0.549,0.62,0.492,1.568-0.127,2.118l-9.805,8.693      C43.327,60.306,42.972,60.43,42.618,60.43z")
+    arrowFastForward.append("path").attr("d", "M61.422,51.737c-0.354,0-0.709-0.125-0.995-0.377l-9.805-8.693c-0.62-0.55-0.677-1.498-0.127-2.118      c0.55-0.62,1.498-0.676,2.118-0.127l9.805,8.693c0.62,0.55,0.677,1.498,0.127,2.118C62.249,51.566,61.836,51.737,61.422,51.737z      ")
+    arrowFastForward.append("path").attr("d", "M51.618,60.43c-0.414,0-0.827-0.17-1.123-0.505c-0.549-0.62-0.492-1.568,0.127-2.118l9.805-8.693      c0.62-0.549,1.568-0.492,2.118,0.127c0.549,0.62,0.492,1.568-0.127,2.118l-9.805,8.693C52.327,60.306,51.972,60.43,51.618,60.43      z")
+    
+    //Create an arrow to navigate to the next bit of the story
+    var arrowDown = arrows.append("g").attr("class", "DOWN")
+        .attr({
+          transform: "translate(50, 70)"
+        });
+    arrowDown.append("path").attr("d", "M8.048,10.043c-2,0-2.589,2.014-1.457,3.143l8.098,8.235c0.746,0.746,1.956,0.785,2.7,0.037l8.1-8.154  c1.016-1.018,0.568-3.261-1.433-3.261C21.952,10.043,9.646,10.043,8.048,10.043z")
+    arrowDown.attr("opacity", 0);
+
+    //Create an arrow to navigate to the next bit of the story
+    var arrowUP = arrows.append("g").attr("class", "UP")
+        .attr({
+          transform: "translate(50, 0)"
+        });
+    arrowUP.append("path").attr("d", "M23.986,22c2,0,2.589-2.014,1.457-3.143l-8.098-8.235c-0.746-0.746-1.956-0.786-2.7-0.038l-8.099,8.155  C5.531,19.757,5.978,22,7.979,22C10.082,22,22.388,22,23.986,22z")
+    arrowUP.attr("opacity", 0);
+  }
+  createArrows(250);
+  //--------------------------------------------------------Text to tell the story-----------------------------------------------
   var captions = ["<b>Starting with the 5 courses:<br></b>\
                   <li>CS106B (c++)<br></li>\
                   <li>Natural Language Processing<br></li>\
@@ -85,8 +170,6 @@ function firstView() {
                   "Decide to study <b>statistical inference</b> to supplement Stats110.<br>",
                   "<b>Databases completed!</b>",
                   "Onwards with c++ towards completion..."] 
-  var courses = dataLoader.courses();
-  color.domain(dataLoader.colorD());
 
   //Create the labels
   svg_plot.append("g").append("foreignObject")
@@ -99,8 +182,8 @@ function firstView() {
           .html('<div style="width: 400px; font-size: 30; color: white; display:none, visibility:hidden"></div>');
 
   //Create the x and y axes
-  x.domain([dataLoader.minDate(), dataLoader.maxDate()]);
-  y.domain([0, dataLoader.maxHour() + 1]); //+1 to accomodate for rounding when worked 0,5h
+  x.domain([minDate, maxDate]);
+  y.domain([0, maxHour + 1]); //+1 to accomodate for rounding when worked 0,5h
   svg_plot.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
@@ -289,7 +372,7 @@ function firstView() {
     if(time_funcs[timer] == "11"){
       if(!d3.select(".circle10").empty()) {
         d3.select(".circle10").transition().duration(400).delay(1000).style("opacity", 0.3); //Change the opacity of the last circle
-        enableHover(captions);
+        enableHover(captions, createArrows);
         showNext(arrowImg);
         timer++;
       }
@@ -326,21 +409,8 @@ function firstView() {
     .style("text-anchor", "end")
     .text(function(d) { return d; });
 
-  //Create an arrow to navigate to the next bit of the story
-  var arrowImg = d3.select("#DOWN").append("svg")
-                    .attr("width", 1100 - margin.left - margin.right)
-                    .attr("height", 100)
-                    .append("g").attr("class", "arrowDOWN");
-  arrowImg.append("path").attr("d", "M50.021,15.959c-18.779,0.002-34.001,15.224-34.001,34c0,18.779,15.221,34.002,34.001,34.001   c18.776,0,33.998-15.222,33.999-34.002C84.021,31.181,68.798,15.961,50.021,15.959z M47.684,72.107   c-0.044-0.033-0.089-0.064-0.132-0.102c-0.078-0.064-0.155-0.135-0.231-0.212c-0.003-0.002-0.006-0.006-0.008-0.008L30.324,54.798   c-1.495-1.495-1.495-3.915,0-5.411c1.493-1.493,3.915-1.493,5.408,0L46.195,59.85l-0.001-29.015   c0.001-2.113,1.714-3.826,3.826-3.826c2.111,0,3.824,1.713,3.824,3.826v29.016l10.463-10.462c1.492-1.495,3.916-1.495,5.411,0   c1.491,1.494,1.491,3.914,0,5.407L52.726,71.788c-0.081,0.083-0.16,0.154-0.243,0.221c-0.033,0.03-0.07,0.058-0.104,0.086   c-0.027,0.021-0.058,0.045-0.088,0.062c-0.634,0.472-1.416,0.752-2.269,0.754c-0.856-0.002-1.639-0.282-2.276-0.754   C47.724,72.142,47.705,72.123,47.684,72.107z");
-  arrowImg.attr("transform", function(d, i) { return "translate("+ (1000 - margin.left - margin.right)/2 + ", 0)"; });
-  arrowImg.attr("opacity", 0);
-
-  var arrowFastForward = svg_legend.append("g").attr("class", "FF");
-  arrowFastForward.append("path").attr("d", "M53.646,62.319l6.518-6.518H25.801C22.593,55.801,20,53.208,20,50  c0-3.208,2.593-5.815,5.801-5.815h34.363l-6.518-6.503c-2.271-2.271-2.271-5.947,0-8.217c2.271-2.271,5.946-2.271,8.217,0  l16.435,16.435c2.27,2.255,2.27,5.947,0,8.203L61.863,70.536c-2.271,2.27-5.947,2.27-8.217,0  C51.375,68.266,51.375,64.589,53.646,62.319z");
-  arrowFastForward.attr("transform", function(d, i) { return "translate(20, 200)"; });
-
   //When click on the fast forward arrow
-  svg_legend.select(".FF").on("click", function(){
+  d3.select(".FF").on("click", function(){
     //End transitions
     var allElem = d3.selectAll("*")
       .transition() 
@@ -353,17 +423,60 @@ function firstView() {
     });
     clearTimeout(FFclicked);
     //Finish the plot
-    runTillEnd(captions, rectsBucket);
+    runTillEnd(captions, rectsBucket, createArrows);
   })
 
-};
+  // ---------------------------------------------------------------Page loading---------------------------------------------------------------
+  $(window).scroll(function(){
+    // if(parseFloat($(window).scrollTop()) >= 1350){
+    //   Reload();
+    // }
+    if(parseFloat($(window).scrollTop()) <= 1200){
+      //End transitions
+      var allElem = d3.selectAll("*")
+        .transition() 
+        .duration(0);
+
+      clearTimeout(FFclicked);
+      //Finish the plot
+      runTillEnd(captions, rectsBucket, createArrows);
+
+      //Reset the hour counter
+      d3.select(".header .col-md-1 h1 small").text("0");
+      //Remove current view
+      d3.selectAll("svg").remove();
+    }
+  })
+
+  d3.select(".RP").on("click", function(){
+    Reload();
+  })
+
+  function Reload(){
+    //End transitions
+    var allElem = d3.selectAll("*")
+      .transition() 
+      .duration(0);
+
+    clearTimeout(FFclicked);
+    //Finish the plot
+    runTillEnd(captions, rectsBucket, createArrows);
+
+    //Reset the hour counter
+    d3.select(".header .col-md-1 h1 small").text("0");
+    //Remove current view
+    d3.selectAll("svg").remove();
+    //Load the data again for previous view
+    LoadMyJs("view_blocks.js");
+  }
+});
 
 function showNext(arrowImg){
   //Show placement of arrow for continuing with the story
   arrowImg.transition().duration(400).attr("opacity", 1);
 }
 
-function enableHover(captions){
+function enableHover(captions, createArrows){
   //Hovering
   d3.select(".mainG").selectAll("circle")
     .on("mouseover", function(d){
@@ -383,10 +496,10 @@ function enableHover(captions){
       $("#caption").html("");
       d3.select(this).style("opacity", 0.3);
     })
-  var arrowClick = d3.select(".arrowDOWN").attr("opacity", 1);
-  arrowClick.on("click", function(d){
+  d3.select(".DOWN").attr("opacity", 1);
+  d3.select(".DOWN").on("click", function(d){
     //Load the data again for another view
-    secondView();
+    secondView(createArrows);
   })
 }
 
@@ -443,7 +556,7 @@ function transitions(bucket_number, captions, rectsBucket){
       })
 }
 
-function runTillEnd(captions, rectsBucket){
+function runTillEnd(captions, rectsBucket, createArrows){
   //Remove all circles
   d3.selectAll("circle").remove();
 
@@ -474,7 +587,7 @@ function runTillEnd(captions, rectsBucket){
     .style("visibility", "visible").text("");
 
   //Enable hovering once everything is loaded
-  enableHover(captions);
+  enableHover(captions, createArrows);
 }
 
 // ----------------------------------------LOADING FILE FUNCTIONS-----------------------------------------------
@@ -519,7 +632,7 @@ function loadScript(src, script, callback){
 
 // ----------------------------------------END OF LOADING FILE FUNCTIONS---------------------------------------
 
-function secondView(){
+function secondView(createArrows){
   // Make the caption invisible
   d3.select("#caption")
     .style("visibility", "hidden");
@@ -528,17 +641,20 @@ function secondView(){
   //Make the svg smaller to use as context for the next plot
   d3.selectAll("svg").transition().duration(1000).ease("cubic")
     .attr("height", 100)
-    .attr("width", 800 - margin.left - margin.right);
+    .attr("width", 750 - margin.left - margin.right);
   //Remove the svg with the legend
   d3.selectAll("svg").forEach(function(d){
     d.forEach(function(k, index){
-      if(index == 1){
+      if(index == 1 || index == 2){
         k.remove();
       }
     })
   })
   //Add a class to the g
   d3.select("svg").select("g").attr("class", "context");
+
+  //Reload the arrows
+  createArrows(100);
 
   //Load bottom graphs
   LoadScriptsSync(["area.js", "barChart.js"], [])
@@ -547,23 +663,15 @@ function secondView(){
   focusAndBrush();
 
   //Add an up arrow to go back to previous view
-  var arrowImg2 = d3.select("#UP").append("svg")
-                    .attr("width", 850 - margin.left - margin.right)
-                    .attr("height", 100)
-                    .append("g")
-                    .attr({
-                      transform: "translate(" + (1100 - margin.left - margin.right)/2 + ", 0)"
-                    })
-                    .attr("class", "arrowUP");
-  arrowImg2.append("path").attr("d", "M49.979,83.96c18.779-0.001,34.001-15.223,34.001-34c0-18.778-15.222-34-34.001-34c-18.776,0-33.998,15.223-33.999,34.001   C15.979,68.738,31.203,83.959,49.979,83.96z M52.316,27.812c0.044,0.033,0.088,0.065,0.131,0.102   c0.078,0.064,0.156,0.135,0.232,0.212c0.003,0.001,0.006,0.005,0.008,0.007l16.988,16.988c1.495,1.495,1.495,3.917,0,5.412   c-1.494,1.493-3.916,1.493-5.409,0L53.805,40.07v29.015c0,2.112-1.713,3.826-3.826,3.826c-2.112,0-3.825-1.714-3.825-3.826V40.07   L35.692,50.531c-1.493,1.495-3.916,1.495-5.411,0c-1.492-1.493-1.492-3.915,0-5.408l16.994-16.992   c0.081-0.082,0.16-0.154,0.243-0.22c0.033-0.03,0.069-0.058,0.104-0.085c0.027-0.021,0.058-0.045,0.087-0.062   c0.635-0.472,1.417-0.752,2.27-0.754c0.855,0.002,1.639,0.284,2.275,0.755C52.275,27.779,52.295,27.797,52.316,27.812z");
-  arrowImg2.attr("opacity", 1);
-  d3.select(".arrowDOWN").remove();
+  d3.select(".UP");
+  d3.select(".UP").attr("opacity", 1);
+  d3.select(".DOWN").remove();
   d3.selectAll("circle").remove();
 
   //On click up arrow bring back the first view
-  arrowImg2.on("click", function(d){
+  d3.select(".UP").on("click", function(d){
     //Remove current view
-    d3.selectAll("svg").remove();
+    d3.selectAll("svg").remove()
     //Reset the hour counter
     d3.select(".header .col-md-1 h1 small").text("0");
     //Load the data again for previous view
@@ -574,7 +682,7 @@ function secondView(){
 function focusAndBrush() {
   var svg = d3.select("#area1").select("svg");
   var x2 = x;
-  var width = 800 - margin.left - margin.right;
+  var width = 750 - margin.left - margin.right;
 
   var brush = d3.svg.brush()
     .x(x)
@@ -598,65 +706,6 @@ function focusAndBrush() {
   var count = 0;
   function brushed() {
 
-  //   var selection = d3.select(".context").selectAll("rect");
-  //   var counts = [0, 0, 0, 0, 0, 0, 0, 0];
-  //   var total = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  //   for(var i = 0; i < selection[0].length; i++){
-  //     var course = selection[0][i].className.animVal.substr(selection[0][i].className.animVal.indexOf(' ')+1);
-  //     var date = selection[0][i].parentNode.className.animVal;
-  //     var brushT1 = format(brush.extent()[0]);
-  //     var brushT2 = format(brush.extent()[1]);
-  //     brushT1 = d3.time.format("%d-%m-%Y").parse(brushT1);
-  //     brushT2 = d3.time.format("%m-%d-%Y").parse(brushT2);
-
-  //     date = d3.time.format("%a\ %b\ %d\ %Y\ %X").parse(date.substr(0, date.length - 15));
-  //     if(course != "extent" && course != "" && course != "background" && date < brushT1 || course != "extent" && course != "" && course != "background" && date > brushT2){
-  //       if(course == "CS106B"){
-  //        counts[0]++;
-  //       }
-  //       if(course == "DB"){
-  //         counts[1]++;
-  //       }
-  //       if(course == "NLP"){
-  //         counts[2]++;
-  //       }
-  //       if(course == "CS171"){
-  //         counts[3]++;
-  //       }
-  //       if(course == "Stats110"){
-  //         counts[4]++;
-  //       }
-  //       if(course == "StatsUD"){
-  //         counts[5]++;
-  //       }
-  //       if(course == "StatsMIT"){
-  //         counts[6]++;
-  //       }
-  //       if(course == "CS109"){
-  //         counts[7]++;
-  //       }
-  //     }
-
-  //     //Total count for python
-  //     total[0] = (0.86*counts[7] + 0.13*counts[2]) / 0.92;
-  //     console.log(String(total[0]))
-  //     var grad = d3.select("#grad");
-  //     grad.append("stop").attr("offset", String(total[0]) + "%").style("stop-color", "#17becf");
-  //     grad.append("stop").attr("offset", String(100 - total[0]) + "%").style("stop-color", "#c7c7c7");
-  //     d3.select(".python")
-  //       .style("fill", "none")
-  //       .style('fill', "url(#grad)");
-  //     //Total count JS
-
-  //     //Total R
-
-  //     //Total c++
-
-  //     //Total SQL
-
-
-  //   }
-
     if(count == 0){ //only apprend defs once
        d3.select("#area1").selectAll("svg")
         .append("defs").append("clipPath")
@@ -676,6 +725,5 @@ function focusAndBrush() {
         .attr("transform", function(d) {
           return "rotate(-65)" 
         });;;
-
   }
 }

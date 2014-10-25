@@ -1,5 +1,5 @@
 var margin = { top: 100, right: 10, bottom: 50, left: 50 };
-var width = 750 - margin.left - margin.right;
+var width = 700 - margin.left - margin.right;
 var height = 450 - margin.bottom - margin.top;
 
 var format = d3.time.format("%d-%m-%Y");

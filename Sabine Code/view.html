@@ -19,16 +19,27 @@
         -webkit-font-smoothing: antialiased; /*To remove blurry text*/
       }
 
-      @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+      /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);*/
        
       body{
-          font-family: 'Open Sans', sans-serif;
+        font-family: verdana;
+        /*background-color: transparent !important;*/
+        background-image: url("./Map/thailand_reduced_opacity.png");
+        background-repeat: no-repeat;
+        background-position: right; 
+        background-attachment: fixed;
+          /*font-family: 'Open Sans', sans-serif;*/
       }
 
-      h1, p {
+      h1, h2, p {
         font-variant: small-caps !important;  
         text-rendering: auto;
         vertical-align: middle;
+        font-family: verdana;
+      }
+
+      .row {
+          margin-right: 120px !important; /* to remove side margin */
       }
 
       .axis path,
@@ -50,15 +61,8 @@
       }
 
       .content {
-       position: relative;
        bottom: 600px;
        opacity: 1;
-      }
-      
-      .imageBackground {
-        /*this sets the background color to be the same as the rest of the page*/
-        /*background-color: #272b30 !important; */
-        background-color: transparent !important;
       }
 
       .brush .extent {
@@ -71,9 +75,9 @@
         clip-path: url(#clip);
       }
 
-      img {
+/*      img {
           z-index: -1;
-      }
+      }*/
 
       .xaxis line {
         stroke: #fff;
@@ -95,7 +99,7 @@
       #navLeft, #navRight {
         width: 50%;
         float: left;
-        margin: 0 0 1em 0;
+        margin: 0 0 0 0;
         padding: 0;
         background-color: #222;
       }
@@ -132,20 +136,77 @@
         background-color: #eee; 
       }
 
-      .navContainer {
-        height: 100px;
+/*      .frontImage { 
+         position: relative;
+      }*/
+
+      .openingText, .openingTextAuthor {
+         position: absolute; 
+         left: 120px; 
+         width: 100%;
+         text-shadow: none;
+         color: #222;
       }
+
+      .openingText {
+        top: 80px;
+        font-size: 25px;
+      }
+
+      .openingTextAuthor {
+        top: 110px;
+        font-size: 18px;
+      }
+
+      #frontPage {
+        height: 700px;
+        width: auto;
+        background-image: url("./Images/boatEdit.jpg");
+         /*no-repeat top center fixed;*/
+        background-size: 100% 100%;
+        opacity:1;
+        background-attachment: fixed;
+      }
+
+      #mapPage {
+        /*background-image: url("./Map/thailand_reduced_opacity.png");*/
+        height: 700px;
+        width: auto;
+        /*background-image: url("./Map/thailand_reduced_opacity.png");*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: right;*/
+        /*background-attachment: fixed;*/
+        /*background-repeat: no-repeat;
+        background-position: right; 
+        background-attachment: fixed;*/
+      }
+
+      #mainPage {
+        height: 700px;
+        width: auto;
+        /*this sets the background color to be the same as the rest of the page*/
+        /*background-color: #272b30 !important; */
+        /*background-color: transparent !important;*/
+        /*background-attachment: fixed;*/
+        /*background:none !important;*/
+      }
+/*
+      .navContainer {
+        background-color: #222;
+        height: 100px;
+      }*/
 
     </style>
 </head>
 
 <body>
 
-<div class="navContainer">
+<nav class="navContainer navbar-fixed-top" role="navigation">
   <div id="navLeft">
     <ul>
       <li><a href="#home">Data Science Online Master</a></li>
       <li><a href="#news">Detailed Exploration</a></li>
+      <li><a href="#news">Statistical Analysis</a></li>
     </ul>
   </div>
   <div id="navRight">
@@ -156,19 +217,29 @@
       <!-- <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="datajourney"></a></li> -->
     </ul>
   </div>
-</div>
+</nav>
 
-<div id="page">
-  <div class="imageBackground">
-    <div class="row">
-      <div class="col-lg-6">
-      </div>
-      <div class="col-lg-6">
-          <img src="./Map/thailand_reduced_opacity.png" class="img-rounded">
-      </div>
+<div id="frontPage">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="openingText">“It is good to have an end to journey toward, but it is the journey that matters, in the end.”</h1>
+      <h2 class="openingTextAuthor">― Ernest Hemingway</h2>
+<!--       <img class="frontImage" src="./Images/boatEdit.jpg" height="600" width=auto> -->
     </div>
   </div>
+</div>
 
+<div id="mapPage">
+  <div class="row">
+    <div class="col-lg-12">
+<!--       <svg height="700" width="900">
+        <circle cx="839" cy="100" r="5" fill="red"/>
+      </svg> -->
+    </div>
+  </div>
+</div>
+
+<div id="mainPage">
   <div class="header content">
     <div class="row">
       <div class="col-md-8">
@@ -177,26 +248,77 @@
       <div class="col-md-3">
         <h1 class="text-left" style=""><small>Total hours worked:</small></h1>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-1 hours">
         <h1 class="text-left"><small>0</small></h1>
       </div>
     </div>
   </div>
 
-  <div class="row content">
+<!--   <div class="row content">
     <div class="col-md-12" id="UP"></div>
-  </div>
+  </div> -->
 
   <div class="row content">
     <div class="col-md-12" id="area1"></div>
+<!--     <div class="col-md-1" id="arrows"> -->
+    </div>
   </div>
 
-  <div class="row content">
+<!--   <div class="row content">
     <div class="col-md-12" id="DOWN"></div>
-  </div>
-
+  </div> -->
+</div>
 </body>
-  <script src = "dataLoader.js"></script>
-  <script src = "view_blocks.js"></script>
+
+  <!-- // <script src="dataLoader2.js"></script> -->
+  <!-- // <script src="view_blocks.js"></script> -->
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script>
+    var loaded = 0;
+    function LoadMyJs(scriptName) {
+      var imported = document.createElement('script');
+      imported.src = scriptName;
+      document.head.appendChild(imported);
+    }
+    var divs = $('.openingText, .openingTextAuthor');
+    $(window).scroll(function(){
+      // console.log($(window).scrollTop())
+      //Change the opacity of the background image to fade as other page moves up
+      $("#frontPage").css("opacity", 1 - (parseFloat($(window).scrollTop()) / (parseFloat($(document).height())/2)));
+      //Fade the text as soon as start scrolling, to happen over 300ms
+      if($(window).scrollTop() > 1){
+        divs.stop().animate({
+          opacity: 0
+        }, 300);
+      } else {
+        divs.stop().animate({
+          opacity: 1
+        }, 300);
+      }
+      if(parseFloat($(window).scrollTop()) >= 690){
+        $("#mapPage").css("background-attachment", "fixed");
+      }
+
+      if(parseFloat($(window).scrollTop()) >= 1350 && loaded == 0){
+        loaded++;
+        $("#mainPage").css("opacity", 1);
+        d3.select(".header .col-md-1 h1 small").text("0");
+        LoadMyJs("view_blocks.js");
+      }
+
+      if(parseFloat($(window).scrollTop()) <= 1200){
+        $("#mainPage").stop().animate({
+          opacity: 0
+        }, 50);
+        loaded=0;
+      }
+
+      // Block scrolling past the end of the main page
+      if($(window).scrollTop() >=1368) 
+      { 
+          $(window).scrollTop(1368); 
+      }
+
+    });
+  </script>
 </html>
