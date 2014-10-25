@@ -1,13 +1,10 @@
-var margin = { top: 100, right: 10, bottom: 50, left: 50 };
-var width = 450 - margin.left - margin.right;
-var height = 450 - margin.bottom - margin.top;
+var margin = { top: 25, right: 10, bottom: 50, left: 50 };
+var width = 550 - margin.left - margin.right;
+var height = 350 - margin.bottom - margin.top;
 
 var canvas = d3.select("#area1").append("svg").attr({
     width: width + margin.left + margin.right,
     height: height + margin.top + margin.bottom
-})
-.attr({
-    transform: "translate(" + margin.left + "," + margin.top + ")"
 })
 .attr("id", "bars");
 
@@ -183,21 +180,23 @@ function plot(data, type){
 	//Determine the y-translation required for each plot
 	var yTrans = "";
 	if(type == "Languages"){
-		yTrans = 100;
+		yTrans = margin.top + 5;
 	}
 	else{
-		yTrans = 275;
+		yTrans = 195;
 	}
 	var xAxisTrans = "";
 	if(type == "Languages"){
-		xAxisTrans = 225;
+		xAxisTrans = 143;
 	}
 	else{
-		xAxisTrans = 400;
+		xAxisTrans = 307;
 	}
 	chart.attr("transform", "translate(200, " + yTrans + ")");
 	y_xis.attr("transform", "translate(200, " + yTrans + ")");
 	x_xis.attr("transform", "translate(200, " + xAxisTrans + ")");
 	title.attr("transform", "translate(200, " + (yTrans - 5) + ")");
 
+	//Make the x-axis less bright
+	x_xis.attr("opacity", 0.5);
 }

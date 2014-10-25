@@ -26,12 +26,12 @@
         /*background-color: transparent !important;*/
         background-image: url("./Map/thailand_reduced_opacity.png");
         background-repeat: no-repeat;
-        background-position: right; 
+        background-position: center; 
         background-attachment: fixed;
           /*font-family: 'Open Sans', sans-serif;*/
       }
 
-      h1, h2, p {
+      h1, h2, h3, h4, p {
         font-variant: small-caps !important;  
         text-rendering: auto;
         vertical-align: middle;
@@ -66,7 +66,7 @@
       }
 
       .brush .extent {
-        stroke: #fff;
+        stroke: #eee;
         fill-opacity: .35;
         shape-rendering: crispEdges;
       }
@@ -80,7 +80,7 @@
       }*/
 
       .xaxis line {
-        stroke: #fff;
+        stroke: #eee;
       }
       .xaxis path {
         display: none;
@@ -164,7 +164,7 @@
         background-image: url("./Images/boatEdit.jpg");
          /*no-repeat top center fixed;*/
         background-size: 100% 100%;
-        opacity:1;
+        opacity: 1;
         background-attachment: fixed;
       }
 
@@ -190,11 +190,67 @@
         /*background-attachment: fixed;*/
         /*background:none !important;*/
       }
-/*
-      .navContainer {
-        background-color: #222;
-        height: 100px;
-      }*/
+
+      .Story1 {
+        margin-top: 100px;
+/*        margin-right: 150px;*/
+        text-align: justify;
+      }
+
+      .Story1::first-letter {
+        color: #222;
+        font-size: xx-large;
+        background-color: #eee;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-left: -5px;
+        margin-right: 5px;
+      }
+
+      .headline1 {
+        margin-top: 60px;
+      }
+
+      .headline2{
+        /*border-style: solid;*/
+        border-bottom: solid;
+        border-top: solid;
+        border-left: none;
+        border-right: none;
+        border-width: 1px;
+      }
+
+      .Explan_graph_1 {
+        margin-top: 100px;
+      }
+
+      .headline3 {
+        margin-left: 20px;
+      }
+
+      #caption {
+        border-bottom: none;
+        border-top: none;
+        border-left: solid;
+        border-right: none;
+        border-width: 1px;
+        width: auto;
+        font-size: 30;
+        color: #eee;
+        height: 30px;
+        opacity: 0;
+        /*margin-left: 200px;*/
+        /*display:none;*/
+        /*visibility:hidden;*/
+      }
+
+      #explanation {
+        height: 60px;
+      }
+
+      .bleep {
+        pointer-events:none;
+      }
 
     </style>
 </head>
@@ -231,11 +287,31 @@
 
 <div id="mapPage">
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-1 buffer"></div>
+    <div class="col-lg-4 headline1">
+      <div class="row">
+        <h1 class="text-center"> Online Data Science Masters<br></br></h1>
+      </div>
+      <div class="row headline2">
+        <h4>The journey we took and skills we acquired through studying data science online</h4>
+        <h5><small><font color='#909090'>Fraser Campbell and Sabine Crevoisier</font></small></h5>
+      </div>
 <!--       <svg height="700" width="900">
         <circle cx="839" cy="100" r="5" fill="red"/>
       </svg> -->
     </div>
+    <div class="col-lg-1 buffer"></div>
+    <div class="col-lg-6">
+      <div class="Story1">On May 21st 2014, we flew out to Thailand with loaded backpacks, this time for a different reason than the holidays which came before. We were taking 6 months out of our lives to study Data Science online.</br></br>
+
+      After four years in industry, the still young world of open source and open access education inspired us to test courses that re-ignited our interest in science. Blown away by the quality of courses available, comparable to a reputable Master degree, we decided to create a tailored curriculum with the aim of becoming Data Scientists.</br></br>
+
+<!--       Prior to making this commitment both of us had worked as Data Scientists as well as studying Data Science related courses online. -->
+      This website showcases some of the skills we have acquired on this journey. We hope it might demonstrate what is possible through the open source learning movement; acknowldege those who continue to make this learning available and maybe even inspire others to pursue the learning they always dreamed of.
+
+    </div>
+      <h3 class="Explan_graph_1 text-center"><small><font color='#909090'>Scrolling down reveals the work we undertook over 6 months</font></small></h3>
+    </div> 
   </div>
 </div>
 
@@ -243,7 +319,7 @@
   <div class="header content">
     <div class="row">
       <div class="col-md-8">
-        <h1 class="text-center">Data Science Online Masters</h1>
+        <h1 class="headline3"><small>Studying hours over 6 months</small></h1>
       </div>
       <div class="col-md-3">
         <h1 class="text-left" style=""><small>Total hours worked:</small></h1>
@@ -254,24 +330,21 @@
     </div>
   </div>
 
-<!--   <div class="row content">
-    <div class="col-md-12" id="UP"></div>
-  </div> -->
-
-  <div class="row content">
-    <div class="col-md-12" id="area1"></div>
-<!--     <div class="col-md-1" id="arrows"> -->
+  <div class="row">
+    <div id="explanation">
+      <!-- <p>Initial Text</p> -->
     </div>
   </div>
 
-<!--   <div class="row content">
-    <div class="col-md-12" id="DOWN"></div>
-  </div> -->
+
+  <div class="row-fluid content">
+    <div class="col-md-12" id="area1"></div>
+    </div>
+  </div>
+
 </div>
 </body>
 
-  <!-- // <script src="dataLoader2.js"></script> -->
-  <!-- // <script src="view_blocks.js"></script> -->
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script>
     var loaded = 0;
@@ -299,9 +372,11 @@
         $("#mapPage").css("background-attachment", "fixed");
       }
 
-      if(parseFloat($(window).scrollTop()) >= 1350 && loaded == 0){
+      if(parseFloat($(window).scrollTop()) > 1250 && loaded == 0){
         loaded++;
-        $("#mainPage").css("opacity", 1);
+        $("#mainPage").stop().animate({
+          opacity: 1
+        }, 50);
         d3.select(".header .col-md-1 h1 small").text("0");
         LoadMyJs("view_blocks.js");
       }
@@ -314,9 +389,9 @@
       }
 
       // Block scrolling past the end of the main page
-      if($(window).scrollTop() >=1368) 
+      if($(window).scrollTop() >=1380) 
       { 
-          $(window).scrollTop(1368); 
+          $(window).scrollTop(1380); 
       }
 
     });

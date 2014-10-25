@@ -1,6 +1,6 @@
-var margin = { top: 100, right: 10, bottom: 50, left: 50 };
+var margin = { top: 40, right: 10, bottom: 50, left: 50 };
 var width = 900 - margin.left - margin.right;
-var height = 450 - margin.bottom - margin.top;
+var height = 350 - margin.bottom - margin.top;
 var width_legend = 100;
 
 var format = d3.time.format("%d-%m-%Y");
@@ -69,6 +69,38 @@ d3.tsv("study_data.tsv", function(err, data) {
     maxDate = d3.extent(data, function(d) { return d.date; })[1];
     maxHour = d3.max(data, function(d) { return d.total; });
 
+
+//-------------------------------------------------------------------Create the tooltip--------------------------------------------------------
+    d3.select("#area1").append("div")
+          .attr("id", "caption");
+//--------------------------------------------------------Text to tell the story-----------------------------------------------
+  var captions = ["<b>Starting with the 5 courses:<br></b>\
+                  <li>CS106B (c++)<br></li>\
+                  <li>Natural Language Processing<br></li>\
+                  <li>Databases<br></li>\
+                  <li>CS171 (visualisation)<br></li>\
+                  <li>Statistics (udacity)<br></li>\
+                  <b>As planned. For one month.</b>",
+                  "Followed by a two week holiday, visiting Thailand.<br>\
+                  <b>And a little work...</b>",
+                  "<b>CS171</b> was a <b>fantastic</b> course so we started looking for other Harvard courses and found:<br>\
+                   <br>\
+                  <b>CS109 (data science course). </b>",
+                  "<b>ALTER THE PLAN</b>\
+                  <ol><li>Put current courses on hold</li>\
+                  <li>Focus on NEW courses:</li></ol>\
+                  <li>CS109 (data science)</li>\
+                  <li>Stats110  (statistics pre-requisite for CS109)</li>",
+                  "Decide to focus on one course at a time.<br>\
+                   <br>\
+                  <b>Stats110 completed!</b>",
+                  "<b>CS109 completed!</b>",
+                  "<b>CS171 completed!</b>",
+                  "Decide to study <b>statistical inference</b> to supplement Stats110.<br>",
+                  "<b>Databases completed!</b>",
+                  "Onwards with c++ towards completion..."] 
+
+//-------------------------------------------------------------------Create the svgs-------------------------------------------------------------
   var svg_plot = d3.select("#area1")
     .append("svg")
       .attr({
@@ -97,23 +129,31 @@ d3.tsv("study_data.tsv", function(err, data) {
         transform: "translate(0," + margin.top + ")"
       });
 
-//----------------------------------------------------------Arrows----------------------------------------------------------------
-function createArrows(h){
+//------------------------------------------------------------------Arrows--------------------------------------------------------------------
+function createArrows(h, x, y){
     var arrows = d3.selectAll("#area1")
       .append("svg")
       .attr({
-          width: 150,
+          width: 250,
           height: h
         })
       .append("g").attr("id", "#arrows")
         .attr({
-          transform: "translate(50, 0)"
+          transform: "translate(" + x + ", " + y + ")"
         });
 
     var arrowreplay = arrows.append("g").attr("class", "RP")
         .attr({
           transform: "translate(0, 0)"
         });
+
+    arrowreplay.append("rect") //to help with clicking on the arrows so don't have to exactly click on the path element of arrow
+      .attr({
+          transform: "translate(30, 30)"
+        })
+      .attr("height", 40)
+      .attr("width", 40)
+      .attr("opacity", 0);
     arrowreplay.append("path")
       .attr("d", "M50,68.2c-8.6,0-15.6-7-15.6-15.6c0-3.6,1.3-7.2,3.6-10c0.6-0.7,1.6-0.8,2.3-0.2c0.7,0.6,0.8,1.6,0.2,2.3  c-1.8,2.2-2.9,5-2.9,7.9c0,6.8,5.6,12.4,12.4,12.4c6.8,0,12.4-5.6,12.4-12.4S56.8,40.2,50,40.2c-0.9,0-1.6-0.7-1.6-1.6  s0.7-1.6,1.6-1.6c8.6,0,15.6,7,15.6,15.6S58.6,68.2,50,68.2z")
     arrowreplay.append("path").attr("d", "M54.1,46.1c-0.4,0-0.8-0.1-1.1-0.4l-6-5.5c-0.3-0.3-0.5-0.7-0.5-1.2c0-0.4,0.2-0.9,0.5-1.2l6-5.5c0.7-0.6,1.7-0.6,2.3,0.1  c0.6,0.7,0.6,1.7-0.1,2.3L50.5,39l4.7,4.3c0.7,0.6,0.7,1.6,0.1,2.3C54.9,45.9,54.5,46.1,54.1,46.1z")
@@ -122,6 +162,13 @@ function createArrows(h){
         .attr({
           transform: "translate(37, 0)"
         });
+    arrowFastForward.append("rect") //to help with clicking on the arrows so don't have to exactly click on the path element of arrow
+      .attr({
+          transform: "translate(35, 30)"
+        })
+      .attr("height", 40)
+      .attr("width", 30)
+      .attr("opacity", 0);
     arrowFastForward.append("path").attr("d", "M52.422,51.737c-0.354,0-0.709-0.125-0.995-0.377l-9.805-8.693c-0.62-0.55-0.677-1.498-0.127-2.118      c0.551-0.62,1.499-0.676,2.118-0.127l9.805,8.693c0.62,0.55,0.677,1.498,0.127,2.118C53.249,51.566,52.836,51.737,52.422,51.737      z")
     arrowFastForward.append("path").attr("d", "M42.618,60.43c-0.414,0-0.827-0.17-1.123-0.505c-0.549-0.62-0.492-1.568,0.127-2.118l9.805-8.693      c0.621-0.549,1.568-0.492,2.118,0.127c0.549,0.62,0.492,1.568-0.127,2.118l-9.805,8.693      C43.327,60.306,42.972,60.43,42.618,60.43z")
     arrowFastForward.append("path").attr("d", "M61.422,51.737c-0.354,0-0.709-0.125-0.995-0.377l-9.805-8.693c-0.62-0.55-0.677-1.498-0.127-2.118      c0.55-0.62,1.498-0.676,2.118-0.127l9.805,8.693c0.62,0.55,0.677,1.498,0.127,2.118C62.249,51.566,61.836,51.737,61.422,51.737z      ")
@@ -143,44 +190,9 @@ function createArrows(h){
     arrowUP.append("path").attr("d", "M23.986,22c2,0,2.589-2.014,1.457-3.143l-8.098-8.235c-0.746-0.746-1.956-0.786-2.7-0.038l-8.099,8.155  C5.531,19.757,5.978,22,7.979,22C10.082,22,22.388,22,23.986,22z")
     arrowUP.attr("opacity", 0);
   }
-  createArrows(250);
-  //--------------------------------------------------------Text to tell the story-----------------------------------------------
-  var captions = ["<b>Starting with the 5 courses:<br></b>\
-                  <li>CS106B (c++)<br></li>\
-                  <li>Natural Language Processing<br></li>\
-                  <li>Databases<br></li>\
-                  <li>CS171 (visualisation)<br></li>\
-                  <li>Statistics (udacity)<br></li>\
-                  <b>As planned. For one month.</b>",
-                  "Followed by a two week holiday, visiting Thailand.<br>\
-                  <b>And a little work...</b>",
-                  "<b>CS171</b> was a <b>fantastic</b> course so we started looking for other Harvard courses and found:<br>\
-                   <br>\
-                  <b>CS109 (data science course). </b>",
-                  "<b>ALTER THE PLAN</b>\
-                  <ol><li>Put current courses on hold</li>\
-                  <li>Focus on NEW courses:</li></ol>\
-                  <li>CS109 (data science)</li>\
-                  <li>Stats110  (statistics pre-requisite for CS109)</li>",
-                  "Decide to focus on one course at a time.<br>\
-                   <br>\
-                  <b>Stats110 completed!</b>",
-                  "<b>CS109 completed!</b>",
-                  "<b>CS171 completed!</b>",
-                  "Decide to study <b>statistical inference</b> to supplement Stats110.<br>",
-                  "<b>Databases completed!</b>",
-                  "Onwards with c++ towards completion..."] 
+  createArrows(250, 70, 0);
 
-  //Create the labels
-  svg_plot.append("g").append("foreignObject")
-          .attr("id", "caption")
-          .attr("x", 570)
-          .attr("y", -70)
-          .attr('width', 350)
-          .attr('height', 500)
-          .append("xhtml:body")
-          .html('<div style="width: 400px; font-size: 30; color: white; display:none, visibility:hidden"></div>');
-
+//------------------------------------------------------------------Axes--------------------------------------------------------------------
   //Create the x and y axes
   x.domain([minDate, maxDate]);
   y.domain([0, maxHour + 1]); //+1 to accomodate for rounding when worked 0,5h
@@ -204,6 +216,7 @@ function createArrows(h){
     .style("text-anchor", "start")
     .text("Hours Worked");
 
+//------------------------------------------------------------------Buckets--------------------------------------------------------------------
   //Create buckets for each significant part of studying, to help with storytelling
   var bucket1 = svg_plot.append("g")
             .attr("id", "bucket1");
@@ -363,7 +376,6 @@ function createArrows(h){
 
   var time_funcs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
       timer = 0;
-  // var delays = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] //for ease of testing so happens quickly
   var delays = [3000, 2000, 4000, 4000, 4000, 2000, 2000, 3000, 3000, 1000] //Change the opacity of the last circle
   //Check if FF button has been clicked, if so, stop all transitions
   var FFclicked;
@@ -371,9 +383,9 @@ function createArrows(h){
   function callFuncs() {
     if(time_funcs[timer] == "11"){
       if(!d3.select(".circle10").empty()) {
-        d3.select(".circle10").transition().duration(400).delay(1000).style("opacity", 0.3); //Change the opacity of the last circle
+        d3.select(".circle10").transition().duration(400).delay(1000).style("opacity", 0.5); //Change the opacity of the last circle
         enableHover(captions, createArrows);
-        showNext(arrowImg);
+        showNext(arrowDown);
         timer++;
       }
     }
@@ -428,9 +440,6 @@ function createArrows(h){
 
   // ---------------------------------------------------------------Page loading---------------------------------------------------------------
   $(window).scroll(function(){
-    // if(parseFloat($(window).scrollTop()) >= 1350){
-    //   Reload();
-    // }
     if(parseFloat($(window).scrollTop()) <= 1200){
       //End transitions
       var allElem = d3.selectAll("*")
@@ -466,6 +475,8 @@ function createArrows(h){
     d3.select(".header .col-md-1 h1 small").text("0");
     //Remove current view
     d3.selectAll("svg").remove();
+    //Remove caption div
+    d3.select("#caption").remove();
     //Load the data again for previous view
     LoadMyJs("view_blocks.js");
   }
@@ -479,21 +490,28 @@ function showNext(arrowImg){
 function enableHover(captions, createArrows){
   //Hovering
   d3.select(".mainG").selectAll("circle")
-    .on("mouseover", function(d){
-      //Increase the opacity of the circle when hovered over
-      d3.select(this).style("opacity", 0.8);
+    .on("mouseover", function(d, i){
       //Bring the correct caption to show
       var buck = d3.select(this).attr("class");
       var buck_num = buck[buck.length-1];
       if(buck_num == 0){ //Note buck_num = 0 actually corresponds to 10th bucket
-        $("#caption").html(captions[9]);
+        d3.select("#caption").html(captions[9]).style("opacity", 1)
+            .style("margin-left", (d3.event.pageX) + "px")     
       }
       else{
-        $("#caption").html(captions[buck_num-1]);
+        d3.select("#caption").html(captions[buck_num-1]).style("opacity", 1)
+            .style("margin-left", (d3.event.pageX) + "px")     
       }
+
+      //Bleep over hovered circle to draw attention
+      Bleep(d3.select(this));
+
+      //Make the hovered circle brighter
+      d3.select(this).attr("opacity", 0.8);
+
     })
     .on("mouseout", function(d){
-      $("#caption").html("");
+      d3.select("#caption").html("").style("opacity", 0);
       d3.select(this).style("opacity", 0.3);
     })
   d3.select(".DOWN").attr("opacity", 1);
@@ -510,7 +528,6 @@ function transitions(bucket_number, captions, rectsBucket){
   d3.selectAll("g").selectAll("#bucket" + bucket_number + " rect")
     .transition()
     .duration(100)
-    // .duration(0) //for ease of testing so happens quickly
     .delay(function(d, i){
       return x(d.date) * 30 + i * 30;
     })
@@ -522,10 +539,8 @@ function transitions(bucket_number, captions, rectsBucket){
         var totalHours = parseInt(d3.select(".header .col-md-1 h1 small").text()) + 1;
         d3.select(".header .col-md-1 h1 small").text(totalHours);
         if(i == 0){
-          //If any circles exist already, reduce their opacity to bring in focus the new circle
-          d3.select(".circle" + circleNum).transition().duration(400).style("opacity", 0.3);
           //Bring up the story
-          $("#caption").html(captions[bucket_number - 1]).attr("class", bucket_number).hide();
+          d3.select("#caption").html(captions[bucket_number - 1]).attr("class", bucket_number).style("opacity", 0);
         }
         if(i == rectsBucket[bucket_number - 1] - 2){
           //Get attributes of the last rect over which the circle will be positioned
@@ -538,20 +553,23 @@ function transitions(bucket_number, captions, rectsBucket){
                         .attr("class", "circle" + bucket_number)
                         .attr("cx", xPos + w/2)
                         .attr("cy", yPos - h)
-                        .attr("r", 25)
-                        .style("fill", "purple")
+                        .attr("r", 9)
+                        .style("fill", "#eee")
                         .style("opacity", 0);
           circle.transition()
-            .ease("linear")
-            .duration(1000) 
-            .style("opacity", 0.8);
+              .each("end", function(d, i) {
+                return Bleep(circle)
+              })
+              .transition()
+              .ease("linear")
+              .duration(1000) 
+              .style("opacity", 0.5);
 
           // Then transition the relevant text
           d3.select("#caption").transition()
               .ease("linear")
               .duration(1000)
-              .style("display", "inline")
-              .style("visibility", "visible");
+              .style("opacity", 1);
         }
       })
 }
@@ -577,14 +595,13 @@ function runTillEnd(captions, rectsBucket, createArrows){
       .attr("class", "circle" + bucket_number)
       .attr("cx", xCoord + w/2)
       .attr("cy", yCoord - h)
-      .attr("r", 25)
-      .style("fill", "purple")
-      .style("opacity", 0.3);
+      .attr("r", 9)
+      .style("fill", "#eee")
+      .style("opacity", 0.5);
   }
-  // Then make the caption visible
-  d3.select("#caption")
-    .style("display", "inline")
-    .style("visibility", "visible").text("");
+  // Then make the caption in-visible
+  d3.select("#caption").html("")
+    .style("opacity", 0);
 
   //Enable hovering once everything is loaded
   enableHover(captions, createArrows);
@@ -634,8 +651,7 @@ function loadScript(src, script, callback){
 
 function secondView(createArrows){
   // Make the caption invisible
-  d3.select("#caption")
-    .style("visibility", "hidden");
+  d3.select("#caption").remove();
   //Make the axis text invisible
   d3.selectAll(".axis").selectAll("text").style("opacity", 0);
   //Make the svg smaller to use as context for the next plot
@@ -654,7 +670,7 @@ function secondView(createArrows){
   d3.select("svg").select("g").attr("class", "context");
 
   //Reload the arrows
-  createArrows(100);
+  createArrows(100, 20, 50);
 
   //Load bottom graphs
   LoadScriptsSync(["area.js", "barChart.js"], [])
@@ -663,9 +679,10 @@ function secondView(createArrows){
   focusAndBrush();
 
   //Add an up arrow to go back to previous view
-  d3.select(".UP");
   d3.select(".UP").attr("opacity", 1);
   d3.select(".DOWN").remove();
+  d3.select(".FF").remove();
+  d3.select(".RP").remove();
   d3.selectAll("circle").remove();
 
   //On click up arrow bring back the first view
@@ -680,6 +697,7 @@ function secondView(createArrows){
 }
 
 function focusAndBrush() {
+  console.log(height)
   var svg = d3.select("#area1").select("svg");
   var x2 = x;
   var width = 750 - margin.left - margin.right;
@@ -699,11 +717,12 @@ function focusAndBrush() {
       .attr("class", "x brush")
       .call(brush)
     .selectAll("rect")
-      .attr("y", -6)
-      .attr("height", 300 + 7);
+      .attr("y", 5)
+      .attr("height", 250);
 
   //Keep a counter of how many times brushed
   var count = 0;
+
   function brushed() {
 
     if(count == 0){ //only apprend defs once
@@ -726,4 +745,41 @@ function focusAndBrush() {
           return "rotate(-65)" 
         });;;
   }
+}
+
+function Bleep(circle){
+      var blip = [2, 3, 4];
+      d3.select(".mainG").selectAll("blips").data(blip).enter()
+        .append("circle").attr("class", "bleep")
+        .attr("cx", function(pt, i){
+          return circle.attr("cx");
+        })
+        .attr("cy", function(pt, i){
+          return circle.attr("cy");
+        })
+        .attr("r", function(pt){
+          return pt/2;
+        })
+        .style("stroke", function(dt, i){
+          if(i == 0) return "#eee";
+          return "#222";
+          // if(i == 1) return "red";
+          // if(i == 2) return "red";
+        })
+        .style("fill", function(pt, i){
+          if(i == 0) return "#eee";
+          if(i == 1) return "#222";
+          else return "rgba(0,0,0,0)";
+        })
+        .attr("opacity", 0.7)
+        .transition()
+        .ease("quad")
+        .duration(1500)
+        .attr("r", function(pt, i){
+          if(i == 0) return 30;
+          else return Math.pow(pt, 3);
+        })
+        .attr("opacity", 0)
+        .transition()
+        .remove();
 }
