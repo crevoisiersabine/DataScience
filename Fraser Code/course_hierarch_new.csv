@@ -1,0 +1,1033 @@
+Course,Chapter,Topic,Course_hour,Chap_hour
+CS106A, Chapter 2, Algorithm vs Program,151,7
+CS106A, Chapter 2, Creating Methods,151,7
+CS106A, Chapter 2, for Loop and While Loop,151,7
+CS106A, Chapter 2, If Statement and Putting it All Together,151,7
+CS106A, Chapter 3, Common Errors,151,7
+CS106A, Chapter 3, Comments,151,7
+CS106A, Chapter 3, Pre-conditions and Post-conditions,151,7
+CS106A, Chapter 3, Decomposition,151,7
+CS106A, Chapter 3, Importance of Good Software Engineering,151,7
+CS106A, Chapter 3, The Right Decomposition,151,7
+CS106A, Chapter 4, The History of Computing,151,8
+CS106A, Chapter 4, Computer Science vs Programming,151,8
+CS106A, Chapter 4, The Compilation Process,151,8
+CS106A, Chapter 4, Java is an Object Oriented Language,151,8
+CS106A, Chapter 4, Inheritance,151,8
+CS106A, Chapter 4, Instance of a Class,151,8
+CS106A, Chapter 4, The acm.program Hierarchy,151,8
+CS106A, Chapter 4, Your First Java Program,151,8
+CS106A, Chapter 5, Variables,151,4
+CS106A, Chapter 5, Data Types and Syntax of Variables,151,4
+CS106A, Chapter 5, Classes as Types Objects as Variables,151,4
+CS106A, Chapter 5, Invoking Methods on Objects,151,4
+CS106A, Chapter 5, Graphics Coordinates and Operations,151,4
+CS106A, Chapter 5, Expressions and Operators,151,4
+CS106A, Chapter 6, readInt() and readDouble(),151,4
+CS106A, Chapter 6, The Division Operator w.r.t ints and Doubles,151,4
+CS106A, Chapter 6, Order of Precedence for Operators,151,4
+CS106A, Chapter 6, Type Casting,151,4
+CS106A, Chapter 6, Shorthands,151,4
+CS106A, Chapter 6, Constants,151,4
+CS106A, Chapter 6, The Boolean Data Type,151,4
+CS106A, Chapter 6, Value Comparisons,151,4
+CS106A, Chapter 6, Statement Blocks,151,4
+CS106A, Chapter 6, Scope of Variables,151,4
+CS106A, Chapter 6, Cascading if,151,4
+CS106A, Chapter 6, The Switch Statement,151,4
+CS106A, Chapter 6, The For Loop and While Loop,151,4
+CS106A, Chapter 7, The Loop and a Half Problem,151,5
+CS106A, Chapter 7, For Versus While Loop,151,5
+CS106A, Chapter 7, The CheckerBoard Program Example,151,5
+CS106A, Chapter 7, Methods in Java,151,5
+CS106A, Chapter 7, The FactorialExample Program,151,5
+CS106A, Chapter 7, Returning Objects from Methods,151,5
+CS106A, Chapter 8, Information Hiding,151,9
+CS106A, Chapter 8, The Void Return Type,151,9
+CS106A, Chapter 8, Parameter Passing Between Methods,151,9
+CS106A, Chapter 8, Bad Times with Methods-Using Classes,151,9
+CS106A, Chapter 8, Instance variables vs Local Variables,151,9
+CS106A, Chapter 8, The RandomGenerator Program Example,151,9
+CS106A, Chapter 8, The RollDice Program Example,151,9
+CS106A, Chapter 8, The setSeed() Method,151,9
+CS106A, Chapter 9, Strings,151,7
+CS106A, Chapter 9, Writing Your Own Class,151,7
+CS106A, Chapter 9, Public and Private Visibility,151,7
+CS106A, Chapter 9, Creating a New Class - The Constructor Method +'this' Keyword,151,7
+CS106A, Chapter 9, Using the Created Class,151,7
+CS106A, Chapter 9, Objects are Called by Reference not Called by Value-Class Variables,151,7
+CS106A, Chapter 9, The Student Program Example,151,7
+CS106A, Chapter 10, Importance of Private Variables,151,8
+CS106A, Chapter 10, Extending the Student Class,151,8
+CS106A, Chapter 10, Overriding Methods,151,8
+CS106A, Chapter 10, Methods Common to All GObjects,151,8
+CS106A, Chapter 10, Interfaces and Methods Defined by Them,151,8
+CS106A, Chapter 10, The BouncingBall Program Example,151,8
+CS106A, Chapter 11, The GImage GShape Classes,151,6
+CS106A, Chapter 11, Event Driven Programs,151,6
+CS106A, Chapter 11, The ClickForFace Program Example,151,6
+CS106A, Chapter 11, Responding to Mouse and Keyboard Events,151,6
+CS106A, Chapter 11, The UFO program Example,151,6
+CS106A, Chapter 12, Enumeration and Characters,151,9
+CS106A, Chapter 12, The ASCII Subset of Unicode,151,9
+CS106A, Chapter 12, Reading Characters and Math on Characters,151,9
+CS106A, Chapter 12, char as a Primitive Type and the Character Class,151,9
+CS106A, Chapter 12, Strings and Their Manipulations,151,9
+CS106A, Chapter 13, String Processing,151,9
+CS106A, Chapter 13, Tokenizers,151,9
+CS106A, Chapter 13, Encryption,151,9
+CS106A, Chapter 14, Memory,151,9
+CS106A, Chapter 14, Different Sections of Memory for Different Types of Variables,151,9
+CS106A, Chapter 14, Memory Allocation Mechanics,151,9
+CS106A, Chapter 14, The Pointer Viewpoint,151,9
+CS106A, Chapter 14, The Binky Pointer Fun Video,151,9
+CS106A, Chapter 15, Pointer Recap and Object 'Call by Reference' Instead of 'Call of Value'?,151,16
+CS106A, Chapter 15, Wrapper Classes for Primitive Types,151,16
+CS106A, Chapter 15, Files and Code for Opening- Reading&Closing Files,151,16
+CS106A, Chapter 15, Exceptions,151,16
+CS106A, Chapter 15, Code for Writing Files,151,16
+CS106A, Chapter 16, Array and Array Creation,151,7
+CS106A, Chapter 16, The ++ Operator,151,7
+CS106A, Chapter 16, Actual Size / Effective Size of the Array,151,7
+CS106A, Chapter 16, An Array as a Parameter,151,7
+CS106A, Chapter 16, Initialize an Array During Creation,151,7
+CS106A, Chapter 16, An ArrayList,151,7
+CS106A, Chapter 17, Multi-dimensional Arrays,151,9
+CS106A, Chapter 17, An ArrayList,151,9
+CS106A, Chapter 17, The Template Class,151,9
+CS106A, Chapter 17, Methods in the ArrayList Class and Example Program,151,9
+CS106A, Chapter 17, ArrayLists Hold Objects,151,9
+CS106A, Chapter 17, Example Program with an ArrayList of Glabels and GrayImage Program,151,9
+CS106A, Chapter 18, A Wrap Up of Multi-dimensional Arrays,151,11
+CS106A, Chapter 18, The ArrayList Way,151,11
+CS106A, Chapter 18, Debugging and Approaches to Debugging,151,11
+CS106A, Chapter 19, An Interface and Implementation,151,11
+CS106A, Chapter 19, A Map,151,11
+CS106A, Chapter 19, The HashMap Class and Mehtods The Collection Hierarchy,151,11
+CS106A, Chapter 19, The Map Hierarchy,151,11
+CS106A, Chapter 19, An Iterator,151,11
+CS106A, Chapter 19, A HashMap Example,151,11
+CS106A, Chapter 20, GUI,151,14
+CS106A, Chapter 20, Interactors in the Context of a Java Program,151,14
+CS106A, Chapter 20, The Swing Interactor Hierarchy,151,14
+CS106A, Chapter 20, Window Regions,151,14
+CS106A, Chapter 20, Creating Interactors,151,14
+CS106A, Chapter 20, Exploring More Interactors,151,14
+CS106A, Chapter 20, The InteractiveDrawFace Program Example,151,14
+CS106A, Chapter 21, Review of Interactors and Listeners,151,10
+CS106A, Chapter 21, TextField Example,151,10
+CS106A, Chapter 21, Layouts,151,10
+CS106A, Chapter 21, The Temperature Conversion Example,151,10
+CS106A, Chapter 21, The TextAndGraphics Example,151,10
+CS106A, Chapter 22, Components and Containers,151,13
+CS106A, Chapter 22, Listeners for Components,151,13
+CS106A, Chapter 22, Create a Program Which Extends Program,151,13
+CS106A, Chapter 22, The ComponentListener Interface,151,13
+CS106A, Chapter 22, The MusicShop Example Program,151,13
+CS106A, Chapter 22, The MusicShopDisplay Example Program,151,13
+CS106A, Chapter 23, Introduction to Lecture's material - Searching,151,10
+CS106A, Chapter 23, Searching,151,10
+CS106A, Chapter 23, Linear Search and Binary Search Efficiency,151,10
+CS106A, Chapter 23, Comparing Search Efficiencies,151,10
+CS106A, Chapter 23, Sorting,151,10
+CS106A, Chapter 23, Selection Sort Algorithm Efficiency,151,10
+CS106A, Chapter 23, The Radix Sort Algorithm,151,10
+CS106A, Chapter 24, Principles of Good Software Engineering for Managing Large Amounts of Data,151,10
+CS106A, Chapter 24, Principles of Design,151,10
+CS106A, Chapter 24, The Collection Hierarchy,151,10
+CS106A, Chapter 24, Useful Methods of Collection,151,10
+CS106A, Chapter 24, The FlyTunes Example Program - An Online Music Store,151,10
+CS106A, Chapter 24, Reusing Data - Shallow Copy vs. Deep Copy,151,10
+CS106A, Chapter 25, Defining a Social Network for Our Purposes,151,6
+CS106A, Chapter 25, See What the Program Needs to Do,151,6
+CS106A, Chapter 25, The Six Degrees of Separation Phenomenon,151,6
+CS106A, Chapter 25, Concurrency,151,6
+CS106A, Chapter 25, A Thread,151,6
+CS106A, Chapter 25, The Runnable Interface,151,6
+CS106A, Chapter 25, Having Shared Data Between Your Threads,151,6
+CS106A, Chapter 26, Introduction to the Standard Java Libraries,151,1
+CS106A, Chapter 26, JAR Files and JAR File Creation,151,1
+CS106A, Chapter 26, Creating an Applet,151,1
+CS106A, Chapter 26, Standard Java Programs Without Using the ACM Libraries,151,1
+CS106A, Chapter 26, Other Resources - Learning More Java,151,1
+CS106B, Chapter 2, Similarity between C++ & Java,116,7
+CS106B, Chapter 2, #include Statements,116,7
+CS106B, Chapter 2, Global Declarations (constant),116,7
+CS106B, Chapter 2, Declaring a Function Prototype,116,7
+CS106B, Chapter 2, The main() Function,116,7
+CS106B, Chapter 2, C++ User Defined Data Types,116,7
+CS106B, Chapter 2, C++ Parameters Passing,116,7
+CS106B, Chapter 3, C++ Libraries,116,7
+CS106B, Chapter 3, C++ String Type & Operations on String,116,7
+CS106B, Chapter 3, C++ Console I/O,116,7
+CS106B, Chapter 4, C++ File I/O,116,8
+CS106B, Chapter 4, Stream Operations,116,8
+CS106B, Chapter 4, Error Function,116,8
+CS106B, Chapter 4, Class Libraries OO Features & Why OO is So Successful,116,8
+CS106B, Chapter 4, Container Classes & Template Containers,116,8
+CS106B, Chapter 5, Vector Class & Interface,116,4
+CS106B, Chapter 5, Type-safety in Templates,116,4
+CS106B, Chapter 5, Grid Class & Interface,116,4
+CS106B, Chapter 5, Stack Class & Interface,116,4
+CS106B, Chapter 5, Queue Class & Interface,116,4
+CS106B, Chapter 5, Nested Templates,116,4
+CS106B, Chapter 5, Learning a New API,116,4
+CS106B, Chapter 5, CS106B Library Documentation,116,4
+CS106B, Chapter 6, More Containers,116,4
+CS106B, Chapter 6, Map Class & Interface,116,4
+CS106B, Chapter 6, Iterator Operation Through the Map,116,4
+CS106B, Chapter 6, Set Class & Interface,116,4
+CS106B, Chapter 6, Set Higher-level Operations & Why Set is Different,116,4
+CS106B, Chapter 7, Seeing Functions as Data: Plot Functions,116,5
+CS106B, Chapter 7, Back to the Set,116,5
+CS106B, Chapter 7, Client Callback Function,116,5
+CS106B, Chapter 7, Review of the Classes,116,5
+CS106B, Chapter 7, Using Nested Abstract Data Types,116,5
+CS106B, Chapter 7, Recursion,116,5
+CS106B, Chapter 8, Common Mistakes: 'I'terator,116,9
+CS106B, Chapter 8, Common Mistakes: Concatenating Strings,116,9
+CS106B, Chapter 8, Solving Problems Recursively,116,9
+CS106B, Chapter 8, Functional Recursion,116,9
+CS106B, Chapter 8, Recursion & Efficiency,116,9
+CS106B, Chapter 8, Binary Search,116,9
+CS106B, Chapter 9, Thinking Recursively,116,7
+CS106B, Chapter 9, Procedural vs Functional Recursion,116,7
+CS106B, Chapter 9, Fractal Code,116,7
+CS106B, Chapter 9, Hanois Towers : Classic Recursion Example,116,7
+CS106B, Chapter 9, Permutations,116,7
+CS106B, Chapter 10, Subsets,116,8
+CS106B, Chapter 10, Exhaustive Recursion,116,8
+CS106B, Chapter 10, Recursive Backtracking,116,8
+CS106B, Chapter 11, Backtracking Pseudocode & Examples,116,6
+CS106B, Chapter 11, Introduction to Pointers,116,6
+CS106B, Chapter 12, Pointer Basics,116,9
+CS106B, Chapter 12, Recursive Data,116,9
+CS106B, Chapter 12, Linked Lists,116,9
+CS106B, Chapter 13, More on Linked Lists using recursion,116,9
+CS106B, Chapter 13, Passing Pointers by Reference,116,9
+CS106B, Chapter 13, Array vs Linked List,116,9
+CS106B, Chapter 14, Algorithm Analysis,116,9
+CS106B, Chapter 14, Big-O,116,9
+CS106B, Chapter 14, Analysis of Recursive Algorithms,116,9
+CS106B, Chapter 14, Selection Sort,116,9
+CS106B, Chapter 15, Selection Sort,116,16
+CS106B, Chapter 15, Insertion Sort,116,16
+CS106B, Chapter 15, Merge Sort,116,16
+CS106B, Chapter 15, Quick Sort,116,16
+CS106B, Chapter 16, Quick Sort,116,7
+CS106B, Chapter 16, Quicksort vs Merge Sort,116,7
+CS106B, Chapter 16, Template Instantiation,116,7
+CS106B, Chapter 17, Sort Template with Callback,116,9
+CS106B, Chapter 17, Why Object Oriented Programming,116,9
+CS106B, Chapter 17, Class Division,116,9
+CS106B, Chapter 17," Class Interface in "".h"" File",116,9
+CS106B, Chapter 17, Storage for Objects,116,9
+CS106B, Chapter 17, Accessing Members of a Class,116,9
+CS106B, Chapter 17, Class & Member Function Implementation,116,9
+CS106B, Chapter 17," Maintaining Object Consistency
+",116,9
+CS106B, Chapter 17, Constructors & Destructors of a Class,116,9
+CS106B, Chapter 17, Idea of Encapsulation,116,9
+CS106B, Chapter 18, Abstract Data Types,116,11
+CS106B, Chapter 18, Why Abstract Data Types?,116,11
+CS106B, Chapter 18, Growing Dynamically: Making Space at Runtime,116,11
+CS106B, Chapter 18, Templatizing the Class Created,116,11
+CS106B, Chapter 19, Rules of Template Implementation,116,11
+CS106B, Chapter 19, InsertAt Function,116,11
+CS106B, Chapter 19, Consequences of Contiguous Memory Being a Disadvantage,116,11
+CS106B, Chapter 20, Linked List Implementation for Stack,116,14
+CS106B, Chapter 20, Analyzing Push/pop Functions,116,14
+CS106B, Chapter 20, Queue Implementation,116,14
+CS106B, Chapter 20, Buffered Class Interface,116,14
+CS106B, Chapter 21, Buffer: Vector vs Stack,116,10
+CS106B, Chapter 21, Buffer as Linked List,116,10
+CS106B, Chapter 21, Cursor Design,116,10
+CS106B, Chapter 21, Use of Dummy Cell,116,10
+CS106B, Chapter 21, Linked List Insert/delete,116,10
+CS106B, Chapter 21, Linked List Cursor Movement,116,10
+CS106B, Chapter 21, Doubly Linked List,116,10
+CS106B, Chapter 21, Implementing Map,116,10
+CS106B, Chapter 21, Map as Vector,116,10
+CS106B, Chapter 22, Binary Search Trees,116,13
+CS106B, Chapter 22, Trees in General,116,13
+CS106B, Chapter 22, Implementing Map as Tree,116,13
+CS106B, Chapter 22, Important Syntactical Advice,116,13
+CS106B, Chapter 23, Pathfinder Demo,116,10
+CS106B, Chapter 23, Graphs in C++,116,10
+CS106B, Chapter 23, Nodes and Arcs in C++,116,10
+CS106B, Chapter 23, Depth First Search,116,10
+CS106B, Chapter 23, Breadth First Search,116,10
+CS106B, Chapter 23, Graph Search Algorithms,116,10
+CS106B, Chapter 24, Compare Map Implementations,116,10
+CS106B, Chapter 24, Hashtable Idea,116,10
+CS106B, Chapter 24, Hashing Generic Types,116,10
+CS106B, Chapter 24, Implementing Set,116,10
+CS106B, Chapter 25, Lexicon Case Study: Sorted Vector,116,6
+CS106B, Chapter 25, DAWG: Directed Acyclic Word Graph,116,6
+CS106B, Chapter 25, Lexicon as DAWG,116,6
+CS106B, Chapter 26, Thinking About Design,116,1
+CS106B, Chapter 27, Guest Lecturer: About the C++ Language,116,9
+CS171, Design Principle Lecture, Cognition Limitation,115,13
+CS171, Design Principle Lecture, Tufte Principles,115,13
+CS171, Design Principle Lecture, Graphical Integrity,115,13
+CS171, Design Principle Lecture, Scale Distortion and Lie factor,115,13
+CS171, Design Principle Lecture, Data-Ink-Ratio and Chart-Junk,115,13
+CS171, Design Principle Lecture, Data-Density,115,13
+CS171, Design Principle Lecture, Layering and Separation,115,13
+CS171, Design Principle Lecture, Subjective,115,13
+CS171, Lab 1, Github,115,14
+CS171, Lab 1, HTML,115,14
+CS171, Lab 1, CSS,115,14
+CS171, Lab 1, Javascript,115,14
+CS171, Lab 1, SVG,115,14
+CS171, D3 Lecture, Javascript functions,115,18
+CS171, D3 Lecture, Javascript 'bake-in-state',115,18
+CS171, D3 Lecture, Selection D3,115,18
+CS171, D3 Lecture, data D3,115,18
+CS171, D3 Lecture, enter and exit D3,115,18
+CS171, D3 Lecture, transition D3,115,18
+CS171, D3 Lecture, nested examples and further D3,115,18
+CS171, D3 Data Models and Variables, Data types,115,12
+CS171, D3 Data Models and Variables, Quantitative types,115,12
+CS171, D3 Data Models and Variables, Entity,115,12
+CS171, D3 Data Models and Variables, Data model & conceptual model,115,12
+CS171, D3 Data Models and Variables, Visual variables,115,12
+CS171, D3 Data Models and Variables, Position,115,12
+CS171, D3 Data Models and Variables, Size,115,12
+CS171, D3 Data Models and Variables, Length,115,12
+CS171, D3 Data Models and Variables, Shape,115,12
+CS171, D3 Data Models and Variables, Color,115,12
+CS171, D3 Data Models and Variables, Graph perception,115,12
+CS171, D3 Data Models and Variables, Effective visual variables rank,115,12
+CS171, Lab 2, Loading Data D3,115,14
+CS171, Lab 2, Selectors D3,115,14
+CS171, Lab 2, Drawing with Data D3,115,14
+CS171, Interaction Lecture, Shneiderman mantra,115,12
+CS171, Interaction Lecture, Focus + Context,115,12
+CS171, Interaction Lecture, Brishing & linking,115,12
+CS171, Interaction Lecture, Filtering,115,12
+CS171, Interaction Lecture, Zooming,115,12
+CS171, Interaction Lecture, Animation,115,12
+CS171, Interaction Lecture, Off-the-desktop-interaction,115,12
+CS171, Networks & Process Lecture, Network Layouts,115,4
+CS171, Networks & Process Lecture, Force-directed,115,4
+CS171, Networks & Process Lecture, Clustered,115,4
+CS171, Networks & Process Lecture, Radial,115,4
+CS171, Networks & Process Lecture, Matrix,115,4
+CS171, Networks & Process Lecture, Tree Layouts,115,4
+CS171, Networks & Process Lecture, Radial trees,115,4
+CS171, Networks & Process Lecture, Segmentation plots,115,4
+CS171, Lab 3, Transitions D3,115,2
+CS171, Lab 3, Interactions D3,115,2
+CS171, Lab 3, Scale & Axis D3,115,2
+CS171, Process & Graphs Lecture, Target - explore domain-pose questions-find & clean data,115,4
+CS171, Process & Graphs Lecture, Translate - formulate analysis,115,4
+CS171, Process & Graphs Lecture, Design - design encodings,115,4
+CS171, Process & Graphs Lecture, Implement - code sketches,115,4
+CS171, Process & Graphs Lecture, Validate - effective,115,4
+CS171, Process & Graphs Lecture, Visualisation Taxonomy,115,4
+CS171, Process & Graphs Lecture, Chart Starter - comparison,115,4
+CS171, Process & Graphs Lecture, Chart Starter - trend over time,115,4
+CS171, Process & Graphs Lecture, Chart Starter - proportions,115,4
+CS171, Process & Graphs Lecture, Chart Starter - distributions,115,4
+CS171, Process & Graphs Lecture, Chart Starter - correlations,115,4
+CS171, Process & Graphs Lecture, Chart Starter - overplotting,115,4
+CS171, Lab 4, D3 Layouts,115,2
+CS171, High Dimensional Data Lecture, Geometric methods,115,5
+CS171, High Dimensional Data Lecture, Data Reduction,115,5
+CS171, High Dimensional Data Lecture, Pixel based methods,115,5
+CS171, High Dimensional Data Lecture, Clustering,115,5
+CS171, High Dimensional Data Lecture, Heterogenous data sets & stratification,115,5
+CS171, High Dimensional Data Lecture, Dimensionality reduction,115,5
+CS171, High Dimensional Data Lecture, Multi-dimensional scaling,115,5
+CS171, High Dimensional Data Lecture, Glyphs,115,5
+CS171, Text Visualisation Lecture, Text as abstraction,115,1
+CS171, Text Visualisation Lecture, Typeography,115,1
+CS171, Text Visualisation Lecture, Visualisation of text,115,1
+CS171, Text Visualisation Lecture, Visualisation of collections,115,1
+CS171, Text Visualisation Lecture, Bag of words,115,1
+CS171, Text Visualisation Lecture, Text corpora & language,115,1
+CS171, Text Visualisation Lecture, Time evolution text,115,1
+CS171, Lab 5, Web scraping,115,10
+CS171, Lab 5, JQuery,115,10
+CS171, Lab 5, Advanced Javascript,115,10
+CS171, Visualisation Maps Lecture, Geographic and Population Maps,115,2
+CS171, Visualisation Maps Lecture, Landmarks and Paths,115,2
+CS171, Visualisation Maps Lecture, Latitude and Longitude,115,2
+CS171, Visualisation Maps Lecture, Azimuthal Equidistant,115,2
+CS171, Visualisation Maps Lecture, Conic,115,2
+CS171, Visualisation Maps Lecture, Cylindrical,115,2
+CS171, Visualisation Maps Lecture, Albers Equal Area,115,2
+CS171, Visualisation Maps Lecture, Mercator,115,2
+CS171, Visualisation Maps Lecture, Chloropleth,115,2
+CS171, Visualisation Maps Lecture, Isopleth map,115,2
+CS171, Visualisation Maps Lecture, Cartograms,115,2
+CS171, Visualisation Maps Lecture, Proportional Symbol Maps,115,2
+CS171, Visualisation Maps Lecture, Flow Maps,115,2
+CS171, Visualisation Maps Lecture, Time Varying Maps,115,2
+CS171, Visualisation Maps Lecture, Thematic Maps,115,2
+CS171, Tableua Desktop Lecture, Tableau Intro,115,12
+CS171, Perception Lecture, bottom-up & top-down brain,115,7
+CS171, Perception Lecture, the eye,115,7
+CS171, Perception Lecture, eye tracking summary,115,7
+CS171, Perception Lecture, receptive fields,115,7
+CS171, Perception Lecture, visual channels,115,7
+CS171, Perception Lecture, contrast/ layering,115,7
+CS171, Perception Lecture, color and motion pop-out,115,7
+CS171, Perception Lecture, separable & integral channels,115,7
+CS171, Perception Lecture, Gestalt principles,115,7
+CS171, Color Lecture, Tufte color,115,3
+CS171, Color Lecture, Color models,115,3
+CS171, Color Lecture, Additive and subtractive models,115,3
+CS171, Color Lecture, Visual systems,115,3
+CS171, Color Lecture, Color perception and illusions,115,3
+CS171, Color Lecture, Color blindness,115,3
+CS171, Color Lecture, RGB + HSL + LAB + Munsell,115,3
+CS171, Color Lecture, Color discriminability/ encodings,115,3
+CS171, Color Lecture, Normal colors,115,3
+CS171, Color Lecture, Color maps + Brewer + chroma.js,115,3
+CS171, Cognition Lecture, TBC,115,8
+CS171, Storytelling Lecture, Visual design - 7 genres,115,6
+CS171, Storytelling Lecture, Visual design - beginning + middle + end,115,6
+CS171, Storytelling Lecture, Messaging - headline + caption + annotation,115,6
+CS171, Storytelling Lecture, Messaging - viewpoint + relatability + precision,115,6
+CS171, Storytelling Lecture, Interactivity - obvious interaction,115,6
+CS171, Storytelling Lecture, Interactivity - reactive & reset,115,6
+CS171, Lab 6, Object Orientated Javascript,115,5
+CS171, Lab 6, Classes Javascript,115,5
+CS109, Process + Data + Visual Attributes Lecture, Data Process,128,13
+CS109, Process + Data + Visual Attributes Lecture, Data Types,128,13
+CS109, Process + Data + Visual Attributes Lecture, Data Dimensions,128,13
+CS109, Process + Data + Visual Attributes Lecture, Data & Images,128,13
+CS109, Process + Data + Visual Attributes Lecture, Visual attributes,128,13
+CS109, Process + Data + Visual Attributes Lecture, Visualisations,128,13
+CS109, Lab 1, Basic Expressions,128,14
+CS109, Lab 1, Lists,128,14
+CS109, Lab 1, Dictionaries,128,14
+CS109, Lab 1, Tuples,128,14
+CS109, Lab 1, Functions,128,14
+CS109, Lab 1, Modules,128,14
+CS109, Statistical Graphs Lecture, Design Principle,128,7
+CS109, Statistical Graphs Lecture, Graph Types,128,7
+CS109, Statistical Graphs Lecture, Comparisons,128,7
+CS109, Statistical Graphs Lecture, Trends Over Time,128,7
+CS109, Statistical Graphs Lecture, Correlations,128,7
+CS109, Statistical Graphs Lecture, Distributions,128,7
+CS109, Statistical Graphs Lecture, Color,128,7
+CS109, Data Munging Lecture, Scraping Web Data,128,3
+CS109, Data Munging Lecture, Etiquette of Scraping,128,3
+CS109, Data Munging Lecture, Scraping Demonstration,128,3
+CS109, Lab 2, Basic Expressions & Web Scraping,128,14
+CS109, Statistical Models Lecture, Probability,128,1
+CS109, Statistical Graphs Lecture, Parametric vs Non-Parametric,128,7
+CS109, Statistical Graphs Lecture, Length Biasing,128,7
+CS109, Statistical Graphs Lecture, Exponential Distribution,128,7
+CS109, Statistical Graphs Lecture, Binomial Distribution,128,7
+CS109, Statistical Graphs Lecture, Bootstrap,128,7
+CS109, Bias Sampling Lecture, Some Forms of Bias,128,11
+CS109, Bias Sampling Lecture, Sampling Schemes,128,11
+CS109, Bias Sampling Lecture, Bias of an Estimator,128,11
+CS109, Bias Sampling Lecture, Basu's Weighting,128,11
+CS109, Bias Sampling Lecture, Fisher Weighting,128,11
+CS109, Lab 3, Workshop on Pandas,128,2
+CS109, Lab 3, Visualisation Python,128,2
+CS109, Lab 3, Matplotlib Python,128,2
+CS109, Regression Lecture, Regression to the mean,128,4
+CS109, Regression Lecture, Linear Model,128,4
+CS109, Regression Lecture, Gauss-Markov Theorem,128,4
+CS109, Regression Lecture, Hat Matrix,128,4
+CS109, Regression Lecture, Logistic Regression,128,4
+CS109, High Dimensional Data Lecture, Data Types,128,5
+CS109, High Dimensional Data Lecture, Graphical Methods,128,5
+CS109, High Dimensional Data Lecture, Dimensionality Reduction MDS,128,5
+CS109, High Dimensional Data Lecture, Dimensionality Reduction PCA,128,5
+CS109, High Dimensional Data Lecture, Linear Methods,128,5
+CS109, Lab 4, Sci-Kit Learn,128,2
+CS109, Lab 4, Regression,128,2
+CS109, Lab 4, PCA,128,2
+CS109, Classification & Clustering Lecture, Classification,128,6
+CS109, Classification & Clustering Lecture, Clustering,128,6
+CS109, Thinking Bayesian Lecture, Bayesian Thinking,128,4
+CS109, Thinking Bayesian Lecture, Cross-Validation,128,4
+CS109, Thinking Bayesian Lecture, Bayesian Method,128,4
+CS109, Thinking Bayesian Lecture, MCMC,128,4
+CS109, Thinking Bayesian Lecture, Interval Estimation,128,4
+CS109, Thinking Bayesian Lecture, Conjugate Priors,128,4
+CS109, Lab 5, Bias,128,10
+CS109, Lab 5, Variance,128,10
+CS109, Lab 5, Cross-Validation,128,10
+CS109, Simulation & Bayesian Computation Lecture, Bayesian Data Analysis,128,6
+CS109, Simulation & Bayesian Computation Lecture, Bayesian Bandits,128,6
+CS109, Simulation & Bayesian Computation Lecture, LASSO and Sparsity,128,6
+CS109, Simulation & Bayesian Computation Lecture, Kidney Data Analysis,128,6
+CS109, Simulation & Bayesian Computation Lecture, Markov Chain Example,128,6
+CS109, Simulation & Bayesian Computation Lecture, MCM Cryptography,128,6
+CS109, Bayesian Contd Monte Carlo Lecture, Markov Chains,128,4
+CS109, Bayesian Contd Monte Carlo Lecture, Likelihood Ratios,128,4
+CS109, Bayesian Contd Monte Carlo Lecture, MCMC,128,4
+CS109, Bayesian Contd Monte Carlo Lecture, Hidden Makov Models,128,4
+CS109, Bayesian Contd Monte Carlo Lecture, Networks,128,4
+CS109, Bayesian Contd Monte Carlo Lecture, MCMC Generate Networks,128,4
+CS109, Bayesian Contd Monte Carlo Lecture, Gibbs Sampler + Metropolis Hastings,128,4
+CS109, Bayesian Contd Monte Carlo Lecture, Hierarchical Models,128,4
+CS109, Lab 6, Bayesian Analysis,128,5
+CS109, Lab 6, SciKit Learn,128,5
+CS109, Practical Machine Learning Lecture, Supervised Learning - SVM,128,3
+CS109, Practical Machine Learning Lecture, Supervised Learning - Decision Tree,128,3
+CS109, Practical Machine Learning Lecture, Supervised Learning - Boosting,128,3
+CS109, Practical Machine Learning Lecture, Supervised Learning - Random Forest,128,3
+CS109, Practical Machine Learning Lecture, Unsupervised Learning - K-Means,128,3
+CS109, Practical Machine Learning Lecture, Unsupervised Learning - Mean Shift,128,3
+CS109, EC2 + AWS + MapReduce + MrJOB Lecture, Map Reduce,128,3
+CS109, EC2 + AWS + MapReduce + MrJOB Lecture, Python Generators,128,3
+CS109, EC2 + AWS + MapReduce + MrJOB Lecture, Combiner,128,3
+CS109, EC2 + AWS + MapReduce + MrJOB Lecture, JSON Encoding,128,3
+CS109, Trees + Networks + Databases Lecture, Trees,128,6
+CS109, Trees + Networks + Databases Lecture, Networks,128,6
+CS109, Trees + Networks + Databases Lecture, Radial Layouts,128,6
+CS109, Trees + Networks + Databases Lecture, Matrices,128,6
+CS109, Trees + Networks + Databases Lecture, Tools & Applications,128,6
+CS109, Trees + Networks + Databases Lecture, Databases,128,6
+CS109, Lab 7, Basic ML,128,5
+CS109, Lab 7, EC2,128,5
+CS109, Lab 7, MRJob,128,5
+CS109, EC2 + AWS + MapReduce + MrJOB Lecture, JSON Encoding,128,3
+CS109, Network Vis & Gephi Lecture, Graphs,128,5
+CS109, Network Vis & Gephi Lecture, Networks,128,5
+CS109, Network Vis & Gephi Lecture, Power Laws,128,5
+CS109, Network Vis & Gephi Lecture, Models,128,5
+CS109, Lab 8, Basic ML,128,4
+CS109, Lab 8, EC2,128,4
+CS109, Lab 8, MRJob,128,4
+CS109, Networks II Lecture, Centrality Measures,128,7
+CS109, Networks II Lecture, Community Detection,128,7
+CS109, Networks II Lecture, Respondent Driven Sampling,128,7
+CS109, Visual Storytelling & Messaging Lecture, Effective Communication,128,3
+CS109, Networks II Lecture, Simplicity,128,7
+CS109, Networks II Lecture, Visual Design,128,7
+CS109, Networks II Lecture, Messaging,128,7
+CS109, Networks II Lecture, Visual Storytelling,128,7
+CS109, SVM & Random Forest Lecture, Hierarchical Clustering,128,4
+CS109, SVM & Random Forest Lecture, SVM's,128,4
+CS109, SVM & Random Forest Lecture, Neural Networks,128,4
+Machine Learning, Introduction, Introduction,72,3
+Machine Learning, Introduction, Octave Tutorial,72,3
+Machine Learning, Linear Algebra Review, Matrices and Vectors,72,3
+Machine Learning, Linear Algebra Review, Addition and Scalar Multiplication,72,3
+Machine Learning, Linear Algebra Review, Vector Multiplication,72,3
+Machine Learning, Linear Algebra Review, Matrix Multiplication,72,3
+Machine Learning, Linear Algebra Review, Inverse and Transpose,72,3
+Machine Learning, Linear Regression, Cost Function,72,3
+Machine Learning, Linear Regression," Gradient Descent with One Variable
+",72,3
+Machine Learning, Linear Regression," Gradient Descent with Multiple Variables
+",72,3
+Machine Learning, Linear Regression," Features and Polynomial Regression
+",72,3
+Machine Learning, Linear Regression," Normal Equation
+",72,3
+Machine Learning, Linear Regression," Regularization
+",72,3
+Machine Learning, Logistic Regression," Classification
+",72,3
+Machine Learning, Logistic Regression," Hypothesis Representation
+",72,3
+Machine Learning, Logistic Regression," Decision Boundary
+",72,3
+Machine Learning, Logistic Regression," Cost Function
+",72,3
+Machine Learning, Logistic Regression," Multiclass Classification
+",72,3
+Machine Learning, Logistic Regression," Regularization
+",72,3
+Machine Learning, Neural Networks," Non linear Hypotheses
+",72,4
+Machine Learning, Neural Networks," Model Representation
+",72,4
+Machine Learning, Neural Networks," Multiclass Classification
+",72,4
+Machine Learning, Neural Networks," Cost Function
+",72,4
+Machine Learning, Neural Networks," Backpropagation
+",72,4
+Machine Learning, Neural Networks," Implementation
+",72,4
+Machine Learning, Neural Networks," Gradient Checking
+",72,4
+Machine Learning, Neural Networks," Random Initialisation
+",72,4
+Machine Learning, Support Vector Machines," Optimisation Objective
+",72,5
+Machine Learning, Support Vector Machines," Large Margin Intuition
+",72,5
+Machine Learning, Support Vector Machines," Kernels
+",72,5
+Machine Learning, Support Vector Machines," Using an SVM
+",72,5
+Machine Learning, Clustering," Unsupervised Learning
+",72,3
+Machine Learning, Clustering," K-means Algorithm
+",72,3
+Machine Learning, Clustering," Optimisation Objective
+",72,3
+Machine Learning, Clustering," Random Initialization
+",72,3
+Machine Learning, Clustering," Choosing the number of clusters
+",72,3
+Machine Learning, Dimensionality Reduction," Data Compression
+",72,4
+Machine Learning, Dimensionality Reduction," Visualisation
+",72,4
+Machine Learning, Dimensionality Reduction," Principal Component Analysis
+",72,4
+Machine Learning, Dimensionality Reduction," Choosing the number of PCs
+",72,4
+Machine Learning, Dimensionality Reduction," Reconstruction from Compressed Representation
+",72,4
+Machine Learning, Dimensionality Reduction," Advice for Applying PCA
+",72,4
+Machine Learning, Anomaly Detection," Motivation
+",72,4
+Machine Learning, Anomaly Detection," Gaussian Distribution
+",72,4
+Machine Learning, Anomaly Detection," Algorithms
+",72,4
+Machine Learning, Anomaly Detection," Developing and Evaluating an Anomaly Detection System
+",72,4
+Machine Learning, Anomaly Detection," Anomaly Detection vs. Supervised Learning
+",72,4
+Machine Learning, Anomaly Detection," What Features to Use
+",72,4
+Machine Learning, Anomaly Detection," Multivariate Gaussian Distribution
+",72,4
+Machine Learning, Recommender Systems," Content Based Recommendations
+",72,3
+Machine Learning, Recommender Systems," Collaborative Filtering Algorithm
+",72,3
+Machine Learning, Recommender Systems," Vectorization
+",72,3
+Machine Learning, Recommender Systems," Implementation
+",72,3
+Machine Learning, Advice for Applying ML," Deciding what to try
+",72,2
+Machine Learning, Advice for Applying ML," Evaluating a Hypothesis
+",72,2
+Machine Learning, Advice for Applying ML," Model Selection and Train / Validation
+",72,2
+Machine Learning, Advice for Applying ML," Bias vs. Variance
+",72,2
+Machine Learning, Advice for Applying ML," Regularisation and Bias vs. Variance
+",72,2
+Machine Learning, Advice for Applying ML," Learning Curves
+",72,2
+Machine Learning, Advice for Applying ML," What to do next ?
+",72,2
+Machine Learning, ML System Design," Prioritization
+",72,4
+Machine Learning, ML System Design," Error Analysis
+",72,4
+Machine Learning, ML System Design," Trade-off Precision and Recall
+",72,4
+Machine Learning, ML System Design," Data for ML
+",72,4
+Machine Learning, Large Scale Machine Learning," Learning with Large Datasets
+",72,3
+Machine Learning, Large Scale Machine Learning," Stochastic Gradient Descent
+",72,3
+Machine Learning, Large Scale Machine Learning," Mini-bathc gradient descent
+",72,3
+Machine Learning, Large Scale Machine Learning," Stochastic gradient descent convergence
+",72,3
+Machine Learning, Large Scale Machine Learning," Online Learning
+",72,3
+Machine Learning, Large Scale Machine Learning," Map Reduce and Parallelism 
+",72,3
+Machine Learning, Conclusion," Application Examples
+",72,4
+Machine Learning, Conclusion," Conclusions
+",72,4
+Stats 110, Lecture 1," sample spaces
+",19,2
+Stats 110, Lecture 1," naive definition of probability
+",19,2
+Stats 110, Lecture 1," counting
+",19,2
+Stats 110, Lecture 1," sampling
+",19,2
+Stats 110, Lecture 2," Bose-Einstein
+",19,2
+Stats 110, Lecture 2," story proofs
+",19,2
+Stats 110, Lecture 2," Vandermonde identity
+",19,2
+Stats 110, Lecture 2," axioms of probability 
+",19,2
+Stats 110, Lecture 3," birthday problem
+",19,5
+Stats 110, Lecture 3," properties of probability
+",19,5
+Stats 110, Lecture 3," inclusion-exclusion
+",19,5
+Stats 110, Lecture 3," matching problem
+",19,5
+Stats 110, Lecture 4," independence
+",19,3
+Stats 110, Lecture 4," Newton-Pepys
+",19,3
+Stats 110, Lecture 4," conditional probability
+",19,3
+Stats 110, Lecture 4," Bayes’ rule
+",19,3
+Stats 110, Lecture 5," law of total probability
+",19,3
+Stats 110, Lecture 5," conditional probability examples
+",19,3
+Stats 110, Lecture 5," conditional independence
+",19,3
+Stats 110, Lecture 6," Monty Hall problem
+",19,4
+Stats 110, Lecture 6," Simpson’s paradox
+",19,4
+Stats 110, Lecture 7," gambler’s ruin
+",19,2
+Stats 110, Lecture 7," first step analysis
+",19,2
+Stats 110, Lecture 7," random variables
+",19,2
+Stats 110, Lecture 7," Bernoulli
+",19,2
+Stats 110, Lecture 7," Binomial
+",19,2
+Stats 110, Lecture 8," random variables
+",19,1
+Stats 110, Lecture 8," CDFs
+",19,1
+Stats 110, Lecture 8," PMFs
+",19,1
+Stats 110, Lecture 8," Hypergeometric
+",19,1
+Stats 110, Lecture 9," independence
+",19,5
+Stats 110, Lecture 9," Geometric
+",19,5
+Stats 110, Lecture 9," expected values
+",19,5
+Stats 110, Lecture 9," indicator r.v.s
+",19,5
+Stats 110, Lecture 9," linearity
+",19,5
+Stats 110, Lecture 9," symmetry
+",19,5
+Stats 110, Lecture 9," fundamental bridge
+",19,5
+Stats 110, Lecture 10," linearity
+",19,4
+Stats 110, Lecture 10," Putnam problem
+",19,4
+Stats 110, Lecture 10," Negative Binomial
+",19,4
+Stats 110, Lecture 10," St. Petersburg paradox
+",19,4
+Stats 110, Lecture 11," sympathetic magic
+",19,3
+Stats 110, Lecture 11," Poisson distribution
+",19,3
+Stats 110, Lecture 11," Poisson approximation
+",19,3
+Stats 110, Lecture 12," discrete vs. continuous
+",19,6
+Stats 110, Lecture 12," PDFs
+",19,6
+Stats 110, Lecture 12," variance
+",19,6
+Stats 110, Lecture 12," standard deviation
+",19,6
+Stats 110, Lecture 12," Uniform
+",19,6
+Stats 110, Lecture 12," universality
+",19,6
+Stats 110, Lecture 13," standard Normal
+",19,5
+Stats 110, Lecture 13," Normal normalizing constant
+",19,5
+Stats 110, Lecture 14," Normal distribution
+",19,8
+Stats 110, Lecture 14," standardization
+",19,8
+Stats 110, Lecture 14," LOTUS
+",19,8
+Stats 110, Lecture 15," midterm review
+",19,3
+Stats 110, Lecture 15," extra examples
+",19,3
+Stats 110, Lecture 16," Exponential distribution
+",19,5
+Stats 110, Lecture 16," memoryless property
+",19,5
+Stats 110, Lecture 17," moment generating functions
+",19,6
+Stats 110, Lecture 17," hybrid Bayes’ rule
+",19,6
+Stats 110, Lecture 17," Laplace’s rule of succession
+",19,6
+Stats 110, Lecture 18," MGFs to get moments of Expo and Normal
+",19,6
+Stats 110, Lecture 18," sums of Poissons
+",19,6
+Stats 110, Lecture 18," joint distributions
+",19,6
+Stats 110, Lecture 19," joint
+",19,4
+Stats 110, Lecture 19," conditional and marginal distributions
+",19,4
+Stats 110, Lecture 19," 2-D LOTUS
+",19,4
+Stats 110, Lecture 19," chicken-egg
+",19,4
+Stats 110, Lecture 20," expected distance between Normals
+",19,4
+Stats 110, Lecture 20," Multinomial
+",19,4
+Stats 110, Lecture 20," Cauchy
+",19,4
+Stats 110, Lecture 21," covariance
+",19,8
+Stats 110, Lecture 21," correlation
+",19,8
+Stats 110, Lecture 21," variance of a sum
+",19,8
+Stats 110, Lecture 21," variance of Hypergeometric
+",19,8
+Stats 110, Lecture 22," transformations
+",19,7
+Stats 110, Lecture 22," LogNormal
+",19,7
+Stats 110, Lecture 22," convolutions
+",19,7
+Stats 110, Lecture 22," the probabilistic method
+",19,7
+Stats 110, Lecture 23," Beta distribution
+",19,8
+Stats 110, Lecture 23," Bayes’ billiards
+",19,8
+Stats 110, Lecture 23," finance preview and examples
+",19,8
+Stats 110, Lecture 24," Gamma distribution
+",19,1
+Stats 110, Lecture 24," Poisson processes
+",19,1
+Stats 110, Lecture 25," Beta-Gamma (bank-post office)
+",19,2
+Stats 110, Lecture 25," order statistics
+",19,2
+Stats 110, Lecture 25," conditional expectation
+",19,2
+Stats 110, Lecture 25," two envelope paradox
+",19,2
+Stats 110, Lecture 26," two envelope paradox (cont.)
+",19,3
+Stats 110, Lecture 26," conditional expectation (cont.)
+",19,3
+Stats 110, Lecture 26," waiting for HT vs. waiting for HH
+",19,3
+Stats 110, Lecture 27," conditional expectation (cont.)
+",19,9
+Stats 110, Lecture 27," taking out what’s known
+",19,9
+Stats 110, Lecture 27," Adam’s law
+",19,9
+Stats 110, Lecture 27," Eve’s law
+",19,9
+Stats 110, Lecture 28," sum of a random number of random variables
+",19,6
+Stats 110, Lecture 28, inequalities (Cauchy-Schwarz,19,6
+Stats 110, Lecture 29," law of large numbers
+",19,3
+Stats 110, Lecture 29," central limit theorem
+",19,3
+Stats 110, Lecture 30," Chi-Square
+",19,12
+Stats 110, Lecture 30," Student-t
+",19,12
+Stats 110, Lecture 30," Multivariate Normal
+",19,12
+Stats 110, Lecture 31," Markov chains
+",19,6
+Stats 110, Lecture 31," transition matrix
+",19,6
+Stats 110, Lecture 31," stationary distribution
+",19,6
+Stats 110, Lecture 32," Markov chains (cont.)
+",19,4
+Stats 110, Lecture 32," irreducibility
+",19,4
+Stats 110, Lecture 32," reversibility
+",19,4
+Stats 110, Lecture 32," random walk on an undirected network
+",19,4
+Stats 110, Lecture 33," Markov chains (cont.)
+",19,5
+Stats 110, Lecture 33," Google PageRank as a Markov chain
+",19,5
+Stats 110, Lecture 34," a look ahead
+",19,6
+Statistics Udacity, Lecture 1," Introduction
+",18,2
+Statistics Udacity, Lecture 2," Visualizing Data
+",18,2
+Statistics Udacity, Lecture 3," Central Tendency
+",18,5
+Statistics Udacity, Lecture 4," Variability
+",18,3
+Statistics Udacity, Lecture 5," Standardizing
+",18,3
+Statistics Udacity, Lecture 6," Normal Distribution
+",18,4
+Statistics Udacity, Lecture 7," Sampling Distribution
+",18,2
+Statistics Udacity, Lecture 8," Estimation
+",18,1
+Statistics Udacity, Lecture 9," Hypothesis Testing
+",18,5
+Statistics Udacity, Lecture 10," t-Tests
+",18,4
+Statistics Udacity, Lecture 11," t-Tests
+",18,3
+Statistics Udacity, Lecture 12," One-way ANOVA
+",18,6
+Statistics Udacity, Lecture 13," ANOVA (cont.)
+",18,5
+Statistics Udacity, Lecture 14," Correlation
+",18,8
+Statistics Udacity, Lecture 15," Regression
+",18,3
+Statistics Udacity, Lecture 16," Chi-Squared tests
+",18,5
+Stanford Databases, Introduction," Introduction
+",36,3
+Stanford Databases, Relational Databases," Model
+",36,3
+Stanford Databases, Relational Databases," Querying
+",36,3
+Stanford Databases, Relational Databases," UML Language
+",36,3
+Stanford Databases, Relational Algebra," Select
+",36,18
+Stanford Databases, Relational Algebra," Project
+",36,18
+Stanford Databases, Relational Algebra," Join
+",36,18
+Stanford Databases, Relational Algebra," Set Operators
+",36,18
+Stanford Databases, Relational Algebra," Rename
+",36,18
+Stanford Databases, Relational Algebra," Notation
+",36,18
+Stanford Databases, XML Data," Introduction
+",36,3
+Stanford Databases, XML Data," DTDs
+",36,3
+Stanford Databases, XML Data," IDs
+",36,3
+Stanford Databases, XML Data," IDREFs
+",36,3
+Stanford Databases, XML Data," XML Schema
+",36,3
+Stanford Databases, XML Data," Querying
+",36,3
+Stanford Databases, JSON Data," Introduction
+",36,6
+Stanford Databases, SQL," Introduction
+",36,12
+Stanford Databases, SQL," Select
+",36,12
+Stanford Databases, SQL," Set Operators
+",36,12
+Stanford Databases, SQL," Where
+",36,12
+Stanford Databases, SQL," From
+",36,12
+Stanford Databases, SQL," Joins
+",36,12
+Stanford Databases, SQL," Aggregation
+",36,12
+Stanford Databases, SQL," NULL
+",36,12
+Stanford Databases, SQL," Data modification statements
+",36,12
+Stanford Databases, SQL," Indexes
+",36,12
+Stanford Databases, SQL," Constraints
+",36,12
+Stanford Databases, SQL," Triggers
+",36,12
+Stanford Databases, SQL," Transactions
+",36,12
+Stanford Databases, SQL," Isolations
+",36,12
+Stanford Databases, SQL," Views
+",36,12
+Stanford Databases, SQL," Authorisation
+",36,12
+Stanford Databases, SQL," Recursion
+",36,12
+Stanford Databases, SQL," OLAP
+",36,12
+Stanford Databases, NoSQL," Motivation
+",36,1
+NLP, The Language Modeling Problem," Markov Processes
+",16,6
+NLP, The Language Modeling Problem," Trigram Language Model
+",16,6
+NLP, The Language Modeling Problem," Perplexity
+",16,6
+NLP, Parameter Estimation in Language Models," Linear Interpolation
+",16,4
+NLP, Parameter Estimation in Language Models," Dicounting Methods
+",16,4
+NLP, Tagging Problems and Hidden Markov Models," Tagging Problem
+",16,1
+NLP, Tagging Problems and Hidden Markov Models," Generative Models for Supervised Learning
+",16,1
+NLP, Tagging Problems and Hidden Markov Models," Hidden Markov Model (HMM)
+",16,1
+NLP, Tagging Problems and Hidden Markov Models," Parameter Estimation in HMM
+",16,1
+NLP, Tagging Problems and Hidden Markov Models," Viterbi Algorithm
+",16,1
+NLP, Parsing and Context-Free Grammars," Parsing Problem
+",16,5
+NLP, Parsing and Context-Free Grammars," Context-Free Grammar
+",16,5
+NLP, Parsing and Context-Free Grammars," A Simple Grammar for English
+",16,5
+NLP, Probabilistic Context-Free Grammars (PCFGs)," Basics of PCFGs
+",16,7
+NLP, Probabilistic Context-Free Grammars (PCFGs)," CKY Parsing Algorithm
+",16,7
+NLP, Probabilistic Context-Free Grammars (PCFGs)," Weaknesses of PCFGs
+",16,7
+NLP, Lexicalized PCFGs," Lexicalization of a Treebank
+",16,3
+NLP, Lexicalized PCFGs," Parameter Estimation in Lexicalised PCFGs
+",16,3
+NLP, Lexicalized PCFGs," Evaluation of Lexicalised PCFGs
+",16,3
+Probabilistic Sys, Bayesian Statistical Inference I Lecture, Inference Model,113,6
+Probabilistic Sys, Bayesian Statistical Inference I Lecture, Hypothesis Test,113,6
+Probabilistic Sys, Bayesian Statistical Inference I Lecture, Estimation,113,6
+Probabilistic Sys, Bayesian Statistical Inference I Lecture, LMS Estimation,113,6
+Probabilistic Sys, Bayesian Statistical Inference II Lecture, MAP Estimate,113,6
+Probabilistic Sys, Bayesian Statistical Inference II Lecture, MSE Estimate,113,6
+Probabilistic Sys, Bayesian Statistical Inference II Lecture, LMS Estimate,113,6
+Probabilistic Sys, Bayesian Statistical Inference II Lecture, Linear LMS Estimate,113,6
+Probabilistic Sys, Classical Statistical Inference I Lecture, Inference Model,113,1
+Probabilistic Sys, Classical Statistical Inference I Lecture, MLE,113,1
+Probabilistic Sys, Classical Statistical Inference I Lecture, MSE,113,1
+Probabilistic Sys, Classical Statistical Inference I Lecture, Confidence Intervals,113,1
+Probabilistic Sys, Classical Inference II Lecture, MLE Estimate,113,15
+Probabilistic Sys, Classical Inference II Lecture, Confidence Intervals,113,15
+Probabilistic Sys, Classical Inference II Lecture, Linear Regression,113,15
+Probabilistic Sys, Classical Inference II Lecture, Binary Hypothesis Test,113,15
+Probabilistic Sys, Classical Inference III Course Overview Lecture, Binary Hypothesis Test,113,6
+Probabilistic Sys, Classical Inference III Course Overview Lecture, Composite Test,113,6
