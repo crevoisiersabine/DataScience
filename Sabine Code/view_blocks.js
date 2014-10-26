@@ -1,6 +1,6 @@
 var margin = { top: 40, right: 10, bottom: 50, left: 50 };
 var width = 900 - margin.left - margin.right;
-var height = 350 - margin.bottom - margin.top;
+var height = 400 - margin.bottom - margin.top;
 var width_legend = 100;
 
 var format = d3.time.format("%d-%m-%Y");
@@ -72,34 +72,36 @@ d3.tsv("study_data.tsv", function(err, data) {
 
 //-------------------------------------------------------------------Create the tooltip--------------------------------------------------------
     d3.select("#area1").append("div")
-          .attr("id", "caption");
+          .attr("id", "caption")
+          .style("margin-left", "300px")
+          .style("margin-top", "20px");
 //--------------------------------------------------------Text to tell the story-----------------------------------------------
-  var captions = ["<b>Starting with the 5 courses:<br></b>\
-                  <li>CS106B (c++)<br></li>\
-                  <li>Natural Language Processing<br></li>\
-                  <li>Databases<br></li>\
-                  <li>CS171 (visualisation)<br></li>\
-                  <li>Statistics (udacity)<br></li>\
-                  <b>As planned. For one month.</b>",
-                  "Followed by a two week holiday, visiting Thailand.<br>\
-                  <b>And a little work...</b>",
-                  "<b>CS171</b> was a <b>fantastic</b> course so we started looking for other Harvard courses and found:<br>\
-                   <br>\
-                  <b>CS109 (data science course). </b>",
-                  "<b>ALTER THE PLAN</b>\
-                  <ol><li>Put current courses on hold</li>\
-                  <li>Focus on NEW courses:</li></ol>\
-                  <li>CS109 (data science)</li>\
-                  <li>Stats110  (statistics pre-requisite for CS109)</li>",
-                  "Decide to focus on one course at a time.<br>\
-                   <br>\
-                  <b>Stats110 completed!</b>",
-                  "<b>CS109 completed!</b>",
-                  "<b>CS171 completed!</b>",
-                  "Decide to study <b>statistical inference</b> to supplement Stats110.<br>",
-                  "<b>Databases completed!</b>",
-                  "Onwards with c++ towards completion..."] 
+  var captions = ["<h2><small><font color='#eee'>We started the first term studying 5 courses simultaneously</font></small></h2>",
 
+                  "<h2><small><font color='#eee'>Followed by a two week holiday. <b>And a little work...</b></font></small></h2>",
+
+                  "<h2><small><font color='#eee'>CS171 was a <b>brilliant</b> course, so we found other Harvard Courses</font></small></h2>",
+
+                  "<h2><small><font color='#eee'>Long days studying Statistics and Data Science Theory... this was a difficult period</font></small></h2>",
+
+
+                  "<h2><small><font color='#eee'>Stats110 completed, half a day off!</font></small></h2>",
+
+                  "<h2><small><font color='#eee'>CS109 completed, quarter of a day off!</font></small></h2>",
+
+                  "<h2><small><font color='#eee'>CS171 completed ... </font></small></h2>",
+
+                  "<h2><small><font color='#eee'>Studying statistical inference to apply our Stats110 learning.</font></small></h2>",
+
+                  "<h2><small><font color='#eee'>Databases completed</font></small></h2>",
+
+                  "<h2><small><font color='#eee'>and CS106B the last man standing</font></small></h2>"] 
+
+//------------------------------------------------------------------Create the titles-----------------------------------------------------
+    d3.select(".header .col-md-8 h1 small").text("Studying hours over 6 months");
+    d3.select(".header .col-md-3 h1 small").text("Total hours worked:");
+    d3.select(".header .col-md-1 h1 small").text("0");
+    d3.selectAll("#explanation").text("")
 //-------------------------------------------------------------------Create the svgs-------------------------------------------------------------
   var svg_plot = d3.select("#area1")
     .append("svg")
@@ -496,11 +498,13 @@ function enableHover(captions, createArrows){
       var buck_num = buck[buck.length-1];
       if(buck_num == 0){ //Note buck_num = 0 actually corresponds to 10th bucket
         d3.select("#caption").html(captions[9]).style("opacity", 1)
-            .style("margin-left", (d3.event.pageX) + "px")     
+            .style("margin-left",  "300px")  
+            .style("margin-top", "20px");   
       }
       else{
         d3.select("#caption").html(captions[buck_num-1]).style("opacity", 1)
-            .style("margin-left", (d3.event.pageX) + "px")     
+            .style("margin-left", "300px")
+            .style("margin-top", "20px");  
       }
 
       //Bleep over hovered circle to draw attention
@@ -650,7 +654,18 @@ function loadScript(src, script, callback){
 // ----------------------------------------END OF LOADING FILE FUNCTIONS---------------------------------------
 
 function secondView(createArrows){
-  // Make the caption invisible
+  //Remove the text from first row to minimise the row and make more space for the row below to have text
+  d3.selectAll(".header h1 small").text("");
+
+  //Add additional html explanation of the second view
+  d3.selectAll("#explanation").html('The courses spanned a number of skills and programming languages, cumulatively building upon our competence in these.<br><br>\
+  <p style = "text-align: center">Brush the timeline to zoom in on a specific time period. Hover over a course to track its timeline and examine its skills.<br>\
+  The competencies are color coded relative to the course you select and according to hours spent \
+  <span style = "background-color: #eee"><font color="#191970"><b>previously</b></font></span>, \
+  <span style = "background-color: #eee"><font color="#17becf"><b>currently</b></font></span> and \
+  <span style = "background-color: #222"><font color="#c7c7c7"><b>remaining</b></font></span></p>');
+
+  // Remove the caption
   d3.select("#caption").remove();
   //Make the axis text invisible
   d3.selectAll(".axis").selectAll("text").style("opacity", 0);
@@ -689,6 +704,10 @@ function secondView(createArrows){
   d3.select(".UP").on("click", function(d){
     //Remove current view
     d3.selectAll("svg").remove()
+    //------------------------------------------------------------Create the titles-----------------------------------------------
+    d3.select(".header .col-md-8 h1 small").text("Studying hours over 6 months");
+    d3.select(".header .col-md-3 h1 small").text("Total hours worked:");
+
     //Reset the hour counter
     d3.select(".header .col-md-1 h1 small").text("0");
     //Load the data again for previous view
@@ -697,7 +716,6 @@ function secondView(createArrows){
 }
 
 function focusAndBrush() {
-  console.log(height)
   var svg = d3.select("#area1").select("svg");
   var x2 = x;
   var width = 750 - margin.left - margin.right;
@@ -763,8 +781,6 @@ function Bleep(circle){
         .style("stroke", function(dt, i){
           if(i == 0) return "#eee";
           return "#222";
-          // if(i == 1) return "red";
-          // if(i == 2) return "red";
         })
         .style("fill", function(pt, i){
           if(i == 0) return "#eee";
