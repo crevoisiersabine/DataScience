@@ -659,7 +659,7 @@ function secondView(createArrows){
 
   //Add additional html explanation of the second view
   d3.selectAll("#explanation").html('The courses spanned a number of skills and programming languages, cumulatively building upon our competence in these.<br><br>\
-  <p style = "text-align: center">Brush the timeline to zoom in on a specific time period. Hover over a course to track its timeline and examine its skills.<br>\
+  <p style = "text-align: left">Brush the timeline to zoom in on a specific time period. Hover over a course to track its timeline and examine its skills.<br>\
   The competencies are color coded relative to the course you select and according to hours spent \
   <span style = "background-color: #eee"><font color="#191970"><b>previously</b></font></span>, \
   <span style = "background-color: #eee"><font color="#17becf"><b>currently</b></font></span> and \
@@ -688,7 +688,7 @@ function secondView(createArrows){
   createArrows(100, 20, 50);
 
   //Load bottom graphs
-  LoadScriptsSync(["area.js", "barChart.js"], [])
+  LoadScriptsSync(["area4.js", "barChart4.js"], [])
 
   //Include focus and brush functionality
   focusAndBrush();
@@ -716,6 +716,7 @@ function secondView(createArrows){
 }
 
 function focusAndBrush() {
+  var height = 350 - margin.bottom - margin.top;
   var svg = d3.select("#area1").select("svg");
   var x2 = x;
   var width = 750 - margin.left - margin.right;
@@ -735,8 +736,8 @@ function focusAndBrush() {
       .attr("class", "x brush")
       .call(brush)
     .selectAll("rect")
-      .attr("y", 5)
-      .attr("height", 250);
+      .attr("y", 23)
+      .attr("height", 290);
 
   //Keep a counter of how many times brushed
   var count = 0;

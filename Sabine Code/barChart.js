@@ -70,16 +70,11 @@ function plot(data, type){
 
    	var gradPreReQ =canvas.append("defs").append("linearGradient").attr("id", "gradPreReQ")
         .attr("x1", "100%").attr("x2", "0%");
-	// grad2.append("stop").attr("class", "notYet").attr("offset", "0%").style("stop-color", "#c7c7c7");
-	// grad2.append("stop").attr("class", "inProgressStart").attr("offset",  "0%").style("stop-color", "#17becf");
-	// grad2.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
     gradPreReQ.append("stop").attr("class", "complete").attr("offset",  "100%").style("stop-color", "#191970");
 
     var gradSingle =canvas.append("defs").append("linearGradient").attr("id", "gradSingle")
         .attr("x1", "100%").attr("x2", "0%");
 	gradSingle.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
-	// gradDB.append("stop").attr("class", "inProgressStart").attr("offset",  "00%").style("stop-color", "#17becf");
-	// gradDB.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
     gradSingle.append("stop").attr("class", "inProgress").attr("offset",  "0%").style("stop-color", "#17becf");
 
    	var gradML =canvas.append("defs").append("linearGradient").attr("id", "gradML")
@@ -96,20 +91,6 @@ function plot(data, type){
 	gradPython.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
     gradPython.append("stop").attr("class", "complete").attr("offset",  "0%").style("stop-color", "#191970");
 
-    // var gradJS =canvas.append("defs").append("linearGradient").attr("id", "gradJS")
-          // .attr("x1", "100%").attr("x2", "0%");
-	// gradJS.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
-	// gradJS.append("stop").attr("class", "inProgressStart").attr("offset",  "00%").style("stop-color", "#17becf");
-	// gradJS.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
-    // gradJS.append("stop").attr("class", "inProgress").attr("offset",  "0%").style("stop-color", "#17becf");
-
-   	// var gradC =canvas.append("defs").append("linearGradient").attr("id", "gradC")
-          // .attr("x1", "100%").attr("x2", "0%");
-	// gradC.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
-	// gradC.append("stop").attr("class", "inProgressStart").attr("offset",  "00%").style("stop-color", "#17becf");
-	// gradC.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
-    // gradC.append("stop").attr("class", "inProgress").attr("offset",  "0%").style("stop-color", "#17becf");
-
     var gradStats =canvas.append("defs").append("linearGradient").attr("id", "gradStats")
           .attr("x1", "100%").attr("x2", "0%");
 	gradStats.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
@@ -117,41 +98,11 @@ function plot(data, type){
 	gradStats.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
     gradStats.append("stop").attr("class", "complete").attr("offset",  "0%").style("stop-color", "#191970");
 
-    // var gradDesign =canvas.append("defs").append("linearGradient").attr("id", "gradDesign")
-          // .attr("x1", "100%").attr("x2", "0%");
-	// gradDesign.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
-	// gradDesign.append("stop").attr("class", "inProgressStart").attr("offset",  "00%").style("stop-color", "#17becf");
-	// gradDesign.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
-    // gradDesign.append("stop").attr("class", "inProgress").attr("offset",  "0%").style("stop-color", "#17becf");
-
-    // var gradNLP =canvas.append("defs").append("linearGradient").attr("id", "gradNLP")
-          // .attr("x1", "100%").attr("x2", "0%");
-	// gradNLP.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
-	// gradNLP.append("stop").attr("class", "inProgressStart").attr("offset",  "00%").style("stop-color", "#17becf");
-	// gradNLP.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
-    // gradNLP.append("stop").attr("class", "inProgress").attr("offset",  "0%").style("stop-color", "#17becf");
-
-    // var gradAlgo =canvas.append("defs").append("linearGradient").attr("id", "gradAlgo")
-          // .attr("x1", "100%").attr("x2", "0%");
-	// gradAlgo.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
-	// gradAlgo.append("stop").attr("class", "inProgressStart").attr("offset",  "00%").style("stop-color", "#17becf");
-	// gradAlgo.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
-    // gradAlgo.append("stop").attr("class", "inProgress").attr("offset",  "0%").style("stop-color", "#17becf");
-
 	//Colour in courses to show progress and allow to update on hover later on
 	d3.select("#bars").select(".octave").style('fill', "url(#gradPreReQ)");
 	d3.select("#bars").select(".Java").style('fill', "url(#gradPreReQ)");
 	d3.select("#bars").select(".R").style('fill', "url(#gradPreReQ)");
 	d3.select("#bars").select(".Machine.Learning").style('fill', "url(#gradML)");
-	// d3.select("#bars").select(".python").style('fill', "url(#gradPython)");
-	// d3.select("#bars").select(".SQL").style('fill', "url(#gradSingle)");
- //    d3.select("#bars").select(".Databases").style('fill', "url(#gradSingle)");
- //    d3.select("#bars").select(".c").style('fill', "url(#gradSingle)");
- //    d3.select("#bars").select(".Algorithms").style('fill', "url(#gradSingle)");
- //    d3.select("#bars").select(".javascript").style('fill', "url(#gradSingle)");
- //    d3.select("#bars").select(".Design").style('fill', "url(#gradSingle)");
- //    d3.select("#bars").select(".Natural.Language.Processing").style('fill', "url(#gradSingle)");
- //    d3.select("#bars").select(".Statistics").style('fill', "url(#gradStats)");
 
 	var y_xis = canvas.append('g')
 		.attr('class','yaxis')
@@ -180,17 +131,17 @@ function plot(data, type){
 	//Determine the y-translation required for each plot
 	var yTrans = "";
 	if(type == "Languages"){
-		yTrans = margin.top + 5;
+		yTrans = margin.top + 25;
 	}
 	else{
-		yTrans = 195;
+		yTrans = 215;
 	}
 	var xAxisTrans = "";
 	if(type == "Languages"){
-		xAxisTrans = 143;
+		xAxisTrans = 163;
 	}
 	else{
-		xAxisTrans = 307;
+		xAxisTrans = 327;
 	}
 	chart.attr("transform", "translate(200, " + yTrans + ")");
 	y_xis.attr("transform", "translate(200, " + yTrans + ")");
@@ -199,4 +150,27 @@ function plot(data, type){
 
 	//Make the x-axis less bright
 	x_xis.attr("opacity", 0.5);
+
+	//Add a legend above the graph
+	var color = ["#191970", "#17becf", "#c7c7c7"];
+	 var legend = canvas.selectAll(".legend")
+      .data(["previous", "current", "remaining"])
+      .enter().append("g")
+      .attr("class", function(d){ return "legend " + d + ""})
+      .attr("transform", function(d, i) { return "translate(" + (100 + i * 100) + ", 5)"; });
+
+    legend.append("rect")
+      .attr("x", 100)
+      .attr("width", 7)
+      .attr("height", 7)
+      .attr("class", function(d){ return "square " + d + ""})
+      .style("fill", function(d, i) { return color[i] })
+      // .style("opacity", 0.65);
+
+    legend.append("text")
+      .attr("x", 157)
+      .attr("y", 3)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });
 }
