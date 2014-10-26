@@ -1,155 +1,155 @@
-Course,Chapter,Topic,Avg_hours
-CS106A, Chapter 2, Algorithm vs Program,5.0
-CS106A, Chapter 2, Creating Methods,5.0
-CS106A, Chapter 2, for Loop and While Loop,5.0
-CS106A, Chapter 2, If Statement and Putting it All Together,5.0
-CS106A, Chapter 3, Common Errors,5.0
-CS106A, Chapter 3, Comments,5.0
-CS106A, Chapter 3, Pre-conditions and Post-conditions,5.0
-CS106A, Chapter 3, Decomposition,5.0
-CS106A, Chapter 3, Importance of Good Software Engineering,5.0
-CS106A, Chapter 3, The Right Decomposition,5.0
-CS106A, Chapter 4, The History of Computing,5.0
-CS106A, Chapter 4, Computer Science vs Programming,5.0
-CS106A, Chapter 4, The Compilation Process,5.0
-CS106A, Chapter 4, Java is an Object Oriented Language,5.0
-CS106A, Chapter 4, Inheritance,v
-CS106A, Chapter 4, Instance of a Class,5.0
-CS106A, Chapter 4, The acm.program Hierarchy,5.0
-CS106A, Chapter 4, Your First Java Program,5.0
-CS106A, Chapter 5, Variables,5.0
-CS106A, Chapter 5, Data Types and Syntax of Variables,5.0
-CS106A, Chapter 5, Classes as Types Objects as Variables,5.0
-CS106A, Chapter 5, Invoking Methods on Objects,5.0
-CS106A, Chapter 5, Graphics Coordinates and Operations,5.0
-CS106A, Chapter 5, Expressions and Operators,5.0
-CS106A, Chapter 6, readInt() and readDouble(),5.0
-CS106A, Chapter 6, The Division Operator w.r.t ints and Doubles,5.0
-CS106A, Chapter 6, Order of Precedence for Operators,5.0
-CS106A, Chapter 6, Type Casting,5.0
-CS106A, Chapter 6, Shorthands,5.0
-CS106A, Chapter 6, Constants,5.0
-CS106A, Chapter 6, The Boolean Data Type,5.0
-CS106A, Chapter 6, Value Comparisons,5.0,
-CS106A, Chapter 6, Statement Blocks,5.0
-CS106A, Chapter 6, Scope of Variables,
-CS106A, Chapter 6, Cascading if,5.0
-CS106A, Chapter 6, The Switch Statement,5.0
-CS106A, Chapter 6, The For Loop and While Loop,5.0
-CS106A, Chapter 7, The Loop and a Half Problem,5.0
-CS106A, Chapter 7, For Versus While Loop,5.0
-CS106A, Chapter 7, The CheckerBoard Program Example,5.0
-CS106A, Chapter 7, Methods in Java,5.0
-CS106A, Chapter 7, The FactorialExample Program,5.0
-CS106A, Chapter 7, Returning Objects from Methods,5.0
-CS106A, Chapter 8, Information Hiding,5.0
-CS106A, Chapter 8, The Void Return Type,5.0
-CS106A, Chapter 8, Parameter Passing Between Methods,5.0
-CS106A, Chapter 8, Bad Times with Methods-Using Classes,5.0
-CS106A, Chapter 8, Instance variables vs Local Variables,5.0
-CS106A, Chapter 8, The RandomGenerator Program Example,5.0
-CS106A, Chapter 8, The RollDice Program Example,5.0
-CS106A, Chapter 8, The setSeed() Method,5.0
-CS106A, Chapter 9, Strings,5.0
-CS106A, Chapter 9, Writing Your Own Class,5.0
-CS106A, Chapter 9, Public and Private Visibility,5.0
-CS106A, Chapter 9, Creating a New Class - The Constructor Method +'this' Keyword,5.0
-CS106A, Chapter 9, Using the Created Class,5.0
-CS106A, Chapter 9, Objects are Called by Reference not Called by Value-Class Variables,5.0 
-CS106A, Chapter 9, The Student Program Example,5.0
-CS106A, Chapter 10, Importance of Private Variables,5.0
-CS106A, Chapter 10, Extending the Student Class,5.0
-CS106A, Chapter 10, Overriding Methods,5.0
-CS106A, Chapter 10, Methods Common to All GObjects,5.0
-CS106A, Chapter 10, Interfaces and Methods Defined by Them,5.0
-CS106A, Chapter 10, The BouncingBall Program Example,5.0
-CS106A, Chapter 11, The GImage GShape Classes,5.0
-CS106A, Chapter 11, Event Driven Programs,5.0
-CS106A, Chapter 11, The ClickForFace Program Example,5.0
-CS106A, Chapter 11, Responding to Mouse and Keyboard Events,5.0
-CS106A, Chapter 11, The UFO program Example,5.0
-CS106A, Chapter 12, Enumeration and Characters,5.0
-CS106A, Chapter 12, The ASCII Subset of Unicode,5.0
-CS106A, Chapter 12, Reading Characters and Math on Characters,5.0
-CS106A, Chapter 12, char as a Primitive Type and the Character Class,5.0
-CS106A, Chapter 12, Strings and Their Manipulations,5.0
-CS106A, Chapter 13, String Processing,5.0
-CS106A, Chapter 13, Tokenizers,5.0
-CS106A, Chapter 13, Encryption,5.0
-CS106A, Chapter 14, Memory,5.0
-CS106A, Chapter 14, Different Sections of Memory for Different Types of Variables,5.0
-CS106A, Chapter 14, Memory Allocation Mechanics,5.0
-CS106A, Chapter 14, The Pointer Viewpoint,5.0
-CS106A, Chapter 14, The Binky Pointer Fun Video,5.0
-CS106A, Chapter 15, Pointer Recap and Object 'Call by Reference' Instead of 'Call of Value'?,5.0
-CS106A, Chapter 15, Wrapper Classes for Primitive Types,5.0
-CS106A, Chapter 15, Files and Code for Opening- Reading&Closing Files,5.0
-CS106A, Chapter 15, Exceptions,5.0
-CS106A, Chapter 15, Code for Writing Files,5.0
-CS106A, Chapter 16, Array and Array Creation,5.0
-CS106A, Chapter 16, The ++ Operator,5.0
-CS106A, Chapter 16, Actual Size / Effective Size of the Array,5.0
-CS106A, Chapter 16, An Array as a Parameter,5.0
-CS106A, Chapter 16, Initialize an Array During Creation,5.0
-CS106A, Chapter 16, An ArrayList,5.0
-CS106A, Chapter 17, Multi-dimensional Arrays,5.0
-CS106A, Chapter 17, An ArrayList,5.0
-CS106A, Chapter 17, The Template Class,5.0
-CS106A, Chapter 17, Methods in the ArrayList Class and Example Program,5.0
-CS106A, Chapter 17, ArrayLists Hold Objects,5.0
-CS106A, Chapter 17, Example Program with an ArrayList of Glabels and GrayImage Program,5.0
-CS106A, Chapter 18, A Wrap Up of Multi-dimensional Arrays,5.0
-CS106A, Chapter 18, The ArrayList Way, Pros and Cons : ArrayList vs. Array,5.0
-CS106A, Chapter 18, Debugging and Approaches to Debugging,5.0
-CS106A, Chapter 19, An Interface and Implementation,5.0
-CS106A, Chapter 19, A Map,5.0
-CS106A, Chapter 19, The HashMap Class and Mehtods The Collection Hierarchy,5.0
-CS106A, Chapter 19, The Map Hierarchy,5.0
-CS106A, Chapter 19, An Iterator,5.0
-CS106A, Chapter 19, A HashMap Example,5.0
-CS106A, Chapter 20, GUI,5.0
-CS106A, Chapter 20, Interactors in the Context of a Java Program,5.0
-CS106A, Chapter 20, The Swing Interactor Hierarchy,5.0
-CS106A, Chapter 20, Window Regions,5.0
-CS106A, Chapter 20, Creating Interactors,5.0
-CS106A, Chapter 20, Exploring More Interactors,5.0
-CS106A, Chapter 20, The InteractiveDrawFace Program Example,5.0
-CS106A, Chapter 21, Review of Interactors and Listeners,5.0
-CS106A, Chapter 21, TextField Example,5.0
-CS106A, Chapter 21, Layouts,5.0
-CS106A, Chapter 21, The Temperature Conversion Example,5.0
-CS106A, Chapter 21, The TextAndGraphics Example,5.0
-CS106A, Chapter 22, Components and Containers,5.0
-CS106A, Chapter 22, Listeners for Components,5.0
-CS106A, Chapter 22, Create a Program Which Extends Program,5.0
-CS106A, Chapter 22, The ComponentListener Interface,5.0
-CS106A, Chapter 22, The MusicShop Example Program,5.0
-CS106A, Chapter 22, The MusicShopDisplay Example Program,5.0
-CS106A, Chapter 23, Introduction to Lecture's material - Searching,5.0
-CS106A, Chapter 23, Searching,5.0
-CS106A, Chapter 23, Linear Search and Binary Search Efficiency,5.0
-CS106A, Chapter 23, Comparing Search Efficiencies,5.0
-CS106A, Chapter 23, Sorting,5.0
-CS106A, Chapter 23, Selection Sort Algorithm Efficiency,5.0
-CS106A, Chapter 23, The Radix Sort Algorithm,5.0
-CS106A, Chapter 24, Principles of Good Software Engineering for Managing Large Amounts of Data,5.0
-CS106A, Chapter 24, Principles of Design,5.0
-CS106A, Chapter 24, The Collection Hierarchy,5.0
-CS106A, Chapter 24, Useful Methods of Collection,5.0
-CS106A, Chapter 24, The FlyTunes Example Program - An Online Music Store,5.0
-CS106A, Chapter 24, Reusing Data - Shallow Copy vs. Deep Copy,5.0
-CS106A, Chapter 25, Defining a Social Network for Our Purposes,5.0
-CS106A, Chapter 25, See What the Program Needs to Do,5.0
-CS106A, Chapter 25, The Six Degrees of Separation Phenomenon,5.0
-CS106A, Chapter 25, Concurrency,5.0
-CS106A, Chapter 25, A Thread,5.0
-CS106A, Chapter 25, The Runnable Interface,5.0
-CS106A, Chapter 25, Having Shared Data Between Your Threads,5.0
-CS106A, Chapter 26, Introduction to the Standard Java Libraries,5.0
-CS106A, Chapter 26, JAR Files and JAR File Creation,5.0
-CS106A, Chapter 26, Creating an Applet,5.0
-CS106A, Chapter 26, Standard Java Programs Without Using the ACM Libraries,5.0
-CS106A, Chapter 26, Other Resources - Learning More Java,5.0
+Course,_Chapter,Topic,Avg_hours
+CS106A, _Chapter 2, Algorithm vs Program,5.0
+CS106A, _Chapter 2, Creating Methods,5.0
+CS106A, _Chapter 2, for Loop and While Loop,5.0
+CS106A, _Chapter 2, If Statement and Putting it All Together,5.0
+CS106A, _Chapter 3, Common Errors,5.0
+CS106A, _Chapter 3, Comments,5.0
+CS106A, _Chapter 3, Pre-conditions and Post-conditions,5.0
+CS106A, _Chapter 3, Decomposition,5.0
+CS106A, _Chapter 3, Importance of Good Software Engineering,5.0
+CS106A, _Chapter 3, The Right Decomposition,5.0
+CS106A, _Chapter 4, The History of Computing,5.0
+CS106A, _Chapter 4, Computer Science vs Programming,5.0
+CS106A, _Chapter 4, The Compilation Process,5.0
+CS106A, _Chapter 4, Java is an Object Oriented Language,5.0
+CS106A, _Chapter 4, Inheritance,v
+CS106A, _Chapter 4, Instance of a Class,5.0
+CS106A, _Chapter 4, The acm.program Hierarchy,5.0
+CS106A, _Chapter 4, Your First Java Program,5.0
+CS106A, _Chapter 5, Variables,5.0
+CS106A, _Chapter 5, Data Types and Syntax of Variables,5.0
+CS106A, _Chapter 5, Classes as Types Objects as Variables,5.0
+CS106A, _Chapter 5, Invoking Methods on Objects,5.0
+CS106A, _Chapter 5, Graphics Coordinates and Operations,5.0
+CS106A, _Chapter 5, Expressions and Operators,5.0
+CS106A, _Chapter 6, readInt() and readDouble(),5.0
+CS106A, _Chapter 6, The Division Operator w.r.t ints and Doubles,5.0
+CS106A, _Chapter 6, Order of Precedence for Operators,5.0
+CS106A, _Chapter 6, Type Casting,5.0
+CS106A, _Chapter 6, Shorthands,5.0
+CS106A, _Chapter 6, Constants,5.0
+CS106A, _Chapter 6, The Boolean Data Type,5.0
+CS106A, _Chapter 6, Value Comparisons,5.0,
+CS106A, _Chapter 6, Statement Blocks,5.0
+CS106A, _Chapter 6, Scope of Variables,
+CS106A, _Chapter 6, Cascading if,5.0
+CS106A, _Chapter 6, The Switch Statement,5.0
+CS106A, _Chapter 6, The For Loop and While Loop,5.0
+CS106A, _Chapter 7, The Loop and a Half Problem,5.0
+CS106A, _Chapter 7, For Versus While Loop,5.0
+CS106A, _Chapter 7, The CheckerBoard Program Example,5.0
+CS106A, _Chapter 7, Methods in Java,5.0
+CS106A, _Chapter 7, The FactorialExample Program,5.0
+CS106A, _Chapter 7, Returning Objects from Methods,5.0
+CS106A, _Chapter 8, Information Hiding,5.0
+CS106A, _Chapter 8, The Void Return Type,5.0
+CS106A, _Chapter 8, Parameter Passing Between Methods,5.0
+CS106A, _Chapter 8, Bad Times with Methods-Using Classes,5.0
+CS106A, _Chapter 8, Instance variables vs Local Variables,5.0
+CS106A, _Chapter 8, The RandomGenerator Program Example,5.0
+CS106A, _Chapter 8, The RollDice Program Example,5.0
+CS106A, _Chapter 8, The setSeed() Method,5.0
+CS106A, _Chapter 9, Strings,5.0
+CS106A, _Chapter 9, Writing Your Own Class,5.0
+CS106A, _Chapter 9, Public and Private Visibility,5.0
+CS106A, _Chapter 9, Creating a New Class - The Constructor Method +'this' Keyword,5.0
+CS106A, _Chapter 9, Using the Created Class,5.0
+CS106A, _Chapter 9, Objects are Called by Reference not Called by Value-Class Variables,5.0 
+CS106A, _Chapter 9, The Student Program Example,5.0
+CS106A, _Chapter 10, Importance of Private Variables,5.0
+CS106A, _Chapter 10, Extending the Student Class,5.0
+CS106A, _Chapter 10, Overriding Methods,5.0
+CS106A, _Chapter 10, Methods Common to All GObjects,5.0
+CS106A, _Chapter 10, Interfaces and Methods Defined by Them,5.0
+CS106A, _Chapter 10, The BouncingBall Program Example,5.0
+CS106A, _Chapter 11, The GImage GShape Classes,5.0
+CS106A, _Chapter 11, Event Driven Programs,5.0
+CS106A, _Chapter 11, The ClickForFace Program Example,5.0
+CS106A, _Chapter 11, Responding to Mouse and Keyboard Events,5.0
+CS106A, _Chapter 11, The UFO program Example,5.0
+CS106A, _Chapter 12, Enumeration and Characters,5.0
+CS106A, _Chapter 12, The ASCII Subset of Unicode,5.0
+CS106A, _Chapter 12, Reading Characters and Math on Characters,5.0
+CS106A, _Chapter 12, char as a Primitive Type and the Character Class,5.0
+CS106A, _Chapter 12, Strings and Their Manipulations,5.0
+CS106A, _Chapter 13, String Processing,5.0
+CS106A, _Chapter 13, Tokenizers,5.0
+CS106A, _Chapter 13, Encryption,5.0
+CS106A, _Chapter 14, Memory,5.0
+CS106A, _Chapter 14, Different Sections of Memory for Different Types of Variables,5.0
+CS106A, _Chapter 14, Memory Allocation Mechanics,5.0
+CS106A, _Chapter 14, The Pointer Viewpoint,5.0
+CS106A, _Chapter 14, The Binky Pointer Fun Video,5.0
+CS106A, _Chapter 15, Pointer Recap and Object 'Call by Reference' Instead of 'Call of Value'?,5.0
+CS106A, _Chapter 15, Wrapper Classes for Primitive Types,5.0
+CS106A, _Chapter 15, Files and Code for Opening- Reading&Closing Files,5.0
+CS106A, _Chapter 15, Exceptions,5.0
+CS106A, _Chapter 15, Code for Writing Files,5.0
+CS106A, _Chapter 16, Array and Array Creation,5.0
+CS106A, _Chapter 16, The ++ Operator,5.0
+CS106A, _Chapter 16, Actual Size / Effective Size of the Array,5.0
+CS106A, _Chapter 16, An Array as a Parameter,5.0
+CS106A, _Chapter 16, Initialize an Array During Creation,5.0
+CS106A, _Chapter 16, An ArrayList,5.0
+CS106A, _Chapter 17, Multi-dimensional Arrays,5.0
+CS106A, _Chapter 17, An ArrayList,5.0
+CS106A, _Chapter 17, The Template Class,5.0
+CS106A, _Chapter 17, Methods in the ArrayList Class and Example Program,5.0
+CS106A, _Chapter 17, ArrayLists Hold Objects,5.0
+CS106A, _Chapter 17, Example Program with an ArrayList of Glabels and GrayImage Program,5.0
+CS106A, _Chapter 18, A Wrap Up of Multi-dimensional Arrays,5.0
+CS106A, _Chapter 18, The ArrayList Way, Pros and Cons : ArrayList vs. Array,5.0
+CS106A, _Chapter 18, Debugging and Approaches to Debugging,5.0
+CS106A, _Chapter 19, An Interface and Implementation,5.0
+CS106A, _Chapter 19, A Map,5.0
+CS106A, _Chapter 19, The HashMap Class and Mehtods The Collection Hierarchy,5.0
+CS106A, _Chapter 19, The Map Hierarchy,5.0
+CS106A, _Chapter 19, An Iterator,5.0
+CS106A, _Chapter 19, A HashMap Example,5.0
+CS106A, _Chapter 20, GUI,5.0
+CS106A, _Chapter 20, Interactors in the Context of a Java Program,5.0
+CS106A, _Chapter 20, The Swing Interactor Hierarchy,5.0
+CS106A, _Chapter 20, Window Regions,5.0
+CS106A, _Chapter 20, Creating Interactors,5.0
+CS106A, _Chapter 20, Exploring More Interactors,5.0
+CS106A, _Chapter 20, The InteractiveDrawFace Program Example,5.0
+CS106A, _Chapter 21, Review of Interactors and Listeners,5.0
+CS106A, _Chapter 21, TextField Example,5.0
+CS106A, _Chapter 21, Layouts,5.0
+CS106A, _Chapter 21, The Temperature Conversion Example,5.0
+CS106A, _Chapter 21, The TextAndGraphics Example,5.0
+CS106A, _Chapter 22, Components and Containers,5.0
+CS106A, _Chapter 22, Listeners for Components,5.0
+CS106A, _Chapter 22, Create a Program Which Extends Program,5.0
+CS106A, _Chapter 22, The ComponentListener Interface,5.0
+CS106A, _Chapter 22, The MusicShop Example Program,5.0
+CS106A, _Chapter 22, The MusicShopDisplay Example Program,5.0
+CS106A, _Chapter 23, Introduction to Lecture's material - Searching,5.0
+CS106A, _Chapter 23, Searching,5.0
+CS106A, _Chapter 23, Linear Search and Binary Search Efficiency,5.0
+CS106A, _Chapter 23, Comparing Search Efficiencies,5.0
+CS106A, _Chapter 23, Sorting,5.0
+CS106A, _Chapter 23, Selection Sort Algorithm Efficiency,5.0
+CS106A, _Chapter 23, The Radix Sort Algorithm,5.0
+CS106A, _Chapter 24, Principles of Good Software Engineering for Managing Large Amounts of Data,5.0
+CS106A, _Chapter 24, Principles of Design,5.0
+CS106A, _Chapter 24, The Collection Hierarchy,5.0
+CS106A, _Chapter 24, Useful Methods of Collection,5.0
+CS106A, _Chapter 24, The FlyTunes Example Program - An Online Music Store,5.0
+CS106A, _Chapter 24, Reusing Data - Shallow Copy vs. Deep Copy,5.0
+CS106A, _Chapter 25, Defining a Social Network for Our Purposes,5.0
+CS106A, _Chapter 25, See What the Program Needs to Do,5.0
+CS106A, _Chapter 25, The Six Degrees of Separation Phenomenon,5.0
+CS106A, _Chapter 25, Concurrency,5.0
+CS106A, _Chapter 25, A Thread,5.0
+CS106A, _Chapter 25, The Runnable Interface,5.0
+CS106A, _Chapter 25, Having Shared Data Between Your Threads,5.0
+CS106A, _Chapter 26, Introduction to the Standard Java Libraries,5.0
+CS106A, _Chapter 26, JAR Files and JAR File Creation,5.0
+CS106A, _Chapter 26, Creating an Applet,5.0
+CS106A, _Chapter 26, Standard Java Programs Without Using the ACM Libraries,5.0
+CS106A, _Chapter 26, Other Resources - Learning More Java,5.0
 CS106B, Chapter 2, Similarity between C++ & Java,3.359375
 CS106B, Chapter 2, #include Statements,3.359375
 CS106B, Chapter 2, Global Declarations (constant),3.359375
@@ -694,22 +694,22 @@ Stats 110, Lecture 32, random walk on an undirected network
 Stats 110, Lecture 33, Markov chains (cont.)
 Stats 110, Lecture 33, Google PageRank as a Markov chain
 Stats 110, Lecture 34, a look ahead
-Statistics Udacity, Lecture 1, Introduction
-Statistics Udacity, Lecture 2, Visualizing Data
-Statistics Udacity, Lecture 3, Central Tendency
-Statistics Udacity, Lecture 4, Variability
-Statistics Udacity, Lecture 5, Standardizing
-Statistics Udacity, Lecture 6, Normal Distribution
-Statistics Udacity, Lecture 7, Sampling Distribution
-Statistics Udacity, Lecture 8, Estimation
-Statistics Udacity, Lecture 9, Hypothesis Testing
-Statistics Udacity, Lecture 10, t-Tests
-Statistics Udacity, Lecture 11, t-Tests
-Statistics Udacity, Lecture 12, One-way ANOVA
-Statistics Udacity, Lecture 13, ANOVA (cont.)
-Statistics Udacity, Lecture 14, Correlation
-Statistics Udacity, Lecture 15, Regression
-Statistics Udacity, Lecture 16, Chi-Squared tests
+Statistics Udacity, Lecture 1_, Introduction
+Statistics Udacity, Lecture 2_, Visualizing Data
+Statistics Udacity, Lecture 3_, Central Tendency
+Statistics Udacity, Lecture 4_, Variability
+Statistics Udacity, Lecture 5_, Standardizing
+Statistics Udacity, Lecture 6_, Normal Distribution
+Statistics Udacity, Lecture 7_, Sampling Distribution
+Statistics Udacity, Lecture 8_, Estimation
+Statistics Udacity, Lecture 9_, Hypothesis Testing
+Statistics Udacity, Lecture 10_, t-Tests
+Statistics Udacity, Lecture 11_, t-Tests
+Statistics Udacity, Lecture 12_, One-way ANOVA
+Statistics Udacity, Lecture 13_, ANOVA (cont.)
+Statistics Udacity, Lecture 14_, Correlation
+Statistics Udacity, Lecture 15_, Regression
+Statistics Udacity, Lecture 16_, Chi-Squared tests
 Stanford Databases, Introduction, Introduction
 Stanford Databases, Relational Databases, Model
 Stanford Databases, Relational Databases, Querying
