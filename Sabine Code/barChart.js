@@ -68,49 +68,64 @@ function plot(data, type){
 			})
 			.attr("width", function(d) { return xscale(d); });
 
-   	var gradPreReQ =canvas.append("defs").append("linearGradient").attr("id", "gradPreReQ")
+   	var gradPreReQ = canvas.append("defs").append("linearGradient").attr("id", "gradPreReQ")
         .attr("x1", "100%").attr("x2", "0%");
     gradPreReQ.append("stop").attr("class", "complete").attr("offset",  "100%").style("stop-color", "#191970");
 
-    var gradSingle =canvas.append("defs").append("linearGradient").attr("id", "gradSingle")
+    var gradSingle = canvas.append("defs").append("linearGradient").attr("id", "gradSingle")
         .attr("x1", "100%").attr("x2", "0%");
 	gradSingle.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
     gradSingle.append("stop").attr("class", "inProgress").attr("offset",  "0%").style("stop-color", "#17becf");
 
-   	var gradML =canvas.append("defs").append("linearGradient").attr("id", "gradML")
+    var gradML_here = canvas.append("defs").append("linearGradient").attr("id", "gradML_here")
         .attr("x1", "100%").attr("x2", "0%");
-	gradML.append("stop").attr("class", "notYet").attr("offset", "25%").style("stop-color", "#c7c7c7");
-	gradML.append("stop").attr("class", "inProgressStart").attr("offset",  "25%").style("stop-color", "#17becf");
-	gradML.append("stop").attr("class", "inProgressEnd").attr("offset",  "25%").style("stop-color", "#17becf");
-    gradML.append("stop").attr("class", "complete").attr("offset",  "25%").style("stop-color", "#191970");
+	gradML_here.append("stop").attr("class", "notYet").attr("offset", "20%").style("stop-color", "#c7c7c7");
+	gradML_here.append("stop").attr("class", "inProgressStart").attr("offset",  "20%").style("stop-color", "#17becf");
+	gradML_here.append("stop").attr("class", "inProgressEnd").attr("offset",  "20%").style("stop-color", "#17becf");
+    gradML_here.append("stop").attr("class", "complete").attr("offset",  "20%").style("stop-color", "#191970");
 
-    var gradPython =canvas.append("defs").append("linearGradient").attr("id", "gradPython")
+   	var gradML = canvas.append("defs").append("linearGradient").attr("id", "gradML")
+        .attr("x1", "100%").attr("x2", "0%");
+	gradML.append("stop").attr("class", "notYet").attr("offset", "20%").style("stop-color", "#c7c7c7");
+	gradML.append("stop").attr("class", "inProgressStart").attr("offset",  "20%").style("stop-color", "#17becf");
+	gradML.append("stop").attr("class", "inProgressEnd").attr("offset",  "20%").style("stop-color", "#17becf");
+    gradML.append("stop").attr("class", "complete").attr("offset",  "20%").style("stop-color", "#191970");
+
+    var gradPython = canvas.append("defs").append("linearGradient").attr("id", "gradPython")
           .attr("x1", "100%").attr("x2", "0%");
 	gradPython.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
 	gradPython.append("stop").attr("class", "inProgressStart").attr("offset",  "0%").style("stop-color", "#17becf");
 	gradPython.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
     gradPython.append("stop").attr("class", "complete").attr("offset",  "0%").style("stop-color", "#191970");
 
-    var gradStats =canvas.append("defs").append("linearGradient").attr("id", "gradStats")
+    var gradStats = canvas.append("defs").append("linearGradient").attr("id", "gradStats")
           .attr("x1", "100%").attr("x2", "0%");
 	gradStats.append("stop").attr("class", "notYet").attr("offset", "100%").style("stop-color", "#c7c7c7");
 	gradStats.append("stop").attr("class", "inProgressStart").attr("offset",  "00%").style("stop-color", "#17becf");
 	gradStats.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
     gradStats.append("stop").attr("class", "complete").attr("offset",  "0%").style("stop-color", "#191970");
 
-   	var gradAlgo =canvas.append("defs").append("linearGradient").attr("id", "gradAlgo")
+   	var gradAlgo_here = canvas.append("defs").append("linearGradient").attr("id", "gradAlgo_here")
           .attr("x1", "100%").attr("x2", "0%");
+	gradAlgo_here.append("stop").attr("class", "notYet").attr("offset", "82%").style("stop-color", "#c7c7c7");
+	gradAlgo_here.append("stop").attr("class", "inProgressStart").attr("offset",  "82%").style("stop-color", "#17becf");
+	gradAlgo_here.append("stop").attr("class", "inProgressEnd").attr("offset",  "82%").style("stop-color", "#17becf");
+    gradAlgo_here.append("stop").attr("class", "complete").attr("offset",  "82%").style("stop-color", "#191970");
+
+    var gradAlgo = canvas.append("defs").append("linearGradient").attr("id", "gradAlgo")
+        .attr("x1", "100%").attr("x2", "0%");
 	gradAlgo.append("stop").attr("class", "notYet").attr("offset", "82%").style("stop-color", "#c7c7c7");
 	gradAlgo.append("stop").attr("class", "inProgressStart").attr("offset",  "82%").style("stop-color", "#17becf");
 	gradAlgo.append("stop").attr("class", "inProgressEnd").attr("offset",  "82%").style("stop-color", "#17becf");
     gradAlgo.append("stop").attr("class", "complete").attr("offset",  "82%").style("stop-color", "#191970");
 
+
 	//Colour in courses to show progress and allow to update on hover later on
-	d3.select("#bars").select(".octave").style('fill', "url(#gradPreReQ)");
-	d3.select("#bars").select(".Java").style('fill', "url(#gradPreReQ)");
-	d3.select("#bars").select(".R").style('fill', "url(#gradPreReQ)");
-	d3.select("#bars").select(".Machine.Learning").style('fill', "url(#gradML)");
-	d3.select("#bars").select(".Algorithms").style('fill', "url(#gradAlgo)");
+	d3.select(".octave").style("fill", "url(#gradPreReQ)");
+	d3.select(".Java").style("fill", "url(#gradPreReQ)");
+	d3.select(".R").style("fill", "url(#gradPreReQ)");
+	d3.select(".Machine.Learning").style("fill", "url(#gradML_here)");
+  	d3.select(".Algorithms").style("fill", "url(#gradAlgo_here)");
 
 	var y_xis = canvas.append('g')
 		.attr('class','yaxis')
@@ -176,9 +191,12 @@ function plot(data, type){
       // .style("opacity", 0.65);
 
     legend.append("text")
-      .attr("x", 157)
+      .attr("x", function(d, i){
+      	console.log(i)
+      	return (110);
+      })
       .attr("y", 3)
       .attr("dy", ".35em")
-      .style("text-anchor", "end")
+      // .style("text-anchor", "end")
       .text(function(d) { return d; });
 }

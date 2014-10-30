@@ -141,7 +141,6 @@ d3.tsv("study_data.tsv", function(data) {
 
 // -------------------------------------------------------------------------------------------------------
     //MOUSEOVER
-
     svg.selectAll(".course")
       .on("mouseover", function(d){
         return Highlight(d);
@@ -188,12 +187,9 @@ d3.tsv("study_data.tsv", function(data) {
             }
         }
       });
-
       if(d.name == "DB"){
         d3.select("#gradSingle").selectAll("stop")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select(".SQL")
           .style('fill', "url(#gradSingle)");
         d3.select(".Databases")
@@ -202,38 +198,21 @@ d3.tsv("study_data.tsv", function(data) {
       if(d.name == "CS106B"){
         //programming contribution
         d3.select("#gradSingle").selectAll("stop")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select(".c")
           .style('fill', "url(#gradSingle)");
         //algorithms contribution
         d3.select("#gradAlgo").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select("#gradAlgo").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
-        d3.select("#gradAlgo").selectAll(".inProgressEnd")
-          .attr("offset", function(d, i) {
-              return "82%";
-          })
-        d3.select("#gradAlgo").selectAll(".complete")
-          .attr("offset", function(d, i) {
-              return "82%";
-          })
-        console.log(d3.select("#gradAlgo").selectAll(".inProgressStart").attr("offset"))
-        // d3.select(".Algorithms")
-        //   .style('fill', "url(#gradAlgo)");
+          .attr("offset", "0%");
+        d3.selectAll(".Algorithms")
+          .style('fill', "url(#gradAlgo)");
       }
       if(d.name == "CS171"){
         //javscript programming contribution
         d3.select("#gradSingle").selectAll("stop")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select(".javascript")
           .style('fill', "url(#gradSingle)");
 
@@ -244,150 +223,88 @@ d3.tsv("study_data.tsv", function(data) {
       if(d.name == "NLP"){
         //NLP contribution
         d3.select("#gradSingle").selectAll("stop")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select(".Natural.Language.Processing")
           .style('fill', "url(#gradSingle)");
         
         //Programming contribution
         d3.select("#gradPython").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "87%";
-          })
+          .attr("offset", "87%");
         d3.select("#gradPython").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "87%";
-          })
+          .attr("offset", "87%");
         d3.select("#gradPython").selectAll(".inProgressEnd")
-          .attr("offset", function(d, i) {
-              return "100%";
-          })
+          .attr("offset", "100%");
         d3.select("#gradPython").selectAll(".complete")
-          .attr("offset", function(d, i) {
-              return "100%";
-          })
+          .attr("offset", "100%");
         d3.select(".python")
           .style('fill', "url(#gradPython)");
       }
       if(d.name == "StatsUD"){
         d3.select("#gradStats").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "86%";
-          })
+          .attr("offset", "86%");
         d3.select("#gradStats").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "86%";
-          })
+          .attr("offset", "86%");
         d3.select("#gradStats").selectAll(".inProgressEnd")
-          .attr("offset", function(d, i) {
-              return "100%";
-          })
+          .attr("offset", "100%");
         d3.select("#gradStats").selectAll(".complete")
-          .attr("offset", function(d, i) {
-              return "100%";
-          })
+          .attr("offset", "100%");
         d3.select(".Statistics")
           .style('fill', "url(#gradStats)");
       }
       if(d.name == "CS109"){
         //python programming contribution
         d3.select("#gradPython").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select("#gradPython").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select("#gradPython").selectAll(".inProgressEnd")
-          .attr("offset", function(d, i) {
-              return "87%";
-          })
+          .attr("offset", "87%");
         d3.select("#gradPython").selectAll(".complete")
-          .attr("offset", function(d, i) {
-              return "87%";
-          })
+          .attr("offset", "87%");
         d3.select(".python")
           .style('fill', "url(#gradPython)");
 
         //stats contribution
         d3.select("#gradStats").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "73%";
-          })
+          .attr("offset", "73%");
         d3.select("#gradStats").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "73%";
-          })
+          .attr("offset", "73%");
         d3.select("#gradStats").selectAll(".inProgressEnd")
-          .attr("offset", function(d, i) {
-              return "86%";
-          })
+          .attr("offset", "86%");
         d3.select("#gradStats").selectAll(".complete")
-          .attr("offset", function(d, i) {
-              return "86%";
-          })
+          .attr("offset", "86%");
         d3.select(".Statistics")
           .style('fill', "url(#gradStats)");
 
         //machine learning contribution
         d3.select("#gradML").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select("#gradML").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
-        d3.select("#gradML").selectAll(".inProgressEnd")
-          .attr("offset", function(d, i) {
-              return "25%";
-          })
-        d3.select("#gradML").selectAll(".complete")
-          .attr("offset", function(d, i) {
-              return "25%";
-          })
-        // d3.select(".Machine.Learning")
-        //   .style('fill', "url(#gradML)");
+          .attr("offset", "0%");
+        d3.select(".Machine.Learning")
+          .style('fill', "url(#gradML)");
       }
       if(d.name == "Stats110"){
         d3.select("#gradStats").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "8%";
-          })
+          .attr("offset", "8%");
         d3.select("#gradStats").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "8%";
-          })
+          .attr("offset", "8%");
         d3.select("#gradStats").selectAll(".inProgressEnd")
-          .attr("offset", function(d, i) {
-              return "73%";
-          })
+          .attr("offset", "73%");
         d3.select("#gradStats").selectAll(".complete")
-          .attr("offset", function(d, i) {
-              return "73%";
-          })
+          .attr("offset", "73%");
         d3.select(".Statistics")
           .style('fill', "url(#gradStats)");
       }
       if(d.name == "StatsMIT"){
         d3.select("#gradStats").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select("#gradStats").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "0%";
-          })
+          .attr("offset", "0%");
         d3.select("#gradStats").selectAll(".inProgressEnd")
-          .attr("offset", function(d, i) {
-              return "8%";
-          })
+          .attr("offset", "8%");
         d3.select("#gradStats").selectAll(".complete")
-          .attr("offset", function(d, i) {
-              return "8%";
-          })
+          .attr("offset", "8%");
         d3.select(".Statistics")
           .style('fill', "url(#gradStats)");
       }
@@ -430,13 +347,9 @@ d3.tsv("study_data.tsv", function(data) {
           .style('fill', "#c7c7c7");
         //algorithms contribution
         d3.select("#gradAlgo").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "82%";
-          })
+          .attr("offset", "82%");
         d3.select("#gradAlgo").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "82%";
-          })
+          .attr("offset", "82%");
       }
       if(d.name == "CS171"){
         //javscript contributino
@@ -468,15 +381,9 @@ d3.tsv("study_data.tsv", function(data) {
 
         //machine learning contribution
         d3.select("#gradML").selectAll(".notYet")
-          .attr("offset", function(d, i) {
-              return "25%";
-          })
+          .attr("offset", "20%");
         d3.select("#gradML").selectAll(".inProgressStart")
-          .attr("offset", function(d, i) {
-              return "25%";
-          })
-        // d3.select(".Machine.Learning")
-        //   .style('fill', "url(#gradML)");
+          .attr("offset", "20%");
       }
       if(d.name == "Stats110"){
         d3.select(".Statistics")
