@@ -136,7 +136,7 @@ function createArrows(h, x, y){
     var arrows = d3.selectAll("#area1")
       .append("svg")
       .attr({
-          width: 250,
+          width: 200,
           height: h
         })
       .append("g").attr("id", "#arrows")
@@ -387,7 +387,7 @@ function createArrows(h, x, y){
       if(!d3.select(".circle10").empty()) {
         d3.select(".circle10").transition().duration(400).delay(1000).style("opacity", 0.5); //Change the opacity of the last circle
         enableHover(captions, createArrows);
-        showNext(arrowDown);
+        showNext(d3.select(".DOWN"));
         timer++;
       }
     }
@@ -456,6 +456,8 @@ function createArrows(h, x, y){
       d3.select(".header .col-md-1 h1 small").text("0");
       //Remove current view
       d3.selectAll("svg").remove();
+      //Remove caption div
+      d3.select("#caption").remove();
     }
   })
 
@@ -688,7 +690,7 @@ function secondView(createArrows){
   createArrows(100, 20, 50);
 
   //Load bottom graphs
-  LoadScriptsSync(["area4.js", "barChart4.js"], [])
+  LoadScriptsSync(["area.js", "barChart.js"], [])
 
   //Include focus and brush functionality
   focusAndBrush();

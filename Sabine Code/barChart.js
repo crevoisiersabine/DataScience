@@ -1,5 +1,5 @@
 var margin = { top: 25, right: 10, bottom: 50, left: 50 };
-var width = 550 - margin.left - margin.right;
+var width = 500 - margin.left - margin.right;
 var height = 350 - margin.bottom - margin.top;
 
 var canvas = d3.select("#area1").append("svg").attr({
@@ -98,11 +98,19 @@ function plot(data, type){
 	gradStats.append("stop").attr("class", "inProgressEnd").attr("offset",  "0%").style("stop-color", "#17becf");
     gradStats.append("stop").attr("class", "complete").attr("offset",  "0%").style("stop-color", "#191970");
 
+   	var gradAlgo =canvas.append("defs").append("linearGradient").attr("id", "gradAlgo")
+          .attr("x1", "100%").attr("x2", "0%");
+	gradAlgo.append("stop").attr("class", "notYet").attr("offset", "82%").style("stop-color", "#c7c7c7");
+	gradAlgo.append("stop").attr("class", "inProgressStart").attr("offset",  "82%").style("stop-color", "#17becf");
+	gradAlgo.append("stop").attr("class", "inProgressEnd").attr("offset",  "82%").style("stop-color", "#17becf");
+    gradAlgo.append("stop").attr("class", "complete").attr("offset",  "82%").style("stop-color", "#191970");
+
 	//Colour in courses to show progress and allow to update on hover later on
 	d3.select("#bars").select(".octave").style('fill', "url(#gradPreReQ)");
 	d3.select("#bars").select(".Java").style('fill', "url(#gradPreReQ)");
 	d3.select("#bars").select(".R").style('fill', "url(#gradPreReQ)");
 	d3.select("#bars").select(".Machine.Learning").style('fill', "url(#gradML)");
+	d3.select("#bars").select(".Algorithms").style('fill', "url(#gradAlgo)");
 
 	var y_xis = canvas.append('g')
 		.attr('class','yaxis')

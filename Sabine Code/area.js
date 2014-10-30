@@ -200,16 +200,33 @@ d3.tsv("study_data.tsv", function(data) {
           .style('fill', "url(#gradSingle)");
       }
       if(d.name == "CS106B"){
+        //programming contribution
         d3.select("#gradSingle").selectAll("stop")
           .attr("offset", function(d, i) {
               return "0%";
           })
-        //programming contribution
         d3.select(".c")
           .style('fill', "url(#gradSingle)");
         //algorithms contribution
-        d3.select(".Algorithms")
-          .style('fill', "url(#gradSingle)");
+        d3.select("#gradAlgo").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select("#gradAlgo").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "0%";
+          })
+        d3.select("#gradAlgo").selectAll(".inProgressEnd")
+          .attr("offset", function(d, i) {
+              return "82%";
+          })
+        d3.select("#gradAlgo").selectAll(".complete")
+          .attr("offset", function(d, i) {
+              return "82%";
+          })
+        console.log(d3.select("#gradAlgo").selectAll(".inProgressStart").attr("offset"))
+        // d3.select(".Algorithms")
+        //   .style('fill', "url(#gradAlgo)");
       }
       if(d.name == "CS171"){
         //javscript programming contribution
@@ -323,6 +340,16 @@ d3.tsv("study_data.tsv", function(data) {
           .attr("offset", function(d, i) {
               return "0%";
           })
+        d3.select("#gradML").selectAll(".inProgressEnd")
+          .attr("offset", function(d, i) {
+              return "25%";
+          })
+        d3.select("#gradML").selectAll(".complete")
+          .attr("offset", function(d, i) {
+              return "25%";
+          })
+        // d3.select(".Machine.Learning")
+        //   .style('fill', "url(#gradML)");
       }
       if(d.name == "Stats110"){
         d3.select("#gradStats").selectAll(".notYet")
@@ -402,8 +429,14 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select(".c")
           .style('fill', "#c7c7c7");
         //algorithms contribution
-        d3.select(".Algorithms")
-          .style('fill', "#c7c7c7");
+        d3.select("#gradAlgo").selectAll(".notYet")
+          .attr("offset", function(d, i) {
+              return "82%";
+          })
+        d3.select("#gradAlgo").selectAll(".inProgressStart")
+          .attr("offset", function(d, i) {
+              return "82%";
+          })
       }
       if(d.name == "CS171"){
         //javscript contributino
@@ -442,6 +475,8 @@ d3.tsv("study_data.tsv", function(data) {
           .attr("offset", function(d, i) {
               return "25%";
           })
+        // d3.select(".Machine.Learning")
+        //   .style('fill', "url(#gradML)");
       }
       if(d.name == "Stats110"){
         d3.select(".Statistics")
