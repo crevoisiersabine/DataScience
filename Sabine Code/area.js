@@ -45,7 +45,7 @@ var grad = d3.select("#grad");
 
 // -------------------------------------------------------------------------------------------------------
 //DATA
-d3.tsv("study_data.tsv", function(data) {
+d3.tsv("study_data2.tsv", function(data) {
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Date"; }));
 
   data.forEach(function(d) {
@@ -187,15 +187,15 @@ d3.tsv("study_data.tsv", function(data) {
             }
         }
       });
-      if(d.name == "DB"){
+      if(d.name == "Databases"){
         d3.select("#gradSingle").selectAll("stop")
           .attr("offset", "0%");
         d3.select(".SQL")
           .style('fill', "url(#gradSingle)");
-        d3.select(".Databases")
+        d3.selectAll(".barsSkills").select(".Databases")
           .style('fill', "url(#gradSingle)");
       }
-      if(d.name == "CS106B"){
+      if(d.name == "ProgAbstractions"){
         //programming contribution
         d3.select("#gradSingle").selectAll("stop")
           .attr("offset", "0%");
@@ -209,7 +209,7 @@ d3.tsv("study_data.tsv", function(data) {
         d3.selectAll(".Algorithms")
           .style('fill', "url(#gradAlgo)");
       }
-      if(d.name == "CS171"){
+      if(d.name == "Visualisation"){
         //javscript programming contribution
         d3.select("#gradSingle").selectAll("stop")
           .attr("offset", "0%");
@@ -220,7 +220,7 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select(".Design")
           .style('fill', "url(#gradSingle)");
       }
-      if(d.name == "NLP"){
+      if(d.name == "NatLangProcessing"){
         //NLP contribution
         d3.select("#gradSingle").selectAll("stop")
           .attr("offset", "0%");
@@ -239,7 +239,7 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select(".python")
           .style('fill', "url(#gradPython)");
       }
-      if(d.name == "StatsUD"){
+      if(d.name == "StatsUdacity"){
         d3.select("#gradStats").selectAll(".notYet")
           .attr("offset", "86%");
         d3.select("#gradStats").selectAll(".inProgressStart")
@@ -251,7 +251,7 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select(".Statistics")
           .style('fill', "url(#gradStats)");
       }
-      if(d.name == "CS109"){
+      if(d.name == "DataScience"){
         //python programming contribution
         d3.select("#gradPython").selectAll(".notYet")
           .attr("offset", "0%");
@@ -296,7 +296,7 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select(".Statistics")
           .style('fill', "url(#gradStats)");
       }
-      if(d.name == "StatsMIT"){
+      if(d.name == "StatsInference"){
         d3.select("#gradStats").selectAll(".notYet")
           .attr("offset", "0%");
         d3.select("#gradStats").selectAll(".inProgressStart")
@@ -335,13 +335,13 @@ d3.tsv("study_data.tsv", function(data) {
           }
       });
 
-      if(d.name == "DB"){
+      if(d.name == "Databases"){
         d3.select(".SQL")
           .style('fill', "#c7c7c7");
         d3.select(".Databases")
           .style('fill', "#c7c7c7");
       }
-      if(d.name == "CS106B"){
+      if(d.name == "ProgAbstractions"){
         //programming contribution
         d3.select(".c")
           .style('fill', "#c7c7c7");
@@ -351,7 +351,7 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select("#gradAlgo").selectAll(".inProgressStart")
           .attr("offset", "82%");
       }
-      if(d.name == "CS171"){
+      if(d.name == "Visualisation"){
         //javscript contributino
         d3.select(".javascript")
           .style('fill', "#c7c7c7");
@@ -359,7 +359,7 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select(".Design")
           .style('fill', "#c7c7c7");
       }
-      if(d.name == "NLP"){
+      if(d.name == "NatLangProcessing"){
         //Programming contribution
         d3.select(".python")
           .style('fill', "#c7c7c7");
@@ -367,11 +367,11 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select(".Natural.Language.Processing")
           .style('fill', "#c7c7c7");
       }
-      if(d.name == "StatsUD"){
+      if(d.name == "StatsUdacity"){
         d3.select(".Statistics")
           .style('fill', "#c7c7c7");
       }
-      if(d.name == "CS109"){
+      if(d.name == "DataScience"){
         //python programming contribution
         d3.select(".python")
           .style('fill', "#c7c7c7");
@@ -389,7 +389,7 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select(".Statistics")
           .style('fill', "#c7c7c7");
       }
-      if(d.name == "StatsMIT"){
+      if(d.name == "StatsInference"){
         d3.select(".Statistics")
           .style('fill', "#c7c7c7");
       }

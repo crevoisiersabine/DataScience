@@ -1,7 +1,7 @@
 var margin = { top: 40, right: 10, bottom: 50, left: 50 };
 var width = 900 - margin.left - margin.right;
 var height = 400 - margin.bottom - margin.top;
-var width_legend = 100;
+var width_legend = 150;
 
 var format = d3.time.format("%d-%m-%Y");
 
@@ -31,7 +31,7 @@ var color = d3.scale.ordinal()
 var courses = [];
 var colorD =[];
 
-d3.tsv("study_data.tsv", function(err, data) {
+d3.tsv("study_data2.tsv", function(err, data) {
     colorD = d3.keys(data[0]).filter(function(key) { return key !== "Date"; });
     color.domain(colorD);
 
@@ -80,22 +80,22 @@ d3.tsv("study_data.tsv", function(err, data) {
 
                   "<h2><small><font color='#eee'>Followed by a two week holiday. <b>And a little work...</b></font></small></h2>",
 
-                  "<h2><small><font color='#eee'>CS171 was a <b>brilliant</b> course, so we found other Harvard Courses</font></small></h2>",
+                  "<h2><small><font color='#eee'>Visualisation was a <b>brilliant</b> course, so we found other Harvard Courses</font></small></h2>",
 
                   "<h2><small><font color='#eee'>Long days studying Statistics and Data Science Theory... this was a difficult period</font></small></h2>",
 
 
                   "<h2><small><font color='#eee'>Stats110 completed, half a day off!</font></small></h2>",
 
-                  "<h2><small><font color='#eee'>CS109 completed, quarter of a day off!</font></small></h2>",
+                  "<h2><small><font color='#eee'>Data Science completed, quarter of a day off!</font></small></h2>",
 
-                  "<h2><small><font color='#eee'>CS171 completed ... </font></small></h2>",
+                  "<h2><small><font color='#eee'>Visualisation completed ... </font></small></h2>",
 
                   "<h2><small><font color='#eee'>Studying statistical inference to apply our Stats110 learning.</font></small></h2>",
 
                   "<h2><small><font color='#eee'>Databases completed</font></small></h2>",
 
-                  "<h2><small><font color='#eee'>and CS106B the last man standing</font></small></h2>"] 
+                  "<h2><small><font color='#eee'>and Programming Abstractions the last man standing</font></small></h2>"] 
 
 //------------------------------------------------------------------Create the titles-----------------------------------------------------
     d3.select(".header .col-md-8 h1 small").text("Studying hours over 6 months");
@@ -136,7 +136,7 @@ function createArrows(h, x, y){
     var arrows = d3.selectAll("#area1")
       .append("svg")
       .attr({
-          width: 200,
+          width: 150,
           height: h
         })
       .append("g").attr("id", "#arrows")
@@ -192,7 +192,7 @@ function createArrows(h, x, y){
     arrowUP.append("path").attr("d", "M23.986,22c2,0,2.589-2.014,1.457-3.143l-8.098-8.235c-0.746-0.746-1.956-0.786-2.7-0.038l-8.099,8.155  C5.531,19.757,5.978,22,7.979,22C10.082,22,22.388,22,23.986,22z")
     arrowUP.attr("opacity", 0);
   }
-  createArrows(250, 70, 0);
+  createArrows(250, 20, 0);
 
 //------------------------------------------------------------------Axes--------------------------------------------------------------------
   //Create the x and y axes
