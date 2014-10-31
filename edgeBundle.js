@@ -322,7 +322,7 @@ function create_parall(data_par){
 
   // CREATE A COLOR SCALE
   var color = d3.scale.ordinal()
-  .domain(["CS106A","CS106B","Stanford Databases","NLP","CS171","CS109","Stats 110","Machine Learning","Probabilistic Sys","Statistics Udacity"]) 
+  .domain(["ProgMethodology","ProgAbstractions","Databases","NatLangProcessing","Visualisation","DataScience","Stats110","MachineLearning","StatsUdacity","StatsUdacity"]) 
   .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
 
   var svg2 = d3.select("#area7").append("svg")
@@ -489,6 +489,9 @@ function create_parall(data_par){
 
   //------Highlight function for legend------------
     function legend_highlight(d){
+      //Gray out all courses except the one hovered over
+      d3.selectAll(".block")
+        .style("fill", "#c7c7c7");
       //Set chain class active
       d3.selectAll(".chain")
           .classed("chain_active", function(dat){
@@ -502,9 +505,17 @@ function create_parall(data_par){
           else false
         });
 
+      //Highlight in blue the legend for the course hovered over
+      d3.selectAll(".block." + d + "")
+        .style("fill", function(d) { console.log(color(d.name))
+          return color(d); })
+
     }
 
     function legend_unhighlight(d){
+      //Return the legend to previous colours
+      d3.selectAll(".block")
+           .style("fill", color);
       //Unset chain class active
       d3.selectAll(".chain")
         .filter(function(dat){ return (dat.source.parent.key == d || dat.target.parent.key == d) })
