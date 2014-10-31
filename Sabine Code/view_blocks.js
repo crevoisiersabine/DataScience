@@ -690,7 +690,7 @@ function secondView(createArrows){
   createArrows(100, 20, 50);
 
   //Load bottom graphs
-  LoadScriptsSync(["area.js", "barChart.js"], []);
+  LoadScriptsSync(["area2.js", "barChart.js"], []);
 
   //Include focus and brush functionality
   focusAndBrush();
