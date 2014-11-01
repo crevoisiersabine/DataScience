@@ -18,17 +18,13 @@
       html {
         -webkit-font-smoothing: antialiased; /*To remove blurry text*/
       }
-
-      /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);*/
        
       body{
         font-family: verdana;
-        /*background-color: transparent !important;*/
         background-image: url("./Map/thailand_reduced_opacity.png");
         background-repeat: no-repeat;
         background-position: center; 
         background-attachment: fixed;
-          /*font-family: 'Open Sans', sans-serif;*/
       }
 
       h1, h2, h3, h4, p {
@@ -74,10 +70,6 @@
       .area {
         clip-path: url(#clip);
       }
-
-/*      img {
-          z-index: -1;
-      }*/
 
       .xaxis line {
         stroke: #eee;
@@ -136,12 +128,7 @@
         background-color: #eee; 
       }
 
-/*      .frontImage { 
-         position: relative;
-      }*/
-
       .openingText, .openingTextAuthor {
-         position: absolute; 
          left: 120px; 
          width: 100%;
          text-shadow: none;
@@ -150,11 +137,14 @@
 
       .openingText {
         top: 80px;
+        position: relative;
         font-size: 25px;
       }
 
       .openingTextAuthor {
-        top: 110px;
+        top: 50px;
+        position: relative;
+        display: inline-block;
         font-size: 18px;
       }
 
@@ -162,38 +152,23 @@
         height: 700px;
         width: auto;
         background-image: url("./Images/boatEdit.jpg");
-         /*no-repeat top center fixed;*/
         background-size: 100% 100%;
         opacity: 1;
         background-attachment: fixed;
       }
 
       #mapPage {
-        /*background-image: url("./Map/thailand_reduced_opacity.png");*/
-        height: 700px;
+        height: auto;
         width: auto;
-        /*background-image: url("./Map/thailand_reduced_opacity.png");*/
-        /*background-repeat: no-repeat;*/
-        /*background-position: right;*/
-        /*background-attachment: fixed;*/
-        /*background-repeat: no-repeat;
-        background-position: right; 
-        background-attachment: fixed;*/
       }
 
       #mainPage {
         height: 700px;
         width: auto;
-        /*this sets the background color to be the same as the rest of the page*/
-        /*background-color: #272b30 !important; */
-        /*background-color: transparent !important;*/
-        /*background-attachment: fixed;*/
-        /*background:none !important;*/
       }
 
       .Story1 {
         margin-top: 100px;
-/*        margin-right: 150px;*/
         text-align: justify;
       }
 
@@ -212,12 +187,13 @@
       }
 
       .headline2{
-        /*border-style: solid;*/
         border-bottom: solid;
         border-top: solid;
         border-left: none;
         border-right: none;
         border-width: 1px;
+        padding-left: 20px;
+        border-collapse:separate;
       }
 
       .Explain_graph_1 {
@@ -240,16 +216,11 @@
         color: #eee;
         height: 40px;
         opacity: 0;
-        /*margin-left: 200px;*/
-        /*display:none;*/
-        /*visibility:hidden;*/
       }
 
       #explanation {
-        /*height: 60px;*/
         margin-left: 50px;
         margin-top: 5px !important;
-        /*margin-bottom: 20px;*/
       }
 
       .bleep {
@@ -282,8 +253,9 @@
 <div id="frontPage">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="openingText">“It is good to have an end to journey toward, but it is the journey that matters, in the end.”</h1>
-      <h2 class="openingTextAuthor">― Ernest Hemingway</h2>
+      <div><h1 class="openingText">“It is good to have an end to journey toward, but it is the journey that matters, in the end.”</h1>
+        <div><h2 class="openingTextAuthor">― Ernest Hemingway</h2></div>
+      </div>
 <!--       <img class="frontImage" src="./Images/boatEdit.jpg" height="600" width=auto> -->
     </div>
   </div>
@@ -348,18 +320,16 @@
 
 </div>
 </body>
-
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script>
     var loaded = 0;
     function LoadMyJs(scriptName) {
       var imported = document.createElement('script');
       imported.src = scriptName;
+      imported.setAttribute("id", "loadedJS");
       document.head.appendChild(imported);
     }
     var divs = $('.openingText, .openingTextAuthor');
     $(window).scroll(function(){
-      // console.log($(window).scrollTop())
       //Change the opacity of the background image to fade as other page moves up
       $("#frontPage").css("opacity", 1 - (parseFloat($(window).scrollTop()) / (parseFloat($(document).height())/2)));
       //Fade the text as soon as start scrolling, to happen over 300ms
@@ -377,7 +347,12 @@
         $("#mapPage").css("background-attachment", "fixed");
       }
 
-      if(parseFloat($(window).scrollTop()) > 1250 && loaded == 0){
+      //Determine the position to start loading the js file
+      var scrollTop     = $(window).scrollTop(),
+      elementOffset = $(".Explain_graph_1").offset().top,
+      distance      = (elementOffset - scrollTop);
+      if((distance < -10 || scrollTop >= $(document).height() - 700) && loaded == 0){
+
         loaded++;
         $("#mainPage").stop().animate({
           opacity: 1
@@ -386,18 +361,13 @@
         LoadMyJs("view_blocks.js");
       }
 
-      if(parseFloat($(window).scrollTop()) <= 1200){
+      if(distance >= 200){
         $("#mainPage").stop().animate({
           opacity: 0
         }, 50);
         loaded=0;
       }
 
-      // Block scrolling past the end of the main page
-      if($(window).scrollTop() >=1380) 
-      { 
-          $(window).scrollTop(1380); 
-      }
 
     });
   </script>
