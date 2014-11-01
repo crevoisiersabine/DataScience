@@ -1,14 +1,7 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)/$ $1.html
-RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
-RewriteRule (.*)$ /$1/ [R=301,L]
-
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>
-Redirect permanent index.html /
+DirectoryIndex http://crevoisiersabine.github.io/DataScience/       
+Redirect permanent http://crevoisiersabine.github.io/DataScience/index.html http://crevoisiersabine.github.io/DataScience/
+Redirect permanent http://crevoisiersabine.github.io/DataScience/network.html http://crevoisiersabine.github.io/DataScience/Network
 order deny,allow
