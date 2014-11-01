@@ -31,7 +31,7 @@ var color = d3.scale.ordinal()
 var courses = [];
 var colorD =[];
 
-d3.tsv("study_data2.tsv", function(err, data) {
+d3.tsv("study_data.tsv", function(err, data) {
     colorD = d3.keys(data[0]).filter(function(key) { return key !== "Date"; });
     color.domain(colorD);
 
@@ -442,7 +442,21 @@ function createArrows(h, x, y){
 
   // ---------------------------------------------------------------Page loading---------------------------------------------------------------
   $(window).scroll(function(){
-    if(parseFloat($(window).scrollTop()) <= 1200){
+    var scrollTop = $(window).scrollTop(),
+    elementOffset = $(".Explain_graph_1").offset().top,
+    distance      = (elementOffset - scrollTop);
+
+    var element2Offset = $(".otherG").offset().top,
+    distance2 = (element2Offset - scrollTop);
+    console.log(distance2)
+
+    // Block scrolling past the end of the main page
+    // if(distance2 <= -350) 
+    // { 
+    //     $(window).scrollTop(element2Offset - 350); 
+    // }
+
+    if(distance >= 200){
       //End transitions
       var allElem = d3.selectAll("*")
         .transition() 
@@ -690,7 +704,7 @@ function secondView(createArrows){
   createArrows(100, 20, 50);
 
   //Load bottom graphs
-  LoadScriptsSync(["area2.js", "barChart.js"], []);
+  LoadScriptsSync(["area.js", "barChart.js"], []);
 
   //Include focus and brush functionality
   focusAndBrush();
