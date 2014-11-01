@@ -29,6 +29,7 @@ var color = d3.scale.ordinal()
     // .range(["#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#c7c7c7", "#17becf"]);
     // .range(["#ff7f0e", "#1f77b4", "#2ca02c", "#9467bd", "#aec7e8", "#d62728", "#e377c2", "#17becf"]);
     // .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5"]);
+    // .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5"]);
     .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
     // .range(["#e41a1c","#377eb8","#4daf4a","#984ea3","#ff7f00","#ffff33","#a65628","#f781bf"]);
 
@@ -45,7 +46,7 @@ var grad = d3.select("#grad");
 
 // -------------------------------------------------------------------------------------------------------
 //DATA
-d3.tsv("study_data2.tsv", function(data) {
+d3.tsv("study_data.tsv", function(data) {
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Date"; }));
 
   data.forEach(function(d) {
@@ -394,7 +395,7 @@ d3.tsv("study_data2.tsv", function(data) {
           .style('fill', "#c7c7c7");
       }
 
-        //On mouseover, return to previous colours
+        //On mouseout, return to previous colours
         svg.selectAll(".area")
           .attr("d", function(d) { return area(d.values); })
           .style("fill", function(d) { return color(d.name); })
