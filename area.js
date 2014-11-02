@@ -1,3 +1,15 @@
+  // ---------------------------------------------------------------Page loading---------------------------------------------------------------
+  $(window).scroll(function(){
+    var scrollTop = $(window).scrollTop(),
+    elementOffset = $(".Explain_graph_1").offset().top,
+    distance      = (elementOffset - scrollTop);
+
+    if(distance >= 200){
+      //Remove current view
+      d3.selectAll("svg").remove();
+    }
+  })
+
 var margin = { top: 40, right: 10, bottom: 50, left: 50 };
 var width = 700 - margin.left - margin.right;
 var height = 350 - margin.bottom - margin.top;
@@ -339,7 +351,7 @@ d3.tsv("study_data.tsv", function(data) {
       if(d.name == "Databases"){
         d3.select(".SQL")
           .style('fill', "#c7c7c7");
-        d3.select(".Databases")
+        d3.selectAll(".barsSkills").select(".Databases")
           .style('fill', "#c7c7c7");
       }
       if(d.name == "ProgAbstractions"){

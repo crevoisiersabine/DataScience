@@ -192,7 +192,6 @@ function plot(data, type){
 
     legend.append("text")
       .attr("x", function(d, i){
-      	console.log(i)
       	return (110);
       })
       .attr("y", 3)

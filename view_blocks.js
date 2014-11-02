@@ -446,16 +446,6 @@ function createArrows(h, x, y){
     elementOffset = $(".Explain_graph_1").offset().top,
     distance      = (elementOffset - scrollTop);
 
-    var element2Offset = $(".otherG").offset().top,
-    distance2 = (element2Offset - scrollTop);
-    console.log(distance2)
-
-    // Block scrolling past the end of the main page
-    // if(distance2 <= -350) 
-    // { 
-    //     $(window).scrollTop(element2Offset - 350); 
-    // }
-
     if(distance >= 200){
       //End transitions
       var allElem = d3.selectAll("*")
