@@ -190,11 +190,11 @@ ProgMethodology, Recursion, Solving Problems Recursively,107.5,4.134615384615385
 ProgMethodology, Recursion, Functional Recursion,107.5,4.134615384615385,0.6891025641025641
 ProgMethodology, Recursion, Recursion & Efficiency,107.5,4.134615384615385,0.6891025641025641
 ProgMethodology, Recursion, Binary Search,107.5,4.134615384615385,0.6891025641025641
-ProgMethodology, Recursion & Hanois, Thinking Recursively,107.5,4.134615384615385,0.8269230769230769
-ProgMethodology, Recursion & Hanois, Procedural vs Functional Recursion,107.5,4.134615384615385,0.8269230769230769
-ProgMethodology, Recursion & Hanois, Fractal Code,107.5,4.134615384615385,0.8269230769230769
-ProgMethodology, Recursion & Hanois, Hanois Towers : Classic Recursion Example,107.5,4.134615384615385,0.8269230769230769
-ProgMethodology, Recursion & Hanois, Permutations,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Thinking Recursively,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Procedural vs Functional Recursion,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Fractal Code,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Hanois Towers : Classic Recursion Example,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Permutations,107.5,4.134615384615385,0.8269230769230769
 ProgMethodology, Permutation + Subset + Backtrack, Subsets,107.5,4.134615384615385,1.3782051282051282
 ProgMethodology, Permutation + Subset + Backtrack, Exhaustive Recursion,107.5,4.134615384615385,1.3782051282051282
 ProgMethodology, Permutation + Subset + Backtrack, Recursive Backtracking,107.5,4.134615384615385,1.3782051282051282
@@ -461,14 +461,14 @@ DataScience, Bayesian Simulation Lecture, LASSO and Sparsity,133.5,5.13461538461
 DataScience, Bayesian Simulation Lecture, Kidney Data Analysis,133.5,5.134615384615385,0.8557692307692307
 DataScience, Bayesian Simulation Lecture, Markov Chain Example,133.5,5.134615384615385,0.8557692307692307
 DataScience, Bayesian Simulation Lecture, MCM Cryptography,133.5,5.134615384615385,0.8557692307692307
-DataScience, Bayesian Contd Monte Carlo Lecture, Markov Chains,133.5,5.134615384615385,0.6418269230769231
-DataScience, Bayesian Contd Monte Carlo Lecture, Likelihood Ratios,133.5,5.134615384615385,0.6418269230769231
-DataScience, Bayesian Contd Monte Carlo Lecture, MCMC,133.5,5.134615384615385,0.6418269230769231
-DataScience, Bayesian Contd Monte Carlo Lecture, Hidden Makov Models,133.5,5.134615384615385,0.6418269230769231
-DataScience, Bayesian Contd Monte Carlo Lecture, Networks,133.5,5.134615384615385,0.6418269230769231
-DataScience, Bayesian Contd Monte Carlo Lecture, MCMC Generate Networks,133.5,5.134615384615385,0.6418269230769231
-DataScience, Bayesian Contd Monte Carlo Lecture, Gibbs Sampler + Metropolis Hastings,133.5,5.134615384615385,0.6418269230769231
-DataScience, Bayesian Contd Monte Carlo Lecture, Hierarchical Models,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Markov Chains,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Likelihood Ratios,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, MCMC,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Hidden Makov Models,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Networks,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, MCMC Generate Networks,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Gibbs Sampler + Metropolis Hastings,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Hierarchical Models,133.5,5.134615384615385,0.6418269230769231
 DataScience, Bayesian & SciKit Learn Lab, Bayesian Analysis,133.5,5.134615384615385,1.2836538461538463
 DataScience, Bayesian & SciKit Learn Lab, SciKit Learn,133.5,5.134615384615385,1.2836538461538463
 DataScience, Practical Machine Learning Lecture, Supervised Learning - SVM,133.5,5.134615384615385,0.8557692307692307
@@ -645,231 +645,119 @@ MachineLearning, Conclusion," Application Examples
 ",,,
 MachineLearning, Conclusion," Conclusions
 ",,,
-Stats110, Naive Probability + Counting," sample spaces
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Naive Probability + Counting," naive definition of probability
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Naive Probability + Counting," counting
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Naive Probability + Counting," sampling
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Probability Axioms," Bose-Einstein
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Probability Axioms," story proofs
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Probability Axioms," Vandermonde identity
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Probability Axioms," axioms of probability 
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Inclusion-Exclusion," birthday problem
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Inclusion-Exclusion," properties of probability
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Inclusion-Exclusion," inclusion-exclusion
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Inclusion-Exclusion," matching problem
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Independance + Condn Prob + Bayes," independence
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Independance + Condn Prob + Bayes," Newton-Pepys
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Independance + Condn Prob + Bayes," conditional probability
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Independance + Condn Prob + Bayes," Bayes’ rule
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Total Prob + Conditional Indep," law of total probability
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Total Prob + Conditional Indep," conditional probability examples
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Total Prob + Conditional Indep," conditional independence
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Simpson + Monty Hall," Monty Hall problem
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Simpson + Monty Hall," Simpson’s paradox
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, 1st Step + Bernoulli & Binomial," gambler’s ruin
-",150.0,4.411764705882353,0.8823529411764706
-Stats110, 1st Step + Bernoulli & Binomial," first step analysis
-",150.0,4.411764705882353,0.8823529411764706
-Stats110, 1st Step + Bernoulli & Binomial," random variables
-",150.0,4.411764705882353,0.8823529411764706
-Stats110, 1st Step + Bernoulli & Binomial," Bernoulli
-",150.0,4.411764705882353,0.8823529411764706
-Stats110, 1st Step + Bernoulli & Binomial," Binomial
-",150.0,4.411764705882353,0.8823529411764706
-Stats110, CDF's + PMF's + Hypergeo," random variables
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, CDF's + PMF's + Hypergeo," CDFs
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, CDF's + PMF's + Hypergeo," PMFs
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, CDF's + PMF's + Hypergeo," Hypergeometric
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Linearity + EV + IRV," independence
-",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + EV + IRV," Geometric
-",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + EV + IRV," expected values
-",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + EV + IRV," indicator r.v.s
-",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + EV + IRV," linearity
-",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + EV + IRV," symmetry
-",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + EV + IRV," fundamental bridge
-",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + Negative Binomial," linearity
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Linearity + Negative Binomial," Putnam problem
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Linearity + Negative Binomial," Negative Binomial
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Linearity + Negative Binomial," St. Petersburg paradox
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Poisson & Poisson approx," sympathetic magic
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Poisson & Poisson approx," Poisson distribution
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Poisson & Poisson approx," Poisson approximation
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Variance + Variance + Universality," discrete vs. continuous
-",150.0,4.411764705882353,0.7352941176470589
-Stats110, Variance + Variance + Universality," PDFs
-",150.0,4.411764705882353,0.7352941176470589
-Stats110, Variance + Variance + Universality," variance
-",150.0,4.411764705882353,0.7352941176470589
-Stats110, Variance + Variance + Universality," standard deviation
-",150.0,4.411764705882353,0.7352941176470589
-Stats110, Variance + Variance + Universality," Uniform
-",150.0,4.411764705882353,0.7352941176470589
-Stats110, Variance + Variance + Universality," universality
-",150.0,4.411764705882353,0.7352941176470589
-Stats110, Standard Normal," standard Normal
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Standard Normal," Normal normalizing constant
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Standardisation + LOTUS," Normal distribution
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Standardisation + LOTUS," standardization
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Standardisation + LOTUS," LOTUS
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Midterm exmp," midterm review
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Midterm exmp," extra examples
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Exponential," Exponential distribution
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Exponential," memoryless property
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, MGF's + Laplace Succession," moment generating functions
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, MGF's + Laplace Succession," hybrid Bayes’ rule
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, MGF's + Laplace Succession," Laplace’s rule of succession
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Joint distributions," MGFs to get moments of Expo and Normal
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Joint distributions," sums of Poissons
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Joint distributions," joint distributions
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Conditional + Marginal + 2D LOTUS," joint
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Conditional + Marginal + 2D LOTUS," conditional and marginal distributions
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Conditional + Marginal + 2D LOTUS," 2-D LOTUS
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Conditional + Marginal + 2D LOTUS," chicken-egg
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Multinomial + Cauchy," expected distance between Normals
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Multinomial + Cauchy," Multinomial
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Multinomial + Cauchy," Cauchy
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Covar & Corr & Variance as sum," covariance
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Covar & Corr & Variance as sum," correlation
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Covar & Corr & Variance as sum," variance of a sum
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Covar & Corr & Variance as sum," variance of Hypergeometric
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Transformatn + Convolution," transformations
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Transformatn + Convolution," LogNormal
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Transformatn + Convolution," convolutions
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Transformatn + Convolution," the probabilistic method
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Beta Distn," Beta distribution
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Beta Distn," Bayes’ billiards
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Beta Distn," finance preview and examples
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Gamma Distn," Gamma distribution
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Gamma Distn," Poisson processes
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Order Stats," Beta-Gamma (bank-post office)
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Order Stats," order statistics
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Order Stats," conditional expectation
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Order Stats," two envelope paradox
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Conditional Expectation," two envelope paradox (cont.)
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Conditional Expectation," conditional expectation (cont.)
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Conditional Expectation," waiting for HT vs. waiting for HH
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Adam's & Eve's Law," conditional expectation (cont.)
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Adam's & Eve's Law," taking out what’s known
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Adam's & Eve's Law," Adam’s law
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Adam's & Eve's Law," Eve’s law
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Random Variables + Inequalities," sum of a random number of random variables
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Random Variables + Inequalities, inequalities (Cauchy-Schwarz,150.0,4.411764705882353,2.2058823529411766
-Stats110, LLN & CLT," law of large numbers
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, LLN & CLT," central limit theorem
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Chi Sqrd + Student-t + Multivar Norm," Chi-Square
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Chi Sqrd + Student-t + Multivar Norm," Student-t
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Chi Sqrd + Student-t + Multivar Norm," Multivariate Normal
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Markov Chains," Markov chains
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Markov Chains," transition matrix
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Markov Chains," stationary distribution
-",150.0,4.411764705882353,1.4705882352941178
-Stats110, Irreducibility & Random Walk," Markov chains (cont.)
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Irreducibility & Random Walk," irreducibility
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Irreducibility & Random Walk," reversibility
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Irreducibility & Random Walk," random walk on an undirected network
-",150.0,4.411764705882353,1.1029411764705883
-Stats110, Markov Chain & Page Rank," Markov chains (cont.)
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Markov Chain & Page Rank," Google PageRank as a Markov chain
-",150.0,4.411764705882353,2.2058823529411766
-Stats110, Look Ahead," a look ahead
-",150.0,4.411764705882353,4.411764705882353
+Stats110, Naive Probability + Counting, sample spaces,150.0,4.411764705882353,1.1029411764705883
+Stats110, Naive Probability + Counting, naive definition of probability,150.0,4.411764705882353,1.1029411764705883
+Stats110, Naive Probability + Counting, counting,150.0,4.411764705882353,1.1029411764705883
+Stats110, Naive Probability + Counting, sampling,150.0,4.411764705882353,1.1029411764705883
+Stats110, Probability Axioms, Bose-Einstein,150.0,4.411764705882353,1.1029411764705883
+Stats110, Probability Axioms, story proofs,150.0,4.411764705882353,1.1029411764705883
+Stats110, Probability Axioms, Vandermonde identity,150.0,4.411764705882353,1.1029411764705883
+Stats110, Probability Axioms, axioms of probability ,150.0,4.411764705882353,1.1029411764705883
+Stats110, Inclusion-Exclusion, birthday problem,150.0,4.411764705882353,1.1029411764705883
+Stats110, Inclusion-Exclusion, properties of probability,150.0,4.411764705882353,1.1029411764705883
+Stats110, Inclusion-Exclusion, inclusion-exclusion,150.0,4.411764705882353,1.1029411764705883
+Stats110, Inclusion-Exclusion, matching problem,150.0,4.411764705882353,1.1029411764705883
+Stats110, Independence + Condn Prob + Bayes, independence,150.0,4.411764705882353,1.1029411764705883
+Stats110, Independence + Condn Prob + Bayes, Newton-Pepys,150.0,4.411764705882353,1.1029411764705883
+Stats110, Independence + Condn Prob + Bayes, conditional probability,150.0,4.411764705882353,1.1029411764705883
+Stats110, Independence + Condn Prob + Bayes, Bayes’ rule,150.0,4.411764705882353,1.1029411764705883
+Stats110, Total Prob + Conditional Indep, law of total probability,150.0,4.411764705882353,1.4705882352941178
+Stats110, Total Prob + Conditional Indep, conditional probability examples,150.0,4.411764705882353,1.4705882352941178
+Stats110, Total Prob + Conditional Indep, conditional independence,150.0,4.411764705882353,1.4705882352941178
+Stats110, Simpson + Monty Hall, Monty Hall problem,150.0,4.411764705882353,2.2058823529411766
+Stats110, Simpson + Monty Hall, Simpson’s paradox,150.0,4.411764705882353,2.2058823529411766
+Stats110, 1st Step + Bernoulli & Binomial, gambler’s ruin,150.0,4.411764705882353,0.8823529411764706
+Stats110, 1st Step + Bernoulli & Binomial, first step analysis,150.0,4.411764705882353,0.8823529411764706
+Stats110, 1st Step + Bernoulli & Binomial, random variables,150.0,4.411764705882353,0.8823529411764706
+Stats110, 1st Step + Bernoulli & Binomial, Bernoulli,150.0,4.411764705882353,0.8823529411764706
+Stats110, 1st Step + Bernoulli & Binomial, Binomial,150.0,4.411764705882353,0.8823529411764706
+Stats110, CDF's + PMF's + Hypergeo, random variables,150.0,4.411764705882353,1.1029411764705883
+Stats110, CDF's + PMF's + Hypergeo, CDFs,150.0,4.411764705882353,1.1029411764705883
+Stats110, CDF's + PMF's + Hypergeo, PMFs,150.0,4.411764705882353,1.1029411764705883
+Stats110, CDF's + PMF's + Hypergeo, Hypergeometric,150.0,4.411764705882353,1.1029411764705883
+Stats110, Linearity + EV + IRV, independence,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, Geometric,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, expected values,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, indicator RVS,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, linearity,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, symmetry,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, fundamental bridge,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + Negative Binomial, linearity,150.0,4.411764705882353,1.1029411764705883
+Stats110, Linearity + Negative Binomial, Putnam problem,150.0,4.411764705882353,1.1029411764705883
+Stats110, Linearity + Negative Binomial, Negative Binomial,150.0,4.411764705882353,1.1029411764705883
+Stats110, Linearity + Negative Binomial, St. Petersburg paradox,150.0,4.411764705882353,1.1029411764705883
+Stats110, Poisson & Poisson approx, sympathetic magic,150.0,4.411764705882353,1.4705882352941178
+Stats110, Poisson & Poisson approx, Poisson distribution,150.0,4.411764705882353,1.4705882352941178
+Stats110, Poisson & Poisson approx, Poisson approximation,150.0,4.411764705882353,1.4705882352941178
+Stats110, Variance + Universality, discrete vs. continuous,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, PDFs,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, variance,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, standard deviation,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, Uniform,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, universality,150.0,4.411764705882353,0.7352941176470589
+Stats110, Standard Normal, standard Normal,150.0,4.411764705882353,2.2058823529411766
+Stats110, Standard Normal, Normal normalizing constant,150.0,4.411764705882353,2.2058823529411766
+Stats110, Standardisation + LOTUS, Normal distribution,150.0,4.411764705882353,1.4705882352941178
+Stats110, Standardisation + LOTUS, standardization,150.0,4.411764705882353,1.4705882352941178
+Stats110, Standardisation + LOTUS, LOTUS,150.0,4.411764705882353,1.4705882352941178
+Stats110, Midterm exmp, midterm review,150.0,4.411764705882353,2.2058823529411766
+Stats110, Midterm exmp, extra examples,150.0,4.411764705882353,2.2058823529411766
+Stats110, Exponential, Exponential distribution,150.0,4.411764705882353,2.2058823529411766
+Stats110, Exponential, memoryless property,150.0,4.411764705882353,2.2058823529411766
+Stats110, MGF's + Laplace Succession, moment generating functions,150.0,4.411764705882353,1.4705882352941178
+Stats110, MGF's + Laplace Succession, hybrid Bayes’ rule,150.0,4.411764705882353,1.4705882352941178
+Stats110, MGF's + Laplace Succession, Laplace’s rule of succession,150.0,4.411764705882353,1.4705882352941178
+Stats110, Joint distributions, MGFs to get moments of Expo and Normal,150.0,4.411764705882353,1.4705882352941178
+Stats110, Joint distributions, sums of Poissons,150.0,4.411764705882353,1.4705882352941178
+Stats110, Joint distributions, joint distributions,150.0,4.411764705882353,1.4705882352941178
+Stats110, 2D LOTUS, joint,150.0,4.411764705882353,1.1029411764705883
+Stats110, 2D LOTUS, conditional and marginal distributions,150.0,4.411764705882353,1.1029411764705883
+Stats110, 2D LOTUS, 2-D LOTUS test,150.0,4.411764705882353,1.1029411764705883
+Stats110, 2D LOTUS, chicken-egg,150.0,4.411764705882353,1.1029411764705883
+Stats110, Multinomial + Cauchy, expected distance between Normals,150.0,4.411764705882353,1.4705882352941178
+Stats110, Multinomial + Cauchy, Multinomial,150.0,4.411764705882353,1.4705882352941178
+Stats110, Multinomial + Cauchy, Cauchy,150.0,4.411764705882353,1.4705882352941178
+Stats110, Covar + Corr + Variance, covariance,150.0,4.411764705882353,1.1029411764705883
+Stats110, Covar + Corr + Variance, correlation,150.0,4.411764705882353,1.1029411764705883
+Stats110, Covar + Corr + Variance, variance of a sum,150.0,4.411764705882353,1.1029411764705883
+Stats110, Covar + Corr + Variance, variance of Hypergeometric,150.0,4.411764705882353,1.1029411764705883
+Stats110, Transformatn + Convolution, transformations,150.0,4.411764705882353,1.1029411764705883
+Stats110, Transformatn + Convolution, LogNormal,150.0,4.411764705882353,1.1029411764705883
+Stats110, Transformatn + Convolution, convolutions,150.0,4.411764705882353,1.1029411764705883
+Stats110, Transformatn + Convolution, the probabilistic method,150.0,4.411764705882353,1.1029411764705883
+Stats110, Beta Distn, Beta distribution,150.0,4.411764705882353,1.4705882352941178
+Stats110, Beta Distn, Bayes’ billiards,150.0,4.411764705882353,1.4705882352941178
+Stats110, Beta Distn, finance preview and examples,150.0,4.411764705882353,1.4705882352941178
+Stats110, Gamma Distn, Gamma distribution,150.0,4.411764705882353,2.2058823529411766
+Stats110, Gamma Distn, Poisson processes,150.0,4.411764705882353,2.2058823529411766
+Stats110, Order Stats, Beta-Gamma (bank-post office),150.0,4.411764705882353,1.1029411764705883
+Stats110, Order Stats, order statistics,150.0,4.411764705882353,1.1029411764705883
+Stats110, Order Stats, conditional expectation,150.0,4.411764705882353,1.1029411764705883
+Stats110, Order Stats, two envelope paradox,150.0,4.411764705882353,1.1029411764705883
+Stats110, Conditional Expectation, two envelope paradox (cont.),150.0,4.411764705882353,1.4705882352941178
+Stats110, Conditional Expectation, conditional expectation (cont.),150.0,4.411764705882353,1.4705882352941178
+Stats110, Conditional Expectation, waiting for HT vs. waiting for HH,150.0,4.411764705882353,1.4705882352941178
+Stats110, Adam's & Eve's Law, conditional expectation (cont.),150.0,4.411764705882353,1.1029411764705883
+Stats110, Adam's & Eve's Law, taking out what’s known,150.0,4.411764705882353,1.1029411764705883
+Stats110, Adam's & Eve's Law, Adam’s law,150.0,4.411764705882353,1.1029411764705883
+Stats110, Adam's & Eve's Law, Eve’s law,150.0,4.411764705882353,1.1029411764705883
+Stats110, Rand Vars + Inequalities, sum of a random number of random variables,150.0,4.411764705882353,2.2058823529411766
+Stats110, Rand Vars + Inequalities, inequalities Cauchy-Schwarz,150.0,4.411764705882353,2.2058823529411766
+Stats110, Law Large Num & Central Limit Th, law of large numbers,150.0,4.411764705882353,2.2058823529411766
+Stats110, Law Large Num & Central Limit Th, central limit theorem,150.0,4.411764705882353,2.2058823529411766
+Stats110, Chi Sqrd + Student-t + Multivar Norm, Chi-Square,150.0,4.411764705882353,1.4705882352941178
+Stats110, Chi Sqrd + Student-t + Multivar Norm, Student-t,150.0,4.411764705882353,1.4705882352941178
+Stats110, Chi Sqrd + Student-t + Multivar Norm, Multivariate Normal,150.0,4.411764705882353,1.4705882352941178
+Stats110, Markov Chains, Markov chains,150.0,4.411764705882353,1.4705882352941178
+Stats110, Markov Chains, transition matrix,150.0,4.411764705882353,1.4705882352941178
+Stats110, Markov Chains, stationary distribution,150.0,4.411764705882353,1.4705882352941178
+Stats110, Irreducibility & Random Walk, Markov chains (cont.),150.0,4.411764705882353,1.1029411764705883
+Stats110, Irreducibility & Random Walk, irreducibility,150.0,4.411764705882353,1.1029411764705883
+Stats110, Irreducibility & Random Walk, reversibility,150.0,4.411764705882353,1.1029411764705883
+Stats110, Irreducibility & Random Walk, random walk on an undirected network,150.0,4.411764705882353,1.1029411764705883
+Stats110, Markov Chain & Page Rank, Markov chains (cont.),150.0,4.411764705882353,2.2058823529411766
+Stats110, Markov Chain & Page Rank, Google PageRank as a Markov chain,150.0,4.411764705882353,2.2058823529411766
+Stats110, Look Ahead, a look ahead,150.0,4.411764705882353,4.411764705882353
 StatsUdacity, Introduction," Introduction
 ",31.5,1.96875,1.96875
 StatsUdacity, Visualizing Data," Visualizing Data
@@ -1018,5 +906,5 @@ StatsInference, Classical Inference II, MLE Estimate,18.0,3.6,0.9
 StatsInference, Classical Inference II, Confidence Intervals,18.0,3.6,0.9
 StatsInference, Classical Inference II, Linear Regression,18.0,3.6,0.9
 StatsInference, Classical Inference II, Binary Hypothesis Test,18.0,3.6,0.9
-StatsInference, Classical Inference III Overview, Binary Hypothesis Test,18.0,3.6,1.8
-StatsInference, Classical Inference III Overview, Composite Test,18.0,3.6,1.8
+StatsInference, Classical Inference III, Binary Hypothesis Test,18.0,3.6,1.8
+StatsInference, Classical Inference III, Composite Test,18.0,3.6,1.8

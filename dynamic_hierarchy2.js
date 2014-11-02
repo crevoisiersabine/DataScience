@@ -189,7 +189,7 @@ function update(source, class_used, class_array) {
   //   //-----------------Function to initiate tooltip
 
   function choose_image(param){
-    name_array = ["ProgAbstractions", "Visualisation", "DataScience", "MachineLearning", "Stats110", "StatsUdacity", "Databases", "NatLangProcessing", "StatsMIT", "ProgMethodology"]
+    name_array = ["ProgAbstractions", "Visualisation", "DataScience", "MachineLearning", "Stats110", "StatsUdacity", "Databases", "NatLangProcessing", "StatsInference", "ProgMethodology"]
     link_array = ["Cambridge.jpg", "Cambridge.jpg", "Cambridge.jpg", "Cambridge.jpg", "Cambridge.jpg", "Cambridge.jpg", "Cambridge.jpg", "Cambridge.jpg", "Cambridge.jpg", "Cambridge.jpg"]
     // link_array = ["https://lh3.googleusercontent.com/-IT2yFdNVDK8/TrhNrYrH4jI/AAAAAAAAASM/tSO9I_MXceQ/w482-h481-no/SU_BlockStree_2colorjpg300px.jpg", "http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Harvard_Wreath_Logo_1.svg/193px-Harvard_Wreath_Logo_1.svg.png", "http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Harvard_Wreath_Logo_1.svg/193px-Harvard_Wreath_Logo_1.svg.png", "https://lh3.googleusercontent.com/-IT2yFdNVDK8/TrhNrYrH4jI/AAAAAAAAASM/tSO9I_MXceQ/w482-h481-no/SU_BlockStree_2colorjpg300px.jpg", "http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Harvard_Wreath_Logo_1.svg/193px-Harvard_Wreath_Logo_1.svg.png", "https://pbs.twimg.com/profile_images/2671170543/18debd694829ed78203a5a36dd364160.png", "https://lh3.googleusercontent.com/-IT2yFdNVDK8/TrhNrYrH4jI/AAAAAAAAASM/tSO9I_MXceQ/w482-h481-no/SU_BlockStree_2colorjpg300px.jpg","http://www.e-pint.com/epint.jpg", "https://lh3.googleusercontent.com/-IT2yFdNVDK8/TrhNrYrH4jI/AAAAAAAAASM/tSO9I_MXceQ/w482-h481-no/SU_BlockStree_2colorjpg300px.jpg", "https://lh3.googleusercontent.com/-IT2yFdNVDK8/TrhNrYrH4jI/AAAAAAAAASM/tSO9I_MXceQ/w482-h481-no/SU_BlockStree_2colorjpg300px.jpg"]
     index = name_array.indexOf(param.name)
@@ -197,27 +197,26 @@ function update(source, class_used, class_array) {
   }
 
   function choose_text(param){
-    name_array = ["ProgAbstractions", "Visualisation", "DataScience", "MachineLearning", "Stats110", "StatsUdacity", "Databases", "NatLangProcessing", "StatsMIT", "ProgMethodology"]
+    name_array = ["ProgAbstractions", "Visualisation", "DataScience", "MachineLearning", "Stats110", "StatsUdacity", "Databases", "NatLangProcessing", "StatsInference", "ProgMethodology"]
     link_array = ["Programming Abstractions in C++", "Visualisation", "Data Science", "Machine Learning", "Statistics 110", "Statistics", "Databases", "Natural Language Processing", "Probabilistic Systems Analysis and Applied Probability", "Programming Methodology in Java"]
     index = name_array.indexOf(param.name)
     return link_array[index];
   }
 
   function choose_link(param){
-    name_array = ["ProgAbstractions", "Visualisation", "DataScience", "MachineLearning", "Stats110", "StatsUdacity", "Databases", "NatLangProcessing", "StatsMIT", "ProgMethodology"]
+    name_array = ["ProgAbstractions", "Visualisation", "DataScience", "MachineLearning", "Stats110", "StatsUdacity", "Databases", "NatLangProcessing", "StatsInference", "ProgMethodology"]
     link_array = ["http://see.stanford.edu/see/courseinfo.aspx?coll=11f4f422-5670-4b4c-889c-008262e09e4e", "http://www.cs171.org/#!index.md", "http://cs109.github.io/2014/", "https://www.coursera.org/course/ml", "http://projects.iq.harvard.edu/stat110/home", "https://www.udacity.com/course/st095", "https://www.coursera.org/course/db", "https://www.coursera.org/course/nlangp", "http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/readings/", "http://see.stanford.edu/see/courseinfo.aspx?coll=824a47e1-135f-4508-a5aa-866adcae1111"]
     index = name_array.indexOf(param.name)
     return link_array[index];
   }
 
   function create_line(param, x0, y0){
-    console.log("here")
     d3.selectAll(".tooltipText").remove();
     d3.selectAll(".tooltip_circle").remove();
     var x1 = 150;
     var y1 = 50;
     var data = [{x: x0 - 9, y: y0}, {x: x1, y: y1}];
-    var line = d3.svg_1.line()
+    var line = d3.svg.line()
         .interpolate("step-before")
         .x(function(d) { return (d.x); })
         .y(function(d) { return (d.y); });
@@ -256,7 +255,6 @@ function update(source, class_used, class_array) {
   d3.selectAll("circle")
     .on("mouseover", function(){
       if(d3.select(this).data()[0].depth==1){
-        console.log("here")
         var positionX = $(this).position().left;
         var positionY = $(this).position().top;
         create_line(d3.select(this).data()[0], positionX, positionY);
@@ -390,17 +388,18 @@ function collapse2(){
 //--------------------------------Expand Functions----------------------------------------------------------
 
 function stat_expand(){
-  story_1 = [53, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169];
-  story_2 = [118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140];
-  story_3 = [76, 82, 83, 85, 89, 91, 92, 100, 185, 186, 187, 188, 189, 190];
+  story_1 = [156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171];
+  story_2 = [121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155];
+  story_3 = [78, 81, 84, 85, 87, 89, 91, 92, 94, 103, 185, 186, 187, 188, 189, 190, 191, 192];
   stat_array = story_1.concat(story_2, story_3);
-  expan_arr = [118, 153, 76, 185]; //The array of nodes to expand
+  expan_arr = [156, 121, 78, 185]; //The array of nodes to expand
   var d = svg_1.selectAll("g.node").data()[0]; //This select the data associated with the base node
 
   d.children = d._children; //Expand the first level of the node graph
   d._children = null;
 
   d.children.forEach(function(dat){ //For all of the children of lowest level
+    console.log(dat)
     if(expan_arr.indexOf(dat.id) != -1){ //Dictates the nodes within the first level to expand
       if(!dat.children){ //If children are null
         dat.children = dat._children; //if data.children null then make equal to data._children
@@ -413,8 +412,8 @@ function stat_expand(){
 }
 
 function algo_expand(){
-  story_1 = [2, 5, 6, 7, 20, 21, 22, 23, 24, 25, 26];
-  story_2 = [28, 30, 31, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49];
+  story_1 = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
+  story_2 = [28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55];
   story_3 = [];
   expan_arr = [2, 28];
   algo_array = story_1.concat(story_2, story_3);
@@ -424,7 +423,6 @@ function algo_expand(){
   d._children = null;
 
   d.children.forEach(function(dat){
-
     if(expan_arr.indexOf(dat.id) != -1){
       if(!dat.children){
         dat.children = dat._children;
@@ -437,18 +435,17 @@ function algo_expand(){
 }
 
 function ml_expand(){
-  story_1 = [103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117];
-  story_2 = [178, 179, 180, 181, 182, 183, 184];
-  story_3 = [76, 102, 94, 88, 85, 86];
+  story_1 = [106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120];
+  story_2 = [180, 181, 182, 183, 184, 185, 186];
+  story_3 = [78, 87, 88, 90, 96, 105];
   ml_array = story_1.concat(story_2, story_3);
-  expan_arr = [103, 178, 76];
+  expan_arr = [106, 180, 78];
   var d = svg_1.selectAll("g.node").data()[0];
 
   d.children = d._children; //Expand the first level of the node graph
   d._children = null;
 
   d.children.forEach(function(dat){
-
     if(expan_arr.indexOf(dat.id) != -1){
       if(!dat.children){
         dat.children = dat._children;

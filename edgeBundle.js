@@ -339,7 +339,7 @@ function create_parall(data_par){
 
   var margin = {top: 50, right: 10, bottom: 10, left: 10},
       width = 500 - margin.left - margin.right,
-      height = 350 - margin.top - margin.bottom;
+      height = 330 - margin.top - margin.bottom;
 
   var x = d3.scale.ordinal().rangePoints([0, width], 1),
       y = {}
