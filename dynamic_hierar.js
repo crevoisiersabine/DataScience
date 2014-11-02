@@ -392,7 +392,7 @@ function stat_expand(){
   story_2 = [121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155];
   story_3 = [78, 81, 84, 85, 87, 89, 91, 92, 94, 103, 185, 186, 187, 188, 189, 190, 191, 192];
   stat_array = story_1.concat(story_2, story_3);
-  expan_arr = [156, 121, 78, 185]; //The array of nodes to expand
+  expan_arr = [156, 121, 78, 187]; //The array of nodes to expand
   var d = svg_1.selectAll("g.node").data()[0]; //This select the data associated with the base node
 
   d.children = d._children; //Expand the first level of the node graph
