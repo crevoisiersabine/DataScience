@@ -1,6 +1,7 @@
-var diameter = 675,
+var diameter = 600,
     radius = diameter / 2,
     innerRadius = radius - 100;
+    outerRadius = radius - 90
  
 var cluster = d3.layout.cluster()
     .size([360, innerRadius])
@@ -14,23 +15,29 @@ var line = d3.svg.line.radial()
     .tension(.85)
     .radius(function(d) { return d.y; })
     .angle(function(d) { return d.x / 180 * Math.PI; });
+
+var radialScale = d3.scale.linear().range([0, 2* Math.PI]); //Create the radial scale
+
+  // CREATE A COLOR SCALE
+var color = d3.scale.ordinal()
+  .domain(["ProgMethodology","ProgAbstractions","Databases","NatLangProcessing","Visualisation","DataScience","Stats110","MachineLearning","StatsUdacity","StatsInference"]) 
+  // .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
+  .range(['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(251,128,114)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','#ccebc5','rgb(188,128,189)']);
  
 var svg = d3.select("#area6").append("svg")
-    .attr("width", diameter)
-    .attr("height", diameter)
+    .attr("width", 650)
+    .attr("height", 750)
   .append("g")
-    .attr("transform", "translate(" + radius + "," + radius + ")");
+    .attr("transform", "translate(" + (radius + 20) + "," + (radius + 40) + ")") //Translate coordinate system
 
 //------------------------GETTNG THE CORRECT DATA STRUCTURE -------------------------------------------------
-d3.csv("course_hierarch.csv", function(d) {
+d3.csv("course_hierarchy.csv", function(d) {
 
 // var connect_data
 //   d3.json("testing_connect.json", function(d){
 //     connect_data = d;
 //     console.log(connect_data)
 //   });
-
-  console.log(d);
   map_temp = {}
   data_temp = []
   file_save_map = []
@@ -83,16 +90,10 @@ d3.csv("course_hierarch.csv", function(d) {
     data_temp.push(val);
   });
 
-  //Assign the imports according to the actual connections
-  // $.each(map_temp, function (i, val) {
-  // });
-
   d3.json("Course_relation_data.json", function(error, classes){
-    console.log(classes)
 
     var nodes = cluster.nodes(packageHierarchy(classes))
     var links = packageImports(nodes);
-    console.log(links)
 
     //--------------------------------Create the data for the //el coords plot
 
@@ -143,6 +144,42 @@ d3.csv("course_hierarch.csv", function(d) {
         .on("mouseover", mouseovered)
         .on("mouseout", mouseouted);
 
+    //--------------------------------Create the overlying donut selector
+    var upper_count = 0
+    var lower_count = 1
+    var arc_dat = []
+    var sort_order = ["ProgAbstractions", "ProgMethodology", "Visualisation", "DataScience", "MachineLearning", "Stats110", "StatsUdacity", "Databases", "NatLangProcessing", "StatsInference"]//Sorting the parallel_data into the correct order
+    var i, d = {}, donut_data = []; //Intermediate dict and result
+    for(i=0; i<parallel_data.length; ++i){ //Create the map
+      d[parallel_data[i].course] = parallel_data[i];
+    }
+    for(i=0; i<sort_order.length; ++i){
+      donut_data.push(d[sort_order[i]]);
+    }
+
+    var counter = 1 //For space btwn donuts
+    for(i=0; i<donut_data.length; i++){
+      var new_dat = [];
+      upper_count += donut_data[i].topic_count + counter;
+      new_dat.push(lower_count);
+      new_dat.push(upper_count);
+      new_dat.push(donut_data[i].course);
+      arc_dat.push(new_dat);
+      lower_count = upper_count + counter;
+    }
+
+    radialScale.domain([0, upper_count+1]);
+    var arc = d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius-3).startAngle(function(d){return radialScale(d[0]);}).endAngle(function(d){return radialScale(d[1]);}) //arc func
+    svg.append("g")
+      // .attr("transform", "translate(" + (radius + 20) + "," + (radius + 40) + ")")
+      .selectAll("path")
+      .data(arc_dat)
+      .enter().append("path")
+      .attr("d", arc)
+      .attr("class", function(d){ return "donut " + d[2] + ""})
+      .style("fill", function(d){ return color(d[2]) });
+
+    //------------------------------------------------------------------
     create_parall(parallel_data);
     create_legend();
 
@@ -158,7 +195,7 @@ function create_legend(){
 
   legend = d3.select("#area6 svg")
     .append("g")
-    .attr('transform', 'translate(370, 25)')
+    .attr('transform', 'translate(440, 35)')
     .classed("legend", true)
     .attr("class", "point")
     
@@ -166,7 +203,7 @@ function create_legend(){
     .data(data_leg)
     .enter()
     .append('circle')
-    .attr("cx", function(d, i){ return i*85})
+    .attr("cx", function(d, i){ return i*75})
     .attr("r", 5)
     .style("fill", function(d, i){ return data_leg_color[i] });
 
@@ -174,7 +211,7 @@ function create_legend(){
       .data(data_leg_color)
       .enter()
       .append('text')
-      .attr("x", function(d, i){ return 8 + i*85})
+      .attr("x", function(d, i){ return 8 + i*75})
       .attr("y", 4)
       .text( function(d, i) {return data_leg[i];});
 }
@@ -186,17 +223,12 @@ function mouseovered(d) {
   var hyper_linked_arr =[]
 
   svg.selectAll(".chain").classed("chain_active", function(data){
-    // console.log(data.target);
-    // console.log(d.parent.name);
     if (data.source.parent.name === d.parent.name) {linked_arr.push(data.target.name); return true}
     else if (data.target.parent.name === d.parent.name) {linked_arr.push(data.source.name); return true} //linked_arr.push(data.target.name);
     else return false
   });
 
-  svg.selectAll(".chain").attr("class", function(data) {
-    // classed(".chain_hyperactive", function(data){
-    // console.log(data.source.name);
-    // console.log(d.name);
+  svg.selectAll(".chain").attr("class", function(data) {;
     if (data.source.name === d.name) {hyper_linked_arr.push(data.target.name); return "chain chain_hyperactive"}
     else if (data.target.name === d.name) {hyper_linked_arr.push(data.source.name); return "chain chain_hyperactive"} //hyper_linked_arr.push(data.target.name);
     else return "chain chain_active"
@@ -305,11 +337,9 @@ function packageImports(nodes) {
 
 function create_parall(data_par){
 
-  console.log(data_par)
-
   var margin = {top: 50, right: 10, bottom: 10, left: 10},
       width = 500 - margin.left - margin.right,
-      height = 300 - margin.top - margin.bottom;
+      height = 350 - margin.top - margin.bottom;
 
   var x = d3.scale.ordinal().rangePoints([0, width], 1),
       y = {}
@@ -319,11 +349,6 @@ function create_parall(data_par){
       axis = d3.svg.axis().orient("left"),
       background,
       foreground;
-
-  // CREATE A COLOR SCALE
-  var color = d3.scale.ordinal()
-  .domain(["ProgMethodology","ProgAbstractions","Databases","NatLangProcessing","Visualisation","DataScience","Stats110","MachineLearning","StatsUdacity","StatsUdacity"]) 
-  .range(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]);
 
   var svg2 = d3.select("#area7").append("svg")
       .attr("width", width + margin.left + margin.right)
@@ -355,7 +380,7 @@ function create_parall(data_par){
         .data(data_par)
       .enter().append("path")
         .attr("d", path)
-        .attr("stroke", function(d) { console.log(color(d.course)); return color(d.course); })
+        .attr("stroke", function(d) { return color(d.course); })
         .on("mouseover", function(d) {highlighted(d)})
         .on("mouseout", function(d) {un_highlighted(d)});
 
@@ -421,7 +446,6 @@ function create_parall(data_par){
 
     // Returns the path for a given data point.
     function path(d) {
-      console.log(dimensions)
       return line(dimensions.map(function(p) { return [position(p), y[p](d[p])]; }));
     }
 
@@ -456,15 +480,15 @@ function create_parall(data_par){
         .classed("chain_active", false);
     }
 
-// ------------Legend-------------------------------------------------------------------------------------------
+// ------------Legend courses----------------------------------------------------------------------------
 
     var legend = d3.select("#area_legend")
-      .append("svg").attr("height", "400").append("g")
+      .append("svg").attr("height", "350").append("g")
       .attr("transform", "translate(0,70)")
       .selectAll(".legend")
       .data(color.domain().slice().reverse())
       .enter().append("g")
-      .attr("class", function(d){ return "legend " + d + ""})
+      .attr("class", function(d){ console.log(d); return "legend " + d + ""})
       .attr("transform", function(d, i) { return "translate(100," + i * 20 + ")"; });
 
     legend.append("rect")
@@ -492,6 +516,8 @@ function create_parall(data_par){
       //Gray out all courses except the one hovered over
       d3.selectAll(".block")
         .style("fill", "#c7c7c7");
+      d3.selectAll(".donut")
+        .style("fill", "#c7c7c7");
       //Set chain class active
       d3.selectAll(".chain")
           .classed("chain_active", function(dat){
@@ -507,15 +533,17 @@ function create_parall(data_par){
 
       //Highlight in blue the legend for the course hovered over
       d3.selectAll(".block." + d + "")
-        .style("fill", function(d) { console.log(color(d.name))
-          return color(d); })
-
+        .style("fill", function(d) { return color(d); })
+      d3.selectAll(".donut." + d + "")
+        .style("fill", function(d) { return color(d[2]); })
     }
 
     function legend_unhighlight(d){
       //Return the legend to previous colours
       d3.selectAll(".block")
            .style("fill", color);
+      d3.selectAll(".donut")
+           .style("fill", function(d){ return color(d[2])});
       //Unset chain class active
       d3.selectAll(".chain")
         .filter(function(dat){ return (dat.source.parent.key == d || dat.target.parent.key == d) })

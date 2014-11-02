@@ -1,7 +1,7 @@
 var diameter = 900;
 
 var margin = {top: 200, right: 120, bottom: 20, left: 120},
-    width = diameter*(3/4),
+    width = diameter*(7/8),
     height = diameter;
     
 var i = 0,
@@ -59,7 +59,8 @@ function leave(){
 //        .attr("data-id", "drilldown");
 
 //--------------------------------------------LOADING DATA FUNC----------------------------------------------------
-d3.csv("course_hierarch.csv", function(d) {
+d3.csv("course_hierarchy.csv", function(d) {
+
     data ={ "name": "", "children": [] }
     Course_arr = data.children
     Course = "Course"

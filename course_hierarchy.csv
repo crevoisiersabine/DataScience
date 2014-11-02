@@ -1,271 +1,271 @@
 Course,Chapter,Topic,Course_hour,Chap_hour,Top_hour,
-ProgMethodology, Logic Statements C++, Algorithm vs Program,,,
-ProgMethodology, Logic Statements C++, Creating Methods,,,
-ProgMethodology, Logic Statements C++, for Loop and While Loop,,,
-ProgMethodology, Logic Statements C++, If Statement and Putting it All Together,,,
-ProgMethodology, Software Engineering Principles, Common Errors,,,
-ProgMethodology, Software Engineering Principles, Comments,,,
-ProgMethodology, Software Engineering Principles, Pre-conditions and Post-conditions,,,
-ProgMethodology, Software Engineering Principles, Decomposition,,,
-ProgMethodology, Software Engineering Principles, Importance of Good Software Engineering,,,
-ProgMethodology, Software Engineering Principles, The Right Decomposition,,,
-ProgMethodology, Object Oriented Principles, The History of Computing,,,
-ProgMethodology, Object Oriented Principles, Computer Science vs Programming,,,
-ProgMethodology, Object Oriented Principles, The Compilation Process,,,
-ProgMethodology, Object Oriented Principles, Java is an Object Oriented Language,,,
-ProgMethodology, Object Oriented Principles, Inheritance,,,
-ProgMethodology, Object Oriented Principles, Instance of a Class,,,
-ProgMethodology, Object Oriented Principles, The acm.program Hierarchy,,,
-ProgMethodology, Object Oriented Principles, Your First Java Program,,,
-ProgMethodology, Variables & Methods, Variables,,,
-ProgMethodology, Variables & Methods, Data Types and Syntax of Variables,,,
-ProgMethodology, Variables & Methods, Classes as Types Objects as Variables,,,
-ProgMethodology, Variables & Methods, Invoking Methods on Objects,,,
-ProgMethodology, Variables & Methods, Graphics Coordinates and Operations,,,
-ProgMethodology, Variables & Methods, Expressions and Operators,,,
-ProgMethodology, Variables & Methods II, readInt() and readDouble(),,,
-ProgMethodology, Variables & Methods II, The Division Operator w.r.t ints and Doubles,,,
-ProgMethodology, Variables & Methods II, Order of Precedence for Operators,,,
-ProgMethodology, Variables & Methods II, Type Casting,,,
-ProgMethodology, Variables & Methods II, Shorthands,,,
-ProgMethodology, Variables & Methods II, Constants,,,
-ProgMethodology, Variables & Methods II, The Boolean Data Type,,,
-ProgMethodology, Variables & Methods II, Value Comparisons,,,
-ProgMethodology, Variables & Methods II, Statement Blocks,,,
-ProgMethodology, Variables & Methods II, Scope of Variables,,,
-ProgMethodology, Variables & Methods II, Cascading if,,,
-ProgMethodology, Variables & Methods II, The Switch Statement,,,
-ProgMethodology, Variables & Methods II, The For Loop and While Loop,,,
-ProgMethodology, Methods III, The Loop and a Half Problem,,,
-ProgMethodology, Methods III, For Versus While Loop,,,
-ProgMethodology, Methods III, The CheckerBoard Program Example,,,
-ProgMethodology, Methods III, Methods in Java,,,
-ProgMethodology, Methods III, The FactorialExample Program,,,
-ProgMethodology, Methods III, Returning Objects from Methods,,,
-ProgMethodology, Methods & Random Numbers, Information Hiding,,,
-ProgMethodology, Methods & Random Numbers, The Void Return Type,,,
-ProgMethodology, Methods & Random Numbers, Parameter Passing Between Methods,,,
-ProgMethodology, Methods & Random Numbers, Bad Times with Methods-Using Classes,,,
-ProgMethodology, Methods & Random Numbers, Instance variables vs Local Variables,,,
-ProgMethodology, Methods & Random Numbers, The RandomGenerator Program Example,,,
-ProgMethodology, Methods & Random Numbers, The RollDice Program Example,,,
-ProgMethodology, Methods & Random Numbers, The setSeed() Method,,,
-ProgMethodology, Classes, Strings,,,
-ProgMethodology, Classes, Writing Your Own Class,,,
-ProgMethodology, Classes, Public and Private Visibility,,,
-ProgMethodology, Classes, Creating a New Class - The Constructor Method +'this' Keyword,,,
-ProgMethodology, Classes, Using the Created Class,,,
-ProgMethodology, Classes, Objects are Called by Reference not Called by Value-Class Variables,,,
-ProgMethodology, Classes, The Student Program Example,,,
-ProgMethodology, Extending Classes & Interfaces, Importance of Private Variables,,,
-ProgMethodology, Extending Classes & Interfaces, Extending the Student Class,,,
-ProgMethodology, Extending Classes & Interfaces, Overriding Methods,,,
-ProgMethodology, Extending Classes & Interfaces, Methods Common to All GObjects,,,
-ProgMethodology, Extending Classes & Interfaces, Interfaces and Methods Defined by Them,,,
-ProgMethodology, Extending Classes & Interfaces, The BouncingBall Program Example,,,
-ProgMethodology, Events, The GImage GShape Classes,,,
-ProgMethodology, Events, Event Driven Programs,,,
-ProgMethodology, Events, The ClickForFace Program Example,,,
-ProgMethodology, Events, Responding to Mouse and Keyboard Events,,,
-ProgMethodology, Events, The UFO program Example,,,
-ProgMethodology, Strings & Enumerations, Enumeration and Characters,,,
-ProgMethodology, Strings & Enumerations, The ASCII Subset of Unicode,,,
-ProgMethodology, Strings & Enumerations, Reading Characters and Math on Characters,,,
-ProgMethodology, Strings & Enumerations, char as a Primitive Type and the Character Class,,,
-ProgMethodology, Strings & Enumerations, Strings and Their Manipulations,,,
-ProgMethodology, Strings & Tokenizing, String Processing,,,
-ProgMethodology, Strings & Tokenizing, Tokenizers,,,
-ProgMethodology, Strings & Tokenizing, Encryption,,,
-ProgMethodology, Pointers & Allocation, Memory,,,
-ProgMethodology, Pointers & Allocation, Different Sections of Memory for Different Types of Variables,,,
-ProgMethodology, Pointers & Allocation, Memory Allocation Mechanics,,,
-ProgMethodology, Pointers & Allocation, The Pointer Viewpoint,,,
-ProgMethodology, Pointers & Allocation, The Binky Pointer Fun Video,,,
-ProgMethodology, Exceptions and Files, Pointer Recap and Object 'Call by Reference' Instead of 'Call of Value'?,,,
-ProgMethodology, Exceptions and Files, Wrapper Classes for Primitive Types,,,
-ProgMethodology, Exceptions and Files, Files and Code for Opening- Reading&Closing Files,,,
-ProgMethodology, Exceptions and Files, Exceptions,,,
-ProgMethodology, Exceptions and Files, Code for Writing Files,,,
-ProgMethodology, Arrays, Array and Array Creation,,,
-ProgMethodology, Arrays, The ++ Operator,,,
-ProgMethodology, Arrays, Actual Size / Effective Size of the Array,,,
-ProgMethodology, Arrays, An Array as a Parameter,,,
-ProgMethodology, Arrays, Initialize an Array During Creation,,,
-ProgMethodology, Arrays, An ArrayList,,,
-ProgMethodology, Array Lists, Multi-dimensional Arrays,,,
-ProgMethodology, Array Lists, An ArrayList,,,
-ProgMethodology, Array Lists, The Template Class,,,
-ProgMethodology, Array Lists, Methods in the ArrayList Class and Example Program,,,
-ProgMethodology, Array Lists, ArrayLists Hold Objects,,,
-ProgMethodology, Array Lists, Example Program with an ArrayList of Glabels and GrayImage Program,,,
-ProgMethodology, Array List & Debugging, A Wrap Up of Multi-dimensional Arrays,,,
-ProgMethodology, Array List & Debugging, The ArrayList Way,,,
-ProgMethodology, Array List & Debugging, Debugging and Approaches to Debugging,,,
-ProgMethodology, Maps & Iterators, An Interface and Implementation,,,
-ProgMethodology, Maps & Iterators, A Map,,,
-ProgMethodology, Maps & Iterators, The HashMap Class and Mehtods The Collection Hierarchy,,,
-ProgMethodology, Maps & Iterators, The Map Hierarchy,,,
-ProgMethodology, Maps & Iterators, An Iterator,,,
-ProgMethodology, Maps & Iterators, A HashMap Example,,,
-ProgMethodology, Interactors, GUI,,,
-ProgMethodology, Interactors, Interactors in the Context of a Java Program,,,
-ProgMethodology, Interactors, The Swing Interactor Hierarchy,,,
-ProgMethodology, Interactors, Window Regions,,,
-ProgMethodology, Interactors, Creating Interactors,,,
-ProgMethodology, Interactors, Exploring More Interactors,,,
-ProgMethodology, Interactors, The InteractiveDrawFace Program Example,,,
-ProgMethodology, Listeners & Graphics, Review of Interactors and Listeners,,,
-ProgMethodology, Listeners & Graphics, TextField Example,,,
-ProgMethodology, Listeners & Graphics, Layouts,,,
-ProgMethodology, Listeners & Graphics, The Temperature Conversion Example,,,
-ProgMethodology, Listeners & Graphics, The TextAndGraphics Example,,,
-ProgMethodology, Components & Containers, Components and Containers,,,
-ProgMethodology, Components & Containers, Listeners for Components,,,
-ProgMethodology, Components & Containers, Create a Program Which Extends Program,,,
-ProgMethodology, Components & Containers, The ComponentListener Interface,,,
-ProgMethodology, Components & Containers, The MusicShop Example Program,,,
-ProgMethodology, Components & Containers, The MusicShopDisplay Example Program,,,
-ProgMethodology, Search & Sort Algorithms, Introduction to Lecture's material - Searching,,,
-ProgMethodology, Search & Sort Algorithms, Searching,,,
-ProgMethodology, Search & Sort Algorithms, Linear Search and Binary Search Efficiency,,,
-ProgMethodology, Search & Sort Algorithms, Comparing Search Efficiencies,,,
-ProgMethodology, Search & Sort Algorithms, Sorting,,,
-ProgMethodology, Search & Sort Algorithms, Selection Sort Algorithm Efficiency,,,
-ProgMethodology, Search & Sort Algorithms, The Radix Sort Algorithm,,,
-ProgMethodology, Design & Java Collections, Principles of Good Software Engineering for Managing Large Amounts of Data,,,
-ProgMethodology, Design & Java Collections, Principles of Design,,,
-ProgMethodology, Design & Java Collections, The Collection Hierarchy,,,
-ProgMethodology, Design & Java Collections, Useful Methods of Collection,,,
-ProgMethodology, Design & Java Collections, The FlyTunes Example Program - An Online Music Store,,,
-ProgMethodology, Design & Java Collections, Reusing Data - Shallow Copy vs. Deep Copy,,,
-ProgMethodology, Threads & Concurrency, Defining a Social Network for Our Purposes,,,
-ProgMethodology, Threads & Concurrency, See What the Program Needs to Do,,,
-ProgMethodology, Threads & Concurrency, The Six Degrees of Separation Phenomenon,,,
-ProgMethodology, Threads & Concurrency, Concurrency,,,
-ProgMethodology, Threads & Concurrency, A Thread,,,
-ProgMethodology, Threads & Concurrency, The Runnable Interface,,,
-ProgMethodology, Threads & Concurrency, Having Shared Data Between Your Threads,,,
-ProgMethodology, Standard Java JAR, Introduction to the Standard Java Libraries,,,
-ProgMethodology, Standard Java JAR, JAR Files and JAR File Creation,,,
-ProgMethodology, Standard Java JAR, Creating an Applet,,,
-ProgMethodology, Standard Java JAR, Standard Java Programs Without Using the ACM Libraries,,,
-ProgMethodology, Standard Java JAR, Other Resources - Learning More Java,,,
-ProgAbstractions, Introduction & Java Comparison, Similarity between C++ & Java,107.5,4.134615384615385,0.5906593406593407
-ProgAbstractions, Intro & Java Comparison, #include Statements,107.5,4.134615384615385,0.5906593406593407
-ProgAbstractions, Intro & Java Comparison, Global Declarations (constant),107.5,4.134615384615385,0.5906593406593407
-ProgAbstractions, Intro & Java Comparison, Declaring a Function Prototype,107.5,4.134615384615385,0.5906593406593407
-ProgAbstractions, Intro & Java Comparison, The main() Function,107.5,4.134615384615385,0.5906593406593407
-ProgAbstractions, Intro & Java Comparison, C++ User Defined Data Types,107.5,4.134615384615385,0.5906593406593407
-ProgAbstractions, Intro & Java Comparison, C++ Parameters Passing,107.5,4.134615384615385,0.5906593406593407
-ProgAbstractions, Strings and Console, C++ Libraries,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Strings and Console, C++ String Type & Operations on String,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Strings and Console, C++ Console I/O,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Streams & Classes, C++ File I/O,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Streams & Classes, Stream Operations,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Streams & Classes, Error Function,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Streams & Classes, Class Libraries OO Features & Why OO is So Successful,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Streams & Classes, Container Classes & Template Containers,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Vector + Grid + Stack + Queue, Vector Class & Interface,107.5,4.134615384615385,0.5168269230769231
-ProgAbstractions, Vector + Grid + Stack + Queue, Type-safety in Templates,107.5,4.134615384615385,0.5168269230769231
-ProgAbstractions, Vector + Grid + Stack + Queue, Grid Class & Interface,107.5,4.134615384615385,0.5168269230769231
-ProgAbstractions, Vector + Grid + Stack + Queue, Stack Class & Interface,107.5,4.134615384615385,0.5168269230769231
-ProgAbstractions, Vector + Grid + Stack + Queue, Queue Class & Interface,107.5,4.134615384615385,0.5168269230769231
-ProgAbstractions, Vector + Grid + Stack + Queue, Nested Templates,107.5,4.134615384615385,0.5168269230769231
-ProgAbstractions, Vector + Grid + Stack + Queue, Learning a New API,107.5,4.134615384615385,0.5168269230769231
-ProgAbstractions, Vector + Grid + Stack + Queue, ProgAbstractions Library Documentation,107.5,4.134615384615385,0.5168269230769231
-ProgAbstractions, Map + Iterator + Set, More Containers,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Map + Iterator + Set, Map Class & Interface,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Map + Iterator + Set, Iterator Operation Through the Map,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Map + Iterator + Set, Set Class & Interface,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Map + Iterator + Set, Set Higher-level Operations & Why Set is Different,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Callbacks + Nested Data, Seeing Functions as Data: Plot Functions,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Callbacks + Nested Data, Back to the Set,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Callbacks + Nested Data, Client Callback Function,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Callbacks + Nested Data, Review of the Classes,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Callbacks + Nested Data, Using Nested Abstract Data Types,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Callbacks + Nested Data, Recursion,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Recursion, Common Mistakes: 'I'terator,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Recursion, Common Mistakes: Concatenating Strings,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Recursion, Solving Problems Recursively,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Recursion, Functional Recursion,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Recursion, Recursion & Efficiency,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Recursion, Binary Search,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Recursion & Hanois, Thinking Recursively,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Recursion & Hanois, Procedural vs Functional Recursion,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Recursion & Hanois, Fractal Code,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Recursion & Hanois, Hanois Towers : Classic Recursion Example,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Recursion & Hanois, Permutations,107.5,4.134615384615385,0.8269230769230769
-ProgAbstractions, Permutation + Subset + Backtrack, Subsets,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Permutation + Subset + Backtrack, Exhaustive Recursion,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Permutation + Subset + Backtrack, Recursive Backtracking,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Backtracking & Pointers, Backtracking Pseudocode & Examples,107.5,4.134615384615385,2.0673076923076925
-ProgAbstractions, Backtracking & Pointers, Introduction to Pointers,107.5,4.134615384615385,2.0673076923076925
-ProgAbstractions, Linked List + Pointers, Pointer Basics,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Linked List + Pointers, Recursive Data,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Linked List + Pointers, Linked Lists,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Linked List vs Array, More on Linked Lists using recursion,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Linked List vs Array, Passing Pointers by Reference,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Linked List vs Array, Array vs Linked List,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Algorithm Analysis, Algorithm Analysis,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Algorithm Analysis, Big-O,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Algorithm Analysis, Analysis of Recursive Algorithms,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Algorithm Analysis, Selection Sort,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Sort Algorithms, Selection Sort,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Sort Algorithms, Insertion Sort,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Sort Algorithms, Merge Sort,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Sort Algorithms, Quick Sort,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Quicksort & Templates, Quick Sort,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Quicksort & Templates, Quicksort vs Merge Sort,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Quicksort & Templates, Template Instantiation,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Object Orientated, Sort Template with Callback,107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated, Why Object Oriented Programming,107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated, Class Division,107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated," Class Interface in "".h"" File",107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated, Storage for Objects,107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated, Accessing Members of a Class,107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated, Class & Member Function Implementation,107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated," Maintaining Object Consistency",107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated, Constructors & Destructors of a Class,107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Object Orientated, Idea of Encapsulation,107.5,4.134615384615385,0.41346153846153844
-ProgAbstractions, Abstract Data Types, Abstract Data Types,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Abstract Data Types, Why Abstract Data Types?,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Abstract Data Types, Growing Dynamically: Making Space at Runtime,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Abstract Data Types, Templatizing the Class Created,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Templating & Memory, Rules of Template Implementation,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Templating & Memory, InsertAt Function,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Templating & Memory, Consequences of Contiguous Memory Being a Disadvantage,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Linked List + Queue Implementation, Linked List Implementation for Stack,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Linked List + Queue Implementation, Analyzing Push/pop Functions,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Linked List + Queue Implementation, Queue Implementation,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Linked List + Queue Implementation, Buffered Class Interface,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Buffer Class + Map Implementation, Buffer: Vector vs Stack,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Buffer Class + Map Implementation, Buffer as Linked List,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Buffer Class + Map Implementation, Cursor Design,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Buffer Class + Map Implementation, Use of Dummy Cell,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Buffer Class + Map Implementation, Linked List Insert/delete,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Buffer Class + Map Implementation, Linked List Cursor Movement,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Buffer Class + Map Implementation, Doubly Linked List,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Buffer Class + Map Implementation, Implementing Map,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Buffer Class + Map Implementation, Map as Vector,107.5,4.134615384615385,0.4594017094017094
-ProgAbstractions, Trees + Syntax, Binary Search Trees,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Trees + Syntax, Trees in General,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Trees + Syntax, Implementing Map as Tree,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Trees + Syntax, Important Syntactical Advice,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Pathfinder & Graphs, Pathfinder Demo,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Pathfinder & Graphs, Graphs in C++,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Pathfinder & Graphs, Nodes and Arcs in C++,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Pathfinder & Graphs, Depth First Search,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Pathfinder & Graphs, Breadth First Search,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Pathfinder & Graphs, Graph Search Algorithms,107.5,4.134615384615385,0.6891025641025641
-ProgAbstractions, Hashtable + Set Implementation, Compare Map Implementations,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Hashtable + Set Implementation, Hashtable Idea,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Hashtable + Set Implementation, Hashing Generic Types,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Hashtable + Set Implementation, Implementing Set,107.5,4.134615384615385,1.0336538461538463
-ProgAbstractions, Acyclical Word Graph, Lexicon Case Study: Sorted Vector,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Acyclical Word Graph, DAWG: Directed Acyclic Word Graph,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Acyclical Word Graph, Lexicon as DAWG,107.5,4.134615384615385,1.3782051282051282
-ProgAbstractions, Design Programming, Thinking About Design,107.5,4.134615384615385,4.134615384615385
-ProgAbstractions, Guest Lecture C++, Guest Lecturer: About the C++ Language,107.5,4.134615384615385,4.134615384615385
+ProgAbstractions, Logic Statements Java, Algorithm vs Program,,,
+ProgAbstractions, Logic Statements Java, Creating Methods,,,
+ProgAbstractions, Logic Statements Java, for Loop and While Loop,,,
+ProgAbstractions, Logic Statements Java, If Statement and Putting it All Together,,,
+ProgAbstractions, Software Engineering Principles, Common Errors,,,
+ProgAbstractions, Software Engineering Principles, Comments,,,
+ProgAbstractions, Software Engineering Principles, Pre-conditions and Post-conditions,,,
+ProgAbstractions, Software Engineering Principles, Decomposition,,,
+ProgAbstractions, Software Engineering Principles, Importance of Good Software Engineering,,,
+ProgAbstractions, Software Engineering Principles, The Right Decomposition,,,
+ProgAbstractions, Object Oriented Principles, The History of Computing,,,
+ProgAbstractions, Object Oriented Principles, Computer Science vs Programming,,,
+ProgAbstractions, Object Oriented Principles, The Compilation Process,,,
+ProgAbstractions, Object Oriented Principles, Java is an Object Oriented Language,,,
+ProgAbstractions, Object Oriented Principles, Inheritance,,,
+ProgAbstractions, Object Oriented Principles, Instance of a Class,,,
+ProgAbstractions, Object Oriented Principles, The acm.program Hierarchy,,,
+ProgAbstractions, Object Oriented Principles, Your First Java Program,,,
+ProgAbstractions, Variables & Methods, Variables,,,
+ProgAbstractions, Variables & Methods, Data Types and Syntax of Variables,,,
+ProgAbstractions, Variables & Methods, Classes as Types Objects as Variables,,,
+ProgAbstractions, Variables & Methods, Invoking Methods on Objects,,,
+ProgAbstractions, Variables & Methods, Graphics Coordinates and Operations,,,
+ProgAbstractions, Variables & Methods, Expressions and Operators,,,
+ProgAbstractions, Variables & Methods II, readInt() and readDouble(),,,
+ProgAbstractions, Variables & Methods II, The Division Operator w.r.t ints and Doubles,,,
+ProgAbstractions, Variables & Methods II, Order of Precedence for Operators,,,
+ProgAbstractions, Variables & Methods II, Type Casting,,,
+ProgAbstractions, Variables & Methods II, Shorthands,,,
+ProgAbstractions, Variables & Methods II, Constants,,,
+ProgAbstractions, Variables & Methods II, The Boolean Data Type,,,
+ProgAbstractions, Variables & Methods II, Value Comparisons,,,
+ProgAbstractions, Variables & Methods II, Statement Blocks,,,
+ProgAbstractions, Variables & Methods II, Scope of Variables,,,
+ProgAbstractions, Variables & Methods II, Cascading if,,,
+ProgAbstractions, Variables & Methods II, The Switch Statement,,,
+ProgAbstractions, Variables & Methods II, The For Loop and While Loop,,,
+ProgAbstractions, Methods III, The Loop and a Half Problem,,,
+ProgAbstractions, Methods III, For Versus While Loop,,,
+ProgAbstractions, Methods III, The CheckerBoard Program Example,,,
+ProgAbstractions, Methods III, Methods in Java,,,
+ProgAbstractions, Methods III, The FactorialExample Program,,,
+ProgAbstractions, Methods III, Returning Objects from Methods,,,
+ProgAbstractions, Methods & Random Numbers, Information Hiding,,,
+ProgAbstractions, Methods & Random Numbers, The Void Return Type,,,
+ProgAbstractions, Methods & Random Numbers, Parameter Passing Between Methods,,,
+ProgAbstractions, Methods & Random Numbers, Bad Times with Methods-Using Classes,,,
+ProgAbstractions, Methods & Random Numbers, Instance variables vs Local Variables,,,
+ProgAbstractions, Methods & Random Numbers, The RandomGenerator Program Example,,,
+ProgAbstractions, Methods & Random Numbers, The RollDice Program Example,,,
+ProgAbstractions, Methods & Random Numbers, The setSeed() Method,,,
+ProgAbstractions, Classes, Strings,,,
+ProgAbstractions, Classes, Writing Your Own Class,,,
+ProgAbstractions, Classes, Public and Private Visibility,,,
+ProgAbstractions, Classes, Creating a New Class - The Constructor Method +'this' Keyword,,,
+ProgAbstractions, Classes, Using the Created Class,,,
+ProgAbstractions, Classes, Objects are Called by Reference not Called by Value-Class Variables,,,
+ProgAbstractions, Classes, The Student Program Example,,,
+ProgAbstractions, Extending Classes & Interfaces, Importance of Private Variables,,,
+ProgAbstractions, Extending Classes & Interfaces, Extending the Student Class,,,
+ProgAbstractions, Extending Classes & Interfaces, Overriding Methods,,,
+ProgAbstractions, Extending Classes & Interfaces, Methods Common to All GObjects,,,
+ProgAbstractions, Extending Classes & Interfaces, Interfaces and Methods Defined by Them,,,
+ProgAbstractions, Extending Classes & Interfaces, The BouncingBall Program Example,,,
+ProgAbstractions, Events, The GImage GShape Classes,,,
+ProgAbstractions, Events, Event Driven Programs,,,
+ProgAbstractions, Events, The ClickForFace Program Example,,,
+ProgAbstractions, Events, Responding to Mouse and Keyboard Events,,,
+ProgAbstractions, Events, The UFO program Example,,,
+ProgAbstractions, Strings & Enumerations, Enumeration and Characters,,,
+ProgAbstractions, Strings & Enumerations, The ASCII Subset of Unicode,,,
+ProgAbstractions, Strings & Enumerations, Reading Characters and Math on Characters,,,
+ProgAbstractions, Strings & Enumerations, char as a Primitive Type and the Character Class,,,
+ProgAbstractions, Strings & Enumerations, Strings and Their Manipulations,,,
+ProgAbstractions, Strings & Tokenizing, String Processing,,,
+ProgAbstractions, Strings & Tokenizing, Tokenizers,,,
+ProgAbstractions, Strings & Tokenizing, Encryption,,,
+ProgAbstractions, Pointers & Allocation, Memory,,,
+ProgAbstractions, Pointers & Allocation, Different Sections of Memory for Different Types of Variables,,,
+ProgAbstractions, Pointers & Allocation, Memory Allocation Mechanics,,,
+ProgAbstractions, Pointers & Allocation, The Pointer Viewpoint,,,
+ProgAbstractions, Pointers & Allocation, The Binky Pointer Fun Video,,,
+ProgAbstractions, Exceptions and Files, Pointer Recap and Object 'Call by Reference' Instead of 'Call of Value'?,,,
+ProgAbstractions, Exceptions and Files, Wrapper Classes for Primitive Types,,,
+ProgAbstractions, Exceptions and Files, Files and Code for Opening- Reading&Closing Files,,,
+ProgAbstractions, Exceptions and Files, Exceptions,,,
+ProgAbstractions, Exceptions and Files, Code for Writing Files,,,
+ProgAbstractions, Arrays, Array and Array Creation,,,
+ProgAbstractions, Arrays, The ++ Operator,,,
+ProgAbstractions, Arrays, Actual Size / Effective Size of the Array,,,
+ProgAbstractions, Arrays, An Array as a Parameter,,,
+ProgAbstractions, Arrays, Initialize an Array During Creation,,,
+ProgAbstractions, Arrays, An ArrayList,,,
+ProgAbstractions, Array Lists, Multi-dimensional Arrays,,,
+ProgAbstractions, Array Lists, An ArrayList,,,
+ProgAbstractions, Array Lists, The Template Class,,,
+ProgAbstractions, Array Lists, Methods in the ArrayList Class and Example Program,,,
+ProgAbstractions, Array Lists, ArrayLists Hold Objects,,,
+ProgAbstractions, Array Lists, Example Program with an ArrayList of Glabels and GrayImage Program,,,
+ProgAbstractions, Array List & Debugging, A Wrap Up of Multi-dimensional Arrays,,,
+ProgAbstractions, Array List & Debugging, The ArrayList Way,,,
+ProgAbstractions, Array List & Debugging, Debugging and Approaches to Debugging,,,
+ProgAbstractions, Maps & Iterators, An Interface and Implementation,,,
+ProgAbstractions, Maps & Iterators, A Map,,,
+ProgAbstractions, Maps & Iterators, The HashMap Class and Mehtods The Collection Hierarchy,,,
+ProgAbstractions, Maps & Iterators, The Map Hierarchy,,,
+ProgAbstractions, Maps & Iterators, An Iterator,,,
+ProgAbstractions, Maps & Iterators, A HashMap Example,,,
+ProgAbstractions, Interactors, GUI,,,
+ProgAbstractions, Interactors, Interactors in the Context of a Java Program,,,
+ProgAbstractions, Interactors, The Swing Interactor Hierarchy,,,
+ProgAbstractions, Interactors, Window Regions,,,
+ProgAbstractions, Interactors, Creating Interactors,,,
+ProgAbstractions, Interactors, Exploring More Interactors,,,
+ProgAbstractions, Interactors, The InteractiveDrawFace Program Example,,,
+ProgAbstractions, Listeners & Graphics, Review of Interactors and Listeners,,,
+ProgAbstractions, Listeners & Graphics, TextField Example,,,
+ProgAbstractions, Listeners & Graphics, Layouts,,,
+ProgAbstractions, Listeners & Graphics, The Temperature Conversion Example,,,
+ProgAbstractions, Listeners & Graphics, The TextAndGraphics Example,,,
+ProgAbstractions, Components & Containers, Components and Containers,,,
+ProgAbstractions, Components & Containers, Listeners for Components,,,
+ProgAbstractions, Components & Containers, Create a Program Which Extends Program,,,
+ProgAbstractions, Components & Containers, The ComponentListener Interface,,,
+ProgAbstractions, Components & Containers, The MusicShop Example Program,,,
+ProgAbstractions, Components & Containers, The MusicShopDisplay Example Program,,,
+ProgAbstractions, Search & Sort Algorithms, Introduction to Lecture's material - Searching,,,
+ProgAbstractions, Search & Sort Algorithms, Searching,,,
+ProgAbstractions, Search & Sort Algorithms, Linear Search and Binary Search Efficiency,,,
+ProgAbstractions, Search & Sort Algorithms, Comparing Search Efficiencies,,,
+ProgAbstractions, Search & Sort Algorithms, Sorting,,,
+ProgAbstractions, Search & Sort Algorithms, Selection Sort Algorithm Efficiency,,,
+ProgAbstractions, Search & Sort Algorithms, The Radix Sort Algorithm,,,
+ProgAbstractions, Design & Java Collections, Principles of Good Software Engineering for Managing Large Amounts of Data,,,
+ProgAbstractions, Design & Java Collections, Principles of Design,,,
+ProgAbstractions, Design & Java Collections, The Collection Hierarchy,,,
+ProgAbstractions, Design & Java Collections, Useful Methods of Collection,,,
+ProgAbstractions, Design & Java Collections, The FlyTunes Example Program - An Online Music Store,,,
+ProgAbstractions, Design & Java Collections, Reusing Data - Shallow Copy vs. Deep Copy,,,
+ProgAbstractions, Threads & Concurrency, Defining a Social Network for Our Purposes,,,
+ProgAbstractions, Threads & Concurrency, See What the Program Needs to Do,,,
+ProgAbstractions, Threads & Concurrency, The Six Degrees of Separation Phenomenon,,,
+ProgAbstractions, Threads & Concurrency, Concurrency,,,
+ProgAbstractions, Threads & Concurrency, A Thread,,,
+ProgAbstractions, Threads & Concurrency, The Runnable Interface,,,
+ProgAbstractions, Threads & Concurrency, Having Shared Data Between Your Threads,,,
+ProgAbstractions, Standard Java JAR, Introduction to the Standard Java Libraries,,,
+ProgAbstractions, Standard Java JAR, JAR Files and JAR File Creation,,,
+ProgAbstractions, Standard Java JAR, Creating an Applet,,,
+ProgAbstractions, Standard Java JAR, Standard Java Programs Without Using the ACM Libraries,,,
+ProgAbstractions, Standard Java JAR, Other Resources - Learning More Java,,,
+ProgMethodology, Introduction & Java Comparison, Similarity between C++ & Java,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, #include Statements,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, Global Declarations (constant),107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, Declaring a Function Prototype,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, The main() Function,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, C++ User Defined Data Types,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, C++ Parameters Passing,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Strings and Console, C++ Libraries,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Strings and Console, C++ String Type & Operations on String,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Strings and Console, C++ Console I/O,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Streams & Classes, C++ File I/O,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Streams & Classes, Stream Operations,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Streams & Classes, Error Function,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Streams & Classes, Class Libraries OO Features & Why OO is So Successful,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Streams & Classes, Container Classes & Template Containers,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Vector + Grid + Stack + Queue, Vector Class & Interface,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Type-safety in Templates,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Grid Class & Interface,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Stack Class & Interface,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Queue Class & Interface,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Nested Templates,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Learning a New API,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, ProgMethodology Library Documentation,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Map + Iterator + Set, More Containers,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Map + Iterator + Set, Map Class & Interface,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Map + Iterator + Set, Iterator Operation Through the Map,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Map + Iterator + Set, Set Class & Interface,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Map + Iterator + Set, Set Higher-level Operations & Why Set is Different,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Callbacks + Nested Data, Seeing Functions as Data: Plot Functions,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Back to the Set,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Client Callback Function,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Review of the Classes,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Using Nested Abstract Data Types,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Recursion,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Common Mistakes: 'I'terator,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Common Mistakes: Concatenating Strings,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Solving Problems Recursively,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Functional Recursion,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Recursion & Efficiency,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Binary Search,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion & Hanois, Thinking Recursively,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Recursion & Hanois, Procedural vs Functional Recursion,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Recursion & Hanois, Fractal Code,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Recursion & Hanois, Hanois Towers : Classic Recursion Example,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Recursion & Hanois, Permutations,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Permutation + Subset + Backtrack, Subsets,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Permutation + Subset + Backtrack, Exhaustive Recursion,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Permutation + Subset + Backtrack, Recursive Backtracking,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Backtracking & Pointers, Backtracking Pseudocode & Examples,107.5,4.134615384615385,2.0673076923076925
+ProgMethodology, Backtracking & Pointers, Introduction to Pointers,107.5,4.134615384615385,2.0673076923076925
+ProgMethodology, Linked List + Pointers, Pointer Basics,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List + Pointers, Recursive Data,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List + Pointers, Linked Lists,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List vs Array, More on Linked Lists using recursion,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List vs Array, Passing Pointers by Reference,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List vs Array, Array vs Linked List,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Algorithm Analysis, Algorithm Analysis,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Algorithm Analysis, Big-O,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Algorithm Analysis, Analysis of Recursive Algorithms,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Algorithm Analysis, Selection Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Sort Algorithms, Selection Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Sort Algorithms, Insertion Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Sort Algorithms, Merge Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Sort Algorithms, Quick Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Quicksort & Templates, Quick Sort,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Quicksort & Templates, Quicksort vs Merge Sort,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Quicksort & Templates, Template Instantiation,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Object Orientated, Sort Template with Callback,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Why Object Oriented Programming,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Class Division,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated," Class Interface in "".h"" File",107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Storage for Objects,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Accessing Members of a Class,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Class & Member Function Implementation,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated," Maintaining Object Consistency",107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Constructors & Destructors of a Class,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Idea of Encapsulation,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Abstract Data Types, Abstract Data Types,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Abstract Data Types, Why Abstract Data Types?,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Abstract Data Types, Growing Dynamically: Making Space at Runtime,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Abstract Data Types, Templatizing the Class Created,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Templating & Memory, Rules of Template Implementation,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Templating & Memory, InsertAt Function,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Templating & Memory, Consequences of Contiguous Memory Being a Disadvantage,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List + Queue Implementation, Linked List Implementation for Stack,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Linked List + Queue Implementation, Analyzing Push/pop Functions,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Linked List + Queue Implementation, Queue Implementation,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Linked List + Queue Implementation, Buffered Class Interface,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Buffer Class + Map Implementation, Buffer: Vector vs Stack,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Buffer as Linked List,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Cursor Design,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Use of Dummy Cell,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Linked List Insert/delete,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Linked List Cursor Movement,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Doubly Linked List,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Implementing Map,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Map as Vector,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Trees + Syntax, Binary Search Trees,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Trees + Syntax, Trees in General,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Trees + Syntax, Implementing Map as Tree,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Trees + Syntax, Important Syntactical Advice,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Pathfinder & Graphs, Pathfinder Demo,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Graphs in C++,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Nodes and Arcs in C++,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Depth First Search,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Breadth First Search,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Graph Search Algorithms,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Hashtable + Set Implementation, Compare Map Implementations,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Hashtable + Set Implementation, Hashtable Idea,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Hashtable + Set Implementation, Hashing Generic Types,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Hashtable + Set Implementation, Implementing Set,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Acyclical Word Graph, Lexicon Case Study: Sorted Vector,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Acyclical Word Graph, DAWG: Directed Acyclic Word Graph,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Acyclical Word Graph, Lexicon as DAWG,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Design Programming, Thinking About Design,107.5,4.134615384615385,4.134615384615385
+ProgMethodology, Guest Lecture C++, Guest Lecturer: About the C++ Language,107.5,4.134615384615385,4.134615384615385
 Visualisation, Design Principle Lecture, Cognition Limitation,128.5,6.425,0.803125
 Visualisation, Design Principle Lecture, Tufte Principles,128.5,6.425,0.803125
 Visualisation, Design Principle Lecture, Graphical Integrity,128.5,6.425,0.803125
@@ -705,19 +705,19 @@ Stats110, CDF's + PMF's + Hypergeo," PMFs
 ",150.0,4.411764705882353,1.1029411764705883
 Stats110, CDF's + PMF's + Hypergeo," Hypergeometric
 ",150.0,4.411764705882353,1.1029411764705883
-Stats110, Linearity + E.V. + I.R.V," independence
+Stats110, Linearity + EV + IRV," independence
 ",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + E.V. + I.R.V," Geometric
+Stats110, Linearity + EV + IRV," Geometric
 ",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + E.V. + I.R.V," expected values
+Stats110, Linearity + EV + IRV," expected values
 ",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + E.V. + I.R.V," indicator r.v.s
+Stats110, Linearity + EV + IRV," indicator r.v.s
 ",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + E.V. + I.R.V," linearity
+Stats110, Linearity + EV + IRV," linearity
 ",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + E.V. + I.R.V," symmetry
+Stats110, Linearity + EV + IRV," symmetry
 ",150.0,4.411764705882353,0.6302521008403361
-Stats110, Linearity + E.V. + I.R.V," fundamental bridge
+Stats110, Linearity + EV + IRV," fundamental bridge
 ",150.0,4.411764705882353,0.6302521008403361
 Stats110, Linearity + Negative Binomial," linearity
 ",150.0,4.411764705882353,1.1029411764705883
@@ -727,11 +727,11 @@ Stats110, Linearity + Negative Binomial," Negative Binomial
 ",150.0,4.411764705882353,1.1029411764705883
 Stats110, Linearity + Negative Binomial," St. Petersburg paradox
 ",150.0,4.411764705882353,1.1029411764705883
-Stats110, Poisson & Poisson approx.," sympathetic magic
+Stats110, Poisson & Poisson approx," sympathetic magic
 ",150.0,4.411764705882353,1.4705882352941178
-Stats110, Poisson & Poisson approx.," Poisson distribution
+Stats110, Poisson & Poisson approx," Poisson distribution
 ",150.0,4.411764705882353,1.4705882352941178
-Stats110, Poisson & Poisson approx.," Poisson approximation
+Stats110, Poisson & Poisson approx," Poisson approximation
 ",150.0,4.411764705882353,1.4705882352941178
 Stats110, Variance + Variance + Universality," discrete vs. continuous
 ",150.0,4.411764705882353,0.7352941176470589
@@ -892,10 +892,8 @@ StatsUdacity, t-Tests," t-Tests
 ",31.5,1.96875,1.96875
 StatsUdacity, t-Tests," t-Tests
 ",31.5,1.96875,1.96875
-StatsUdacity, One-way ANOVA," One-way ANOVA
-",31.5,1.96875,1.96875
-StatsUdacity, ANOVA (cont.)," ANOVA (cont.)
-",31.5,1.96875,1.96875
+StatsUdacity, One-way ANOVA, One-way ANOVAs ,31.5,1.96875,1.96875
+StatsUdacity, ANOVA again, ANOVA agains ,31.5,1.96875,1.96875
 StatsUdacity, Correlation," Correlation
 ",31.5,1.96875,1.96875
 StatsUdacity, Regression," Regression
