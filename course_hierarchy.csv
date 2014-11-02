@@ -1,0 +1,910 @@
+Course,Chapter,Topic,Course_hour,Chap_hour,Top_hour,
+ProgAbstractions, Logic Statements Java, Algorithm vs Program,,,
+ProgAbstractions, Logic Statements Java, Creating Methods,,,
+ProgAbstractions, Logic Statements Java, for Loop and While Loop,,,
+ProgAbstractions, Logic Statements Java, If Statement and Putting it All Together,,,
+ProgAbstractions, Software Engineering Principles, Common Errors,,,
+ProgAbstractions, Software Engineering Principles, Comments,,,
+ProgAbstractions, Software Engineering Principles, Pre-conditions and Post-conditions,,,
+ProgAbstractions, Software Engineering Principles, Decomposition,,,
+ProgAbstractions, Software Engineering Principles, Importance of Good Software Engineering,,,
+ProgAbstractions, Software Engineering Principles, The Right Decomposition,,,
+ProgAbstractions, Object Oriented Principles, The History of Computing,,,
+ProgAbstractions, Object Oriented Principles, Computer Science vs Programming,,,
+ProgAbstractions, Object Oriented Principles, The Compilation Process,,,
+ProgAbstractions, Object Oriented Principles, Java is an Object Oriented Language,,,
+ProgAbstractions, Object Oriented Principles, Inheritance,,,
+ProgAbstractions, Object Oriented Principles, Instance of a Class,,,
+ProgAbstractions, Object Oriented Principles, The acm.program Hierarchy,,,
+ProgAbstractions, Object Oriented Principles, Your First Java Program,,,
+ProgAbstractions, Variables & Methods, Variables,,,
+ProgAbstractions, Variables & Methods, Data Types and Syntax of Variables,,,
+ProgAbstractions, Variables & Methods, Classes as Types Objects as Variables,,,
+ProgAbstractions, Variables & Methods, Invoking Methods on Objects,,,
+ProgAbstractions, Variables & Methods, Graphics Coordinates and Operations,,,
+ProgAbstractions, Variables & Methods, Expressions and Operators,,,
+ProgAbstractions, Variables & Methods II, readInt() and readDouble(),,,
+ProgAbstractions, Variables & Methods II, The Division Operator w.r.t ints and Doubles,,,
+ProgAbstractions, Variables & Methods II, Order of Precedence for Operators,,,
+ProgAbstractions, Variables & Methods II, Type Casting,,,
+ProgAbstractions, Variables & Methods II, Shorthands,,,
+ProgAbstractions, Variables & Methods II, Constants,,,
+ProgAbstractions, Variables & Methods II, The Boolean Data Type,,,
+ProgAbstractions, Variables & Methods II, Value Comparisons,,,
+ProgAbstractions, Variables & Methods II, Statement Blocks,,,
+ProgAbstractions, Variables & Methods II, Scope of Variables,,,
+ProgAbstractions, Variables & Methods II, Cascading if,,,
+ProgAbstractions, Variables & Methods II, The Switch Statement,,,
+ProgAbstractions, Variables & Methods II, The For Loop and While Loop,,,
+ProgAbstractions, Methods III, The Loop and a Half Problem,,,
+ProgAbstractions, Methods III, For Versus While Loop,,,
+ProgAbstractions, Methods III, The CheckerBoard Program Example,,,
+ProgAbstractions, Methods III, Methods in Java,,,
+ProgAbstractions, Methods III, The FactorialExample Program,,,
+ProgAbstractions, Methods III, Returning Objects from Methods,,,
+ProgAbstractions, Methods & Random Numbers, Information Hiding,,,
+ProgAbstractions, Methods & Random Numbers, The Void Return Type,,,
+ProgAbstractions, Methods & Random Numbers, Parameter Passing Between Methods,,,
+ProgAbstractions, Methods & Random Numbers, Bad Times with Methods-Using Classes,,,
+ProgAbstractions, Methods & Random Numbers, Instance variables vs Local Variables,,,
+ProgAbstractions, Methods & Random Numbers, The RandomGenerator Program Example,,,
+ProgAbstractions, Methods & Random Numbers, The RollDice Program Example,,,
+ProgAbstractions, Methods & Random Numbers, The setSeed() Method,,,
+ProgAbstractions, Classes, Strings,,,
+ProgAbstractions, Classes, Writing Your Own Class,,,
+ProgAbstractions, Classes, Public and Private Visibility,,,
+ProgAbstractions, Classes, Creating a New Class - The Constructor Method +'this' Keyword,,,
+ProgAbstractions, Classes, Using the Created Class,,,
+ProgAbstractions, Classes, Objects are Called by Reference not Called by Value-Class Variables,,,
+ProgAbstractions, Classes, The Student Program Example,,,
+ProgAbstractions, Extending Classes & Interfaces, Importance of Private Variables,,,
+ProgAbstractions, Extending Classes & Interfaces, Extending the Student Class,,,
+ProgAbstractions, Extending Classes & Interfaces, Overriding Methods,,,
+ProgAbstractions, Extending Classes & Interfaces, Methods Common to All GObjects,,,
+ProgAbstractions, Extending Classes & Interfaces, Interfaces and Methods Defined by Them,,,
+ProgAbstractions, Extending Classes & Interfaces, The BouncingBall Program Example,,,
+ProgAbstractions, Events, The GImage GShape Classes,,,
+ProgAbstractions, Events, Event Driven Programs,,,
+ProgAbstractions, Events, The ClickForFace Program Example,,,
+ProgAbstractions, Events, Responding to Mouse and Keyboard Events,,,
+ProgAbstractions, Events, The UFO program Example,,,
+ProgAbstractions, Strings & Enumerations, Enumeration and Characters,,,
+ProgAbstractions, Strings & Enumerations, The ASCII Subset of Unicode,,,
+ProgAbstractions, Strings & Enumerations, Reading Characters and Math on Characters,,,
+ProgAbstractions, Strings & Enumerations, char as a Primitive Type and the Character Class,,,
+ProgAbstractions, Strings & Enumerations, Strings and Their Manipulations,,,
+ProgAbstractions, Strings & Tokenizing, String Processing,,,
+ProgAbstractions, Strings & Tokenizing, Tokenizers,,,
+ProgAbstractions, Strings & Tokenizing, Encryption,,,
+ProgAbstractions, Pointers & Allocation, Memory,,,
+ProgAbstractions, Pointers & Allocation, Different Sections of Memory for Different Types of Variables,,,
+ProgAbstractions, Pointers & Allocation, Memory Allocation Mechanics,,,
+ProgAbstractions, Pointers & Allocation, The Pointer Viewpoint,,,
+ProgAbstractions, Pointers & Allocation, The Binky Pointer Fun Video,,,
+ProgAbstractions, Exceptions and Files, Pointer Recap and Object 'Call by Reference' Instead of 'Call of Value'?,,,
+ProgAbstractions, Exceptions and Files, Wrapper Classes for Primitive Types,,,
+ProgAbstractions, Exceptions and Files, Files and Code for Opening- Reading&Closing Files,,,
+ProgAbstractions, Exceptions and Files, Exceptions,,,
+ProgAbstractions, Exceptions and Files, Code for Writing Files,,,
+ProgAbstractions, Arrays, Array and Array Creation,,,
+ProgAbstractions, Arrays, The ++ Operator,,,
+ProgAbstractions, Arrays, Actual Size / Effective Size of the Array,,,
+ProgAbstractions, Arrays, An Array as a Parameter,,,
+ProgAbstractions, Arrays, Initialize an Array During Creation,,,
+ProgAbstractions, Arrays, An ArrayList,,,
+ProgAbstractions, Array Lists, Multi-dimensional Arrays,,,
+ProgAbstractions, Array Lists, An ArrayList,,,
+ProgAbstractions, Array Lists, The Template Class,,,
+ProgAbstractions, Array Lists, Methods in the ArrayList Class and Example Program,,,
+ProgAbstractions, Array Lists, ArrayLists Hold Objects,,,
+ProgAbstractions, Array Lists, Example Program with an ArrayList of Glabels and GrayImage Program,,,
+ProgAbstractions, Array List & Debugging, A Wrap Up of Multi-dimensional Arrays,,,
+ProgAbstractions, Array List & Debugging, The ArrayList Way,,,
+ProgAbstractions, Array List & Debugging, Debugging and Approaches to Debugging,,,
+ProgAbstractions, Maps & Iterators, An Interface and Implementation,,,
+ProgAbstractions, Maps & Iterators, A Map,,,
+ProgAbstractions, Maps & Iterators, The HashMap Class and Mehtods The Collection Hierarchy,,,
+ProgAbstractions, Maps & Iterators, The Map Hierarchy,,,
+ProgAbstractions, Maps & Iterators, An Iterator,,,
+ProgAbstractions, Maps & Iterators, A HashMap Example,,,
+ProgAbstractions, Interactors, GUI,,,
+ProgAbstractions, Interactors, Interactors in the Context of a Java Program,,,
+ProgAbstractions, Interactors, The Swing Interactor Hierarchy,,,
+ProgAbstractions, Interactors, Window Regions,,,
+ProgAbstractions, Interactors, Creating Interactors,,,
+ProgAbstractions, Interactors, Exploring More Interactors,,,
+ProgAbstractions, Interactors, The InteractiveDrawFace Program Example,,,
+ProgAbstractions, Listeners & Graphics, Review of Interactors and Listeners,,,
+ProgAbstractions, Listeners & Graphics, TextField Example,,,
+ProgAbstractions, Listeners & Graphics, Layouts,,,
+ProgAbstractions, Listeners & Graphics, The Temperature Conversion Example,,,
+ProgAbstractions, Listeners & Graphics, The TextAndGraphics Example,,,
+ProgAbstractions, Components & Containers, Components and Containers,,,
+ProgAbstractions, Components & Containers, Listeners for Components,,,
+ProgAbstractions, Components & Containers, Create a Program Which Extends Program,,,
+ProgAbstractions, Components & Containers, The ComponentListener Interface,,,
+ProgAbstractions, Components & Containers, The MusicShop Example Program,,,
+ProgAbstractions, Components & Containers, The MusicShopDisplay Example Program,,,
+ProgAbstractions, Search & Sort Algorithms, Introduction to Lecture's material - Searching,,,
+ProgAbstractions, Search & Sort Algorithms, Searching,,,
+ProgAbstractions, Search & Sort Algorithms, Linear Search and Binary Search Efficiency,,,
+ProgAbstractions, Search & Sort Algorithms, Comparing Search Efficiencies,,,
+ProgAbstractions, Search & Sort Algorithms, Sorting,,,
+ProgAbstractions, Search & Sort Algorithms, Selection Sort Algorithm Efficiency,,,
+ProgAbstractions, Search & Sort Algorithms, The Radix Sort Algorithm,,,
+ProgAbstractions, Design & Java Collections, Principles of Good Software Engineering for Managing Large Amounts of Data,,,
+ProgAbstractions, Design & Java Collections, Principles of Design,,,
+ProgAbstractions, Design & Java Collections, The Collection Hierarchy,,,
+ProgAbstractions, Design & Java Collections, Useful Methods of Collection,,,
+ProgAbstractions, Design & Java Collections, The FlyTunes Example Program - An Online Music Store,,,
+ProgAbstractions, Design & Java Collections, Reusing Data - Shallow Copy vs. Deep Copy,,,
+ProgAbstractions, Threads & Concurrency, Defining a Social Network for Our Purposes,,,
+ProgAbstractions, Threads & Concurrency, See What the Program Needs to Do,,,
+ProgAbstractions, Threads & Concurrency, The Six Degrees of Separation Phenomenon,,,
+ProgAbstractions, Threads & Concurrency, Concurrency,,,
+ProgAbstractions, Threads & Concurrency, A Thread,,,
+ProgAbstractions, Threads & Concurrency, The Runnable Interface,,,
+ProgAbstractions, Threads & Concurrency, Having Shared Data Between Your Threads,,,
+ProgAbstractions, Standard Java JAR, Introduction to the Standard Java Libraries,,,
+ProgAbstractions, Standard Java JAR, JAR Files and JAR File Creation,,,
+ProgAbstractions, Standard Java JAR, Creating an Applet,,,
+ProgAbstractions, Standard Java JAR, Standard Java Programs Without Using the ACM Libraries,,,
+ProgAbstractions, Standard Java JAR, Other Resources - Learning More Java,,,
+ProgMethodology, Introduction & Java Comparison, Similarity between C++ & Java,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, #include Statements,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, Global Declarations (constant),107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, Declaring a Function Prototype,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, The main() Function,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, C++ User Defined Data Types,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Intro & Java Comparison, C++ Parameters Passing,107.5,4.134615384615385,0.5906593406593407
+ProgMethodology, Strings and Console, C++ Libraries,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Strings and Console, C++ String Type & Operations on String,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Strings and Console, C++ Console I/O,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Streams & Classes, C++ File I/O,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Streams & Classes, Stream Operations,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Streams & Classes, Error Function,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Streams & Classes, Class Libraries OO Features & Why OO is So Successful,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Streams & Classes, Container Classes & Template Containers,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Vector + Grid + Stack + Queue, Vector Class & Interface,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Type-safety in Templates,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Grid Class & Interface,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Stack Class & Interface,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Queue Class & Interface,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Nested Templates,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, Learning a New API,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Vector + Grid + Stack + Queue, ProgMethodology Library Documentation,107.5,4.134615384615385,0.5168269230769231
+ProgMethodology, Map + Iterator + Set, More Containers,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Map + Iterator + Set, Map Class & Interface,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Map + Iterator + Set, Iterator Operation Through the Map,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Map + Iterator + Set, Set Class & Interface,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Map + Iterator + Set, Set Higher-level Operations & Why Set is Different,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Callbacks + Nested Data, Seeing Functions as Data: Plot Functions,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Back to the Set,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Client Callback Function,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Review of the Classes,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Using Nested Abstract Data Types,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Callbacks + Nested Data, Recursion,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Common Mistakes: 'I'terator,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Common Mistakes: Concatenating Strings,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Solving Problems Recursively,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Functional Recursion,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Recursion & Efficiency,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Recursion, Binary Search,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Hanoi's Tower, Thinking Recursively,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Procedural vs Functional Recursion,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Fractal Code,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Hanois Towers : Classic Recursion Example,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Hanoi's Tower, Permutations,107.5,4.134615384615385,0.8269230769230769
+ProgMethodology, Permutation + Subset + Backtrack, Subsets,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Permutation + Subset + Backtrack, Exhaustive Recursion,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Permutation + Subset + Backtrack, Recursive Backtracking,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Backtracking & Pointers, Backtracking Pseudocode & Examples,107.5,4.134615384615385,2.0673076923076925
+ProgMethodology, Backtracking & Pointers, Introduction to Pointers,107.5,4.134615384615385,2.0673076923076925
+ProgMethodology, Linked List + Pointers, Pointer Basics,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List + Pointers, Recursive Data,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List + Pointers, Linked Lists,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List vs Array, More on Linked Lists using recursion,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List vs Array, Passing Pointers by Reference,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List vs Array, Array vs Linked List,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Algorithm Analysis, Algorithm Analysis,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Algorithm Analysis, Big-O,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Algorithm Analysis, Analysis of Recursive Algorithms,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Algorithm Analysis, Selection Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Sort Algorithms, Selection Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Sort Algorithms, Insertion Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Sort Algorithms, Merge Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Sort Algorithms, Quick Sort,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Quicksort & Templates, Quick Sort,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Quicksort & Templates, Quicksort vs Merge Sort,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Quicksort & Templates, Template Instantiation,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Object Orientated, Sort Template with Callback,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Why Object Oriented Programming,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Class Division,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated," Class Interface in "".h"" File",107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Storage for Objects,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Accessing Members of a Class,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Class & Member Function Implementation,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated," Maintaining Object Consistency",107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Constructors & Destructors of a Class,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Object Orientated, Idea of Encapsulation,107.5,4.134615384615385,0.41346153846153844
+ProgMethodology, Abstract Data Types, Abstract Data Types,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Abstract Data Types, Why Abstract Data Types?,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Abstract Data Types, Growing Dynamically: Making Space at Runtime,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Abstract Data Types, Templatizing the Class Created,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Templating & Memory, Rules of Template Implementation,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Templating & Memory, InsertAt Function,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Templating & Memory, Consequences of Contiguous Memory Being a Disadvantage,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Linked List + Queue Implementation, Linked List Implementation for Stack,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Linked List + Queue Implementation, Analyzing Push/pop Functions,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Linked List + Queue Implementation, Queue Implementation,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Linked List + Queue Implementation, Buffered Class Interface,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Buffer Class + Map Implementation, Buffer: Vector vs Stack,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Buffer as Linked List,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Cursor Design,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Use of Dummy Cell,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Linked List Insert/delete,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Linked List Cursor Movement,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Doubly Linked List,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Implementing Map,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Buffer Class + Map Implementation, Map as Vector,107.5,4.134615384615385,0.4594017094017094
+ProgMethodology, Trees + Syntax, Binary Search Trees,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Trees + Syntax, Trees in General,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Trees + Syntax, Implementing Map as Tree,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Trees + Syntax, Important Syntactical Advice,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Pathfinder & Graphs, Pathfinder Demo,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Graphs in C++,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Nodes and Arcs in C++,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Depth First Search,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Breadth First Search,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Pathfinder & Graphs, Graph Search Algorithms,107.5,4.134615384615385,0.6891025641025641
+ProgMethodology, Hashtable + Set Implementation, Compare Map Implementations,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Hashtable + Set Implementation, Hashtable Idea,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Hashtable + Set Implementation, Hashing Generic Types,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Hashtable + Set Implementation, Implementing Set,107.5,4.134615384615385,1.0336538461538463
+ProgMethodology, Acyclical Word Graph, Lexicon Case Study: Sorted Vector,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Acyclical Word Graph, DAWG: Directed Acyclic Word Graph,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Acyclical Word Graph, Lexicon as DAWG,107.5,4.134615384615385,1.3782051282051282
+ProgMethodology, Design Programming, Thinking About Design,107.5,4.134615384615385,4.134615384615385
+ProgMethodology, Guest Lecture C++, Guest Lecturer: About the C++ Language,107.5,4.134615384615385,4.134615384615385
+Visualisation, Design Principle Lecture, Cognition Limitation,128.5,6.425,0.803125
+Visualisation, Design Principle Lecture, Tufte Principles,128.5,6.425,0.803125
+Visualisation, Design Principle Lecture, Graphical Integrity,128.5,6.425,0.803125
+Visualisation, Design Principle Lecture, Scale Distortion and Lie factor,128.5,6.425,0.803125
+Visualisation, Design Principle Lecture, Data-Ink-Ratio and Chart-Junk,128.5,6.425,0.803125
+Visualisation, Design Principle Lecture, Data-Density,128.5,6.425,0.803125
+Visualisation, Design Principle Lecture, Layering and Separation,128.5,6.425,0.803125
+Visualisation, Design Principle Lecture, Subjective,128.5,6.425,0.803125
+Visualisation, Front End Lab, Github,128.5,6.425,0.5840909090909091
+Visualisation, Front End Lab, HTML,128.5,6.425,0.5840909090909091
+Visualisation, Front End Lab, CSS,128.5,6.425,0.5840909090909091
+Visualisation, Front End Lab, Javascript,128.5,6.425,0.5840909090909091
+Visualisation, Front End Lab, SVG,128.5,6.425,0.5840909090909091
+Visualisation, D3 Lecture, Javascript functions,128.5,6.425,0.9178571428571428
+Visualisation, D3 Lecture, Javascript 'bake-in-state',128.5,6.425,0.9178571428571428
+Visualisation, D3 Lecture, Selection D3,128.5,6.425,0.9178571428571428
+Visualisation, D3 Lecture, data D3,128.5,6.425,0.9178571428571428
+Visualisation, D3 Lecture, enter and exit D3,128.5,6.425,0.9178571428571428
+Visualisation, D3 Lecture, transition D3,128.5,6.425,0.9178571428571428
+Visualisation, D3 Lecture, nested examples and further D3,128.5,6.425,0.9178571428571428
+Visualisation, D3 Data Models and Variables, Data types,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Quantitative types,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Entity,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Data model & conceptual model,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Visual variables,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Position,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Size,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Length,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Shape,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Color,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Graph perception,128.5,6.425,0.5354166666666667
+Visualisation, D3 Data Models and Variables, Effective visual variables rank,128.5,6.425,0.5354166666666667
+Visualisation, D3 Basic Lab, Loading Data D3,128.5,6.425,1.60625
+Visualisation, D3 Basic Lab, Selectors D3,128.5,6.425,1.60625
+Visualisation, D3 Basic Lab, Drawing with Data D3,128.5,6.425,1.60625
+Visualisation, Interaction Lecture, Shneiderman mantra,128.5,6.425,0.9178571428571428
+Visualisation, Interaction Lecture, Focus + Context,128.5,6.425,0.9178571428571428
+Visualisation, Interaction Lecture, Brishing & linking,128.5,6.425,0.9178571428571428
+Visualisation, Interaction Lecture, Filtering,128.5,6.425,0.9178571428571428
+Visualisation, Interaction Lecture, Zooming,128.5,6.425,0.9178571428571428
+Visualisation, Interaction Lecture, Animation,128.5,6.425,0.9178571428571428
+Visualisation, Interaction Lecture, Off-the-desktop-interaction,128.5,6.425,0.9178571428571428
+Visualisation, Networks & Process Lecture, Network Layouts,128.5,6.425,0.803125
+Visualisation, Networks & Process Lecture, Force-directed,128.5,6.425,0.803125
+Visualisation, Networks & Process Lecture, Clustered,128.5,6.425,0.803125
+Visualisation, Networks & Process Lecture, Radial,128.5,6.425,0.803125
+Visualisation, Networks & Process Lecture, Matrix,128.5,6.425,0.803125
+Visualisation, Networks & Process Lecture, Tree Layouts,128.5,6.425,0.803125
+Visualisation, Networks & Process Lecture, Radial trees,128.5,6.425,0.803125
+Visualisation, Networks & Process Lecture, Segmentation plots,128.5,6.425,0.803125
+Visualisation, D3 Transition & Interaction Lab, Transitions D3,128.5,6.425,1.0708333333333333
+Visualisation, D3 Transition & Interaction Lab, Interactions D3,128.5,6.425,1.0708333333333333
+Visualisation, D3 Transition & Interaction Lab, Scale & Axis D3,128.5,6.425,1.0708333333333333
+Visualisation, Process & Graphs Lecture, Target - explore domain-pose questions-find & clean data,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Translate - formulate analysis,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Design - design encodings,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Implement - code sketches,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Validate - effective,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Visualisation Taxonomy,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Chart Starter - comparison,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Chart Starter - trend over time,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Chart Starter - proportions,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Chart Starter - distributions,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Chart Starter - correlations,128.5,6.425,0.5354166666666667
+Visualisation, Process & Graphs Lecture, Chart Starter - overplotting,128.5,6.425,0.5354166666666667
+Visualisation, D3 Layouts Lab, D3 Layouts,128.5,6.425,1.60625
+Visualisation, High Dimensional Data Lecture, Geometric methods,128.5,6.425,0.49423076923076925
+Visualisation, High Dimensional Data Lecture, Data Reduction,128.5,6.425,0.49423076923076925
+Visualisation, High Dimensional Data Lecture, Pixel based methods,128.5,6.425,0.49423076923076925
+Visualisation, High Dimensional Data Lecture, Clustering,128.5,6.425,0.49423076923076925
+Visualisation, High Dimensional Data Lecture, Heterogenous data sets & stratification,128.5,6.425,0.49423076923076925
+Visualisation, High Dimensional Data Lecture, Dimensionality reduction,128.5,6.425,0.49423076923076925
+Visualisation, High Dimensional Data Lecture, Multi-dimensional scaling,128.5,6.425,0.49423076923076925
+Visualisation, High Dimensional Data Lecture, Glyphs,128.5,6.425,0.49423076923076925
+Visualisation, Text Visualisation Lecture, Text as abstraction,128.5,6.425,0.9178571428571428
+Visualisation, Text Visualisation Lecture, Typeography,128.5,6.425,0.9178571428571428
+Visualisation, Text Visualisation Lecture, Visualisation of text,128.5,6.425,0.9178571428571428
+Visualisation, Text Visualisation Lecture, Visualisation of collections,128.5,6.425,0.9178571428571428
+Visualisation, Text Visualisation Lecture, Bag of words,128.5,6.425,0.9178571428571428
+Visualisation, Text Visualisation Lecture, Text corpora & language,128.5,6.425,0.9178571428571428
+Visualisation, Text Visualisation Lecture, Time evolution text,128.5,6.425,0.9178571428571428
+Visualisation, Scraping & JQuery lab, Web scraping,128.5,6.425,1.0708333333333333
+Visualisation, JQuery Adv JavaScript Lab, JQuery,128.5,6.425,1.0708333333333333
+Visualisation, JQuery Adv JavaScript Lab, Advanced Javascript,128.5,6.425,1.0708333333333333
+Visualisation, Visualisation Maps Lecture, Geographic and Population Maps,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Landmarks and Paths,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Latitude and Longitude,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Azimuthal Equidistant,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Conic,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Cylindrical,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Albers Equal Area,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Mercator,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Chloropleth,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Isopleth map,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Cartograms,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Proportional Symbol Maps,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Flow Maps,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Time Varying Maps,128.5,6.425,0.42833333333333334
+Visualisation, Visualisation Maps Lecture, Thematic Maps,128.5,6.425,0.42833333333333334
+Visualisation, Tableua Desktop Lecture, Tableau Intro,128.5,6.425,6.425
+Visualisation, Perception Lecture, bottom-up & top-down brain,128.5,6.425,0.7138888888888889
+Visualisation, Perception Lecture, the eye,128.5,6.425,0.7138888888888889
+Visualisation, Perception Lecture, eye tracking summary,128.5,6.425,0.7138888888888889
+Visualisation, Perception Lecture, receptive fields,128.5,6.425,0.7138888888888889
+Visualisation, Perception Lecture, visual channels,128.5,6.425,0.7138888888888889
+Visualisation, Perception Lecture, contrast/ layering,128.5,6.425,0.7138888888888889
+Visualisation, Perception Lecture, color and motion pop-out,128.5,6.425,0.7138888888888889
+Visualisation, Perception Lecture, separable & integral channels,128.5,6.425,0.7138888888888889
+Visualisation, Perception Lecture, Gestalt principles,128.5,6.425,0.7138888888888889
+Visualisation, Color Lecture, Tufte color,128.5,6.425,0.6425
+Visualisation, Color Lecture, Color models,128.5,6.425,0.6425
+Visualisation, Color Lecture, Additive and subtractive models,128.5,6.425,0.6425
+Visualisation, Color Lecture, Visual systems,128.5,6.425,0.6425
+Visualisation, Color Lecture, Color perception and illusions,128.5,6.425,0.6425
+Visualisation, Color Lecture, Color blindness,128.5,6.425,0.6425
+Visualisation, Color Lecture, RGB + HSL + LAB + Munsell,128.5,6.425,0.6425
+Visualisation, Color Lecture, Color discriminability/ encodings,128.5,6.425,0.6425
+Visualisation, Color Lecture, Normal colors,128.5,6.425,0.6425
+Visualisation, Color Lecture, Color maps + Brewer + chroma.js,128.5,6.425,0.6425
+Visualisation, Cognition Lecture, TBC,128.5,6.425,6.425
+Visualisation, Storytelling Lecture, Visual design - 7 genres,128.5,6.425,1.0708333333333333
+Visualisation, Storytelling Lecture, Visual design - beginning + middle + end,128.5,6.425,1.0708333333333333
+Visualisation, Storytelling Lecture, Messaging - headline + caption + annotation,128.5,6.425,1.0708333333333333
+Visualisation, Storytelling Lecture, Messaging - viewpoint + relatability + precision,128.5,6.425,1.0708333333333333
+Visualisation, Storytelling Lecture, Interactivity - obvious interaction,128.5,6.425,1.0708333333333333
+Visualisation, Storytelling Lecture, Interactivity - reactive & reset,128.5,6.425,1.0708333333333333
+Visualisation, Obj Oriented JavaScript Lab, Object Orientated Javascript,128.5,6.425,1.60625
+Visualisation, Obj Oriented JavaScript Lab, Classes Javascript,128.5,6.425,1.60625
+DataScience, Process + Data + Visuals, Data Process,133.5,5.134615384615385,0.8557692307692307
+DataScience, Process + Data + Visuals, Data Types,133.5,5.134615384615385,0.8557692307692307
+DataScience, Process + Data + Visuals, Data Dimensions,133.5,5.134615384615385,0.8557692307692307
+DataScience, Process + Data + Visuals, Data & Images,133.5,5.134615384615385,0.8557692307692307
+DataScience, Process + Data + Visuals, Visual attributes,133.5,5.134615384615385,0.8557692307692307
+DataScience, Process + Data + Visuals, Visualisations,133.5,5.134615384615385,0.8557692307692307
+DataScience, Basic Python Lab, Basic Expressions,133.5,5.134615384615385,0.46678321678321677
+DataScience, Basic Python Lab, Lists,133.5,5.134615384615385,0.46678321678321677
+DataScience, Basic Python Lab, Dictionaries,133.5,5.134615384615385,0.46678321678321677
+DataScience, Basic Python Lab, Tuples,133.5,5.134615384615385,0.46678321678321677
+DataScience, Basic Python Lab, Functions,133.5,5.134615384615385,0.46678321678321677
+DataScience, Basic Python Lab, Modules,133.5,5.134615384615385,0.46678321678321677
+DataScience, Statistical Graphs Lecture, Design Principle,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Graph Types,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Comparisons,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Trends Over Time,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Correlations,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Distributions,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Color,133.5,5.134615384615385,0.42788461538461536
+DataScience, Data Munging Lecture, Scraping Web Data,133.5,5.134615384615385,1.7115384615384615
+DataScience, Data Munging Lecture, Etiquette of Scraping,133.5,5.134615384615385,1.7115384615384615
+DataScience, Data Munging Lecture, Scraping Demonstration,133.5,5.134615384615385,1.7115384615384615
+DataScience, Expressions & Scraping lab, Basic Expressions & Web Scraping,133.5,5.134615384615385,1.2836538461538463
+DataScience, Statistical Models Lecture, Probability,133.5,5.134615384615385,5.134615384615385
+DataScience, Statistical Graphs Lecture, Parametric vs Non-Parametric,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Length Biasing,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Exponential Distribution,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Binomial Distribution,133.5,5.134615384615385,0.42788461538461536
+DataScience, Statistical Graphs Lecture, Bootstrap,133.5,5.134615384615385,0.42788461538461536
+DataScience, Bias Sampling Lecture, Some Forms of Bias,133.5,5.134615384615385,1.0269230769230768
+DataScience, Bias Sampling Lecture, Sampling Schemes,133.5,5.134615384615385,1.0269230769230768
+DataScience, Bias Sampling Lecture, Bias of an Estimator,133.5,5.134615384615385,1.0269230769230768
+DataScience, Bias Sampling Lecture, Basu's Weighting,133.5,5.134615384615385,1.0269230769230768
+DataScience, Bias Sampling Lecture, Fisher Weighting,133.5,5.134615384615385,1.0269230769230768
+DataScience, Pandas + Matplotlib Lab, Workshop on Pandas,133.5,5.134615384615385,0.8557692307692307
+DataScience, Pandas + Matplotlib Lab, Visualisation Python,133.5,5.134615384615385,0.8557692307692307
+DataScience, Pandas + Matplotlib Lab, Matplotlib Python,133.5,5.134615384615385,0.8557692307692307
+DataScience, Regression Lecture, Regression to the mean,133.5,5.134615384615385,1.0269230769230768
+DataScience, Regression Lecture, Linear Model,133.5,5.134615384615385,1.0269230769230768
+DataScience, Regression Lecture, Gauss-Markov Theorem,133.5,5.134615384615385,1.0269230769230768
+DataScience, Regression Lecture, Hat Matrix,133.5,5.134615384615385,1.0269230769230768
+DataScience, Regression Lecture, Logistic Regression,133.5,5.134615384615385,1.0269230769230768
+DataScience, High Dimensional Data Lecture, Data Types,133.5,5.134615384615385,0.39497041420118345
+DataScience, High Dimensional Data Lecture, Graphical Methods,133.5,5.134615384615385,0.39497041420118345
+DataScience, High Dimensional Data Lecture, Dimensionality Reduction MDS,133.5,5.134615384615385,0.39497041420118345
+DataScience, High Dimensional Data Lecture, Dimensionality Reduction PCA,133.5,5.134615384615385,0.39497041420118345
+DataScience, High Dimensional Data Lecture, Linear Methods,133.5,5.134615384615385,0.39497041420118345
+DataScience, Sci-Kit & Regression & PCA Lab, Sci-Kit Learn,133.5,5.134615384615385,1.2836538461538463
+DataScience, Sci-Kit & Regression & PCA Lab, Regression,133.5,5.134615384615385,1.2836538461538463
+DataScience, Sci-Kit & Regression & PCA Lab, PCA,133.5,5.134615384615385,1.2836538461538463
+DataScience, Classification & Clustering Lecture, Classification,133.5,5.134615384615385,2.5673076923076925
+DataScience, Classification & Clustering Lecture, Clustering,133.5,5.134615384615385,2.5673076923076925
+DataScience, Thinking Bayesian Lecture, Bayesian Thinking,133.5,5.134615384615385,0.8557692307692307
+DataScience, Thinking Bayesian Lecture, Cross-Validation,133.5,5.134615384615385,0.8557692307692307
+DataScience, Thinking Bayesian Lecture, Bayesian Method,133.5,5.134615384615385,0.8557692307692307
+DataScience, Thinking Bayesian Lecture, MCMC,133.5,5.134615384615385,0.8557692307692307
+DataScience, Thinking Bayesian Lecture, Interval Estimation,133.5,5.134615384615385,0.8557692307692307
+DataScience, Thinking Bayesian Lecture, Conjugate Priors,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bias-Variance & X-Validation Lab, Bias,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bias-Variance & X-Validation Lab, Variance,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bias-Variance & X-Validation Lab, Cross-Validation,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bayesian Simulation Lecture, Bayesian Data Analysis,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bayesian Simulation Lecture, Bayesian Bandits,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bayesian Simulation Lecture, LASSO and Sparsity,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bayesian Simulation Lecture, Kidney Data Analysis,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bayesian Simulation Lecture, Markov Chain Example,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bayesian Simulation Lecture, MCM Cryptography,133.5,5.134615384615385,0.8557692307692307
+DataScience, Bayesian Contd + Monte Carlo, Markov Chains,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Likelihood Ratios,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, MCMC,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Hidden Makov Models,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Networks,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, MCMC Generate Networks,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Gibbs Sampler + Metropolis Hastings,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian Contd + Monte Carlo, Hierarchical Models,133.5,5.134615384615385,0.6418269230769231
+DataScience, Bayesian & SciKit Learn Lab, Bayesian Analysis,133.5,5.134615384615385,1.2836538461538463
+DataScience, Bayesian & SciKit Learn Lab, SciKit Learn,133.5,5.134615384615385,1.2836538461538463
+DataScience, Practical Machine Learning Lecture, Supervised Learning - SVM,133.5,5.134615384615385,0.8557692307692307
+DataScience, Practical Machine Learning Lecture, Supervised Learning - Decision Tree,133.5,5.134615384615385,0.8557692307692307
+DataScience, Practical Machine Learning Lecture, Supervised Learning - Boosting,133.5,5.134615384615385,0.8557692307692307
+DataScience, Practical Machine Learning Lecture, Supervised Learning - Random Forest,133.5,5.134615384615385,0.8557692307692307
+DataScience, Practical Machine Learning Lecture, Unsupervised Learning - K-Means,133.5,5.134615384615385,0.8557692307692307
+DataScience, Practical Machine Learning Lecture, Unsupervised Learning - Mean Shift,133.5,5.134615384615385,0.8557692307692307
+DataScience, AWS + MapReduce + MrJOB Lecture, Map Reduce,133.5,5.134615384615385,1.0269230769230768
+DataScience, AWS + MapReduce + MrJOB Lecture, Python Generators,133.5,5.134615384615385,1.0269230769230768
+DataScience, AWS + MapReduce + MrJOB Lecture, Combiner,133.5,5.134615384615385,1.0269230769230768
+DataScience, AWS + MapReduce + MrJOB Lecture, JSON Encoding,133.5,5.134615384615385,1.0269230769230768
+DataScience, Networks + Databases Lecture, Trees,133.5,5.134615384615385,0.8557692307692307
+DataScience, Networks + Databases Lecture, Networks,133.5,5.134615384615385,0.8557692307692307
+DataScience, Networks + Databases Lecture, Radial Layouts,133.5,5.134615384615385,0.8557692307692307
+DataScience, Networks + Databases Lecture, Matrices,133.5,5.134615384615385,0.8557692307692307
+DataScience, Networks + Databases Lecture, Tools & Applications,133.5,5.134615384615385,0.8557692307692307
+DataScience, Networks + Databases Lecture, Databases,133.5,5.134615384615385,0.8557692307692307
+DataScience, ML + EC2 + MrJobs Lab, Basic ML,133.5,5.134615384615385,1.7115384615384615
+DataScience, ML + EC2 + MrJobs Lab, EC2,133.5,5.134615384615385,1.7115384615384615
+DataScience, ML + EC2 + MrJobs Lab, MRJob,133.5,5.134615384615385,1.7115384615384615
+DataScience, EC2 + AWS + MapReduce + MrJOB Lecture, JSON Encoding,133.5,5.134615384615385,1.0269230769230768
+DataScience, Network Vis & Gephi Lecture, Graphs,133.5,5.134615384615385,1.2836538461538463
+DataScience, Network Vis & Gephi Lecture, Networks,133.5,5.134615384615385,1.2836538461538463
+DataScience, Network Vis & Gephi Lecture, Power Laws,133.5,5.134615384615385,1.2836538461538463
+DataScience, Network Vis & Gephi Lecture, Models,133.5,5.134615384615385,1.2836538461538463
+DataScience, ML + EC2 + MrJobs 2 Lab, Basic ML,133.5,5.134615384615385,1.7115384615384615
+DataScience, ML + EC2 + MrJobs 2 Lab, EC2,133.5,5.134615384615385,1.7115384615384615
+DataScience, ML + EC2 + MrJobs 2 Lab, MRJob,133.5,5.134615384615385,1.7115384615384615
+DataScience, Networks II Lecture, Centrality Measures,133.5,5.134615384615385,0.7335164835164835
+DataScience, Networks II Lecture, Community Detection,133.5,5.134615384615385,0.7335164835164835
+DataScience, Networks II Lecture, Respondent Driven Sampling,133.5,5.134615384615385,0.7335164835164835
+DataScience, Visual Storytelling Lecture, Effective Communication,133.5,5.134615384615385,5.134615384615385
+DataScience, Visual Storytelling Lecture, Simplicity,133.5,5.134615384615385,0.7335164835164835
+DataScience, Visual Storytelling Lecture, Visual Design,133.5,5.134615384615385,0.7335164835164835
+DataScience, Visual Storytelling Lecture, Messaging,133.5,5.134615384615385,0.7335164835164835
+DataScience, Visual Storytelling Lecture, Visual Storytelling,133.5,5.134615384615385,0.7335164835164835
+DataScience, SVM & Random Forest Lecture, Hierarchical Clustering,133.5,5.134615384615385,1.7115384615384615
+DataScience, SVM & Random Forest Lecture, SVM's,133.5,5.134615384615385,1.7115384615384615
+DataScience, SVM & Random Forest Lecture, Neural Networks,133.5,5.134615384615385,1.7115384615384615
+MachineLearning, Introduction, Introduction,,,
+MachineLearning, Introduction, Octave Tutorial,,,
+MachineLearning, Linear Algebra Review, Matrices and Vectors,,,
+MachineLearning, Linear Algebra Review, Addition and Scalar Multiplication,,,
+MachineLearning, Linear Algebra Review, Vector Multiplication,,,
+MachineLearning, Linear Algebra Review, Matrix Multiplication,,,
+MachineLearning, Linear Algebra Review, Inverse and Transpose,,,
+MachineLearning, Linear Regression, Cost Function,,,
+MachineLearning, Linear Regression," Gradient Descent with One Variable
+",,,
+MachineLearning, Linear Regression," Gradient Descent with Multiple Variables
+",,,
+MachineLearning, Linear Regression," Features and Polynomial Regression
+",,,
+MachineLearning, Linear Regression," Normal Equation
+",,,
+MachineLearning, Linear Regression," Regularization
+",,,
+MachineLearning, Logistic Regression," Classification
+",,,
+MachineLearning, Logistic Regression," Hypothesis Representation
+",,,
+MachineLearning, Logistic Regression," Decision Boundary
+",,,
+MachineLearning, Logistic Regression," Cost Function
+",,,
+MachineLearning, Logistic Regression," Multiclass Classification
+",,,
+MachineLearning, Logistic Regression," Regularization
+",,,
+MachineLearning, Neural Networks," Non linear Hypotheses
+",,,
+MachineLearning, Neural Networks," Model Representation
+",,,
+MachineLearning, Neural Networks," Multiclass Classification
+",,,
+MachineLearning, Neural Networks," Cost Function
+",,,
+MachineLearning, Neural Networks," Backpropagation
+",,,
+MachineLearning, Neural Networks," Implementation
+",,,
+MachineLearning, Neural Networks," Gradient Checking
+",,,
+MachineLearning, Neural Networks," Random Initialisation
+",,,
+MachineLearning, Support Vector Machines," Optimisation Objective
+",,,
+MachineLearning, Support Vector Machines," Large Margin Intuition
+",,,
+MachineLearning, Support Vector Machines," Kernels
+",,,
+MachineLearning, Support Vector Machines," Using an SVM
+",,,
+MachineLearning, Clustering," Unsupervised Learning
+",,,
+MachineLearning, Clustering," K-means Algorithm
+",,,
+MachineLearning, Clustering," Optimisation Objective
+",,,
+MachineLearning, Clustering," Random Initialization
+",,,
+MachineLearning, Clustering," Choosing the number of clusters
+",,,
+MachineLearning, Dimensionality Reduction," Data Compression
+",,,
+MachineLearning, Dimensionality Reduction," Visualisation
+",,,
+MachineLearning, Dimensionality Reduction," Principal Component Analysis
+",,,
+MachineLearning, Dimensionality Reduction," Choosing the number of PCs
+",,,
+MachineLearning, Dimensionality Reduction," Reconstruction from Compressed Representation
+",,,
+MachineLearning, Dimensionality Reduction," Advice for Applying PCA
+",,,
+MachineLearning, Anomaly Detection," Motivation
+",,,
+MachineLearning, Anomaly Detection," Gaussian Distribution
+",,,
+MachineLearning, Anomaly Detection," Algorithms
+",,,
+MachineLearning, Anomaly Detection," Developing and Evaluating an Anomaly Detection System
+",,,
+MachineLearning, Anomaly Detection," Anomaly Detection vs. Supervised Learning
+",,,
+MachineLearning, Anomaly Detection," What Features to Use
+",,,
+MachineLearning, Anomaly Detection," Multivariate Gaussian Distribution
+",,,
+MachineLearning, Recommender Systems," Content Based Recommendations
+",,,
+MachineLearning, Recommender Systems," Collaborative Filtering Algorithm
+",,,
+MachineLearning, Recommender Systems," Vectorization
+",,,
+MachineLearning, Recommender Systems," Implementation
+",,,
+MachineLearning, Advice for Applying ML," Deciding what to try
+",,,
+MachineLearning, Advice for Applying ML," Evaluating a Hypothesis
+",,,
+MachineLearning, Advice for Applying ML," Model Selection and Train / Validation
+",,,
+MachineLearning, Advice for Applying ML," Bias vs. Variance
+",,,
+MachineLearning, Advice for Applying ML," Regularisation and Bias vs. Variance
+",,,
+MachineLearning, Advice for Applying ML," Learning Curves
+",,,
+MachineLearning, Advice for Applying ML," What to do next ?
+",,,
+MachineLearning, ML System Design," Prioritization
+",,,
+MachineLearning, ML System Design," Error Analysis
+",,,
+MachineLearning, ML System Design," Trade-off Precision and Recall
+",,,
+MachineLearning, ML System Design," Data for ML
+",,,
+MachineLearning, Large Scale MachineLearning," Learning with Large Datasets
+",,,
+MachineLearning, Large Scale MachineLearning," Stochastic Gradient Descent
+",,,
+MachineLearning, Large Scale MachineLearning," Mini-bathc gradient descent
+",,,
+MachineLearning, Large Scale MachineLearning," Stochastic gradient descent convergence
+",,,
+MachineLearning, Large Scale MachineLearning," Online Learning
+",,,
+MachineLearning, Large Scale MachineLearning," Map Reduce and Parallelism 
+",,,
+MachineLearning, Conclusion," Application Examples
+",,,
+MachineLearning, Conclusion," Conclusions
+",,,
+Stats110, Naive Probability + Counting, sample spaces,150.0,4.411764705882353,1.1029411764705883
+Stats110, Naive Probability + Counting, naive definition of probability,150.0,4.411764705882353,1.1029411764705883
+Stats110, Naive Probability + Counting, counting,150.0,4.411764705882353,1.1029411764705883
+Stats110, Naive Probability + Counting, sampling,150.0,4.411764705882353,1.1029411764705883
+Stats110, Probability Axioms, Bose-Einstein,150.0,4.411764705882353,1.1029411764705883
+Stats110, Probability Axioms, story proofs,150.0,4.411764705882353,1.1029411764705883
+Stats110, Probability Axioms, Vandermonde identity,150.0,4.411764705882353,1.1029411764705883
+Stats110, Probability Axioms, axioms of probability ,150.0,4.411764705882353,1.1029411764705883
+Stats110, Inclusion-Exclusion, birthday problem,150.0,4.411764705882353,1.1029411764705883
+Stats110, Inclusion-Exclusion, properties of probability,150.0,4.411764705882353,1.1029411764705883
+Stats110, Inclusion-Exclusion, inclusion-exclusion,150.0,4.411764705882353,1.1029411764705883
+Stats110, Inclusion-Exclusion, matching problem,150.0,4.411764705882353,1.1029411764705883
+Stats110, Independence + Condn Prob + Bayes, independence,150.0,4.411764705882353,1.1029411764705883
+Stats110, Independence + Condn Prob + Bayes, Newton-Pepys,150.0,4.411764705882353,1.1029411764705883
+Stats110, Independence + Condn Prob + Bayes, conditional probability,150.0,4.411764705882353,1.1029411764705883
+Stats110, Independence + Condn Prob + Bayes, Bayes’ rule,150.0,4.411764705882353,1.1029411764705883
+Stats110, Total Prob + Conditional Indep, law of total probability,150.0,4.411764705882353,1.4705882352941178
+Stats110, Total Prob + Conditional Indep, conditional probability examples,150.0,4.411764705882353,1.4705882352941178
+Stats110, Total Prob + Conditional Indep, conditional independence,150.0,4.411764705882353,1.4705882352941178
+Stats110, Simpson + Monty Hall, Monty Hall problem,150.0,4.411764705882353,2.2058823529411766
+Stats110, Simpson + Monty Hall, Simpson’s paradox,150.0,4.411764705882353,2.2058823529411766
+Stats110, 1st Step + Bernoulli & Binomial, gambler’s ruin,150.0,4.411764705882353,0.8823529411764706
+Stats110, 1st Step + Bernoulli & Binomial, first step analysis,150.0,4.411764705882353,0.8823529411764706
+Stats110, 1st Step + Bernoulli & Binomial, random variables,150.0,4.411764705882353,0.8823529411764706
+Stats110, 1st Step + Bernoulli & Binomial, Bernoulli,150.0,4.411764705882353,0.8823529411764706
+Stats110, 1st Step + Bernoulli & Binomial, Binomial,150.0,4.411764705882353,0.8823529411764706
+Stats110, CDF's + PMF's + Hypergeo, random variables,150.0,4.411764705882353,1.1029411764705883
+Stats110, CDF's + PMF's + Hypergeo, CDFs,150.0,4.411764705882353,1.1029411764705883
+Stats110, CDF's + PMF's + Hypergeo, PMFs,150.0,4.411764705882353,1.1029411764705883
+Stats110, CDF's + PMF's + Hypergeo, Hypergeometric,150.0,4.411764705882353,1.1029411764705883
+Stats110, Linearity + EV + IRV, independence,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, Geometric,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, expected values,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, indicator RVS,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, linearity,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, symmetry,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + EV + IRV, fundamental bridge,150.0,4.411764705882353,0.6302521008403361
+Stats110, Linearity + Negative Binomial, linearity,150.0,4.411764705882353,1.1029411764705883
+Stats110, Linearity + Negative Binomial, Putnam problem,150.0,4.411764705882353,1.1029411764705883
+Stats110, Linearity + Negative Binomial, Negative Binomial,150.0,4.411764705882353,1.1029411764705883
+Stats110, Linearity + Negative Binomial, St. Petersburg paradox,150.0,4.411764705882353,1.1029411764705883
+Stats110, Poisson & Poisson approx, sympathetic magic,150.0,4.411764705882353,1.4705882352941178
+Stats110, Poisson & Poisson approx, Poisson distribution,150.0,4.411764705882353,1.4705882352941178
+Stats110, Poisson & Poisson approx, Poisson approximation,150.0,4.411764705882353,1.4705882352941178
+Stats110, Variance + Universality, discrete vs. continuous,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, PDFs,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, variance,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, standard deviation,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, Uniform,150.0,4.411764705882353,0.7352941176470589
+Stats110, Variance + Universality, universality,150.0,4.411764705882353,0.7352941176470589
+Stats110, Standard Normal, standard Normal,150.0,4.411764705882353,2.2058823529411766
+Stats110, Standard Normal, Normal normalizing constant,150.0,4.411764705882353,2.2058823529411766
+Stats110, Standardisation + LOTUS, Normal distribution,150.0,4.411764705882353,1.4705882352941178
+Stats110, Standardisation + LOTUS, standardization,150.0,4.411764705882353,1.4705882352941178
+Stats110, Standardisation + LOTUS, LOTUS,150.0,4.411764705882353,1.4705882352941178
+Stats110, Midterm exmp, midterm review,150.0,4.411764705882353,2.2058823529411766
+Stats110, Midterm exmp, extra examples,150.0,4.411764705882353,2.2058823529411766
+Stats110, Exponential, Exponential distribution,150.0,4.411764705882353,2.2058823529411766
+Stats110, Exponential, memoryless property,150.0,4.411764705882353,2.2058823529411766
+Stats110, MGF's + Laplace Succession, moment generating functions,150.0,4.411764705882353,1.4705882352941178
+Stats110, MGF's + Laplace Succession, hybrid Bayes’ rule,150.0,4.411764705882353,1.4705882352941178
+Stats110, MGF's + Laplace Succession, Laplace’s rule of succession,150.0,4.411764705882353,1.4705882352941178
+Stats110, Joint distributions, MGFs to get moments of Expo and Normal,150.0,4.411764705882353,1.4705882352941178
+Stats110, Joint distributions, sums of Poissons,150.0,4.411764705882353,1.4705882352941178
+Stats110, Joint distributions, joint distributions,150.0,4.411764705882353,1.4705882352941178
+Stats110, 2D LOTUS, joint,150.0,4.411764705882353,1.1029411764705883
+Stats110, 2D LOTUS, conditional and marginal distributions,150.0,4.411764705882353,1.1029411764705883
+Stats110, 2D LOTUS, 2-D LOTUS test,150.0,4.411764705882353,1.1029411764705883
+Stats110, 2D LOTUS, chicken-egg,150.0,4.411764705882353,1.1029411764705883
+Stats110, Multinomial + Cauchy, expected distance between Normals,150.0,4.411764705882353,1.4705882352941178
+Stats110, Multinomial + Cauchy, Multinomial,150.0,4.411764705882353,1.4705882352941178
+Stats110, Multinomial + Cauchy, Cauchy,150.0,4.411764705882353,1.4705882352941178
+Stats110, Covar + Corr + Variance, covariance,150.0,4.411764705882353,1.1029411764705883
+Stats110, Covar + Corr + Variance, correlation,150.0,4.411764705882353,1.1029411764705883
+Stats110, Covar + Corr + Variance, variance of a sum,150.0,4.411764705882353,1.1029411764705883
+Stats110, Covar + Corr + Variance, variance of Hypergeometric,150.0,4.411764705882353,1.1029411764705883
+Stats110, Transformatn + Convolution, transformations,150.0,4.411764705882353,1.1029411764705883
+Stats110, Transformatn + Convolution, LogNormal,150.0,4.411764705882353,1.1029411764705883
+Stats110, Transformatn + Convolution, convolutions,150.0,4.411764705882353,1.1029411764705883
+Stats110, Transformatn + Convolution, the probabilistic method,150.0,4.411764705882353,1.1029411764705883
+Stats110, Beta Distn, Beta distribution,150.0,4.411764705882353,1.4705882352941178
+Stats110, Beta Distn, Bayes’ billiards,150.0,4.411764705882353,1.4705882352941178
+Stats110, Beta Distn, finance preview and examples,150.0,4.411764705882353,1.4705882352941178
+Stats110, Gamma Distn, Gamma distribution,150.0,4.411764705882353,2.2058823529411766
+Stats110, Gamma Distn, Poisson processes,150.0,4.411764705882353,2.2058823529411766
+Stats110, Order Stats, Beta-Gamma (bank-post office),150.0,4.411764705882353,1.1029411764705883
+Stats110, Order Stats, order statistics,150.0,4.411764705882353,1.1029411764705883
+Stats110, Order Stats, conditional expectation,150.0,4.411764705882353,1.1029411764705883
+Stats110, Order Stats, two envelope paradox,150.0,4.411764705882353,1.1029411764705883
+Stats110, Conditional Expectation, two envelope paradox (cont.),150.0,4.411764705882353,1.4705882352941178
+Stats110, Conditional Expectation, conditional expectation (cont.),150.0,4.411764705882353,1.4705882352941178
+Stats110, Conditional Expectation, waiting for HT vs. waiting for HH,150.0,4.411764705882353,1.4705882352941178
+Stats110, Adam's & Eve's Law, conditional expectation (cont.),150.0,4.411764705882353,1.1029411764705883
+Stats110, Adam's & Eve's Law, taking out what’s known,150.0,4.411764705882353,1.1029411764705883
+Stats110, Adam's & Eve's Law, Adam’s law,150.0,4.411764705882353,1.1029411764705883
+Stats110, Adam's & Eve's Law, Eve’s law,150.0,4.411764705882353,1.1029411764705883
+Stats110, Rand Vars + Inequalities, sum of a random number of random variables,150.0,4.411764705882353,2.2058823529411766
+Stats110, Rand Vars + Inequalities, inequalities Cauchy-Schwarz,150.0,4.411764705882353,2.2058823529411766
+Stats110, Law Large Num & Central Limit Th, law of large numbers,150.0,4.411764705882353,2.2058823529411766
+Stats110, Law Large Num & Central Limit Th, central limit theorem,150.0,4.411764705882353,2.2058823529411766
+Stats110, Chi Sqrd + Student-t + Multivar Norm, Chi-Square,150.0,4.411764705882353,1.4705882352941178
+Stats110, Chi Sqrd + Student-t + Multivar Norm, Student-t,150.0,4.411764705882353,1.4705882352941178
+Stats110, Chi Sqrd + Student-t + Multivar Norm, Multivariate Normal,150.0,4.411764705882353,1.4705882352941178
+Stats110, Markov Chains, Markov chains,150.0,4.411764705882353,1.4705882352941178
+Stats110, Markov Chains, transition matrix,150.0,4.411764705882353,1.4705882352941178
+Stats110, Markov Chains, stationary distribution,150.0,4.411764705882353,1.4705882352941178
+Stats110, Irreducibility & Random Walk, Markov chains (cont.),150.0,4.411764705882353,1.1029411764705883
+Stats110, Irreducibility & Random Walk, irreducibility,150.0,4.411764705882353,1.1029411764705883
+Stats110, Irreducibility & Random Walk, reversibility,150.0,4.411764705882353,1.1029411764705883
+Stats110, Irreducibility & Random Walk, random walk on an undirected network,150.0,4.411764705882353,1.1029411764705883
+Stats110, Markov Chain & Page Rank, Markov chains (cont.),150.0,4.411764705882353,2.2058823529411766
+Stats110, Markov Chain & Page Rank, Google PageRank as a Markov chain,150.0,4.411764705882353,2.2058823529411766
+Stats110, Look Ahead, a look ahead,150.0,4.411764705882353,4.411764705882353
+StatsUdacity, Introduction," Introduction
+",31.5,1.96875,1.96875
+StatsUdacity, Visualizing Data," Visualizing Data
+",31.5,1.96875,1.96875
+StatsUdacity, Central Tendency," Central Tendency
+",31.5,1.96875,1.96875
+StatsUdacity, Variability," Variability
+",31.5,1.96875,1.96875
+StatsUdacity, Standardizing," Standardizing
+",31.5,1.96875,1.96875
+StatsUdacity, Normal Distribution," Normal Distribution
+",31.5,1.96875,1.96875
+StatsUdacity, Sampling Distribution," Sampling Distribution
+",31.5,1.96875,1.96875
+StatsUdacity, Estimation," Estimation
+",31.5,1.96875,1.96875
+StatsUdacity, Hypothesis Testing," Hypothesis Testing
+",31.5,1.96875,1.96875
+StatsUdacity, t-Tests," t-Tests
+",31.5,1.96875,1.96875
+StatsUdacity, t-Tests," t-Tests
+",31.5,1.96875,1.96875
+StatsUdacity, One-way ANOVA, One-way ANOVAs ,31.5,1.96875,1.96875
+StatsUdacity, ANOVA again, ANOVA agains ,31.5,1.96875,1.96875
+StatsUdacity, Correlation," Correlation
+",31.5,1.96875,1.96875
+StatsUdacity, Regression," Regression
+",31.5,1.96875,1.96875
+StatsUdacity, Chi-Squared tests," Chi-Squared tests
+",31.5,1.96875,1.96875
+Databases, Introduction," Introduction
+",42.5,6.071428571428571,2.0238095238095237
+Databases, Relational Databases," Model
+",42.5,6.071428571428571,2.0238095238095237
+Databases, Relational Databases," Querying
+",42.5,6.071428571428571,2.0238095238095237
+Databases, Relational Databases," UML Language
+",42.5,6.071428571428571,2.0238095238095237
+Databases, Relational Algebra," Select
+",42.5,6.071428571428571,1.0119047619047619
+Databases, Relational Algebra," Project
+",42.5,6.071428571428571,1.0119047619047619
+Databases, Relational Algebra," Join
+",42.5,6.071428571428571,1.0119047619047619
+Databases, Relational Algebra," Set Operators
+",42.5,6.071428571428571,1.0119047619047619
+Databases, Relational Algebra," Rename
+",42.5,6.071428571428571,1.0119047619047619
+Databases, Relational Algebra," Notation
+",42.5,6.071428571428571,1.0119047619047619
+Databases, XML Data," Introduction
+",42.5,6.071428571428571,1.0119047619047619
+Databases, XML Data," DTDs
+",42.5,6.071428571428571,1.0119047619047619
+Databases, XML Data," IDs
+",42.5,6.071428571428571,1.0119047619047619
+Databases, XML Data," IDREFs
+",42.5,6.071428571428571,1.0119047619047619
+Databases, XML Data," XML Schema
+",42.5,6.071428571428571,1.0119047619047619
+Databases, XML Data," Querying
+",42.5,6.071428571428571,1.0119047619047619
+Databases, JSON Data," Introduction
+",42.5,6.071428571428571,6.071428571428571
+Databases, SQL," Introduction
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Select
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Set Operators
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Where
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," From
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Joins
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Aggregation
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," NULL
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Data modification statements
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Indexes
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Constraints
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Triggers
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Transactions
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Isolations
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Views
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Authorisation
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," Recursion
+",42.5,6.071428571428571,0.3373015873015873
+Databases, SQL," OLAP
+",42.5,6.071428571428571,0.3373015873015873
+Databases, NoSQL," Motivation
+",42.5,6.071428571428571,6.071428571428571
+NatLangProcessing, The Language Modeling Problem," Markov Processes
+",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, The Language Modeling Problem," Trigram Language Model
+",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, The Language Modeling Problem," Perplexity
+",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Parameter Estimation Models," Linear Interpolation
+",48.5,8.083333333333334,4.041666666666667
+NatLangProcessing, Parameter Estimation Models," Dicounting Methods
+",48.5,8.083333333333334,4.041666666666667
+NatLangProcessing, Tagging & Hidden Markov Models," Tagging Problem
+",48.5,8.083333333333334,1.6166666666666667
+NatLangProcessing, Tagging & Hidden Markov Models," Generative Models for Supervised Learning
+",48.5,8.083333333333334,1.6166666666666667
+NatLangProcessing, Tagging & Hidden Markov Models," Hidden Markov Model (HMM)
+",48.5,8.083333333333334,1.6166666666666667
+NatLangProcessing, Tagging & Hidden Markov Models," Parameter Estimation in HMM
+",48.5,8.083333333333334,1.6166666666666667
+NatLangProcessing, Tagging & Hidden Markov Models," Viterbi Algorithm
+",48.5,8.083333333333334,1.6166666666666667
+NatLangProcessing, Parsing & Context-Free Grammar," Parsing Problem
+",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Parsing & Context-Free Grammar," Context-Free Grammar ",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Parsing & Context-Free Grammar," A Simple Grammar for English ",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Prob Context-Free Grammar," Basics of PCFGs",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Prob Context-Free Grammar," CKY Parsing Algorithm",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Prob Context-Free Grammar," Weaknesses of PCFGs",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Lexicalized PCFGs, "Lexicalization of a Treebank",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Lexicalized PCFGs, "Parameter Estimation in Lexicalised PCFGs",48.5,8.083333333333334,2.6944444444444446
+NatLangProcessing, Lexicalized PCFGs, "Evaluation of Lexicalised PCFGs",48.5,8.083333333333334,2.6944444444444446
+StatsInference, Bayesian Stats Inference I, "Inference Model",18.0,3.6,0.9
+StatsInference, Bayesian Stats Inference I, "Hypothesis Test",18.0,3.6,0.9
+StatsInference, Bayesian Stats Inference I, "Estimation",18.0,3.6,0.9
+StatsInference, Bayesian Stats Inference I, "LMS Estimation",18.0,3.6,0.9
+StatsInference, Bayesian Stats Inference II, "MAP Estimate",18.0,3.6,0.9
+StatsInference, Bayesian Stats Inference II, "MSE Estimate",18.0,3.6,0.9
+StatsInference, Bayesian Stats Inference II, "LMS Estimate",18.0,3.6,0.9
+StatsInference, Bayesian Stats Inference II, "Linear LMS Estimate",18.0,3.6,0.9
+StatsInference, Classical Stats Inference I, "Inference Model",18.0,3.6,0.9
+StatsInference, Classical Stats Inference I, MLE,18.0,3.6,0.9
+StatsInference, Classical Stats Inference I, MSE,18.0,3.6,0.9
+StatsInference, Classical Stats Inference I, Confidence Intervals,18.0,3.6,0.9
+StatsInference, Classical Inference II, MLE Estimate,18.0,3.6,0.9
+StatsInference, Classical Inference II, Confidence Intervals,18.0,3.6,0.9
+StatsInference, Classical Inference II, Linear Regression,18.0,3.6,0.9
+StatsInference, Classical Inference II, Binary Hypothesis Test,18.0,3.6,0.9
+StatsInference, Classical Inference III, Binary Hypothesis Test,18.0,3.6,1.8
+StatsInference, Classical Inference III, Composite Test,18.0,3.6,1.8

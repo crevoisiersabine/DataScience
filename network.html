@@ -3,7 +3,7 @@
 <style>
 
 html{
-	-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -28,9 +28,18 @@ h1, h2, h3, h4, h5, h6, p {
   vertical-align: middle;
 }
 
-#node_link_sec {
+#node_link_sec, #node_link_sec2 {
   position: relative;
   top: 70px;
+}
+
+#node_link_sec2 {
+  height: 750px;
+}
+
+#node_link_sec3, #node_link_sec4 {
+  position: relative;
+  top: 40px;
 }
 
 .circular {
@@ -44,7 +53,7 @@ h1, h2, h3, h4, h5, h6, p {
 rect {
   fill: #fff;
   stroke: steelblue;
-  stroke-width: 1.5px;	
+  stroke-width: 1.5px;  
 }
 
 .percentage_green rect{
@@ -306,7 +315,7 @@ a:hover {
   stroke-width: 1.5px;
 }
 
-.point text, .point_linked text, .point_hyperlinked text, .axis text, .legend text{
+.point text, .point_linked text, .point_hyperlinked text, .axis text, .legend text, .node text{
   stroke-opacity: 0.2;
   opacity: 0.6;
   font: 300;
@@ -337,7 +346,7 @@ a:hover {
   font-size: 10px;
 }
 
-.point text:hover {
+.point text:hover, .node text:hover{
 /*  fill: #000;
   stroke: #000;*/
   font-size: 11px;
@@ -431,7 +440,7 @@ a:hover {
     <ul>
       <!-- <li class="right"><a href="#about">About</a></li> -->
       <li class="right"><a href="#contact">Contact Us</a></li>
-      <li><a href="acknowledgment">Special Thanks</a></li>
+      <li><a href="#contact">Special Thanks</a></li>
       <!-- <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="datajourney"></a></li> -->
     </ul>
   </div>
@@ -517,11 +526,24 @@ a:hover {
 </div> -->
 
 
-<div class="vertical-container container-fluid page-section">
+<div class="vertical-container container-fluid page-section" id="node_link_sec2">
   <div class="row row-sm-padding"> <!-- Using new flex containers -->
     <div class = "col-md-6" id="area6"></div>
-    <div class = "col-md-4" id="area7"></div>
-    <div class = "col-md-2" id="area_legend"></div>
+    <div class = "col-md-6"> <!-- Designated columns for //el coords and legend-->
+      <div class="row row-sm-padding" id="node_link_sec3"> <!-- Using new flex containers -->
+        <div class = "col-md-8" id="area7"></div>
+        <div class = "col-md-4" id="area_legend"></div>
+      </div>
+      <div class="row row-sm-padding" id="node_link_sec4"> <!-- Using new flex containers -->
+        <div class="col-md-1"></div>
+        <div class = "col-md-10" style="text-align: justify"></br>The connections shown arise for many reasons: courses being offered by the same institution; courses as natural successors of another; or courses chosen as they offered an application to skills already acquired.</br></br>
+          <div><h4><small>Please feel free to explore the data through:</br></br><div style="padding-left: 5px">1.  <b>Hovering</b> over individual courses or topics
+          </br>2.  <b>Brushing</b> the axis of the parallel chart to contrast the courses
+          </br>3.  <b>Dragging<b> the axis to identify +ve and -ve course correlations </div></h4></small></div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
     </div>
   </div>
 </div>
