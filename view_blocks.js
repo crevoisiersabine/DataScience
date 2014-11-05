@@ -3,6 +3,8 @@ $(document).ready(function(){
   //Preloader
   $(".windows8").fadeOut();
 
+});
+
   var margin = { top: 40, right: 10, bottom: 50, left: 50 };
   var width = 900 - margin.left - margin.right;
   var height = 400 - margin.bottom - margin.top;
@@ -767,7 +769,7 @@ $(document).ready(function(){
 
     function brushed() {
 
-      if(count == 0){ //only apprend defs once
+      if(count == 0){ //only append defs once
          d3.select("#area1").selectAll("svg")
           .append("defs").append("clipPath")
             .attr("id", "clip")
@@ -823,5 +825,3 @@ $(document).ready(function(){
           .transition()
           .remove();
   }
-
-});
