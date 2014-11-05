@@ -164,6 +164,9 @@ $(document).ready(function(){
       arrowreplay.append("path")
         .attr("d", "M50,68.2c-8.6,0-15.6-7-15.6-15.6c0-3.6,1.3-7.2,3.6-10c0.6-0.7,1.6-0.8,2.3-0.2c0.7,0.6,0.8,1.6,0.2,2.3  c-1.8,2.2-2.9,5-2.9,7.9c0,6.8,5.6,12.4,12.4,12.4c6.8,0,12.4-5.6,12.4-12.4S56.8,40.2,50,40.2c-0.9,0-1.6-0.7-1.6-1.6  s0.7-1.6,1.6-1.6c8.6,0,15.6,7,15.6,15.6S58.6,68.2,50,68.2z")
       arrowreplay.append("path").attr("d", "M54.1,46.1c-0.4,0-0.8-0.1-1.1-0.4l-6-5.5c-0.3-0.3-0.5-0.7-0.5-1.2c0-0.4,0.2-0.9,0.5-1.2l6-5.5c0.7-0.6,1.7-0.6,2.3,0.1  c0.6,0.7,0.6,1.7-0.1,2.3L50.5,39l4.7,4.3c0.7,0.6,0.7,1.6,0.1,2.3C54.9,45.9,54.5,46.1,54.1,46.1z")
+      arrowreplay.append("text").attr({
+            transform: "translate(23, 30)"
+          }).text("replay").style("fill", "#eee");
 
       var arrowFastForward = arrows.append("g").attr("class", "FF")
           .attr({
@@ -180,7 +183,10 @@ $(document).ready(function(){
       arrowFastForward.append("path").attr("d", "M42.618,60.43c-0.414,0-0.827-0.17-1.123-0.505c-0.549-0.62-0.492-1.568,0.127-2.118l9.805-8.693      c0.621-0.549,1.568-0.492,2.118,0.127c0.549,0.62,0.492,1.568-0.127,2.118l-9.805,8.693      C43.327,60.306,42.972,60.43,42.618,60.43z")
       arrowFastForward.append("path").attr("d", "M61.422,51.737c-0.354,0-0.709-0.125-0.995-0.377l-9.805-8.693c-0.62-0.55-0.677-1.498-0.127-2.118      c0.55-0.62,1.498-0.676,2.118-0.127l9.805,8.693c0.62,0.55,0.677,1.498,0.127,2.118C62.249,51.566,61.836,51.737,61.422,51.737z      ")
       arrowFastForward.append("path").attr("d", "M51.618,60.43c-0.414,0-0.827-0.17-1.123-0.505c-0.549-0.62-0.492-1.568,0.127-2.118l9.805-8.693      c0.62-0.549,1.568-0.492,2.118,0.127c0.549,0.62,0.492,1.568-0.127,2.118l-9.805,8.693C52.327,60.306,51.972,60.43,51.618,60.43      z")
-      
+      arrowFastForward.append("text").attr({
+            transform: "translate(40, 30)"
+          }).text("skip").style("fill", "#eee");
+
       //Create an arrow to navigate to the next bit of the story
       var arrowDown = arrows.append("g").attr("class", "DOWN")
           .attr({
@@ -188,6 +194,9 @@ $(document).ready(function(){
           });
       arrowDown.append("path").attr("d", "M8.048,10.043c-2,0-2.589,2.014-1.457,3.143l8.098,8.235c0.746,0.746,1.956,0.785,2.7,0.037l8.1-8.154  c1.016-1.018,0.568-3.261-1.433-3.261C21.952,10.043,9.646,10.043,8.048,10.043z")
       arrowDown.attr("opacity", 0);
+      arrowDown.append("text").attr({
+            transform: "translate(1, 36)"
+          }).text("next").style("fill", "#eee");
 
       //Create an arrow to navigate to the next bit of the story
       var arrowUP = arrows.append("g").attr("class", "UP")
@@ -196,6 +205,9 @@ $(document).ready(function(){
           });
       arrowUP.append("path").attr("d", "M23.986,22c2,0,2.589-2.014,1.457-3.143l-8.098-8.235c-0.746-0.746-1.956-0.786-2.7-0.038l-8.099,8.155  C5.531,19.757,5.978,22,7.979,22C10.082,22,22.388,22,23.986,22z")
       arrowUP.attr("opacity", 0);
+      arrowUP.append("text").attr({
+            transform: "translate(1, 36)"
+          }).text("back").style("fill", "#eee");
     }
     createArrows(250, 20, 0);
 
