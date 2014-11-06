@@ -2,7 +2,16 @@
 <html>
 <style>
 
+html {
+    -webkit-font-smoothing: antialiased; /*To remove blurry text*/
+  }
+
 body {
+  background-image: url("./distimg.jpg");
+  background-size: 900px auto;
+  background-repeat: no-repeat;
+  background-position: left; 
+  background-attachment: fixed;
   font-family: verdana !important;
   font-size: 14px !important;
 }
@@ -12,47 +21,66 @@ h1, h2, h3, h4, h5, h6, p {
   text-rendering: auto;
   vertical-align: middle;
   font-family: verdana;
+}
+
+a {
+  color: #eee !important;
+  font-variant: small-caps;
+}
+
+a:hover, a:active, a:focus {
+  color: #222 !important;
+  background-color: #eee;
+  text-decoration: none !important;
+}
 
 /*--------------CSS------------------------NAVBAR CSS---------------------------------------------------------*/
 
 #navLeft, #navRight {
-        width: 50%;
-        float: left;
-        margin: 0 0 0 0;
-        padding: 0;
-        background-color: #313232;
-      }
+  width: 50%;
+  float: left;
+  margin: 0 0 0 0;
+  padding: 0;
+  background-color: #313232;
+}
 
-      #navLeft ul, #navRight ul {
-        list-style: none;
-        margin: 0;
-        padding: 0; 
-      }
+#navLeft ul, #navRight ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
 
-      #navLeft li, #navRight li {
-        float: right;
-        display: inline;
-      }
+#navLeft li, #navRight li {
+  float: right;
+  display: inline;
+}
 
-      #navLeft li {
-        float: left;
-        display: inline;
-      }
+#navLeft li {
+  float: left;
+  display: inline;
+}
 
-      #navLeft li a, #navRight li a {
-        display: block;
-        padding: 8px 15px;
-        text-decoration: none;
-      }
+#navLeft li a, #navRight li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+}
 
+#intro_sec {
+  margin-top: 50px;
+  padding-right: 40px;
+  padding-left: 70px;
 }
 
 </style>
 
 <head>
     <title>Data Science Statistics</title>
-    <link rel="stylesheet" href = "//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/slate/bootstrap.min.css">
+    <link rel="stylesheet" href = "//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/darkly/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 
@@ -63,30 +91,33 @@ h1, h2, h3, h4, h5, h6, p {
     <ul>
       <li><a href="index">Data Science Online Master</a></li>
       <li><a href="network">Detailed Exploration</a></li>
-      <li><a href="#news">Statistical Analysis</a></li>
+      <li><a href="statistics">Statistical Analysis</a></li>
     </ul>
   </div>
   <div id="navRight">
     <ul>
-      <!-- <li class="right"><a href="#about">About</a></li> -->
       <li class="right"><a href="contact">Contact Us</a></li>
       <li><a href="acknowledgment">Special Thanks</a></li>
-      <!-- <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="datajourney"></a></li> -->
     </ul>
   </div>
 </nav>
 
 
 <div id="Intro section">
-    <div class="row">
-      <div class="col-md-3 buffer"></div>
-      <div class="col-md-6" id="intro_sec">
-        <h1 class="text-center">Bayesian Analysis of Studying<br></h1>
-        <h4 class="text-center">Bayesian statistical analysis of our working patterns during the 6 months<br></br><br></h4>
-        <div class="text-justify">As a demonstration of the application of bayesian statistical analysis we attempt to answer the question, did our working habits change over the 6 months of studying.</br></br>This exercise borrows heavily from analysis to be found in the excellent book <a href='https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers'>Bayesian Analysis for Hackers </a>, so credit where credit is due</br></br>
-        </div>
-      </div>
-      <div class="col-md-3 buffer"></div>
+  <div class="row">
+    <div class="col-md-8 buffer"></div>
+    <div class="col-md-4" id="intro_sec">
+      <h1 class="text-center">Bayesian Analysis of Study Pattern<br></h1>
+      <h4 class="text-center">Statistical analysis of our working hours during the 6 months of online learning<br></br><br></h4>
+      <div class="text-justify">As a demonstration of the application of bayesian statistical analysis we attempt to answer the following question. </br><h2 class="text-center"><small>Did our working habits change over the 6 months of studying ?</h2></small>
+      <small></br></br>This exercise borrows heavily from analysis to be found in the excellent book <a href='https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers'>Bayesian Analysis for Hackers</a>, so credit where credit is due. Thank you.</small></br></br></div>
+      <svg>
+        <g transform="translate(150,30)">
+          <text x="2" y="5" fill="#eee" font-size="12">next</text>
+          <path d = "M8.048,10.043c-2,0-2.589,2.014-1.457,3.143l8.098,8.235c0.746,0.746,1.956,0.785,2.7,0.037l8.1-8.154  c1.016-1.018,0.568-3.261-1.433-3.261C21.952,10.043,9.646,10.043,8.048,10.043z">
+        </g>
+      </svg>
+    </div>
   </div>
 </div>
 
