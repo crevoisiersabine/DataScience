@@ -7,7 +7,6 @@ html {
   }
 
 body {
-  background-image: url("./distimg.jpg");
   background-size: 900px auto;
   background-repeat: no-repeat;
   background-position: left; 
@@ -66,6 +65,24 @@ a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
+/*-------------------------------------------------------------------*/
+
+#Main_section {
+  margin-top: 60px;
+}
+
+.Story1::first-letter {
+  color: #222;
+  font-size: xx-large;
+  background-color: #eee;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-left: -5px;
+  margin-right: 5px;
+}
+
+
+
 </style>
 
 <head>
@@ -96,6 +113,47 @@ a:hover, a:active, a:focus {
   </div>
 </nav>
 
+<div id="Main_section">
+  <div class="row headline1">
+    <div class="col-md-2 buffer"></div>
+    <div class="col-md-8 buffer">
+      <div class="text-justify Story1">As a demonstration of the application of bayesian statistical analysis we attempt to answer the following question. </br><h2 class="text-center"><small>Did our working habits change over the 6 months of studying ?</h2></small>
+      </div><br>
+      In order to answer this question we create a model where our working hours each day are random variables drawn from a distribution. Therefore the above question can now be re-phrased as, does the distribution from which the hours worked are taken, change significantly over the 6 months of studying. The approach taken is common to many Bayesian problems and involves first defining our prior belief of what these distributions might be, then updating this belief based upon our dataset. Often it is extremely difficult or not possible to arrive at a mathematically precise description of our posterior distribution (the distribution once the data has been accounted for), however using MCMC simulations we can explore this posterior distribution and gain an understanding of its most important regions. This page cannot fully cover the methods of Bayesian Statistics but please refer to the accompanying ipython notebook and excellent starting point <a href='https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers'> Bayesian Methods for Hackers </a> for further details.
+      
+      <br>
+      Below is our daily data on total hours worked, it is this from this data that we will try to infer if there has been a change at some point in the number of hours we work:
+      <br><br>
+      <div align="middle"><img src="Hourly_worked.jpg" width = "600" height= "auto"></div>
+      <h5 align="middle"><font color='#909090'>Figure 1: Hours Worked over 6 months</font></h5>
+      <br>
+      We model the hours data as a Poisson distribution with parameter lambda; this makes sense as Poisson distribution deals with discrete count data. The rate parameter is what we believe may have changed during this period, possibly getting lower as some point in time.
+
+      We do not know exactly when or whether this happened nor what value lambda takes however as it is a positive real number, a good choice of model is an exponential distribution with hyper-parameter alpha. Alpha is chosen to be the inverse of the average value of the hours worked, as a prior.
+
+      The point(s) where we believe a shift in study behaviour has occurred is defined by tau. Within the dataset where we have kept all days, we define three uniform time distributions covering specific periods where we believe a different study dynamic may have been established; within each we search for a switch point. Within the second dataset, where days with less than 3h worked have been removed, we expect the shift in behaviour to happen within the main body of the study and therefore omit the first and last few days for the time period of the uniform distribution from which we pick the tau variable.
+      <br>
+      Below are the posterior distributions from our MCMC simulation. On the left hand side are our distributions of lamda <em>(poisson hyperparameter)</em> and on the right is our tau distribution of the change point:
+      <br>
+      <br>
+      <div align="middle"><img src="Posterior_dist.jpg" width = "600" height= "auto"></div>
+      <h5 align="middle"><font color='#909090'>Figure 2: Posterior distributions of lambda and tau parameters</font></h5>
+      <br> 
+      A simple approach to inference is to consider the most probable range of parameter values using the parameter's posterior distribution. Below are the Highest Posterior Density (HPD) regions for the lambda parameters of our poisson distribution, the HPD in this case defines the region within which we have a 95% probability of the true value existing:
+      <br>
+      <br>
+      <div align="middle"><img src="HPD_Regions.jpg" width = "600" height= "auto"></div>
+      <h5 align="middle"><font color='#909090'>Figure 3: Highest Posterior Density regions</font></h5>
+      We can clearly see that the analysis has identified the holiday period, highlighted in green, where an estimated 0-1h of studying has been carried out each day.
+
+      The time period directly preceding and directly following the holiday period, shown in the red and purple colours aren't very distinct in hours worked and their distributions largely overlap. This seems to indicate there isn't a large change in studying behaviour between these two periods.
+
+      However there seems to be a change in behaviour that gets established as shown by the blue distribution. The tau_c variable suggests that the most likely day for this change happened around day 75. Prior to day 75, outside of the holiday period, we seemed to be working around 7h days, whereas from day 75 onwards, we seemed to work around 5h days; this is an average and as this dataset includes holidays is probably an overstated hour drop.
+      <br>
+    </div>
+    <div class="col-md-2 buffer"></div>
+  </div>
+</div>
 
 
 </body>

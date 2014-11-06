@@ -72,6 +72,25 @@ a:hover, a:active, a:focus {
   padding-left: 70px;
 }
 
+/*-------------------------------------------------------------------*/
+
+.headline2{
+  border-bottom: solid;
+  border-top: solid;
+  border-left: none;
+  border-right: none;
+  border-width: 1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 10px;
+  border-collapse:separate;
+}
+
+.headline1 {
+  margin-top: 100px;
+}
+
+
 </style>
 
 <head>
@@ -104,13 +123,16 @@ a:hover, a:active, a:focus {
 
 
 <div id="Intro section">
-  <div class="row">
+  <div class="row headline1">
     <div class="col-md-8 buffer"></div>
     <div class="col-md-4" id="intro_sec">
       <h1 class="text-center">Bayesian Analysis of Study Pattern<br></h1>
-      <h4 class="text-center">Statistical analysis of our working hours during the 6 months of online learning<br></br><br></h4>
-      <div class="text-justify">As a demonstration of the application of bayesian statistical analysis we attempt to answer the following question. </br><h2 class="text-center"><small>Did our working habits change over the 6 months of studying ?</h2></small>
-      <small></br></br>This exercise borrows heavily from analysis to be found in the excellent book <a href='https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers'>Bayesian Analysis for Hackers</a>, so credit where credit is due. Thank you.</small></br></br></div>
+      <div>
+        <h4 class="text-center row headline2">Statistical analysis of our working hours during the 6 months of online learning<br></br></h4>
+      </div>
+
+      <small><br><br><br>This exercise borrows heavily from analysis to be found in the excellent book <a href='https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers'>Bayesian Analysis for Hackers</a>, so credit where credit is due. Thank you.</small></br></br>
+
       <svg>
         <g transform="translate(150,30)">
           <text x="2" y="5" fill="#eee" font-size="12">next</text>
@@ -121,7 +143,11 @@ a:hover, a:active, a:focus {
   </div>
 </div>
 
-
+<script>
+  $('svg').click(function(){
+   window.location.href='/statstory.html';
+})
+</script>
 
 </body>
 
