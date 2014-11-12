@@ -123,14 +123,76 @@ a:hover, a:active, a:focus {
   <div class="row headline1">
     <div class="col-md-2 buffer"></div>
     <div class="col-md-8 buffer">
-      <div class="text-justify Story1">As a demonstration of the application of bayesian statistical analysis we attempt to answer the following question. </br><h2 class="text-center"><small>Did our working habits change over the 6 months of studying ?</h2></small>
-      </div><br>
-      In order to answer this question we model our working hours each day as random variables drawn from a distribution. The above question can therefore be re-phrased as: does the distribution change significantly over the 6 months of studying. In order to answer this, we attempt to fit a number of different distributions to the dataset, aligned with our belief that at certain points during the 6 months, the distribution changes. 
+      <h3 class="text-center">Avazu Click Through Rate Competition</h3><br>
+      <div class="text-justify Story1">
+      This was our first Kaggle competition and first application of machine learning to what might be considered a 'Big Data' problem, with ~47 million training examples. The competition supplied 11 days of Avazu online advertising data in order to predict click through rates.
+      <div><br><ul style="list-style-type:disc">
+        <li>Models were scored on their ability to minimise of the <a class="page" href='https://www.kaggle.com/wiki/LogarithmicLoss'> Log Loss </a> function on a held-out test dataset</li>
+        <li>Our initial model submission had an average log loss on the test dataset of <b>0.5641370</b></li>
+        <li>After tuning we obtained a log loss error of ?????????</li>
+      </ul></div>
+      <h4><small><font color='#909090'>As ever we would like to thank the <a class="page" href='https://github.com/JohnLangford/vowpal_wabbit/wiki'> Vowpal Wabbit project </a> for an amazing software and <a class="page" href='https://www.kaggle.com/'> Kaggle </a> for creating their data science community</font></small></h4>
+
+      <h2 class="text-left"><small>Big Data Challenges</small></h2>
+      This dataset was too large to be read into computer memory and complex modelling on it was proving to very computationally expensive. In the exploratory analysis below, we discuss the issues in working within ipython notebook, and a more detailed version as well as the code can be accessed on the <a class="page" href="http://nbviewer.ipython.org/github/fraser-campbell/Machine-Learning-Projects/blob/master/Machine-Learning-Projects/Avazu/Avazu%20Click%20Through%20Rate.ipynb">ipython notebook</a> itself.<br>
+      Due to the difficulty that we experienced with loading the datased, our only option for working on our local machine appeared to be statistically modelling a sub-sample of the dataset.
       <br><br>
-      This approach is common to many Bayesian problems and involves first defining our prior belief then updating it based upon our dataset. Often it is extremely difficult or not possible to arrive at a mathematically precise description of the posterior distribution (the distribution once the data has been accounted for), however using MCMC (Monte Carlo Markov Chain) simulations we can explore this posterior distribution and gain an understanding of its most important regions.
-      <br><br> This page cannot fully cover the methods of Bayesian Statistics but please refer to the accompanying <a class="page" href="http://nbviewer.ipython.org/github/crevoisiersabine/DataScience/blob/gh-pages/Bayesian%20Course%20Analysis.ipynb"> ipython notebook</a> and excellent starting point <a class="page" href='https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers'> Bayesian Methods for Hackers </a> for further details.
-      <br><br>
-      Below is our daily data on total hours worked. It is this from this data that we will try to infer if there has been a change at some point in the number of hours worked.
+      This led us to consider three alternative options:
+      <div><br><ul style="list-style-type:disc">
+        <li>Sampling and Statistical Analysis</li>
+        <li>Online Learners <em>(Chosen)</em></li>
+        <li>Parallelisation</li>
+      </ul></div>
+
+      <h2 class="text-left"><small>Exploratory Analysis</small></h2>
+      Reading the data in by line to ipython notebook took ~ 1 min for 5000 lines. However from these inital lines we were able to explore the form of the data. Plotted below is a histogram of the unique values for each category, alongside a line chart of the percentage of clicks for each unique value. This seeks to explore:
+      <h4 class="text-center"><small><font color='#909090'>How many features within each category? <br> Do any features seem to have patterns of click / non-click?</font></small></h4>
+      <div class ="imageContainers" align="middle"><img src="image_to_include" width = "600" height= "auto"></div>
+      <h5 align="middle"><font color='#909090'>Figure 1: Category Exploration of Features</font></h5>
+      <br>
+      Some categories appear to have a very high number of unique values, which suggests the vales may be unique to a small number of training examples and could be a candidate for removal to reduce feaures, as they do not include generalisable information. In terms of click distribution the 1000 row data sample is not very informative about the full dataset. In order to potentially reduce the number of features we then explored the growth of the feature space on considering incrementally more data to answer the question.
+      <h4 class="text-center"><small><font color='#909090'>Do some features scale approximately with the dataset?</font></small></h4>
+      <div class ="imageContainers" align="middle"><img src="image_to_include" width = "600" height= "auto"></div>
+      <h5 align="middle"><font color='#909090'>Figure 2: Growth of Features</font></h5>
+      <br>
+      At this stage we experimented with fitting Naive Bayes and Logistic Regression Models to 5000 example subsets of the data. The details can be found in the <a class="page" href='https://give_it'> python notebook </a> but in summary, as would be expected the model was massivey overfit due to too many features for the number of training examples. Both models ended up predicting exclusively no clicks as this maximised the accuracy. To proceed we needed to consider an online learner that could handle the data size.
+      <br>
+
+      </br><h2 class="text-left"><small>Vowpal Wabbit Online Learner</small></h2>
+      <a class="page" href="http://hunch.net/~vw/">Vowpal Wabbit </a> is a large scale online learner, designed for learning from large datsets as it only reads a fraction of training examples into memory at any point. It seems highly suited for this example as it can accomodate models becoming out-dated, dealing with divergence of distributions over time and unbounded features (you may constantly collect new categorical feature values). We found the <a class="page" href='http://mlwave.com/predicting-click-through-rates-with-online-machine-learning/'> ML Wave blog </a> to be a great introduction to using Vowpal Wabbit in Kaggle competitions.
+      <br>
+      We initially ran a Vowpal Wabbit logistic regression model. We were able to specfy the loss function to be log loss (--logistic loss) and achieved a log loss on the test sample upon submission to Kaggle of <b>0.5641370</b>
+      <br>
+
+      </br><h2 class="text-left"><small>Model Analysis & Debugging</small></h2>
+      Vowpal Wabbit has the option to output the average loss to terminal while training, as an aide to debugging. In our above model the loss was seen to decrease with training as expected, but it had a 'bump' after which it increased. This could be due to the model overtraining to some aspect of the data which is more prevalent in the training examples initially, or perhaps the model training rate. We postulated that the cause could be seasonality in the data and training to a particular day of the week and therefor tried to randomly shuffle the dataset.
+      <br>
+      Due to the file size shuffling locally with python was not succesfull and neither was an attempted AWS MAP Reduce job on the dataset, due to file upload limitations. We therefore used a very naive shuffling by splitting the data into large chunks and then recombing these.
+      <br>
+      Finally we considered whether feature reduction might be possible to reduce computation time and potentially allow for more complex learning methods. Using the <em>vw--varinfo</em> option in Vowpal Wabbit you can analyse the weightings given to different features within the trained models. We plotted histograms of feature weightings in order to explore the question:
+      <h4 class="text-center"><small><font color='#909090'>How are the model features weighted within each category</font></small></h4>
+      <div class ="imageContainers" align="middle"><img src="image_to_include" width = "600" height= "auto"></div>
+      <h5 align="middle"><font color='#909090'>Figure 3: Feature Weighting</font></h5>
+
+      <h2 class="text-left"><small>Model Tuning</small></h2>
+      We explored a number of options to tune the parameters and reduce the log loss:
+      <div><br><ul style="list-style-type:disc">
+        <li><b>Hyperparameters:</b> We used the <em> vw--varinfo </em> command to train the model on a range of hyperparameters and record how the validation error changes. We consider both the training rate and l1 regularisation. The validation error is not seen to change significantly which suggests that the default parameters are reasonably good choices, and there is unlikely to be significant improvements from optimisation.</li>
+        <li><b>Bootstrapping:</b> Using  the <em> --bs </em>  option we bootstrap our model my taking the average parameters from 10 seperate models, this will hopefully help our model to generalise</li>
+        <li><b>Multiple passes:</b> By making multiple passes over the data we hope to avoid overfitting our model to one portion of the dataset. We also used the option <em> --early_terminate</em> to stop the passes early if we observed the validation error consistently increasing and therefore 'overfitting' occuring</li>
+      </ul></div>
+      The result of all these optimisations was a Log Loss error of our model on the test set of <b>0.5641370</b>
+      <br>
+
+      </br><h2 class="text-left"><small>Next Steps</small></h2>
+      Several options exist for further model improvement which we would like to apply in future competitions:
+      <div><br><ul style="list-style-type:disc">
+        <li>Combining featires to look at cross-terms. Due to the already large feature space care must be taken!</li>
+        <li>Trying non-linear models, again due to the large dataset this has computational issues</li>
+        <li>Ensemble learning methods, this appears to be a very common approach to improve models in Kaggle competitions</li>
+      </ul></div>
+      In conclusion Kaggle appears to be an excellent place for accessing datasets and practising applying machine learning algorithms. For ourselves though, as we look to understand how to tailor and improve upon algorithms, perhaps Kaggle's best feature is its community and experts who are sharing their code and approaches as we learn to solve industry problems together.
+
       <br><br>
     </div>
   </div>
