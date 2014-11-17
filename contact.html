@@ -3,10 +3,11 @@
 <style>
 
 div {
-  margin-top: 15px;
-/*  text-align: justify;*/
+  margin-top: 10px;
+  /*text-align: justify;*/
   font-family: verdana;
   font-size: 12px;
+  padding-left: 10px;
 }
 
 h4, span {
@@ -14,6 +15,46 @@ h4, span {
   text-rendering: auto;
   vertical-align: middle;
   font-family: verdana;
+}
+
+.circle {
+  display: inline-block;
+  width:30px;
+  height:30px;
+  border-radius:15px; 
+  text-align:center;
+  background: #eee;
+}
+.circle:hover{
+  border:2px double #bbb;
+  color:#eee;
+  text-decoration:none;
+  background: steelblue;
+}
+
+a:hover, a:active, a:focus {
+  color: #222 !important;
+  background-color: #eee;
+  text-decoration: none !important;
+}
+
+.intro {
+  padding-left: 20px;
+}
+
+.introTOP {
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+.projects {
+  padding-left: 20px;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.stick {
+  margin-top: 0px;
 }
 
 /*--------------CSS------------------------NAVBAR CSS---------------------------------------------------------*/
@@ -92,40 +133,69 @@ h4, span {
 
 <div class="vertical-container container-fluid">
   <div class="row row-sm-padding"> <!-- Using new flex containers -->
-<!--     <div class="col-md-3">
-    </div>  -->
     <div class="col-md-4">
-      <address>
-        <h4><strong>Sabine Crevoisier</strong></h4>
-        Some text about who you are, what you have done before and what you want to do in the future
-        <br></br>
-        Education: <br>MSc Physics Cambridge University <br></br>
-        Employment: <br>Petroleum Engineer - BP (2010 - 2014)</br> Data Scientist - Tictrac 2014
-        <br></br>
-        LinkedIn: <span><a href="https://www.linkedin.com/pub/sabine-crevoisier/78/b49/1">LinkedIn Sabine</a></span><br>
-        Github: <span><a href="https://github.com/crevoisiersabine">Github / crevoisiersabine</a></span><br>
-      </address>
-      <a href="https://twitter.com/datajourney" class="twitter-follow-button" data-show-count="false">Follow @datajourney</a>
+      <div class="row introTOP"> 
+        Thanks for visiting. If you want to find out more or work with us, please get in touch.<br><br>
+        <div>
+          <a href="https://twitter.com/datajourney" class="twitter-follow-button" data-show-count="false">Follow @datajourney</a>
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="col-md-6">
+          <address>
+            <h4><strong>Sabine Crevoisier</strong></h4>
+            I am just a scientist who works with data. I enjoy predicting the unknown, I love to code, and I like creating pretty things. In the past, as an engineer, I have modelled reservoirs and fluids; recently I worked with a quntified self startup, interpreting people's usage data. When not on my Mac, I'm learning new languages, eating something that's 'the best', or camping.
+            <!-- Education: <br>MSc Physics Cambridge University <br></br> -->
+            <!-- Employment: <br>Petroleum Engineer - BP (2010 - 2014)</br> Data Scientist - Tictrac 2014 -->
+            <br></br>
+            <span><a href="https://www.linkedin.com/pub/sabine-crevoisier/78/b49/1">LinkedIn Sabine</a></span><br>
+            <span><a href="https://github.com/crevoisiersabine">Github / crevoisiersabine</a></span><br>
+          </address>
+        </div>
+        <div class="col-md-6">
+          <address>
+            <h4><strong>Fraser Campbell</strong></h4>
+            I'm a Data Scientist interested in both Machine Learning and Visualisation. When not working I should be climbing outdoors but will definitely be craving a 'flat white'. Previously I worked as an Analytics Consultant modelling business problems; more recently I've been training computers to learn about human emotions with the exciting start-up <a href="https://www.crowdemotion.co.uk">CrowdEmotion.</a>
+            <br><br>
+            <!-- Education: <br>MSc Physics Cambridge University <br></br> -->
+            <!-- Employment: <br>Analytics Consultant - Price WaterHouse Coopers (2010 - 2014)</br>Data Scientist - CrowdEmotion 2014 -->
+            <span><a href="https://www.linkedin.com/in/frasercampbellcrowdemotion">LinkedIn Fraser</a></span><br>
+            <span><a href="https://github.com/fraser-campbell">Github / fraser-campbell</a></span><br>
+          </address>
+        </div>
+      </div>
+      <div class="row intro">
+        Machine Learning Projects:
+        <span class="projects"><a class="circle project1" href="vowpal_wabbit"></a></span>
+        <span class="projects"><a class="circle project2" href="bike_share"></a></span>
+      </div>
+      <div class="row intro">
+        <h4 class="stick"><small><font class="projTitle" color='steelblue'></font></small></h4>
+      </div>
     </div>
-    <div class="col-md-4">
-      <address>
-        <h4><strong>Fraser Campbell</strong></h4>
-        I'm a Data Scientist interested in both Machine Learning and Visualisation. When not working I should be climbing outdoors but will definitely be craving a 'flat white'. Prevously I worked as an Analytics Consultant modelling business problems for FTSE 100 companies; more recently have been training computers to learn about human emotions with the exciting start-up <a href="https://www.crowdemotion.co.uk"> CrowdEmotion </a>
-        <br></br>
-        Education: <br>MSc Physics Cambridge University <br></br>
-        Employment: <br>Analytics Consultant - Price WaterHouse Coopers (2010 - 2014)</br>Data Scientist - CrowdEmotion 2014
-        <br></br>
-        LinkedIn, <span><a href="https://www.linkedin.com/in/frasercampbellcrowdemotion">LinkedIn Fraser</a></span><br>
-        Github, <span><a href="https://github.com/fraser-campbell">Github / fraser-campbell</a></span><br>
-      </address>
-      <a href="https://twitter.com/datajourney" class="twitter-follow-button" data-show-count="false">Follow @datajourney</a>
-    </div>
-    <div class="col-md-4">
+    <div class="col-md-8 introTOP">
+      <img height = "540" src="contact.jpg"></img>
+      <h5><small>Photo Credit of Tee, <a href="https://www.facebook.com/graphcafe">Graph Cafe</a></h5></small>
     </div>
   </div>
 </div><!-- /.container-fluid -->
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script>
+  $(".circle").mouseover(function(){
+    projNum = ($(this)[0].className).substring(($(this)[0].className).length-1, ($(this)[0].className).length);
+    if(projNum == 1){
+      $(".projTitle").text("Avazu Click-Through Rate Prediction")
+    }
+    else{
+      $(".projTitle").text("Bike Sharing Demand")
+    }
+  })
+  $(".circle").mouseout(function(){
+    $(".projTitle").text("");
+  })
+</script>
 
 </body>
 </html>
