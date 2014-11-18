@@ -397,7 +397,7 @@ $(document).ready(function(){
 
     var time_funcs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
         timer = 0;
-    var delays = [3000, 2000, 4000, 4000, 4000, 2000, 2000, 3000, 3000, 1000] //Change the opacity of the last circle
+    var delays = [2500, 2000, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 1000] //Change the opacity of the last circle
     //Check if FF button has been clicked, if so, stop all transitions
     var FFclicked;
 
@@ -556,9 +556,9 @@ $(document).ready(function(){
     // First transition the bars
     d3.selectAll("g").selectAll("#bucket" + bucket_number + " rect")
       .transition()
-      .duration(100)
+      .duration(30)
       .delay(function(d, i){
-        return x(d.date) * 30 + i * 30;
+        return x(d.date) * 15 + i * 15;
       })
         .style('opacity', 1)
         .attr("class", function(){
