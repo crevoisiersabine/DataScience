@@ -242,9 +242,9 @@ d3.tsv("study_data.tsv", function(data) {
         
         //Programming contribution
         d3.select("#gradPython").selectAll(".notYet")
-          .attr("offset", "87%");
+          .attr("offset", "94%");
         d3.select("#gradPython").selectAll(".inProgressStart")
-          .attr("offset", "87%");
+          .attr("offset", "94%");
         d3.select("#gradPython").selectAll(".inProgressEnd")
           .attr("offset", "100%");
         d3.select("#gradPython").selectAll(".complete")
@@ -271,9 +271,9 @@ d3.tsv("study_data.tsv", function(data) {
         d3.select("#gradPython").selectAll(".inProgressStart")
           .attr("offset", "0%");
         d3.select("#gradPython").selectAll(".inProgressEnd")
-          .attr("offset", "87%");
+          .attr("offset", "94%");
         d3.select("#gradPython").selectAll(".complete")
-          .attr("offset", "87%");
+          .attr("offset", "94%");
         d3.select(".python")
           .style('fill', "url(#gradPython)");
 
