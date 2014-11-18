@@ -57,9 +57,9 @@ a:hover, a:active, a:focus {
   text-decoration: none;
 }
 /*-------------------------------------------------------------------*/
-#Main_section {
+/*#Main_section {
   margin-top: 60px;
-}
+}*/
 .Story1::first-letter {
   color: #222;
   font-size: xx-large;
@@ -185,11 +185,11 @@ a:hover, a:active, a:focus {
 <script type="text/javascript">
   //Ensure body always stays below the nav-bar
   $(window).resize(function () { 
-    $('body').css('padding-top', parseInt($('#navLeft').css("height"))+15);
+    $('body').css('padding-top', parseInt($('#navLeft').css("height")));
   });
 
   $(window).load(function () { 
-      $('body').css('padding-top', parseInt($('#navLeft').css("height"))+15);        
+      $('body').css('padding-top', parseInt($('#navLeft').css("height")));        
   });
 </script>
 
