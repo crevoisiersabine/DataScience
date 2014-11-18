@@ -742,4 +742,14 @@ transform: rotate(900deg);
 
     });
   </script>
+  <script type="text/javascript">
+    //Ensure body always stays below the nav-bar
+  $(window).resize(function () { 
+    $('body').css('padding-top', parseInt($('#navLeft').css("height"))+15);
+  });
+
+  $(window).load(function () { 
+      $('body').css('padding-top', parseInt($('#navLeft').css("height"))+15);        
+  });
+</script>
 </html>

@@ -181,5 +181,16 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </div><!-- /.container-fluid -->
 
+<script type="text/javascript">
+  //Ensure body always stays below the nav-bar
+  $(window).resize(function () { 
+    $('body').css('padding-top', parseInt($('#navLeft').css("height"))+15);
+  });
+
+  $(window).load(function () { 
+      $('body').css('padding-top', parseInt($('#navLeft').css("height"))+15);        
+  });
+</script>
+
 </body>
 </html>

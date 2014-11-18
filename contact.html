@@ -3,7 +3,6 @@
 <style>
 
 div {
-  margin-top: 10px;
   /*text-align: justify;*/
   font-family: verdana;
   font-size: 12px;
@@ -43,7 +42,6 @@ a:hover, a:active, a:focus {
 }
 
 .introTOP {
-  padding-top: 15px;
   padding-left: 20px;
 }
 
@@ -144,7 +142,7 @@ a:hover, a:active, a:focus {
         <div class="col-md-6">
           <address>
             <h4><strong>Sabine Crevoisier</strong></h4>
-            I am just a scientist who works with data. I enjoy predicting the unknown, I love to code, and I like creating pretty things. In the past, as an engineer, I have modelled reservoirs and fluids; recently I worked with a quntified self startup, interpreting people's usage data. When not on my Mac, I'm learning new languages, eating something that's 'the best', or camping.
+            I am just a scientist who works with data. I enjoy predicting the unknown, I love to code, and I like creating pretty things. In the past, as an engineer, I have modelled reservoirs and fluids; recently I worked with a quantified self startup, interpreting people's usage data. When not on my Mac, I'm learning new languages, eating something that's 'the best', or camping.
             <!-- Education: <br>MSc Physics Cambridge University <br></br> -->
             <!-- Employment: <br>Petroleum Engineer - BP (2010 - 2014)</br> Data Scientist - Tictrac 2014 -->
             <br></br>
@@ -195,6 +193,16 @@ a:hover, a:active, a:focus {
   $(".circle").mouseout(function(){
     $(".projTitle").text("");
   })
+
+  //Ensure body always stays below the nav-bar
+  $(window).resize(function () { 
+    $('body').css('padding-top', parseInt($('#navLeft').css("height"))+15);
+  });
+
+  $(window).load(function () { 
+      $('body').css('padding-top', parseInt($('#navLeft').css("height"))+15);        
+  });
+
 </script>
 
 </body>
