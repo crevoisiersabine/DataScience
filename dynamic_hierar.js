@@ -532,7 +532,7 @@ function ml_sum(counter){
 }
 
 function overall_sum(){
-  d3.select("#story_1").html('This diagram details the hierarchy of topics learnt. The thickness of the links within each layer of the diagram is proportional to the number of hours spent on that particular course or topic.<h4><small>By clicking on a node you can contract or expand the view of a given course. Hovering over a course node reveals a link to the course website. Click on the icon to remove the link.</h4></small>');
+  d3.select("#story_1").html('This diagram shows the chapters from each course that we studied. The thickness of the links within each layer of the diagram is proportional to the number of hours spent on that particular course or topic.<h4><small>By clicking on a node you can contract or expand the view of a given course. Hovering over a course node reveals a link to the course website. Click on the icon to remove the link.</h4></small>');
   
   if (!$('#story_1 .explain').length > 0) { // JQuery method of checking if an element exists - This only runs at beginning
     var circles = d3.select("#story_1").append("svg").attr("class", "explain").attr("height", 200); 
