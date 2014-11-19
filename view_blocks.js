@@ -1,4 +1,5 @@
-$(document).ready(function(){
+function blocks(){
+  $(document).ready(function(){
 
   //Preloader
   $(".windows8").fadeOut();
@@ -505,7 +506,8 @@ $(document).ready(function(){
       //Remove caption div
       d3.select("#caption").remove();
       //Load the data again for previous view
-      LoadMyJs("view_blocks.js");
+      blocks();
+      // LoadMyJs("view_blocks.js");
     }
   });
 
@@ -629,7 +631,7 @@ $(document).ready(function(){
         .style("opacity", 0.5);
     }
     // Then make the caption in-visible
-    d3.select("#caption").html("")
+    d3.select("#caption")
       .style("opacity", 0);
 
     //Enable hovering once everything is loaded
@@ -825,3 +827,4 @@ $(document).ready(function(){
           .transition()
           .remove();
   }
+}

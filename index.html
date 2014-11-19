@@ -12,7 +12,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    
   <style>
 
   html {
@@ -691,14 +690,15 @@ transform: rotate(900deg);
 
 </div>
 </body>
-  <script>
+  <script type="text/javascript" src="./view_blocks.js"></script>
+  <script type="text/javascript">
     var loaded = 0;
-    function LoadMyJs(scriptName) {
-      var imported = document.createElement('script');
-      imported.src = scriptName;
-      imported.setAttribute("id", "loadedJS");
-      document.head.appendChild(imported);
-    }
+    // function LoadMyJs(scriptName) {
+    //   var imported = document.createElement('script');
+    //   imported.src = scriptName;
+    //   imported.setAttribute("id", "loadedJS");
+    //   document.head.appendChild(imported);
+    // }
     var divs = $('.openingText, .openingTextAuthor');
     $(window).scroll(function(){
       //Change the opacity of the background image to fade as other page moves up
@@ -729,7 +729,9 @@ transform: rotate(900deg);
           opacity: 1
         }, 50);
         d3.select(".header .col-md-1 h1 small").text("0");
-        LoadMyJs("view_blocks.js");
+        //Re-run the script
+        blocks();
+        // LoadMyJs("view_blocks.js");
       }
 
       if(distance >= 200){
