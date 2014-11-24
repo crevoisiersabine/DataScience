@@ -111,8 +111,8 @@ a:hover, a:active, a:focus {
       This was our first Kaggle competition and first application of machine learning to what might be considered a 'Big Data' problem, with ~47 million training examples. The competition supplied 11 days of Avazu online advertising data in order to predict click through rates.
       <div><br><ul style="list-style-type:disc">
         <li>Models were scored on their ability to minimise the <a class="page" href='https://www.kaggle.com/wiki/LogarithmicLoss'> Log Loss </a> function on a held-out test dataset</li>
-        <li>Our initial model submission had an average log loss on the test dataset of <b>0.5641370</b></li>
-        <li>After tuning we obtained a log loss error of ?????????</li>
+        <li>Our initial model submission had an average log loss on the test dataset of <b>0.44185</b></li>
+        <li>After tuning we obtained a log loss error of <b>0.39870</b></li>
       </ul></div>
       <h4><small><font color='#909090'>We would like to thank the <a class="page" href='https://github.com/JohnLangford/vowpal_wabbit/wiki'> Vowpal Wabbit project </a> for an amazing software and <a class="page" href='https://www.kaggle.com/'> Kaggle </a> for creating their data science community</font></small></h4>
 
@@ -165,14 +165,14 @@ a:hover, a:active, a:focus {
     <div class="col-md-2 buffer"></div>
     <div class="col-md-8 buffer">
       <h5 align="middle"><font color='#909090'>Figure 2: Growth of Features</font></h5>
-      From the above plots we can see that a few of the categories seem to scale with the size of the dataset. Particularly "device_id" and "device_ip" grow linearly with the number of examples and therefore decided to remove tehm from our features when training the model.
+      From the above plots we can see that a few of the categories seem to scale with the size of the dataset. Particularly "device_id" and "device_ip" grow linearly with the number of examples and therefore decided to remove them from our features when training the model.
       <br><br>
       At this stage we experimented with fitting Naive Bayes and Logistic Regression Models to 5000 example subsets of the data. The details can be found in the <a class="page" href='http://nbviewer.ipython.org/github/fraser-campbell/Machine-Learning-Projects/blob/master/Machine-Learning-Projects/Avazu/Avazu%20Click%20Through%20Rate.ipynb'> python notebook </a> but in summary, as would be expected, the model was massivey overfit due to using too many features for the number of training examples. Both models ended up predicting exclusively no clicks as this maximised the accuracy. To proceed, we needed to consider an online learner that could handle the data size.
 
       </br><h2 class="text-left"><small>Vowpal Wabbit Online Learner</small></h2>
       <a class="page" href="http://hunch.net/~vw/">Vowpal Wabbit </a> is a large scale online learner, designed for learning from large datsets as it only reads a fraction of training examples into memory at any point. It seems highly suited for this example as it can accomodate models becoming out-dated, dealing with divergence of distributions over time and unbounded features (you may constantly collect new categorical feature values). We found the <a class="page" href='http://mlwave.com/predicting-click-through-rates-with-online-machine-learning/'> ML Wave blog </a> to be a great introduction to using Vowpal Wabbit in Kaggle competitions.
       <br>
-      We initially ran a Vowpal Wabbit logistic regression model. We were able to specfy the loss function to be log loss (--logistic loss) and achieved a log loss on the test sample upon submission to Kaggle of 0.5641370.
+      We initially ran a Vowpal Wabbit logistic regression model. We were able to specfy the loss function to be log loss (--logistic loss) and achieved a log loss on the test sample upon submission to Kaggle of 0.44185.
       (Note smaller is better).
 
       </br><h2 class="text-left"><small>Model Tuning & Debugging</small></h2>
@@ -185,7 +185,9 @@ a:hover, a:active, a:focus {
       <h5 align="middle"><font color='#909090'>Figure 3: Log loss versus number of training examples</font></h5>
       <br>
       The above plot shows that even with bootstrapping and running multiple passes, we observe the 'bump' showing increase in log loss error before stabilisation; this seems to indicate that the data would still benefit from being shuffled and probably suffers from some seasonality effects. However the 'bump' has been reduced so there seems to have been some advantage to running bootstrap and multiple passes.
-      <br><br><br>
+      <br><br>
+      On submission of the model trained using bootstrap and multiple passes, we saw that multiple passes helped redue the log error but that in fact bootstap made it slightly worse; we think this is possibly due to bootstrapping causing overfit.
+      <br><br>
       We also considered whether feature reduction might be possible to lower computation time and potentially allow for more complex learning methods. Using the <em>vw--varinfo</em> option in Vowpal Wabbit we analysed the weightings given to different features within the trained models. We plotted histograms of feature weightings in order to explore the question:
       <li>How are the model features weighted within each category</li>
       <br>
@@ -204,9 +206,10 @@ a:hover, a:active, a:focus {
     <div class="col-md-8 buffer">
       <h5 align="middle"><font color='#909090'>Figure 3: Feature Weighting</font></h5>
 
-      <br>We also explored a number of options to tune the parameters to reduce the log loss. We used the <em> vw-hypersearch </em> command to train the model on a range of hyperparameters and record how the validation error changes. We consider both the learning rate and l1 regularisation. The validation error is not seen to change significantly which suggests that the default parameters are reasonably good choices, and there is unlikely to be significant improvements from optimisation.</li>
+      <br>We also explored a number of options to tune the parameters to reduce the log loss. We used the <em> vw-hypersearch </em> command to train the model on a range of hyperparameters and record how the validation error changes. We consider both the learning rate and l1 regularisation.<br>
+      The suggested parameter for the learning rate was 4.5, which is relatively high compared to the default of 0.5. Using 4.5 when training the model, we get a worse log error rate on prediction of the test data. This seems to suggest that perhaps the learning parameter optimisation 'got stuck' in a local minimum. The optimised parameter l1 was very close to the default value of zero, so in the end, for our best model we opted for the default parameters.</br>
 
-      </br><h2 class="text-left"><small>Next Steps</small></h2>
+      <h2 class="text-left"><small>Next Steps</small></h2>
       Several options exist for further model improvement which we would like to apply in future competitions:
       <div><br><ul style="list-style-type:disc">
         <li>Combining features to look at cross-terms. Due to the already large feature space, care must be taken!</li>
