@@ -16,6 +16,8 @@ function blocks(){
   //Ordinal x axis scale for dates
   var x = d3.time.scale()
       .range([0, width]);
+  var x2 = d3.time.scale()
+      .range([0, width]);
   var xAxis = d3.svg.axis()
       .scale(x)
       .orient("bottom")
@@ -699,7 +701,7 @@ function blocks(){
     //Make the svg smaller to use as context for the next plot
     d3.selectAll("svg").transition().duration(1000).ease("cubic")
       .attr("height", 100)
-      .attr("width", 750 - margin.left - margin.right);
+      .attr("width", 700 - margin.left - margin.right);
     //Remove the svg with the legend
     d3.selectAll("svg").forEach(function(d){
       d.forEach(function(k, index){
@@ -738,24 +740,25 @@ function blocks(){
       //Reset the hour counter
       d3.select(".header .col-md-1 h1 small").text("0");
       //Load the data again for previous view
-      LoadMyJs("view_blocks.js");
+      blocks();
+      // LoadMyJs("view_blocks.js");
     })
   }
 
   function focusAndBrush() {
     var height = 350 - margin.bottom - margin.top;
+    var width = 700 - margin.left - margin.right;
     var svg = d3.select("#area1").select("svg");
-    var x2 = x;
-    var width = 750 - margin.left - margin.right;
+    x.range([0, width]);
+    x2.domain(x.domain());
 
     var brush = d3.svg.brush()
-      .x(x)
+      .x(x2)
       .on("brush", brushed);
 
     var area = d3.svg.area()
       .interpolate("basis")   
-      .x(function(d) { 
-      return x(d.date) + 1; }) //1 pixel shift to avoid ovverwriting the y-axis
+      .x(function(d) { return x(d.date) + 1; }) //1 pixel shift to avoid ovverwriting the y-axis
       .y0(height)
       .y1(function(d) { return y(d.hour); });
 

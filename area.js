@@ -181,6 +181,7 @@ d3.tsv("study_data.tsv", function(data) {
 // -------------------------------------------------------------------------------------------------------
     //Functions
     function Highlight(d) {
+
       //Gray out all courses except the one hovered over
       svg.selectAll(".area")
         .style("fill", "#c7c7c7");
@@ -335,6 +336,7 @@ d3.tsv("study_data.tsv", function(data) {
     }
 
     function UnHighlight(d) {
+
       //Restore the original order
         svg.selectAll(".course").sort(function(a, b) {
           if (a.name > b.name) {
@@ -409,7 +411,6 @@ d3.tsv("study_data.tsv", function(data) {
 
         //On mouseout, return to previous colours
         svg.selectAll(".area")
-          .attr("d", function(d) { return area(d.values); })
           .style("fill", function(d) { return color(d.name); })
           .style("opacity", 0.65);
         //Return the legend to previous colours
